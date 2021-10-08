@@ -35,16 +35,14 @@ class HomeController extends Controller
         return abort(404);
     }
 
-    public function root()
+    public function homepage()
     {
-
-        return view('welcome');
+        return view('frontend.homepage');
     }
 
-    public function home()
+    public function ourMenu()
     {
-
-        return view('welcome');
+        return view('frontend.our-menu');
     }
     /*Language Translation*/
     public function lang($locale)
