@@ -1174,7 +1174,7 @@ a.btn_book_table:hover {
 .restbeef_nav .restbeef_menu > li > a {
 	padding: 27px 16px 27px 16px;
 	color: #ffffff;
-	font-size: 14px;
+    font-size: 24px;
 	line-height: 20px;
 	letter-spacing: -0.2px;
 	text-transform: uppercase;
@@ -3287,4 +3287,8 @@ ul.restbeef_footer_links_list li:first-child:before {
 }
 .d-flex-x {
     display: flex !important;
+}
+.restbeef_up_title {
+    font-weight: bold;
+    font-size: 87px;
 }

@@ -5,10 +5,6 @@
 @endsection
 @section('slider')
     <style>
-        .restbeef_up_title {
-            font-weight: bold;
-            font-size: 87px;
-        }
 
         body > div > div.restbeef_header_wrapper.restbeef_js_bg_image.restbeef_height100 > div > h1 {
             font-size: 75px;

@@ -2,10 +2,6 @@
     .restbeef_header_content {
         border-bottom: none;
     }
-
-    .restbeef_nav .restbeef_menu > li > a, a.btn_book_table {
-        font-size: 24px;
-    }
 </style>
 <div class="restbeef_menu_part">
     <nav class="restbeef_nav">
