@@ -14,7 +14,7 @@
 <div class="restbeef_site_wrapper fadeOnLoad">
 
     <div class="restbeef_header_wrapper restbeef_js_bg_image restbeef_height100"
-         data-background="img/dummy/1920x1280.png">
+         data-background="img/yildiz-hisar-sariyer-1.jpg">
         @include('frontend.layouts.header')
 
         @yield('slider')

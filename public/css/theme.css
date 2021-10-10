@@ -14,7 +14,7 @@ Project: Restbeef Steak House
 	03.3 Blockquotes
 	03.4 Dropcaps
 	03.5 List Styles
-	
+
 04. HEADER
 	04.1 Header General
 	04.2 Header Slider
@@ -22,7 +22,7 @@ Project: Restbeef Steak House
 	04.4 Header Tagline
 	04.5 Header Logo
 	04.6 Header Menu
-	
+
 05. CONTENT
 
 06. MODULES
@@ -36,11 +36,11 @@ Project: Restbeef Steak House
 	06.8 Testimonials
 	06.9 Team Grid
 	06.10 Special Offers
-	
+
 07. PRODUCT PAGE
 	07.1 Summary Block
 	07.2 Recent Products
-	
+
 08. BLOG LISTING
 	08.1 Blog Grid
 	08.2 Blog Masonry
@@ -50,14 +50,14 @@ Project: Restbeef Steak House
 		08.2.4 Masonry Image PF
 	08.3 Simple Blog
 	08.4 Blog Pagination
-	
+
 09. BLOG POST
 	09.1 Title and Meta
 	09.2 Post Tags
 	09.3 Post Navigation
 	09.4 Post Comments
 	09.5 Recent Posts
-	
+
 10. PRODUCTS MENU
 
 11. SIDEBAR
@@ -67,17 +67,17 @@ Project: Restbeef Steak House
 	11.4 Category Widget
 	11.5 Tagcloud Widget
 	11.6 Widget Instagram
-	
+
 12. FOOTER WIDGETS
 	12.1 General
 	12.2 Restbeef Intouch
-	
+
 13. FOOTER
 
 --------------------------------------------------------------*/
 
 /* GENERAL */
-body, 
+body,
 html {
 	margin: 0;
 	padding: 0;
@@ -93,13 +93,13 @@ body {
 }
 
 .align_left {
-	text-align: left;		
+	text-align: left;
 }
 .align_center {
-	text-align: center;		
+	text-align: center;
 }
 .align_right {
-	text-align: right;		
+	text-align: right;
 }
 .clear {
 	clear: both;
@@ -706,7 +706,7 @@ h2,
 h2 a,
 h2 span {
 	font-size: 50px;
-	line-height: 55px;	
+	line-height: 55px;
 }
 h2 {
 	margin: 0 0 30px 0;
@@ -732,7 +732,7 @@ h4,
 h4 a,
 h4 span {
 	font-size: 30px;
-	line-height: 35px;	
+	line-height: 35px;
 }
 h4 {
 	margin: 0 0 24px 0;
@@ -823,7 +823,7 @@ blockquote {
 }
 .restbeef_container ol li {
 	padding: 0 0 10px 0;
-	margin: 0 0 0 0;	
+	margin: 0 0 0 0;
 }
 .restbeef_container ul li {
 	padding: 0 0 10px 0;
@@ -859,7 +859,7 @@ blockquote {
 	position: absolute;
 	left: 0;
 	top: 0;
-	background: rgba(0,0,0,0.3);
+	background: rgba(0,0,0,.7);
 }
 .restbeef_header_title {
 	text-align: center;
@@ -876,21 +876,25 @@ blockquote {
 }
 .restbeef_header_title h1 span.restbeef_up_title {
 	color: #ffffff;
+    padding-bottom: 11px;
+
 }
 .restbeef_main_header {
 	position: relative;
 	z-index: 99;
 }
+
 .restbeef_header_title .restbeef_header_description {
 	color: #ffffff;
-	font-size: 18px;
+	/*font-size: 18px;*/
 	line-height: 28px;
 	padding: 28px 0 0 0;
 	margin: 0 0 41px 0;
 	text-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
 .restbeef_header_title a.restbeef_button {
-	min-width: 153px;
+	/*min-width: 153px;*/
+    min-width: 200px;
 	box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 	margin: 0 13px;
 }
@@ -1074,7 +1078,7 @@ blockquote {
 	color: #ffffff;
 }
 .restbeef_header_tagline ul li a:hover {
-	
+
 }
 .restbeef_header_tagline ul li i {
 	display: inline-block;
@@ -1108,16 +1112,16 @@ blockquote {
 	color: #ffffff;
 }
 .restbeef_header_tagline .restbeef_header_socials a:hover {
-	color: #b71c1c;
+	  color: #b71c1c;
 }
 
 /* Header Logo */
 .restbeef_image_logo {
-	width: 155px;
-	height: 84px;
-	background: url(../img/logo.png) no-repeat;
-	background-size: 155px 84px;
-	display: block;
+    width: 245px;
+    height: 110px;
+	background: url(../img/yildiz-2@2x.png) no-repeat;
+    background-size: 200px 109px;
+    display: block
 }
 
 /* Header Menu */
@@ -1179,7 +1183,7 @@ a.btn_book_table:hover {
 .restbeef_nav .restbeef_menu > li:hover > a,
 .restbeef_nav .restbeef_menu > li.current-menu-item > a,
 .restbeef_nav .restbeef_menu > li.current-menu-ancestor > a {
-	color: #b71c1c;
+    /* color: #b71c1c; */
 }
 
 .restbeef_nav .restbeef_menu .sub-menu {
@@ -1283,7 +1287,7 @@ a.btn_book_table:hover {
 /* CONTENT */
 .restbeef_tiny {
 	display: block;
-	text-align: left;	
+	text-align: left;
 }
 .restbeef_main_wrapper {
 	padding: 100px 0 115px 0;
@@ -1332,7 +1336,7 @@ a.btn_book_table:hover {
 	box-shadow: 0 17px 67px rgba(52,63,75,0.2);
 	padding: 50px 49px 60px 49px;
 	width: 100%;
-	box-sizing: border-box;	
+	box-sizing: border-box;
 }
 
 .restbeef_two_sided_block {
@@ -1627,7 +1631,7 @@ ul.restbeef_contact_socials li {
 	background-size: 10px 10px;
 	position: absolute;
 	right: calc(50% - 20px);
-	bottom: 5px;	
+	bottom: 5px;
 }
 .restbeef_block_inner .restbeef_step_item:nth-child(even) .restbeef_step_path:after {
 	left: calc(50% - 20px);
@@ -1768,7 +1772,7 @@ ul.restbeef_contact_socials li {
 	font-family: 'FontAwesome';
 	color: #cccccc;
 	font-size: 16px;
-	line-height: 20px;	
+	line-height: 20px;
 	letter-spacing: 0.8px;
 	position: absolute;
 	left: 0;
@@ -1866,7 +1870,7 @@ ul.restbeef_contact_socials li {
 	position: relative;
 	transition: min-height 500ms;
 	min-height: 0;
-	text-align: center;	
+	text-align: center;
 	overflow: hidden;
 }
 .restbeef_testimonials_flow_item {
@@ -1885,7 +1889,7 @@ ul.restbeef_contact_socials li {
 }
 .restbeef_testimonials_flow_item .restbeef_testimonials_author_name {
 	opacity: 0;
-	transition: opacity 300ms;	
+	transition: opacity 300ms;
 }
 .restbeef_testimonials_flow_item .restbeef_testimonial_content {
 	transition: opacity 300ms;
@@ -2037,6 +2041,15 @@ a.restbeef_testimonials_flow_next:hover {
 	background: rgba(0,0,0,0.1);
 	z-index: 1;
 }
+div[data-background="img/yildiz-hisar-009.jpg"]:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.3);
+}
 .restbeef_special_offers_item.restbeef_best_offer .restbeef_special_offers_content:before {
 	background: rgba(0,0,0,0.3);
 }
@@ -2138,9 +2151,13 @@ a.restbeef_testimonials_flow_next:hover {
 
 /* Recent Products */
 .restbeef_recent_products {
-	margin: 0 -15px;
+	/*margin: 0 -15px;*/
+	margin:0 -172px;
 	font-size: 0;
 	line-height: 0;
+}
+.card-menu-text{
+    font-size: 50px;
 }
 .restbeef_recent_products.restbeef_grig_1column .restbeef_recent_product {
 	width: calc(100% - 30px);
@@ -2167,13 +2184,17 @@ a.restbeef_testimonials_flow_next:hover {
 }
 .restbeef_recent_product .restbeef_recent_product_image img {
 	width: 100%;
-	height: auto;
+	height: 450px;
+    object-fit: cover;
 }
 .restbeef_recent_product_content {
 	background: url('../img/products_background.jpg') no-repeat center;
 	background-size: cover;
 	text-align: center;
-	padding: 0 30px 46px 30px;
+    /*	padding: 0 30px 46px 30px; */
+    padding: 39px 30px 76px 30px;
+    height: 250px; /* sonradan eklendi   */
+
 }
 .restbeef_recent_product_price {
 	display: inline-block;
@@ -2181,7 +2202,8 @@ a.restbeef_testimonials_flow_next:hover {
 	font-family: 'Roboto Condensed', sans-serif;
 	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 	margin: 0 0 16px 0;
-	transform: translateY(-25px);
+	/*transform: translateY(-25px);*/
+    transform: translateY(-64px);
 }
 .restbeef_recent_product_price del,
 .restbeef_recent_product_price span {
@@ -3160,17 +3182,17 @@ a.restbeef_featured_post_widget_title:hover {
 	padding-bottom: 6px;
 }
 .restbeef_intouch_form input[type="email"] {
-	flex-grow: 4;
-	height: 40px;
-	position: relative;
-	z-index: 2;
-	max-width: 200px;
+    flex-grow: 4;
+    height: 48px;
+    position: relative;
+    z-index: 2;
+    max-width: 270px;
 }
 .restbeef_intouch_form input[type="submit"] {
 	flex-grow: 0;
-	height: 40px;
+    height: 48px;
 	margin-left: -2px;
-	max-width: 105px;
+	max-width: 125px;
 }
 .restbeef_in_touch {
 	padding-top: 6px;
@@ -3194,7 +3216,7 @@ a.restbeef_featured_post_widget_title:hover {
 	line-height: 20px;
 	border: 2px solid #ffffff;
 	text-align: center;
-	box-sizing: border-box;	
+	box-sizing: border-box;
 	padding: 8px 0 0 0;
 	transition: background 300ms;
 }
@@ -3207,8 +3229,12 @@ a.restbeef_featured_post_widget_title:hover {
 	background: #212121;
 	display: flex;
 	justify-content: space-between;
+    /*
 	padding-top: 9px;
 	padding-bottom: 11px;
+
+     */
+    padding: 18px 200px 18px 89px;
 	color: #ffffff;
 	font-size: 14px;
 	line-height: 20px;
@@ -3216,7 +3242,7 @@ a.restbeef_featured_post_widget_title:hover {
 }
 .restbeef_footer a {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 24px;
 	line-height: 20px;
 	letter-spacing: -0.2px;
 }
@@ -3248,3 +3274,17 @@ ul.restbeef_footer_links_list li:first-child:before {
 	display: none;
 }
 
+.col-5.restbeef_js_padding.restbeef_align_middle {
+    padding: 50px 0 50px 50px;
+}
+
+.d-block-x {
+    display: block !important;
+}
+
+.d-none-x {
+    display: none !important;
+}
+.d-flex-x {
+    display: flex !important;
+}
