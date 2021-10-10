@@ -534,7 +534,10 @@
 }
 
 @media only screen and (max-width: 760px) {
-	.restbeef_container,
+    .restbeef_image_logo {
+        background-size: 173px 93px;
+    }
+    .restbeef_container,
 	.restbeef_fullwidth_boxed .restbeef_block_inner {
 		width: calc(100% - 20px);
 		margin: 0 10px;
