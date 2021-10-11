@@ -3,7 +3,12 @@
 
 <head>
     <meta charset="utf-8" />
-    <title> @yield('title') | Yıldız Hisar Sosyal Tesisleri</title>
+    @if(app()->getLocale() == "tr")
+        <title>Yıldız Hisar Sosyal Tesisleri</title>
+    @else
+        <title>Yıldız Hisar Restaurant</title>
+    @endif
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Yıldız Hisar Sosyal Tesisleri" name="description" />
     <meta content="Yıldız Hisar" name="author" />
@@ -16,10 +21,10 @@
 @show
     <!-- Begin page -->
     <div id="layout-wrapper">
-        @include('layouts.topbar')
-        @include('layouts.sidebar')
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
+
+
+        <!--@include('layouts.sidebar') -->
+        <!-- @include('layouts.topbar') -->
         <!-- ============================================================== -->
         <div class="main-content">
             <div class="page-content">

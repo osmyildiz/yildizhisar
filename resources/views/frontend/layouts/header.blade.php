@@ -22,6 +22,7 @@
 </style>
 
 <header class="restbeef_main_header">
+
     <div class="restbeef_header_inner">
         <div class="restbeef_header_tagline restbeef_container_wide" style="background-color: rgba(0, 0, 0, 0.3);">
             <div class="restbeef_header_contacts">
@@ -38,6 +39,9 @@
                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-youtube-play"></i></a></li>
+                    <li><a href="{{route('lang', ["locale" => Session::get('locale') == "en" ? "tr" : "en"])}}" class="btn_restbeef btn_lang" >
+                            {{ Session::get('locale') == "en" ? "TR" : "EN" }}
+                        </a></li>
                     <!-- <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>-->
                 </ul><!-- .restbeef_header_socials_list -->
             </div><!-- .restbeef_header_socials -->
@@ -55,6 +59,8 @@
                     <span></span>
                 </a><!-- .restbeef_mobile_menu_toggler -->
             </div><!-- .restbeef_mobile_menu_part -->
+
+
 
             @include('frontend.layouts.menu')
 

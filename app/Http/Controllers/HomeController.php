@@ -45,8 +45,66 @@ class HomeController extends Controller
     }
     public function table_rezervations()
     {
+        if (app()->getLocale() == "tr") {
+            return view('frontend.table_rezervations');
+        } else {
+            return view( 'frontend.table_rezervations');
+        }
 
-        return view('frontend.table_rezervations');
+    }
+    public function contact()
+    {
+        if (app()->getLocale() == "tr") {
+            return view('frontend.table_rezervations');
+        } else {
+            return view( 'frontend.table_rezervations');
+        }
+
+    }
+    public function about()
+    {
+        if (app()->getLocale() == "tr") {
+            return view('frontend.table_rezervations');
+        } else {
+            return view( 'frontend.table_rezervations');
+        }
+
+    }
+    public function invitation()
+    {
+        if (app()->getLocale() == "tr") {
+            return view('frontend.table_rezervations');
+        } else {
+            return view( 'frontend.table_rezervations');
+        }
+
+    }
+    public function gallery()
+    {
+        if (app()->getLocale() == "tr") {
+            return view('frontend.table_rezervations');
+        } else {
+            return view( 'frontend.table_rezervations');
+        }
+
+    }
+    public function events()
+    {
+        if (app()->getLocale() == "tr") {
+            return view('frontend.table_rezervations');
+        } else {
+            return view( 'frontend.table_rezervations');
+        }
+
+    }
+    public function restaurant()
+    {
+        if (app()->getLocale() == "tr") {
+            return view('frontend.table_rezervations');
+        } else {
+            return view( 'frontend.table_rezervations');
+        }
+
     }
 
 

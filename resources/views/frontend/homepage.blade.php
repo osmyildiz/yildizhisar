@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Anasayfa')
+@section('title','Yıldız Hisar')
 @section('data-image')
     restbeef_header_wrapper restbeef_js_bg_image restbeef_height100 data-background="img/yildiz-hisar-sariyer-1.jpg"
 @endsection

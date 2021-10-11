@@ -5,7 +5,6 @@
 @section('content')
     <div class="restbeef_site_wrapper fadeOnLoad">
 
-
         <!-- Header -->
         <div class="restbeef_header_wrapper restbeef_js_bg_image" data-background="img/dummy/1920x1280.png">
             <header class="restbeef_main_header">
