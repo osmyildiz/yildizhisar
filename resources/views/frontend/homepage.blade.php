@@ -58,7 +58,7 @@
             Etkinlik - Davet - Restaurant & Bar
         </p>
         <a href="our_menu.html" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Galeri</a>
-        <a href="table_reservation.html" style=" border: 1px solid white;"
+        <a href="/table_rezervations" style=" border: 1px solid white;"
            class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Rezervasyon</a>
     </div><!-- .restbeef_header_title -->
 @endsection

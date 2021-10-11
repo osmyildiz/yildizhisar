@@ -39,6 +39,17 @@ class HomeController extends Controller
     {
         return view('frontend.homepage');
     }
+    public function root()
+    {
+        return view('frontend.homepage');
+    }
+    public function table_rezervations()
+    {
+
+        return view('frontend.table_rezervations');
+    }
+
+
 
     public function ourMenu()
     {
@@ -133,4 +144,5 @@ class HomeController extends Controller
             }
         }
     }
+
 }
