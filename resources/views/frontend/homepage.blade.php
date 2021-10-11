@@ -62,6 +62,7 @@
            class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Rezervasyon</a>
     </div><!-- .restbeef_header_title -->
 @endsection
+
 @section('content')
     <div class="restbeef_main_wrapper">
         <div class="restbeef_container">
