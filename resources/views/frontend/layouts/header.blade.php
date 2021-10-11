@@ -1,10 +1,10 @@
 <style>
     .restbeef_header_socials_list > li > a > i {
         background: white;
-        border-radius: 50%;
+        border-radius: 60%;
         padding: 6px;
         color: black;
-        font-size: 19px !important;
+        font-size: 10px !important;
     }
 
     .fa-facebook-f {
@@ -12,17 +12,18 @@
     }
 
     .restbeef_header_tagline {
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid #8B9598;
     }
 
     .restbeef_header_tagline ul li {
-        font-size: 17px;
+        font-size: 12px;
+        color: #8B9598;
     }
 </style>
 
 <header class="restbeef_main_header">
     <div class="restbeef_header_inner">
-        <div class="restbeef_header_tagline restbeef_container_wide">
+        <div class="restbeef_header_tagline restbeef_container_wide" style="background-color: rgba(0, 0, 0, 0.3);">
             <div class="restbeef_header_contacts">
                 <ul class="restbeef_header_contacts_list">
                     <li><i class="fa fa-map-marker"></i>Rumeli Hisarı, Halim Paşa Sok. No:5 34470 Sarıyer/İstanbul</li>
