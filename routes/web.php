@@ -30,6 +30,7 @@ Route::get('/restaurant', [App\Http\Controllers\HomeController::class, 'restaura
 
 
 
+
 Route::get('/our-menu', [App\Http\Controllers\HomeController::class, 'ourMenu'])->name('our-menu');
 Route::get('locale/{locale}', function ($locale) {
     Session::put('locale', $locale);
