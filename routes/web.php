@@ -25,7 +25,7 @@ Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->nam
 Route::get('/events', [App\Http\Controllers\HomeController::class, 'events'])->name('events');
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
-Route::get('/invitation', [App\Http\Controllers\HomeController::class, 'invitation'])->name('invitation');
+Route::get('/wedding', [App\Http\Controllers\HomeController::class, 'wedding'])->name('wedding');
 Route::get('/restaurant', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant');
 
 

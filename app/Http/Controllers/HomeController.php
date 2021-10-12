@@ -68,13 +68,11 @@ class HomeController extends Controller
 
 
     }
-    public function invitation()
+    public function wedding()
     {
-        if (app()->getLocale() == "tr") {
-            return view('frontend.table_rezervations');
-        } else {
-            return view( 'frontend.table_rezervations');
-        }
+
+            return view('frontend.wedding');
+
 
     }
     public function gallery()

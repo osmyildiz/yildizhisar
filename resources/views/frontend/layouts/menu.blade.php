@@ -17,7 +17,7 @@
         "label" => __("static_text.restaurant")
         ],
         [
-        "routeName" => "homepage",
+        "routeName" => "wedding",
         "label" => __("static_text.invitation")
         ],
         [

@@ -136,7 +136,7 @@
 													<span class="restbeef_up_title">
 														Dessert Menu
 													</span>-->
-                                                <a href="{{route('invitation')}}" class="card-menu-text">@lang('static_text.invitation')</a>
+                                                <a href="{{route('wedding')}}" class="card-menu-text">@lang('static_text.invitation')</a>
 
                                             </h4>
                                         </div><!-- .restbeef_recent_product_content -->
