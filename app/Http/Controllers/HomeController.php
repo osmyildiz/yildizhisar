@@ -63,11 +63,9 @@ class HomeController extends Controller
     }
     public function about()
     {
-        if (app()->getLocale() == "tr") {
-            return view('frontend.table_rezervations');
-        } else {
-            return view( 'frontend.table_rezervations');
-        }
+
+            return view('frontend.about');
+
 
     }
     public function invitation()
@@ -104,6 +102,28 @@ class HomeController extends Controller
         } else {
             return view( 'frontend.table_rezervations');
         }
+
+    }
+    public function login_v()
+    {
+        if (app()->getLocale() == "tr") {
+            return view('auth1.login');
+        } else {
+            return view( 'auth1.login');
+        }
+
+    }
+    public function login(Request $request)
+    {
+
+        if (auth()->attempt(request(['email', 'password'])) == false) {
+            return back()->withErrors([
+                'message' => 'The email or password is incorrect, please try again'
+            ]);
+        }
+
+        return redirect()->to('/panel');
+
 
     }
 
@@ -201,6 +221,15 @@ class HomeController extends Controller
                 ], 200); // Status code here
             }
         }
+    }
+    public function panel()
+    {
+        if (app()->getLocale() == "tr") {
+            return view('panel');
+        } else {
+            return view( 'panel');
+        }
+
     }
 
 }

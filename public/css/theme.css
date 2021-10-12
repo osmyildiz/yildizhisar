@@ -84,7 +84,7 @@ html {
 }
 body {
 	background: #ffffff;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 16px;
 	line-height: 26px;
 	font-weight: 400;
@@ -273,7 +273,7 @@ body textarea {
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 700;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	margin-bottom: 30px;
 	padding: 10px 13px 10px 13px;
 	border: 2px solid #909090;
@@ -1271,10 +1271,10 @@ a.btn_book_table:hover {
 }
 .restbeef_menu .sub-menu li.menu-item-has-children > a:after {
 	content: '\f105';
-	font-family: 'FontAwesome';
+	font-family: 'Ubuntu';
 	float: right;
-	font-size: 16px;
-	line-height: 20px;
+	font-size: 14px;
+	line-height: 18px;
 	transform: translate(3px,-1px);
 }
 
@@ -1523,7 +1523,7 @@ ul.restbeef_contact_socials li {
 }
 .restbeef_grig_gallery_wrapper .restbeef_grig_gallery_item a:after {
 	content: '\f002';
-	font-family: 'FontAwesome';
+	font-family: 'Ubuntu';
 	font-size: 32px;
 	line-height: 40px;
 	width: 40px;
@@ -1579,7 +1579,7 @@ ul.restbeef_contact_socials li {
 	color: #ffffff;
 	background: #b71c1c;
 	text-transform: uppercase;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 30px;
@@ -1686,7 +1686,7 @@ ul.restbeef_contact_socials li {
 .restbeef_team_summary .restbeef_team_block_description span {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 20px;
 	line-height: 26px;
 	color: #212121;
@@ -1744,7 +1744,7 @@ ul.restbeef_contact_socials li {
 	line-height: 20px;
 	text-transform: uppercase;
 	font-weight: 700;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	color: #212121;
 }
 .restbeef_testimonials_carousel .restbeef_testimonials_author .restbeef_testimonials_author_name {
@@ -1756,7 +1756,7 @@ ul.restbeef_contact_socials li {
 .restbeef_testimonials_carousel.restbeef_testimonials_carousel_center .restbeef_stars_review,
 .restbeef_stars_review {
 	content: '\f005\f005\f005\f005\f005';
-	font-family: 'FontAwesome';
+	font-family: 'Ubuntu';
 	position: relative;
 	display: block;
 	margin: 1px auto 0 auto;
@@ -1769,7 +1769,7 @@ ul.restbeef_contact_socials li {
 .restbeef_stars_review:before,
 .restbeef_stars_review:after {
 	content: '\f005\f005\f005\f005\f005';
-	font-family: 'FontAwesome';
+	font-family: 'Ubuntu';
 	color: #cccccc;
 	font-size: 16px;
 	line-height: 20px;
@@ -2157,7 +2157,7 @@ div[data-background="img/yildiz-hisar-009.jpg"]:before{
 	line-height: 0;
 }
 .card-menu-text{
-    font-size: 50px;
+    font-size: 35px;
 }
 .restbeef_recent_products.restbeef_grig_1column .restbeef_recent_product {
 	width: calc(100% - 30px);
@@ -2184,7 +2184,7 @@ div[data-background="img/yildiz-hisar-009.jpg"]:before{
 }
 .restbeef_recent_product .restbeef_recent_product_image img {
 	width: 100%;
-	height: 450px;
+	height: 350px;
     object-fit: cover;
 }
 .restbeef_recent_product_content {
@@ -2193,7 +2193,7 @@ div[data-background="img/yildiz-hisar-009.jpg"]:before{
 	text-align: center;
     /*	padding: 0 30px 46px 30px; */
     padding: 39px 30px 76px 30px;
-    height: 250px; /* sonradan eklendi   */
+     /* sonradan eklendi   */
 
 }
 .restbeef_recent_product_price {
@@ -2663,7 +2663,7 @@ div[data-background="img/yildiz-hisar-009.jpg"]:before{
 .restbeef_header_title .restbeef_post_meta {
 	font-size: 14px;
 	line-height: 20px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #ffffff;

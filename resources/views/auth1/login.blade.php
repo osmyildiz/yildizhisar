@@ -19,8 +19,8 @@
                                 <div class="row">
                                     <div class="col-7">
                                         <div class="text-primary p-4">
-                                            <h5 class="text-primary">Welcome Back !</h5>
-                                            <p>Sign in to continue to Skote.</p>
+                                            <h5 class="text-primary">Yıldız Hisar</h5>
+                                            <p>Admin Panel</p>
                                         </div>
                                     </div>
                                     <div class="col-5 align-self-end">
@@ -50,13 +50,13 @@
                                     </a>
                                 </div>
                                 <div class="p-2">
-                                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                                    <form class="form-horizontal" method="POST" action="{{ route('login1') }}">
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="username" class="form-label">Email</label>
+                                            <label for="email" class="form-label">Email</label>
                                             <input name="email" type="email"
                                                 class="form-control @error('email') is-invalid @enderror"
-                                                value="{{ old('email', 'admin@themesbrand.com') }}" id="username"
+                                                value="{{ old('email', 'admin@admin.com') }}" id="email"
                                                 placeholder="Enter Email" autocomplete="email" autofocus>
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -71,7 +71,7 @@
                                                 class="input-group auth-pass-inputgroup @error('password') is-invalid @enderror">
                                                 <input type="password" name="password"
                                                     class="form-control  @error('password') is-invalid @enderror"
-                                                    id="userpassword" value="123456" placeholder="Enter password"
+                                                    id="password" value="123456" placeholder="Enter password"
                                                     aria-label="Password" aria-describedby="password-addon">
                                                 <button class="btn btn-light " type="button" id="password-addon"><i
                                                         class="mdi mdi-eye-outline"></i></button>
@@ -83,46 +83,16 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="remember"
-                                                {{ old('remember') ? 'checked' : '' }}>
-                                            <label class="form-check-label" for="remember">
-                                                Remember me
-                                            </label>
-                                        </div>
 
                                         <div class="mt-3 d-grid">
-                                            <button class="btn btn-primary waves-effect waves-light" type="submit">Log
-                                                In</button>
+                                            <button class="btn btn-primary waves-effect waves-light" type="submit">Giriş</button>
                                         </div>
 
-                                        <div class="mt-4 text-center">
-                                            <h5 class="font-size-14 mb-3">Sign in with</h5>
-
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item">
-                                                    <a href="#"
-                                                        class="social-list-item bg-primary text-white border-primary">
-                                                        <i class="mdi mdi-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="#" class="social-list-item bg-info text-white border-info">
-                                                        <i class="mdi mdi-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="#" class="social-list-item bg-danger text-white border-danger">
-                                                        <i class="mdi mdi-google"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
 
                                         <div class="mt-4 text-center">
                                             @if (Route::has('password.request'))
                                                 <a href="{{ route('password.request') }}" class="text-muted"><i
-                                                        class="mdi mdi-lock me-1"></i> Forgot your password?</a>
+                                                        class="mdi mdi-lock me-1"></i> Şifremi unuttum.</a>
                                             @endif
 
                                         </div>
@@ -131,18 +101,7 @@
 
                             </div>
                         </div>
-                        <div class="mt-5 text-center">
 
-                            <div>
-                                <p>Don't have an account ? <a href="{{ url('register') }}" class="fw-medium text-primary">
-                                        Signup now </a> </p>
-                                <p>© <script>
-                                        document.write(new Date().getFullYear())
-
-                                    </script> Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand
-                                </p>
-                            </div>
-                        </div>
 
                     </div>
                 </div>

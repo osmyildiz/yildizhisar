@@ -8,7 +8,7 @@
         $routes = [
 
         [
-        "routeName" => "homepage",
+        "routeName" => "about",
         "label" => __("static_text.about")
         ],
 

@@ -21,11 +21,12 @@
 @show
     <!-- Begin page -->
     <div id="layout-wrapper">
+    @include('layouts.topbar')
+    @include('layouts.sidebar1')
 
 
-        <!--@include('layouts.sidebar') -->
-        <!-- @include('layouts.topbar') -->
-        <!-- ============================================================== -->
+
+        <!--  -->
         <div class="main-content">
             <div class="page-content">
                 <div class="container-fluid">

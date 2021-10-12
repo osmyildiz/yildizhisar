@@ -50,16 +50,30 @@
         }
     </style>
     <div class="restbeef_header_title restbeef_container">
-        <h1>
-            <span class="restbeef_up_title">Boğaz Manzarası Eşliğinde</span>
-            UNUTULMAYAN HATIRALAR
-        </h1>
-        <p class="restbeef_header_description">
-            Etkinlik - Davet - Restaurant & Bar
-        </p>
-        <a href="our_menu.html" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Galeri</a>
-        <a href="/table_rezervations" style=" border: 1px solid white;"
-           class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Rezervasyon</a>
+        @if(app()->getLocale() == "tr")
+            <h1>
+                <span class="restbeef_up_title">Boğaz Manzarası Eşliğinde</span>
+                UNUTULMAYAN HATIRALAR
+            </h1>
+            <p class="restbeef_header_description">
+                Etkinlik - Davet - Restoran
+            </p>
+            <a href="our_menu.html" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Galeri</a>
+            <a href="/table_rezervations" style=" border: 1px solid white;"
+               class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Rezervasyon</a>
+        @else
+            <h1>
+                <span class="restbeef_up_title">Unforgettable Moment</span>
+                with the Bosphorus view
+            </h1>
+            <p class="restbeef_header_description">
+                Event & Wedding & Restaurant
+            </p>
+            <a href="our_menu.html" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Gallery</a>
+            <a href="/table_rezervations" style=" border: 1px solid white;"
+               class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Booking Table</a>
+        @endif
+
     </div><!-- .restbeef_header_title -->
 @endsection
 
@@ -74,10 +88,18 @@
 
                         <!-- Recent Products Block -->
                         <div class="restbeef_block restbeef_js_margin" data-margin="-20px 0 99px 0">
-                            <h2 style="font-size: 60px" class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
-                                <span style="font-size: 50px" class="restbeef_up_title">Eşsiz Lezzetler</span>
-                                Yıldız Hisar'da
-                            </h2>
+                            @if(app()->getLocale() == "tr")
+                                <h2 style="font-size: 60px" class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
+                                    <span style="font-size: 50px" class="restbeef_up_title">Eşsiz Lezzetler</span>
+                                    Yıldız Hisar'da
+                                </h2>
+                            @else
+                                <h2 style="font-size: 60px" class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
+                                    <span style="font-size: 50px" class="restbeef_up_title">Unique Tastes at</span>
+                                    Yıldız Hisar
+                                </h2>
+                            @endif
+
                             <div class="restbeef_block_inner">
                                 <div class="restbeef_recent_products restbeef_grig_3columns">
                                     <div class="restbeef_recent_product">
@@ -94,7 +116,8 @@
 													<span class="restbeef_up_title">
 														Season Menu
 													</span>-->
-                                                <a href="product.html" class="card-menu-text">Restaurant</a>
+                                                <a href="{{route('restaurant')}}" class="card-menu-text">@lang('static_text.restaurant')</a>
+
                                             </h4>
                                         </div><!-- .restbeef_recent_product_content -->
                                     </div><!-- .restbeef_recent_product -->
@@ -113,7 +136,8 @@
 													<span class="restbeef_up_title">
 														Dessert Menu
 													</span>-->
-                                                <a href="product.html" class="card-menu-text">Düğün<br> & Davet</a>
+                                                <a href="{{route('invitation')}}" class="card-menu-text">@lang('static_text.invitation')</a>
+
                                             </h4>
                                         </div><!-- .restbeef_recent_product_content -->
                                     </div><!-- .restbeef_recent_product -->
@@ -132,7 +156,8 @@
 													<span class="restbeef_up_title">
 														Steak Menu
 													</span>-->
-                                                <a href="product.html" class="card-menu-text">Etkinlik</a>
+                                                <a href="{{route('events')}}" class="card-menu-text">@lang('static_text.events')</a>
+
                                             </h4>
                                         </div><!-- .restbeef_recent_product_content -->
                                     </div><!-- .restbeef_recent_product -->
@@ -151,22 +176,32 @@
                                     </div><!-- .col-6 -->
                                     <div class="col-6 restbeef_js_padding" data-padding="50px 50px 50px 0">
                                         <div class="restbeef_content_box align_center">
-                                            <h2>
-                                                <span class="restbeef_up_title">Yıldız Hisar</span>
-                                                Hakkımızda
-                                            </h2>
-                                            <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
-                                                Restbeef Steakhouse was est in 1989 in Chicago City. With more than 30
-                                                years of experience and base on traditional recipes, we understand how
-                                                to best serve our customers through tried service principles. Instead of
-                                                following trends, we set them. We create steaks and grill we’re proud to
-                                                serve and deliver it fast, with a smile. No matter where you find us,
-                                                we’re making sure each meal our clients enjoy is delicious and
-                                                one-of-a-kind. Our steaks is always perfect and our professional team
-                                                working hard to make you happy.</p>
-                                            <a href="about_us.html"
-                                               class="restbeef_button rezervasyon-text">Rezervasyon</a>
-                                        </div><!-- .restbeef_content_box -->
+                                            @if(app()->getLocale() == "tr")
+                                                <h2>
+                                                    <span class="restbeef_up_title">Yıldız Hisar</span>
+                                                    Hakkımızda
+                                                </h2>
+                                                <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
+                                                    Yıldız Hisar, harika mimarisi ve boğaz manzarasının yanı sıra kahvaltı, öğle ve akşam yemekleri, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde hizmet vermektedir.</p>
+                                                <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
+                                                    Eşsiz lezzetleriyle boğazın mavi sularını ve esintisini hissedebileceğiniz en güzel konumlardan birisi olan Rumeli Hisa'ında hatırlalardan çıkmayan anlar için sizleri bekliyoruz.</p>
+                                                <a href="/table_rezervations"
+                                                   class="restbeef_button rezervasyon-text">Rezervasyon</a>
+
+                                            @else
+                                                <h2>
+                                                    <span class="restbeef_up_title">Yıldız Hisar</span>
+                                                    About Us
+                                                </h2>
+                                                <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
+                                                    In addition to its magnificent architecture and Bosphorus view, Yıldız Hisar serves on special occasions such as breakfast, lunch and dinner, cocktails, graduation nights and seminars. </p>
+                                                <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
+                                                    We are waiting for you for unforgettable moments in Rumeli Hisa, one of the most beautiful locations where you can feel the blue waters and breeze of the Bosphorus with its unique flavors. </p>
+                                                <a href="/table_rezervations"
+                                                   class="restbeef_button rezervasyon-text">Book a Table</a>
+
+                                            @endif
+                                            </div><!-- .restbeef_content_box -->
                                     </div><!-- .col-6 -->
                                 </div>
                             </div><!-- .restbeef_block_inner -->
@@ -612,26 +647,37 @@
                                 <div class="row row_no_gap restbeef_height100">
                                     <div class="col-5 restbeef_js_padding restbeef_align_middle">
                                         <div class="restbeef_content_box align_center">
-                                            <h2 style="font-size: 60px">
-                                                <span style="font-size: 50px" class="restbeef_up_title">Tüm Sorularınız İçin</span>
-                                                Mesaj Atabilirsiniz
-                                            </h2>
+                                            @if(app()->getLocale() == "tr")
+                                                <h2 style="font-size: 60px">
+                                                    <span style="font-size: 50px" class="restbeef_up_title">Tüm Sorularınız İçin</span>
+                                                    Mesaj Atabilirsiniz.
+                                                </h2>
+
+                                            @else
+                                                <h2 style="font-size: 60px">
+                                                    <span style="font-size: 50px" class="restbeef_up_title">You can send a message</span>
+                                                    for all your questions.
+                                                </h2>
+
+                                            @endif
+
                                             <form method="post" id="contact_form">
                                                 <div class="row">
                                                     <div class="col-6">
-                                                        <input type="text" placeholder="İSİM / SOYİSİM"
+
+                                                        <input type="text" placeholder=@lang('static_text.name')
                                                                name="your_name"/>
                                                     </div>
                                                     <div class="col-6">
-                                                        <input type="email" placeholder="TELEFON veya MAİL AFRESİ"
+                                                        <input type="email" placeholder=@lang('static_text.telephone')
                                                                name="your_email"/>
                                                     </div>
                                                 </div><!-- .row -->
-                                                <textarea placeholder="MESAJINIZ"
+                                                <textarea placeholder=@lang('static_text.message')
                                                           name="your_message"></textarea>
                                                 <input
                                                     style="background-color: #AB945E; font-size: 22px; font-weight: normal"
-                                                    type="submit" value="GÖNDER"/>
+                                                    type="submit" value=@lang('static_text.send')>
                                             </form>
                                         </div><!-- .restbeef_content_box -->
                                     </div><!-- .col-6 -->

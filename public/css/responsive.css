@@ -319,11 +319,11 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	.restbeef_recent_product_content h4,
-	.restbeef_recent_product_content h4 span,
-	.restbeef_recent_product_content h4 a {
-		font-size: 25px;
-		line-height: 30px;
+	.restbeef_recent_product_content h5,
+	.restbeef_recent_product_content h5 span,
+	.restbeef_recent_product_content h5 a {
+		font-size: 20px;
+		line-height: 25px;
 	}
 	.restbeef_recent_products.restbeef_grig_1column .restbeef_recent_product {
 		width: calc(100% - 20px);

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,8 @@ Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])-
 Route::get('/invitation', [App\Http\Controllers\HomeController::class, 'invitation'])->name('invitation');
 Route::get('/restaurant', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant');
 
+
+
 Route::get('/our-menu', [App\Http\Controllers\HomeController::class, 'ourMenu'])->name('our-menu');
 Route::get('locale/{locale}', function ($locale) {
     Session::put('locale', $locale);
@@ -37,7 +40,18 @@ Route::get('locale/{locale}', function ($locale) {
 Route::post('/update-profile/{id}', [App\Http\Controllers\HomeController::class, 'updateProfile'])->name('updateProfile');
 Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('updatePassword');
 
-Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+//Route::get('{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 //Language Translation
-Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
+//Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/panel', [HomeController::class, 'panel'])->name('panel');
+
+});
+
+
+    Route::get('/admin', [App\Http\Controllers\HomeController::class, 'login_v'])->name('login_v');
+    Route::post('/login_1', [LoginController::class, 'action1'])->name('admin.login_1');
+    Route::post('/login1', [HomeController::class, 'login'])->name('login1');
+
