@@ -67,87 +67,56 @@
     <div class="restbeef_site_wrapper fadeOnLoad">
 
 
-        <!-- Content -->
-        <div class="restbeef_header_content restbeef_container_wide">
-            <div class="restbeef_logo_part">
-                <div class="restbeef_logo_cont">
-                    <a href="index.html" class="restbeef_image_logo restbeef_retina"></a>
-                </div>
-            </div><!-- .restbeef_logo_part -->
+        <div class="restbeef_main_wrapper">
+            <div class="restbeef_container">
+                <div class="restbeef_content_wrapper restbeef_no_sidebar">
 
-            <div class="restbeef_mobile_menu_part">
-                <a href="javascript:void(0)" class="restbeef_mobile_menu_toggler">
-                    <span></span>
-                </a><!-- .restbeef_mobile_menu_toggler -->
-            </div><!-- .restbeef_mobile_menu_part -->
+                    <!-- Content Inner -->
+                    <div class="restbeef_content">
+                        <div class="restbeef_tiny">
+                            <div class="restbeef_single_post_pf restbeef_blog_pf_gallery" >
+                                <div class="restbeef_grig_gallery_wrapper restbeef_grig_3columns restbeef_photoswipe_wrapper" data-uniqid="8726">
+                                    <div class="restbeef_grig_gallery_item">
+                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="0">
+                                            <img src="img/dummy/740x700.png" alt="Post Image 01"/>
+                                        </a>
+                                    </div><!-- .restbeef_grig_gallery_item -->
+                                    <div class="restbeef_grig_gallery_item">
+                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="1">
+                                            <img src="img/dummy/740x700.png" alt="Post Image 02"/>
+                                        </a>
+                                    </div><!-- .restbeef_grig_gallery_item -->
+                                    <div class="restbeef_grig_gallery_item">
+                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="2">
+                                            <img src="img/dummy/740x700.png" alt="Post Image 03"/>
+                                        </a>
+                                    </div><!-- .restbeef_grig_gallery_item -->
+                                    <div class="restbeef_grig_gallery_item">
+                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="3">
+                                            <img src="img/dummy/740x700.png" alt="Post Image 04"/>
+                                        </a>
+                                    </div><!-- .restbeef_grig_gallery_item -->
+                                    <div class="restbeef_grig_gallery_item">
+                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="4">
+                                            <img src="img/dummy/740x700.png" alt="Post Image 05"/>
+                                        </a>
+                                    </div><!-- .restbeef_grig_gallery_item -->
+                                    <div class="restbeef_grig_gallery_item">
+                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="5">
+                                            <img src="img/dummy/740x700.png" alt="Post Image 06"/>
+                                        </a>
+                                    </div><!-- .restbeef_grig_gallery_item -->
+                                </div><!-- .restbeef_grig_gallery_wrapper -->
+                            </div><!-- .restbeef_single_post_pf -->
 
-            <div class="restbeef_menu_part">
-                <nav class="restbeef_nav">
-                    <ul id="menu-main-menu" class="restbeef_menu">
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">Home</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="index.html">Home 01</a></li>
-                                <li class="menu-item"><a href="index02.html">Home 02</a></li>
-                                <li class="menu-item"><a href="index03.html">Home 03</a></li>
-                            </ul><!-- .sub-menu -->
-                        </li><!-- .menu-item-has-children -->
 
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">Pages</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="about_us.html">About Us</a></li>
-                                <li class="menu-item"><a href="our_events.html">Our Events</a></li>
-                                <li class="menu-item"><a href="our_team.html">Our Team</a></li>
-                                <li class="menu-item"><a href="team_member.html">Team Member</a></li>
-                                <li class="menu-item"><a href="table_reservation.html">Table Reservation</a></li>
-                                <li class="menu-item"><a href="food_delivery.html">Food Delivery</a></li>
-                                <li class="menu-item"><a href="typography.html">Typography</a></li>
-                            </ul><!-- .sub-menu -->
-                        </li><!-- .menu-item-has-children -->
 
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">Products</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="our_menu.html">Our Menu</a></li>
-                                <li class="menu-item"><a href="product.html">Single Product</a></li>
-                            </ul><!-- .sub-menu -->
-                        </li><!-- .menu-item-has-children -->
+                        </div><!-- .restbeef_tiny -->
+                    </div><!-- .restbeef_content -->
 
-                        <li class="menu-item menu-item-has-children current-menu-ancestor">
-                            <a href="#">Stories</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="blog_grid.html">Blog Grid</a></li>
-                                <li class="menu-item"><a href="blog_masonry.html">Blog Masonry</a></li>
-                                <li class="menu-item"><a href="blog_simple.html">Blog Simple</a></li>
-                                <li class="menu-item"><a href="blog_sidebar.html">Blog with Sidebar</a></li>
-                                <li class="menu-item menu-item-has-children current-menu-ancestor">
-                                    <a href="#">Blog Posts</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="post_standard.html">Standard Post</a></li>
-                                        <li><a href="post_image.html">Image Post</a></li>
-                                        <li class="current-menu-item"><a href="post_gallery.html">Gallery Post</a></li>
-                                        <li><a href="post_video.html">Video Post</a></li>
-                                    </ul><!-- .sub-menu -->
-                                </li><!-- .menu-item-has-children -->
-                            </ul><!-- .sub-menu -->
-                        </li><!-- .menu-item-has-children -->
-
-                        <li class="menu-item menu-item-has-children">
-                            <a href="#">Contacts</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="contacts01.html">Fullwidth</a></li>
-                                <li class="menu-item"><a href="contacts02.html">With Sidebar</a></li>
-                            </ul><!-- .sub-menu -->
-                        </li><!-- .menu-item-has-children -->
-
-                    </ul><!-- .restbeef_menu -->
-                    <a href="table_reservation.html" class="btn_restbeef btn_book_table">Book a Table</a>
-                </nav><!-- .restbeef_nav -->
-            </div><!-- .restbeef_menu_part -->
-
-        </div><!-- .restbeef_header_content -->
-
+                </div><!-- .restbeef_content_wrapper -->
+            </div><!-- .restbeef_container -->
+        </div><!-- .restbeef_main_wrapper -->
     </div>
 @endsection
 
