@@ -21,15 +21,15 @@
         "label" => __("static_text.invitation")
         ],
         [
-        "routeName" => "homepage",
+        "routeName" => "events",
         "label" => __("static_text.events")
         ],
         [
-        "routeName" => "homepage",
+        "routeName" => "gallery",
         "label" => __("static_text.gallery")
         ],
         [
-        "routeName" => "homepage",
+        "routeName" => "contact",
         "label" => __("static_text.contact")
         ],
 

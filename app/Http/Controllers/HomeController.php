@@ -54,11 +54,9 @@ class HomeController extends Controller
     }
     public function contact()
     {
-        if (app()->getLocale() == "tr") {
-            return view('frontend.table_rezervations');
-        } else {
-            return view( 'frontend.table_rezervations');
-        }
+
+            return view('frontend.contact');
+
 
     }
     public function about()
@@ -77,29 +75,22 @@ class HomeController extends Controller
     }
     public function gallery()
     {
-        if (app()->getLocale() == "tr") {
-            return view('frontend.table_rezervations');
-        } else {
-            return view( 'frontend.table_rezervations');
-        }
+
+            return view('frontend.gallery');
+
 
     }
     public function events()
     {
-        if (app()->getLocale() == "tr") {
-            return view('frontend.table_rezervations');
-        } else {
-            return view( 'frontend.table_rezervations');
-        }
+
+            return view('frontend.events');
 
     }
     public function restaurant()
     {
-        if (app()->getLocale() == "tr") {
-            return view('frontend.table_rezervations');
-        } else {
-            return view( 'frontend.table_rezervations');
-        }
+
+            return view('frontend.restaurant');
+
 
     }
     public function login_v()
