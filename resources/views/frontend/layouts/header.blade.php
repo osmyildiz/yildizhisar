@@ -1,25 +1,3 @@
-<style>
-    .restbeef_header_socials_list > li > a > i {
-        background: white;
-        border-radius: 60%;
-        padding: 6px;
-        color: black;
-        font-size: 10px !important;
-    }
-
-    .fa-facebook-f {
-        padding: 6px 12px 6px 9px !important;
-    }
-
-    .restbeef_header_tagline {
-        border-bottom: 2px solid #8B9598;
-    }
-
-    .restbeef_header_tagline ul li {
-        font-size: 12px;
-        color: #8B9598;
-    }
-</style>
 <div class="restbeef_header_wrapper restbeef_js_bg_image restbeef_height100"
      data-background="img/yildiz-hisar-sariyer-1.jpg">
 

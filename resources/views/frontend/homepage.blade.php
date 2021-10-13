@@ -5,43 +5,6 @@
 @endsection
 @section('slider')
     <style>
-
-        body > div > div.restbeef_header_wrapper.restbeef_js_bg_image.restbeef_height100 > div > h1 {
-            font-size: 75px;
-        }
-
-        .restbeef_header_description {
-            font-size: 40px;
-        }
-
-        a.restbeef_button.restbeef_button_white {
-            background-color: #0b0b0b;
-            color: #A38D58;
-            border: 1px solid #A38D58;
-            font-size: 20px;
-        }
-        a.restbeef_button.restbeef_button_white:hover {
-            border: 1px solid #ffffff;
-        }
-
-        .restbeef_header_title a.restbeef_button {
-            max-width: 200px;
-        }
-
-        body > div > div.restbeef_main_wrapper > div > div > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div.restbeef_recent_product_content > h4 {
-            margin-top: -20px;
-            line-height: 52px;
-        }
-
-        body > div > div.restbeef_main_wrapper > div > div > div > div > div.restbeef_block.restbeef_js_bg_image.restbeef_height100.restbeef_fullwidth.restbeef_js_margin.restbeef_home01_block.restbeef_content_on_right > div > div > div:nth-child(2) > div > h2 > span {
-            color: #AD965F;
-            padding-bottom: 24px;
-            font-size: 55px;
-        }
-
-        .rezervasyon-text {
-            font-size: 23px !important;
-        }
         .menu-bnt{
             cursor: pointer;
         }
@@ -648,14 +611,14 @@
                                     <div class="col-5 restbeef_js_padding restbeef_align_middle">
                                         <div class="restbeef_content_box align_center">
                                             @if(app()->getLocale() == "tr")
-                                                <h2 style="font-size: 60px">
-                                                    <span style="font-size: 50px" class="restbeef_up_title">Tüm Sorularınız İçin</span>
+                                                <h2>
+                                                    <span  class="restbeef_up_title">Tüm Sorularınız İçin</span>
                                                     Mesaj Atabilirsiniz.
                                                 </h2>
 
                                             @else
-                                                <h2 style="font-size: 60px">
-                                                    <span style="font-size: 50px" class="restbeef_up_title">You can send a message</span>
+                                                <h2 >
+                                                    <span  class="restbeef_up_title">You can send a message</span>
                                                     for all your questions.
                                                 </h2>
 
@@ -694,6 +657,7 @@
         </div><!-- .restbeef_container -->
     </div><!-- .restbeef_main_wrapper -->
     <script>
+        /*
         $(".menu-bnt").click(function () {
             $(".bottom-menu").addClass("d-none-x").removeClass("d-flex-x")
             $(".menu-bnt").removeClass("menuactive")
@@ -705,6 +669,7 @@
                 $("#bottom-menu" + id).addClass("d-none-x").removeClass("d-flex-x")
             }
         })
+         */
     </script>
 @endsection
 
