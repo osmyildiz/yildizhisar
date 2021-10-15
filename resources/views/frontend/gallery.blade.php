@@ -51,12 +51,12 @@
         @if(app()->getLocale() == "tr")
 
             <h1>
-                <span class="restbeef_up_title"></span>
+                <span class="restbeef_up_title">Bize daha yakından bakın</span>
                 GALERİ
             </h1>
         @else
             <h1>
-                <span class="restbeef_up_title"></span>
+                <span class="restbeef_up_title">Take a closer look at us</span>
                 GALLERY
             </h1>
         @endif

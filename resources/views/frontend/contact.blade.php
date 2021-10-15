@@ -51,13 +51,13 @@
         @if(app()->getLocale() == "tr")
 
             <h1>
-                <span class="restbeef_up_title"></span>
+                <span class="restbeef_up_title">Bize Ulaşın</span>
                 İLETİŞİM
             </h1>
         @else
             <h1>
-                <span class="restbeef_up_title"></span>
-                CONTACT
+                <span class="restbeef_up_title">How to Find</span>
+                Our Contacts
             </h1>
         @endif
 
@@ -154,7 +154,7 @@
                                                         <span class="restbeef_up_title">Bizimle İletişimde Kalın</span>
                                                     </h2>
                                                     <div class="restbeef_contact_info">
-                                                        <h6>Social Medyadan Bizi Takip Edin</h6>
+                                                        <h6>SOSYAL Medyadan Bizi Takip Edin</h6>
                                                         <ul class="restbeef_contact_socials">
                                                             <li><a href="https://www.facebook.com/yildizhisarcom/"><i class="fab fa-facebook-f"></i></a></li>
                                                             <li><a href="https://twitter.com/yildizhisarcom"><i class="fab fa-twitter"></i></a></li>
@@ -174,7 +174,7 @@
                                                                 <span class="restbeef_up_title">Stay in Touch</span>
                                                             </h2>
                                                             <div class="restbeef_contact_info">
-                                                                <h6>Social Links</h6>
+                                                                <h6>SOCIAL LINKS</h6>
                                                                 <ul class="restbeef_contact_socials">
                                                                     <li><a href="https://www.facebook.com/yildizhisarcom/"><i class="fab fa-facebook-f"></i></a></li>
                                                                     <li><a href="https://twitter.com/yildizhisarcom"><i class="fab fa-twitter"></i></a></li>
@@ -199,32 +199,64 @@
 
 
                             <!-- Contact Form -->
-                            <div class="restbeef_block restbeef_js_margin" data-margin="0 0 90px 0">
-                                <h2 class="restbeef_block_title align_center">
-                                    <span class="restbeef_up_title">Got Questions?</span>
-                                    Get IN TOUCH WITH US
-                                </h2>
-                                <div class="restbeef_block_inner">
-                                    <div class="row restbeef_keep_tablet_row">
-                                        <div class="col-2"></div>
-                                        <div class="col-8">
-                                            <form method="post" id="contact_form">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <input type="text" placeholder="Enter Your Name" name="your_name"/>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <input type="email" placeholder="Enter Your Email" name="your_email"/>
-                                                    </div>
-                                                </div><!-- .row -->
-                                                <textarea placeholder="Enter Your Message" name="your_message"></textarea>
-                                                <input type="submit" value="Send Your Message"/>
-                                            </form>
-                                        </div><!-- .col-8 -->
-                                        <div class="col-2"></div>
-                                    </div>
-                                </div>
-                            </div><!-- .restbeef_block -->
+                                @if(app()->getLocale() == "tr")
+                                    <div class="restbeef_block restbeef_js_margin" data-margin="0 0 90px 0">
+                                        <h2 class="restbeef_block_title align_center">
+                                            <span class="restbeef_up_title">Sorunuz mu var?</span>
+                                            Bizimle iletişime geçin
+                                        </h2>
+
+                                        <div class="restbeef_block_inner">
+                                            <div class="row restbeef_keep_tablet_row">
+                                                <div class="col-2"></div>
+                                                <div class="col-8">
+                                                    <form method="post" id="contact_form">
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <input type="text" placeholder="Adınız" name="name"/>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <input type="email" placeholder="Email" name="email"/>
+                                                            </div>
+                                                        </div><!-- .row -->
+                                                        <textarea placeholder="Mesajınız" name="message"></textarea>
+                                                        <input type="submit" value="Gönder"/>
+                                                    </form>
+                                                </div><!-- .col-8 -->
+                                                <div class="col-2"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .restbeef_block -->
+                                        @else
+                                    <div class="restbeef_block restbeef_js_margin" data-margin="0 0 90px 0">
+                                        <h2 class="restbeef_block_title align_center">
+                                            <span class="restbeef_up_title">Got Questions?</span>
+                                            Get IN TOUCH WITH US
+                                        </h2>
+
+                                        <div class="restbeef_block_inner">
+                                            <div class="row restbeef_keep_tablet_row">
+                                                <div class="col-2"></div>
+                                                <div class="col-8">
+                                                    <form method="post" id="contact_form">
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <input type="text" placeholder="Enter Your Name" name="name"/>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <input type="email" placeholder="Enter Your Email" name="email"/>
+                                                            </div>
+                                                        </div><!-- .row -->
+                                                        <textarea placeholder="Enter Your Message" name="message"></textarea>
+                                                        <input type="submit" value="Send Your Message"/>
+                                                    </form>
+                                                </div><!-- .col-8 -->
+                                                <div class="col-2"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- .restbeef_block -->
+                                                @endif
+
 
                             <!-- Map Block -->
                             <div class="restbeef_block restbeef_fullwidth">

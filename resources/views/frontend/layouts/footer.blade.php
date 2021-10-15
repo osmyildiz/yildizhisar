@@ -38,7 +38,7 @@
                 <div class="widget widget_text">
                     <h2 ><span class="restbeef_up_title">@lang('static_text.contact1')</span></h2>
                     <div class="textwidget">
-                        <p>Rumeli Hisarı, Salih Bey Sk. No:6,  34470 Sarıyer / İstanbul</p>
+                        <p>Rumeli Hisarı, Salih Bey Sk. No:6, <br> 34470 Sarıyer / İstanbul</p>
                         <p><span>Tel: </span>+90 212 287 70 45</p>
                         <p>@lang('static_text.open')</p>
                     </div><!-- .textwidget -->

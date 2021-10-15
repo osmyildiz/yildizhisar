@@ -51,12 +51,12 @@
         @if(app()->getLocale() == "tr")
 
             <h1>
-                <span class="restbeef_up_title"></span>
+                <span class="restbeef_up_title">Leziz yemeklerimiz sizi bekliyor</span>
                 RESTORAN
             </h1>
         @else
             <h1>
-                <span class="restbeef_up_title"></span>
+                <span class="restbeef_up_title">Our delicious meals are waiting for you</span>
                 RESTAURANT
             </h1>
         @endif
@@ -607,8 +607,15 @@
                             <!-- Our Gallery -->
                             <div class="restbeef_block">
                                 <h2 class="restbeef_block_title align_center restbeef_js_margin" data-margin="0 0 40px 0">
-                                    <span class="restbeef_up_title">New Photos</span>
-                                    Our Gallery
+                                    @if(app()->getLocale() == "tr")
+
+                                        <span class="restbeef_up_title">Yeni Fotoğraflar</span>
+                                        GALERİ
+                                    @else
+                                        <span class="restbeef_up_title">New Photos</span>
+                                        Our Gallery
+                                    @endif
+
                                 </h2>
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_grig_gallery_wrapper restbeef_grig_3columns restbeef_photoswipe_wrapper" data-uniqid="624">

@@ -6,12 +6,12 @@
         @if(app()->getLocale() == "tr")
 
             <h1>
-                <span class="restbeef_up_title"></span>
+                <span class="restbeef_up_title">Bizi daha yakından tanıyın</span>
                 HAKKIMIZDA
             </h1>
         @else
             <h1>
-                <span class="restbeef_up_title"></span>
+                <span class="restbeef_up_title">Know us better</span>
                 ABOUT US
             </h1>
         @endif
