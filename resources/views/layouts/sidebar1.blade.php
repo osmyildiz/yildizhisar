@@ -23,9 +23,16 @@
 
                 </li>
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="/reservations" class="waves-effect">
                         <i class="bx bx-table"></i>
                         <span key="t-dashboards">Rezervasyon</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/test" class="waves-effect">
+                        <i class="bx bx-table"></i>
+                        <span key="t-dashboards">Deneme</span>
                     </a>
 
                 </li>

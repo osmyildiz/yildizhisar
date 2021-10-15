@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -48,11 +49,18 @@ Route::post('/update-password/{id}', [App\Http\Controllers\HomeController::class
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/panel', [HomeController::class, 'panel'])->name('panel');
+    Route::get('/reservations', [AdminController::class, 'reservations'])->name('reservations');
+    Route::post('/add-reservations', [AdminController::class, 'add_reservations'])->name('add_reservations');
+    Route::get ('/delete-reservations/{id}', [AdminController::class, 'delete_reservations'])->name('reservation.delete');
+    Route::get ('/edit-reservations/{id}', [AdminController::class, 'edit_reservations'])->name('reservation.edit');
+    Route::post('/edit-reservation/{id}', [AdminController::class, 'edit_reservation'])->name('edit.reservation');
+
+    Route::get('/test', [AdminController::class, 'test'])->name('test');
+
 
 });
 
 
     Route::get('/admin', [App\Http\Controllers\HomeController::class, 'login_v'])->name('login_v');
-    Route::post('/login_1', [LoginController::class, 'action1'])->name('admin.login_1');
     Route::post('/login1', [HomeController::class, 'login'])->name('login1');
 
