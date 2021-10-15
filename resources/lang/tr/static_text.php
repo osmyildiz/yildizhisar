@@ -32,7 +32,9 @@ return [
     "menu_reference"=>"SPONSORS",
     "reference"=>"MAIN SPONSORS",
     "sector_ref"=>"SECTOR SPONSORS",
-    "reservations" => "REZERVASYON"
+    "reservations" => "REZERVASYON",
+    "reservation_success"=>"Rezervasyonunuz oluşturulmuştur.",
+    "reservation_error"=>"Rezervasyonunuz oluşturulurken bir hata oluştu. Lütfen tekrar deneyiniz."
 
 
 

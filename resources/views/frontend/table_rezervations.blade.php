@@ -1,7 +1,38 @@
 @extends('frontend.layouts.master')
 @section('title','Rezervasyon')
 
+
+
 @section('slider')
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            opacity: 0.83;
+            transition: opacity 0.6s;
+            margin-bottom: 15px;
+        }
+
+        .alert.success {background-color: #04AA6D;}
+        .alert.info {background-color: #2196F3;}
+        .alert.warning {background-color: #ff9800;}
+
+        .closebtn {
+            padding-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 20px;
+            line-height: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+    </style>
     <style>
 
         body > div > div.restbeef_header_wrapper.restbeef_js_bg_image.restbeef_height100 > div > h1 {
@@ -74,29 +105,47 @@
                 <div class="restbeef_content_wrapper restbeef_no_sidebar">
 
                     <!-- Content Inner -->
+
                     <div class="restbeef_content">
                         <div class="restbeef_tiny">
 
                             <div class="restbeef_block restbeef_js_margin restbeef_intro_block" data-margin="0 0 80px 0">
                                 <div class="row">
                                     <div class="col-3"></div>
+
                                     <div class="col-6 align_center">
+                                        @if(session()->has('message'))
+                                            <div class="alert {{session('alert') ?? 'info'}} alert-dismissible fade show">
+                                                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+
+                                                @if(session('alert')=="success")
+                                                    @lang('static_text.reservation_success')
+                                                    @else
+                                                    @lang('static_text.reservation_error')
+                                                @endif
+                                            </div>
+                                        @endif
                                         <p>@lang('static_text.table_sentence')</p>
                                     </div><!-- .col-6 -->
                                     <div class="col-3"></div>
                                 </div>
                             </div><!-- .restbeef_block -->
-
+                            <form method="POST" class="form-horizontal" action="/add-reservation-web" enctype="multipart/form-data">
+                                @csrf
                             <div class="restbeef_block restbeef_js_margin" data-margin="0 0 90px 0">
                                 <div class="restbeef_block_inner">
                                     <form name="reservation" class="restbeef_reservation_form" id="reservation_form" method="post">
                                         <div class="row">
                                             <div class="col-4">
-                                                <input type="date" data-placeholder="@lang('static_text.date')" name="your_date"/>
+                                                <input type="date" data-placeholder="@lang('static_text.date')" name="res_date" min="<?= date('Y-m-d'); ?>"/>
                                             </div><!-- .col-4 -->
                                             <div class="col-4">
-                                                <select name="your_time">
+                                                <select name="time">
                                                     <option value="" selected>@lang('static_text.time')</option>
+                                                    <option value="08:00">08:00</option>
+                                                    <option value="08:30">08:30</option>
+                                                    <option value="09:00">09:00</option>
+                                                    <option value="09:30">09:30</option>
                                                     <option value="10:00">10:00</option>
                                                     <option value="10:30">10:30</option>
                                                     <option value="11:00">11:00</option>
@@ -122,40 +171,32 @@
                                                     <option value="21:00">21:00</option>
                                                     <option value="21:30">21:30</option>
                                                     <option value="22:00">22:00</option>
+                                                    <option value="22:30">22:30</option>
                                                 </select>
                                             </div><!-- .col-4 -->
                                             <div class="col-4">
-                                                <select name="your_guests">
-                                                    <option value="" selected>@lang('static_text.guest_number')</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                </select>
+                                                <input type="number"  placeholder="@lang('static_text.guest_number')" name="guest_number" required />
                                             </div><!-- .col-4 -->
                                         </div><!-- .row -->
                                         <div class="row">
                                             <div class="col-4">
-                                                <input type="text" placeholder="@lang('static_text.name')" name="your_name"/>
+                                                <input type="text" placeholder="@lang('static_text.name')" name="name" required />
                                             </div><!-- .col-4 -->
                                             <div class="col-4">
-                                                <input type="email" placeholder="@lang('static_text.email')" name="your_email"/>
+                                                <input type="email" placeholder="@lang('static_text.email')" name="email"/>
                                             </div><!-- .col-4 -->
                                             <div class="col-4">
-                                                <input type="tel" placeholder="@lang('static_text.phone')" name="your_phone"/>
+                                                <input type="number" placeholder="@lang('static_text.phone')" name="phone" required onKeyDown="limitText(this,10);"
+                                                       onKeyUp="limitText(this,10);" />
                                             </div><!-- .col-4 -->
                                         </div><!-- .row -->
-                                        <textarea placeholder="@lang('static_text.message')" name="your_text"></textarea>
+                                        <textarea placeholder="@lang('static_text.message')" name="message"></textarea>
                                         <input type="submit" value="@lang('static_text.reservation_submit_text')" />
                                     </form>
                                 </div>
                             </div><!-- .restbeef_block -->
 
-
+                            </form>
                             <!-- Map Block -->
                             <div class="restbeef_block restbeef_fullwidth">
                                 <div class="restbeef_block_inner">
@@ -188,6 +229,23 @@
     <script src="{{ URL::asset('/js/photoswipe.min.js') }}"></script>
     <script src="{{ URL::asset('/js/photoswipe-ui-default.min.js') }}"></script>
     <script src="{{ URL::asset('/js/theme.js') }}"></script>
+
+        <script language="javascript" type="text/javascript">
+            function limitText(limitField, limitNum) {
+                if (limitField.value.length > limitNum) {
+                    limitField.value = limitField.value.substring(0, limitNum);
+                }
+            }
+
+
+        </script>
+        <script>
+            $(document).ready(function(){
+
+                $('.alert-success').fadeIn().delay(3000).fadeOut('slow');
+                $('.alert-danger').fadeIn().delay(3000).fadeOut('slow');
+            });
+        </script>
 
 @endsection
 

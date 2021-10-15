@@ -83,73 +83,73 @@
 
                                         <div class="restbeef_event_item">
                                             <div class="restbeef_event_item_image">
-                                                <a href="post_standard.html">
-                                                    <img src="img/dummy/960x808.png" alt="Order two glasses of wine at a 30% discount"/>
+                                                <a href="img/y12.jpeg">
+                                                    <img src="img/y12.jpeg" alt="Order two glasses of wine at a 30% discount"/>
                                                 </a>
                                             </div><!-- .restbeef_event_item_image -->
                                             <div class="restbeef_event_item_content">
-                                                <div class="restbeef_event_date">22 May, 2019</div>
-                                                <h5><a href="post_standard.html">Order two glasses of wine at a 30% discount</a></h5>
+                                                <div class="restbeef_event_date">22-05-2019</div>
+                                                <h5><a href="img/y12.jpeg">Order two glasses of wine at a 30% discount</a></h5>
                                             </div><!-- .restbeef_event_item_content -->
                                         </div><!-- .restbeef_event_item -->
 
                                         <div class="restbeef_event_item">
                                             <div class="restbeef_event_item_image">
-                                                <a href="post_standard.html">
-                                                    <img src="img/dummy/960x808.png" alt="Every friday: Whiskey + any steak = 20% off"/>
+                                                <a href="img/y13.jpeg">
+                                                    <img src="img/y13.jpeg" alt="Every friday: Whiskey + any steak = 20% off"/>
                                                 </a>
                                             </div><!-- .restbeef_event_item_image -->
                                             <div class="restbeef_event_item_content">
-                                                <div class="restbeef_event_date">20 May, 2019</div>
-                                                <h5><a href="post_standard.html">Every friday: Whiskey + any steak = 20% off</a></h5>
+                                                <div class="restbeef_event_date">22-05-2018</div>
+                                                <h5><a href="img/y13.jpeg">Every friday: Whiskey + any steak = 20% off</a></h5>
                                             </div><!-- .restbeef_event_item_content -->
                                         </div><!-- .restbeef_event_item -->
 
                                         <div class="restbeef_event_item">
                                             <div class="restbeef_event_item_image">
-                                                <a href="post_standard.html">
-                                                    <img src="img/dummy/960x808.png" alt="BBQ Party: second BBQ is 20% off"/>
+                                                <a href="img/y14.jpeg">
+                                                    <img src="img/y14.jpeg" alt="BBQ Party: second BBQ is 20% off"/>
                                                 </a>
                                             </div><!-- .restbeef_event_item_image -->
                                             <div class="restbeef_event_item_content">
-                                                <div class="restbeef_event_date">17 May, 2019</div>
-                                                <h5><a href="post_standard.html">BBQ Party: second BBQ is 20% off</a></h5>
+                                                <div class="restbeef_event_date">17-08-2019</div>
+                                                <h5><a href="img/y14.jpeg">BBQ Party: second BBQ is 20% off</a></h5>
                                             </div><!-- .restbeef_event_item_content -->
                                         </div><!-- .restbeef_event_item -->
 
                                         <div class="restbeef_event_item">
                                             <div class="restbeef_event_item_image">
-                                                <a href="post_standard.html">
-                                                    <img src="img/dummy/960x808.png" alt="Summer Ground: Lounge music every evening"/>
+                                                <a href="img/y7.jpeg">
+                                                    <img src="img/y7.jpeg" alt="Summer Ground: Lounge music every evening"/>
                                                 </a>
                                             </div><!-- .restbeef_event_item_image -->
                                             <div class="restbeef_event_item_content">
-                                                <div class="restbeef_event_date">15 May, 2019</div>
-                                                <h5><a href="post_standard.html">Summer Ground: Lounge music every evening</a></h5>
+                                                <div class="restbeef_event_date">15-10-2019</div>
+                                                <h5><a href="img/y7.jpeg">Summer Ground: Lounge music every evening</a></h5>
                                             </div><!-- .restbeef_event_item_content -->
                                         </div><!-- .restbeef_event_item -->
 
                                         <div class="restbeef_event_item">
                                             <div class="restbeef_event_item_image">
-                                                <a href="post_standard.html">
-                                                    <img src="img/dummy/960x808.png" alt="Get one burger? Take second with 40% Off!"/>
+                                                <a href="img/y10.jpeg">
+                                                    <img src="img/y10.jpeg" alt="Get one burger? Take second with 40% Off!"/>
                                                 </a>
                                             </div><!-- .restbeef_event_item_image -->
                                             <div class="restbeef_event_item_content">
-                                                <div class="restbeef_event_date">10 MAY, 2019</div>
-                                                <h5><a href="post_standard.html">Get one burger? Take second with 40% Off!</a></h5>
+                                                <div class="restbeef_event_date">10-09-2020</div>
+                                                <h5><a href="img/y10.jpeg">Get one burger? Take second with 40% Off!</a></h5>
                                             </div><!-- .restbeef_event_item_content -->
                                         </div><!-- .restbeef_event_item -->
 
                                         <div class="restbeef_event_item">
                                             <div class="restbeef_event_item_image">
-                                                <a href="post_standard.html">
-                                                    <img src="img/dummy/960x808.png" alt="Get hungry? Fast delivery to Anywhere!"/>
+                                                <a href="img/y2.jpeg">
+                                                    <img src="img/y2.jpeg" alt="Get hungry? Fast delivery to Anywhere!"/>
                                                 </a>
                                             </div><!-- .restbeef_event_item_image -->
                                             <div class="restbeef_event_item_content">
-                                                <div class="restbeef_event_date">05 May, 2019</div>
-                                                <h5><a href="post_standard.html">Get hungry? Fast delivery to Anywhere!</a></h5>
+                                                <div class="restbeef_event_date">05-04-2021</div>
+                                                <h5><a href="img/y2.jpeg">Get hungry? Fast delivery to Anywhere!</a></h5>
                                             </div><!-- .restbeef_event_item_content -->
                                         </div><!-- .restbeef_event_item -->
                                     </div><!-- .restbeef_promo_block -->

@@ -56,7 +56,45 @@
                                 </div><!-- .restbeef_block_inner -->
                             </div><!-- .restbeef_block -->
 
-                                 <!-- Our Gallery -->
+                            <!-- Cheef Block -->
+                            <div class="restbeef_block restbeef_js_bg_image restbeef_height100 restbeef_fullwidth restbeef_js_margin restbeef_home01_block restbeef_content_on_right" data-background="img/yildiz_about1.jpeg" data-margin="0 0 71px 0">
+                                <div class="restbeef_block_inner">
+                                    <div class="row row_no_gap restbeef_align_middle restbeef_height100">
+                                        <div class="col-6 restbeef_js_padding" data-padding="50px 0 50px 50px">
+
+                                        </div><!-- .col-6 -->
+                                        <div class="col-6 restbeef_js_padding" data-padding="50px 50px 50px 0">
+                                            <div class="restbeef_content_box align_center">
+                                               @if(app()->getLocale() == "tr")
+                                                    <h2>
+                                                        <span class="restbeef_up_title">Muhteşem Ambiyanslar</span>
+                                                        Yıldız Hisar'da
+                                                    </h2>
+                                                    <p class="restbeef_js_margin" data-margin="0 0 43px 0">
+                                                        Yıldız Hisar Tesisleri, yaz aylarında teras dahil edilerek ve açılır tavan sisteminden faydalanarak oldukça şık bir ambiyansa sahiptir. Ayrıca, Davet ve Etkinlik için oldukça şık bir davet alanı daha sunmaktadır. Dilerseniz mekânın havuz başı alanında göze hitap eden, elegant ve romantik bir davet gerçekleştirebilirsiniz. Boğazın muhteşem görünümü bu alanda da davetinize eşlik edecek ve gecenizi aydınlatacaktır. Yıldız Hisar Tesisleri ağırlıklı olarak yemekli düğün ve davetlerde Türk mutfağının eşsiz lezzetlerini sunmaktadır. Bununla sınırlı kalmayıp ikramlarında Dünya mutfağına da yer vermektedir. Menü konusunda çeşitlilik sunarak, herkesi mutlu edebilmektedir. Oldukça profesyonel aşçılar ve mutfak ekibine sahip olan tesisimiz, davetlerinde ikram edilecek yemekler konusunda oldukça hassastır.
+
+                                                    </p>
+
+                                                @else
+                                                    <h2>
+                                                        <span class="restbeef_up_title">Magnificent Ambiances at</span>
+                                                        YILDIZ Hisar
+                                                    </h2>
+                                                    <p class="restbeef_js_margin" data-margin="0 0 43px 0">
+
+                                                        Yıldız Hisar Facilities have a very stylish ambiance by including the terrace in the summer months and making use of the sunroof system. It also offers a very stylish invitation area for Invitation and Event. If you wish, you can organize an elegant and romantic invitation in the poolside area of the venue. The magnificent view of the Bosphorus will accompany your invitation in this area as well and will illuminate your night. Yıldız Hisar Facilities mainly offer the unique tastes of Turkish cuisine in weddings and invitations with dinner. Not limited to this, it also includes world cuisine in its offerings. It can make everyone happy by offering a variety on the menu. Our facility, which has very professional cooks and kitchen team, is very sensitive about the meals to be served at their invitations.
+                                                    </p>
+
+                                                @endif
+
+
+                                            </div><!-- .restbeef_content_box -->
+                                        </div><!-- .col-6 -->
+                                    </div>
+                                </div><!-- .restbeef_block_inner -->
+                            </div><!-- .restbeef_block -->
+
+                            <!-- Our Gallery -->
                             <div class="restbeef_block">
                                 <h2 class="restbeef_block_title align_center restbeef_js_margin" data-margin="0 0 40px 0">
                                     <span class="restbeef_up_title">New Photos</span>
@@ -65,33 +103,33 @@
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_grig_gallery_wrapper restbeef_grig_3columns restbeef_photoswipe_wrapper" data-uniqid="624">
                                         <div class="restbeef_grig_gallery_item">
-                                            <a href="img/dummy/1920x1280.png" class="restbeef_pswp_slide" data-size="1920x1280" data-count="0">
-                                                <img src="img/dummy/740x640.png" alt="Gallery Image 01"/>
+                                            <a href="img/y1.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="0">
+                                                <img src="img/y1.jpeg" alt="Gallery Image 01"/>
                                             </a>
                                         </div>
                                         <div class="restbeef_grig_gallery_item">
-                                            <a href="img/dummy/1920x1280.png" class="restbeef_pswp_slide" data-size="1920x1280" data-count="1">
-                                                <img src="img/dummy/740x640.png" alt="Gallery Image 02"/>
+                                            <a href="img/y2.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="1">
+                                                <img src="img/y2.jpeg" alt="Gallery Image 02"/>
                                             </a>
                                         </div>
                                         <div class="restbeef_grig_gallery_item">
-                                            <a href="img/dummy/1920x1280.png" class="restbeef_pswp_slide" data-size="1920x1280" data-count="2">
-                                                <img src="img/dummy/740x640.png" alt="Gallery Image 03"/>
+                                            <a href="img/y7.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="2">
+                                                <img src="img/y7.jpeg" alt="Gallery Image 03"/>
                                             </a>
                                         </div>
                                         <div class="restbeef_grig_gallery_item">
-                                            <a href="img/dummy/1920x1280.png" class="restbeef_pswp_slide" data-size="1920x1280" data-count="3">
-                                                <img src="img/dummy/740x640.png" alt="Gallery Image 04"/>
+                                            <a href="img/y4.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="3">
+                                                <img src="img/y4.jpeg" alt="Gallery Image 04"/>
                                             </a>
                                         </div>
                                         <div class="restbeef_grig_gallery_item">
-                                            <a href="img/dummy/1920x1280.png" class="restbeef_pswp_slide" data-size="1920x1280" data-count="4">
-                                                <img src="img/dummy/740x640.png" alt="Gallery Image 05"/>
+                                            <a href="img/y5.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="4">
+                                                <img src="img/y5.jpeg" alt="Gallery Image 05"/>
                                             </a>
                                         </div>
                                         <div class="restbeef_grig_gallery_item">
-                                            <a href="img/dummy/1920x1280.png" class="restbeef_pswp_slide" data-size="1920x1280" data-count="5">
-                                                <img src="img/dummy/740x640.png" alt="Gallery Image 06"/>
+                                            <a href="img/y6.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="5">
+                                                <img src="img/y6.jpeg" alt="Gallery Image 06"/>
                                             </a>
                                         </div>
                                     </div><!-- .restbeef_grig_gallery_wrapper -->

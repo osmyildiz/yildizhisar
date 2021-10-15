@@ -32,6 +32,9 @@ return [
     "menu_reference"=>"SPONSORS",
     "reference"=>"MAIN SPONSORS",
     "sector_ref"=>"SECTOR SPONSORS",
-    "reservations" => "BOOKING TABLE"
+    "reservations" => "BOOKING TABLE",
+    "reservation_success"=>"Your reservation has been created.",
+    "reservation_error"=>"An error occurred while creating your reservation. Please try again. "
+
 
 ];

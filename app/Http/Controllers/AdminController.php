@@ -59,6 +59,29 @@ class AdminController extends Controller
         return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
 
     }
+    protected function add_reservation_web(Request $request)
+    {
+
+        $reservation = new Reservation();
+        $reservation->name = $request->name;
+        $reservation->time = $request->time;
+        $reservation->guest_number = $request->guest_number;
+        $reservation->email = $request->email;
+        $reservation->phone = $request->phone;
+        $reservation->message = $request->message;
+        $res_date = $request->res_date;
+        $res_date = date('Y-m-d', strtotime($res_date));
+        $reservation->res_date = $res_date;
+        $save = $reservation->save();
+
+        if($save){
+
+            return redirect()->back()->with(['message' => 'Rezervasyon oluşturuldu!', 'alert' => 'success']);
+
+        }
+        return redirect()->back()->with(['message' => 'beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!', 'alert' => 'danger']);
+
+    }
     protected function edit_reservations($id)
 {
     $res = Reservation::find($id);

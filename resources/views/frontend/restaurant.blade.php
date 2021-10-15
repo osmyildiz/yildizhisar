@@ -613,18 +613,18 @@
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_grig_gallery_wrapper restbeef_grig_3columns restbeef_photoswipe_wrapper" data-uniqid="624">
                                         <div class="restbeef_grig_gallery_item">
-                                            <a href="img/dummy/1920x1280.png" class="restbeef_pswp_slide" data-size="1920x1280" data-count="0">
-                                                <img src="img/dummy/740x640.png" alt="Gallery Image 01"/>
+                                            <a href="img/y11.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="0">
+                                                <img src="img/y11.jpeg" alt="Gallery Image 01"/>
                                             </a>
                                         </div>
                                         <div class="restbeef_grig_gallery_item">
-                                            <a href="img/dummy/1920x1280.png" class="restbeef_pswp_slide" data-size="1920x1280" data-count="1">
-                                                <img src="img/dummy/740x640.png" alt="Gallery Image 02"/>
+                                            <a href="img/y9.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="1">
+                                                <img src="img/y9.jpeg" alt="Gallery Image 02"/>
                                             </a>
                                         </div>
                                         <div class="restbeef_grig_gallery_item">
-                                            <a href="img/dummy/1920x1280.png" class="restbeef_pswp_slide" data-size="1920x1280" data-count="2">
-                                                <img src="img/dummy/740x640.png" alt="Gallery Image 03"/>
+                                            <a href="img/y10.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="2">
+                                                <img src="img/y10.jpeg" alt="Gallery Image 03"/>
                                             </a>
                                         </div>
 

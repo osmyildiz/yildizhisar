@@ -82,57 +82,114 @@
                                     <div class="row restbeef_keep_tablet_row">
                                         <div class="col-4">
                                             <div class="restbeef_contact_info_wrapper">
-                                                <h2>
-                                                    <span class="restbeef_up_title">Working Hours</span>
-                                                </h2>
-                                                <div class="restbeef_contact_info">
-                                                    <h6>Weekdays</h6>
-                                                    From 10:00 to 23:00
-                                                </div><!-- .restbeef_contact_info -->
-                                                <div class="restbeef_contact_info">
-                                                    <h6>Weekend</h6>
-                                                    From 10:00 to 23:00
-                                                    <br>
-                                                    or to the last client
-                                                </div><!-- .restbeef_contact_info -->
+                                                @if(app()->getLocale() == "tr")
+                                                    <h2>
+                                                        <span class="restbeef_up_title">Çalışma Saatleri</span>
+                                                    </h2>
+                                                    <div class="restbeef_contact_info">
+                                                        <h6>Hafta içi</h6>
+                                                        09:00 - 23:00
+                                                    </div><!-- .restbeef_contact_info -->
+                                                    <div class="restbeef_contact_info">
+                                                        <h6>Hafta sonu</h6>
+                                                        09:00 - 23:00
+
+                                                    </div><!-- .restbeef_contact_info -->
+                                                @else
+                                                    <h2>
+                                                        <span class="restbeef_up_title">Working Hours</span>
+                                                    </h2>
+                                                    <div class="restbeef_contact_info">
+                                                        <h6>Weekdays</h6>
+                                                        From 09:00 to 23:00
+                                                    </div><!-- .restbeef_contact_info -->
+                                                    <div class="restbeef_contact_info">
+                                                        <h6>Weekend</h6>
+                                                        From 09:00 to 23:00
+
+                                                    </div><!-- .restbeef_contact_info -->
+                                                @endif
+
                                             </div><!-- .restbeef_contact_info_wrapper -->
                                         </div><!-- .col1-4 -->
                                         <div class="col-4">
                                             <div class="restbeef_contact_info_wrapper">
-                                                <h2>
-                                                    <span class="restbeef_up_title">Contact Info</span>
-                                                </h2>
-                                                <div class="restbeef_contact_info">
-                                                    <h6>Our Phone</h6>
-                                                    +1 (234) 555 - 67 - 89
-                                                </div><!-- .restbeef_contact_info -->
-                                                <div class="restbeef_contact_info">
-                                                    <h6>Our Location</h6>
-                                                    817 N California Ave,
-                                                    <br>
-                                                    Chicago, IL 60622
-                                                </div><!-- .restbeef_contact_info -->
+                                                @if(app()->getLocale() == "tr")
+                                                    <h2>
+                                                        <span class="restbeef_up_title">İletişim Bilgileri</span>
+                                                    </h2>
+                                                    <div class="restbeef_contact_info">
+                                                        <h6>Telefon</h6>
+                                                        +90 212 287 70 45
+
+                                                    </div><!-- .restbeef_contact_info -->
+                                                    <div class="restbeef_contact_info">
+                                                        <h6>Adres</h6>
+                                                        Rumeli Hisarı, Salih Bey Sk. No:6
+                                                        <br>
+                                                        34470 Sarıyer / İstanbul
+                                                    </div><!-- .restbeef_contact_info -->
+                                                @else
+                                                    <h2>
+                                                        <span class="restbeef_up_title">Contact Info</span>
+                                                    </h2>
+                                                    <div class="restbeef_contact_info">
+                                                        <h6>Our Phone</h6>
+                                                        +90 212 287 70 45
+                                                    </div><!-- .restbeef_contact_info -->
+                                                    <div class="restbeef_contact_info">
+                                                        <h6>Our Location</h6>
+                                                        Rumeli Hisarı, Salih Bey Sk. No:6
+                                                        <br>
+                                                        34470 Sarıyer / İstanbul
+                                                    </div><!-- .restbeef_contact_info -->
+                                                @endif
+
                                             </div><!-- .restbeef_contact_info_wrapper -->
                                         </div><!-- .col1-4 -->
                                         <div class="col-4">
                                             <div class="restbeef_contact_info_wrapper">
-                                                <h2>
-                                                    <span class="restbeef_up_title">Stay in Touch</span>
-                                                </h2>
-                                                <div class="restbeef_contact_info">
-                                                    <h6>Social Links</h6>
-                                                    <ul class="restbeef_contact_socials">
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                                                    </ul>
-                                                </div><!-- .restbeef_contact_info -->
-                                                <div class="restbeef_contact_info">
-                                                    <h6>Email and Support</h6>
-                                                    <strong>General:</strong> <a href="mailto:restbeef@pixel-mafia.com">restbeef@pixel-mafia.com</a>
-                                                    <br>
-                                                    <strong>Clients Support:</strong> <a href="mailto:support@pixel-mafia.com">support@pixel-mafia.com</a>
+                                                @if(app()->getLocale() == "tr")
+                                                    <h2>
+                                                        <span class="restbeef_up_title">Bizimle İletişimde Kalın</span>
+                                                    </h2>
+                                                    <div class="restbeef_contact_info">
+                                                        <h6>Social Medyadan Bizi Takip Edin</h6>
+                                                        <ul class="restbeef_contact_socials">
+                                                            <li><a href="https://www.facebook.com/yildizhisarcom/"><i class="fab fa-facebook-f"></i></a></li>
+                                                            <li><a href="https://twitter.com/yildizhisarcom"><i class="fab fa-twitter"></i></a></li>
+                                                            <li><a href="https://instagram.com/yildizhisarcom"><i class="fab fa-instagram"></i></a></li>
+                                                            <li><a href="https://www.linkedin.com/in/yıldız-hisar"><i class="fab fa-linkedin"></i></a></li>
+
+                                                        </ul>
+                                                    </div><!-- .restbeef_contact_info -->
+                                                    <div class="restbeef_contact_info">
+                                                        <h6>Bize Ulaşın</h6>
+                                                        <strong>Genel:</strong> <a href="mailto:info@yildizhisar.com">info@yildizhisar.com</a>
+                                                        <br>
+                                                        <strong>Düğün & Davet:</strong> <a href="mailto:dugundavet@yildizhisar.com">dugundavet@yildizhisar.com</a>
+
+                                                    @else
+                                                            <h2>
+                                                                <span class="restbeef_up_title">Stay in Touch</span>
+                                                            </h2>
+                                                            <div class="restbeef_contact_info">
+                                                                <h6>Social Links</h6>
+                                                                <ul class="restbeef_contact_socials">
+                                                                    <li><a href="https://www.facebook.com/yildizhisarcom/"><i class="fab fa-facebook-f"></i></a></li>
+                                                                    <li><a href="https://twitter.com/yildizhisarcom"><i class="fab fa-twitter"></i></a></li>
+                                                                    <li><a href="https://instagram.com/yildizhisarcom"><i class="fab fa-instagram"></i></a></li>
+                                                                    <li><a href="https://www.linkedin.com/in/yıldız-hisar"><i class="fab fa-linkedin"></i></a></li>
+
+                                                                </ul>
+                                                            </div><!-- .restbeef_contact_info -->
+                                                            <div class="restbeef_contact_info">
+                                                                <h6>Contact Us</h6>
+                                                                <strong>General:</strong> <a href="mailto:info@yildizhisar.com">info@yildizhisar.com</a>
+                                                                <br>
+                                                                <strong>Wedding:</strong> <a href="mailto:dugundavet@yildizhisar.com">dugundavet@yildizhisar.com</a>
+
+                                                                @endif
                                                 </div><!-- .restbeef_contact_info -->
                                             </div><!-- .restbeef_contact_info_wrapper -->
                                         </div><!-- .col1-4 -->
