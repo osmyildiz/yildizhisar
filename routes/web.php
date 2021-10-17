@@ -70,7 +70,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin', [App\Http\Controllers\HomeController::class, 'login_v'])->name('login_v');
     Route::post('/login1', [HomeController::class, 'login'])->name('login1');
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.','middleware' => 'auth'], function () {
     Route::resource('galleries', GalleryController::class, ['except' => ['index',]]);
     Route::match(['put', 'get'], 'galleries', [GalleryController::class, 'index'])->name('galleries.index');
 
