@@ -16,9 +16,11 @@ return [
     'message' => 'Mesajınız',
     'send' => 'GÖNDER',
     'name' => 'Ad Soyad',
+    'firstname' => 'Ad',
+    'lastname' => 'Soyad',
     'open' => 'Her gün 9:00 - 23:00 arası açık',
     'newsletter' => 'E-Bülten',
-    'email' => 'E-mail',
+    'email' => 'E-MAIL',
     'date' => 'Tarih',
     'time' => 'Saat Aralığı',
     'guest_number' => 'Kişi Sayısı',
@@ -34,7 +36,9 @@ return [
     "sector_ref"=>"SECTOR SPONSORS",
     "reservations" => "REZERVASYON",
     "reservation_success"=>"Rezervasyonunuz oluşturulmuştur.",
-    "reservation_error"=>"Rezervasyonunuz oluşturulurken bir hata oluştu. Lütfen tekrar deneyiniz."
+    "reservation_error"=>"Rezervasyonunuz oluşturulurken bir hata oluştu. Lütfen tekrar deneyiniz.",
+    "form_success"=>"Mesajınız gönderilmiştir. En kısa zamanda size dönüş yapıalcaktır.",
+    "form_error"=>"Mesajınız gönderilirken beklenmeyen bir hata oluştu. Lütfen tekrar deneyiniz."
 
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Form;
 use App\Models\Menu;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
@@ -18,9 +19,23 @@ class AdminController extends Controller
         $res_today = Reservation::whereDay('res_date', now()->day)->get();
         $res_all =Reservation::get();
 
-        return view('reservations',compact('res_today','res_all'));
+        return view('admin-reservations',compact('res_today','res_all'));
     }
-    protected function add_reservations(Request $request)
+    public function admin_menu()
+    {
+        $res_today = Reservation::whereDay('res_date', now()->day)->get();
+        $res_all =Reservation::get();
+
+        return view('admin-menu',compact('res_today','res_all'));
+    }
+    public function admin_about()
+    {
+        $res_today = Reservation::whereDay('res_date', now()->day)->get();
+        $res_all =Reservation::get();
+
+        return view('admin-about',compact('res_today','res_all'));
+    }
+    public function add_reservations(Request $request)
     {
         $rules = [
             'time' => 'required',
@@ -59,7 +74,7 @@ class AdminController extends Controller
         return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
 
     }
-    protected function add_reservation_web(Request $request)
+    public function add_reservation_web(Request $request)
     {
 
         $reservation = new Reservation();
@@ -82,14 +97,33 @@ class AdminController extends Controller
         return redirect()->back()->with(['message' => 'beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!', 'alert' => 'danger']);
 
     }
-    protected function edit_reservations($id)
+    public function add_form_web(Request $request)
+    {
+
+        $form = new Form();
+        $form->name = $request->name;
+        $form->surname = $request->surname;
+        $form->email = $request->email;
+        $form->phone = $request->phone;
+        $form->message = $request->message;
+        $save = $form->save();
+
+        if($save){
+
+            return redirect()->back()->with(['message' => 'Mesajınız iletildi!', 'alert' => 'success']);
+
+        }
+        return redirect()->back()->with(['message' => 'Beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!', 'alert' => 'danger']);
+
+    }
+    public function edit_reservations($id)
 {
     $res = Reservation::find($id);
 
     return view('reservation-edit',compact('res'));
 
 }
-    protected function edit_reservation(Request $request,$id)
+    public function edit_reservation(Request $request,$id)
     {
 
 
@@ -114,7 +148,7 @@ class AdminController extends Controller
 
 
     }
-    protected function delete_reservations($id)
+    public function delete_reservations($id)
     {
         $res = Reservation::destroy($id);
 

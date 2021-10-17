@@ -29,6 +29,7 @@ Route::get('/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])-
 Route::get('/wedding', [App\Http\Controllers\HomeController::class, 'wedding'])->name('wedding');
 Route::get('/restaurant', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant');
 Route::post('/add-reservation-web', [AdminController::class, 'add_reservation_web'])->name('add_reservation_web');
+Route::post('/add-form-web', [AdminController::class, 'add_form_web'])->name('add_form_web');
 
 
 
@@ -56,6 +57,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get ('/delete-reservations/{id}', [AdminController::class, 'delete_reservations'])->name('reservation.delete');
     Route::get ('/edit-reservations/{id}', [AdminController::class, 'edit_reservations'])->name('reservation.edit');
     Route::post('/edit-reservation/{id}', [AdminController::class, 'edit_reservation'])->name('edit.reservation');
+    Route::get('/admin-menu', [AdminController::class, 'admin_menu'])->name('admin-menu');
+    Route::get('/admin-about', [AdminController::class, 'admin_about'])->name('admin-about');
 
     Route::get('/test', [AdminController::class, 'test'])->name('test');
 
