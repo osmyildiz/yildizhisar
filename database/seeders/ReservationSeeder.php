@@ -21,7 +21,7 @@ class ReservationSeeder extends Seeder
             $faker = Faker::create('tr_TR');
             DB::table('reservations')->insert([
                 'name' => $faker->firstName.' '.$faker->lastName,
-                'email' => Str::random(10).'@gmail.com',
+                'email' => $faker->email,
                 'res_date' => Carbon::today()->addDays(rand(1, 20)),
                 'time' => rand(17,22).':00',
                 'phone' => $faker->phoneNumber,

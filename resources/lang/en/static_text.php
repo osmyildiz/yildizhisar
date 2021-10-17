@@ -13,14 +13,16 @@ return [
     'contact1' => 'Contact Us',
     'more_info' => 'More Information',
     'name' => 'Name Surname',
+    'firstname' => 'Name',
+    'lastname' => 'Surname',
     'message' => 'Your Message',
     'send' => 'SEND',
     'open' => 'Open daily from 9:00 to 23:00',
     'newsletter' => 'Stay in Touch',
-    'telephone' => 'Phone or E-mail',
-    'email' => 'E-mail',
-    'date' => 'Date',
-    'time' => 'Select Time',
+    'telephone' => 'Phone or E-MAIL',
+    'email' => 'E-MAIL',
+    'date' => 'DATE',
+    'time' => 'SELECT TIME',
     'guest_number' => 'Guests Numbers',
     'table_sentence' => 'Book your place in advance for your beautiful moments.',
     'phone' => 'Phone',
@@ -34,7 +36,10 @@ return [
     "sector_ref"=>"SECTOR SPONSORS",
     "reservations" => "BOOKING TABLE",
     "reservation_success"=>"Your reservation has been created.",
-    "reservation_error"=>"An error occurred while creating your reservation. Please try again. "
+    "reservation_error"=>"An error occurred while creating your reservation. Please try again. ",
+    "form_success"=>"Your message has been sent. We will get back to you as soon as possible. ",
+    "form_error"=>"There was an unexpected error while sending your message. Please try again."
+
 
 
 ];

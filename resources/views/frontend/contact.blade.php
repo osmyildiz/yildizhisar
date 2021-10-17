@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Events')
+@section('title','Contact')
 
 @section('slider')
     <style>
@@ -45,6 +45,35 @@
         }
         .menu-active{
             border-bottom: 10px solid #AB945E;
+        }
+    </style>
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            opacity: 0.83;
+            transition: opacity 0.6s;
+            margin-bottom: 15px;
+        }
+
+        .alert.success {background-color: #04AA6D;}
+        .alert.info {background-color: #2196F3;}
+        .alert.warning {background-color: #ff9800;}
+
+        .closebtn {
+            padding-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 20px;
+            line-height: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
         }
     </style>
     <div class="restbeef_header_title restbeef_container">
@@ -199,63 +228,45 @@
 
 
                             <!-- Contact Form -->
-                                @if(app()->getLocale() == "tr")
+
                                     <div class="restbeef_block restbeef_js_margin" data-margin="0 0 90px 0">
                                         <h2 class="restbeef_block_title align_center">
                                             <span class="restbeef_up_title">Sorunuz mu var?</span>
                                             Bizimle iletişime geçin
                                         </h2>
-
+                                        <form method="post" id="contact_form">
                                         <div class="restbeef_block_inner">
                                             <div class="row restbeef_keep_tablet_row">
                                                 <div class="col-2"></div>
                                                 <div class="col-8">
-                                                    <form method="post" id="contact_form">
-                                                        <div class="row">
-                                                            <div class="col-6">
-                                                                <input type="text" placeholder="Adınız" name="name"/>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <input type="email" placeholder="Email" name="email"/>
-                                                            </div>
-                                                        </div><!-- .row -->
-                                                        <textarea placeholder="Mesajınız" name="message"></textarea>
-                                                        <input type="submit" value="Gönder"/>
-                                                    </form>
-                                                </div><!-- .col-8 -->
-                                                <div class="col-2"></div>
-                                            </div>
-                                        </div>
-                                    </div><!-- .restbeef_block -->
-                                        @else
-                                    <div class="restbeef_block restbeef_js_margin" data-margin="0 0 90px 0">
-                                        <h2 class="restbeef_block_title align_center">
-                                            <span class="restbeef_up_title">Got Questions?</span>
-                                            Get IN TOUCH WITH US
-                                        </h2>
 
-                                        <div class="restbeef_block_inner">
-                                            <div class="row restbeef_keep_tablet_row">
-                                                <div class="col-2"></div>
-                                                <div class="col-8">
-                                                    <form method="post" id="contact_form">
                                                         <div class="row">
                                                             <div class="col-6">
-                                                                <input type="text" placeholder="Enter Your Name" name="name"/>
+                                                                <input type="text" placeholder=@lang('static_text.firstname') name="name"/>
                                                             </div>
                                                             <div class="col-6">
-                                                                <input type="email" placeholder="Enter Your Email" name="email"/>
+                                                                <input type="text" placeholder=@lang('static_text.lastname') name="surname"/>
                                                             </div>
+
                                                         </div><!-- .row -->
-                                                        <textarea placeholder="Enter Your Message" name="message"></textarea>
-                                                        <input type="submit" value="Send Your Message"/>
-                                                    </form>
+                                                    <div class="row">
+
+                                                        <div class="col-6">
+                                                            <input type="number" placeholder=@lang('static_text.phone') name="phone"/>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <input type="email" placeholder=@lang('static_text.email') name="email"/>
+                                                        </div>
+                                                    </div><!-- .row -->
+                                                        <textarea placeholder="@lang('static_text.message')" name="message"></textarea>
+                                                        <input type="submit" value="@lang('static_text.send')"/>
+
                                                 </div><!-- .col-8 -->
                                                 <div class="col-2"></div>
                                             </div>
                                         </div>
+                                        </form>
                                     </div><!-- .restbeef_block -->
-                                                @endif
 
 
                             <!-- Map Block -->
