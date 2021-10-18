@@ -23,9 +23,6 @@ class AboutSeeder extends Seeder
             'img1'=>"/img/y1.jpeg",
             'img2'=>"/img/y2.jpeg",
             'img3'=>"/img/y7.jpeg",
-            'img4'=>"/img/y4.jpeg",
-            'img5'=>"/img/y5.jpeg",
-            'img6'=>"/img/y6.jpeg",
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
 
