@@ -54,10 +54,10 @@
                             <input type="submit" value=@lang('static_text.send')>
                         </form><!-- .restbeef_intouch_form -->
                         <ul class="restbeef_intouch_socials">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://www.facebook.com/yildizhisarcom/"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/yildizhisarcom">      <i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://instagram.com/yildizhisarcom">    <i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/yıldız-hisar"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
                     </div><!-- .restbeef_in_touch -->
                 </div><!-- .widget_text -->

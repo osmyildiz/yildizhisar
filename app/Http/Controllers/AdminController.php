@@ -162,7 +162,6 @@ class AdminController extends Controller
     }
     public function add_newsletter(Request $request)
     {
-
         $check_email = Newsletter::where('email',$request->email)->first();
         if($check_email->count()>0){
             $scroll = true;
