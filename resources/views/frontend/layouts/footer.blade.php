@@ -1,7 +1,7 @@
 <!-- Footer Widgets -->
 <div class="restbeef_footer_widgets" style="background-color: #AB945E">
-    <!-- Back to Top Button
-    <a href="#" class="restbeef_back_to_top"><i class="fa fa-chevron-up"></i></a> -->
+    <!--  Back to Top Button  -->
+    <a style="background: #AB945E;" href="#" class="restbeef_back_to_top"><i class="fa fa-chevron-up"></i></a>
     <div class="restbeef_container">
         <div class="row">
 
