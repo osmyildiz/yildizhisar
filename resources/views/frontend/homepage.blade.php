@@ -4,6 +4,53 @@
     restbeef_header_wrapper restbeef_js_bg_image restbeef_height100 data-background="img/yildiz-hisar-sariyer-1.jpg"
 @endsection
 @section('slider')
+    <style>
+        body > div > div.restbeef_header_wrapper.restbeef_js_bg_image.restbeef_height100 > div > h1 {
+            font-size: 75px;
+        }
+
+        .restbeef_header_description {
+            font-size: 40px;
+        }
+
+        a.restbeef_button.restbeef_button_white {
+            background-color: #0b0b0b;
+            color: #A38D58;
+            border: 1px solid #A38D58;
+            font-size: 20px;
+        }
+
+        a.restbeef_button.restbeef_button_white:hover {
+            border: 1px solid #ffffff;
+        }
+
+        .restbeef_header_title a.restbeef_button {
+            max-width: 200px;
+        }
+
+        body > div > div.restbeef_main_wrapper > div > div > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div.restbeef_recent_product_content > h4 {
+            margin-top: -20px;
+            line-height: 52px;
+        }
+
+        body > div > div.restbeef_main_wrapper > div > div > div > div > div.restbeef_block.restbeef_js_bg_image.restbeef_height100.restbeef_fullwidth.restbeef_js_margin.restbeef_home01_block.restbeef_content_on_right > div > div > div:nth-child(2) > div > h2 > span {
+            color: #AD965F;
+            padding-bottom: 24px;
+            font-size: 55px;
+        }
+
+        .rezervasyon-text {
+            font-size: 23px !important;
+        }
+
+        .menu-bnt {
+            cursor: pointer;
+        }
+
+        .menu-active {
+            border-bottom: 10px solid #AB945E;
+        }
+    </style>
 
     <div class="restbeef_header_title restbeef_container">
         @if(app()->getLocale() == "tr")
@@ -26,8 +73,9 @@
                 Event & Wedding & Restaurant
             </p>
             <a href="/gallery" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Gallery</a>
-            <a href="/table_rezervations" style=" border: 1px solid white;"
-               class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Booking Table</a>
+            <a href="/table_rezervations" style="border: 1px solid white;"
+               class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Booking
+                Table</a>
         @endif
 
     </div><!-- .restbeef_header_title -->
@@ -45,12 +93,14 @@
                         <!-- Recent Products Block -->
                         <div class="restbeef_block restbeef_js_margin" data-margin="-20px 0 99px 0">
                             @if(app()->getLocale() == "tr")
-                                <h2 style="font-size: 60px" class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
+                                <h2 style="font-size: 60px" class="align_center restbeef_js_padding"
+                                    data-padding="0 0 15px 0">
                                     <span style="font-size: 50px" class="restbeef_up_title">Eşsiz Lezzetler</span>
                                     Yıldız Hisar'da
                                 </h2>
                             @else
-                                <h2 style="font-size: 60px" class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
+                                <h2 style="font-size: 60px" class="align_center restbeef_js_padding"
+                                    data-padding="0 0 15px 0">
                                     <span style="font-size: 50px" class="restbeef_up_title">Unique Tastes at</span>
                                     Yıldız Hisar
                                 </h2>
@@ -66,13 +116,16 @@
                                         </div><!-- .restbeef_recent_product_image -->
                                         <div class="restbeef_recent_product_content">
                                             <div class="restbeef_recent_product_price" style="box-shadow: none">
-                                                <span style="background-color: transparent;"><i style="font-size: 39px;font-weight: 700;" class="far fa-star"></i></span>
+                                                <span style="background-color: transparent;"><i
+                                                        style="font-size: 39px;font-weight: 700;"
+                                                        class="far fa-star"></i></span>
                                             </div><!-- .restbeef_recent_product_price -->
                                             <h4><!--
 													<span class="restbeef_up_title">
 														Season Menu
 													</span>-->
-                                                <a href="{{route('restaurant')}}" class="card-menu-text">@lang('static_text.restaurant')</a>
+                                                <a href="{{route('restaurant')}}"
+                                                   class="card-menu-text">@lang('static_text.restaurant')</a>
 
                                             </h4>
                                         </div><!-- .restbeef_recent_product_content -->
@@ -85,14 +138,18 @@
                                             </a>
                                         </div><!-- .restbeef_recent_product_image -->
                                         <div class="restbeef_recent_product_content">
-                                            <<div class="restbeef_recent_product_price" style="box-shadow: none">
-                                                <span style="background-color: transparent;"><i style="font-size: 39px;font-weight: 700;" class="far fa-star"></i></span>
+                                            <
+                                            <div class="restbeef_recent_product_price" style="box-shadow: none">
+                                                <span style="background-color: transparent;"><i
+                                                        style="font-size: 39px;font-weight: 700;"
+                                                        class="far fa-star"></i></span>
                                             </div><!-- .restbeef_recent_product_price -->
                                             <h4><!--
 													<span class="restbeef_up_title">
 														Dessert Menu
 													</span>-->
-                                                <a href="{{route('wedding')}}" class="card-menu-text">@lang('static_text.invitation')</a>
+                                                <a href="{{route('wedding')}}"
+                                                   class="card-menu-text">@lang('static_text.invitation')</a>
 
                                             </h4>
                                         </div><!-- .restbeef_recent_product_content -->
@@ -106,13 +163,16 @@
                                         </div><!-- .restbeef_recent_product_image -->
                                         <div class="restbeef_recent_product_content">
                                             <div class="restbeef_recent_product_price" style="box-shadow: none">
-                                                <span style="background-color: transparent;"><i style="font-size: 39px;font-weight: 700;" class="far fa-star"></i></span>
+                                                <span style="background-color: transparent;"><i
+                                                        style="font-size: 39px;font-weight: 700;"
+                                                        class="far fa-star"></i></span>
                                             </div><!-- .restbeef_recent_product_price -->
                                             <h4><!--
 													<span class="restbeef_up_title">
 														Steak Menu
 													</span>-->
-                                                <a href="{{route('events')}}" class="card-menu-text">@lang('static_text.events')</a>
+                                                <a href="{{route('events')}}"
+                                                   class="card-menu-text">@lang('static_text.events')</a>
 
                                             </h4>
                                         </div><!-- .restbeef_recent_product_content -->
@@ -138,9 +198,13 @@
                                                     Hakkımızda
                                                 </h2>
                                                 <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
-                                                    Yıldız Hisar, harika mimarisi ve boğaz manzarasının yanı sıra kahvaltı, öğle ve akşam yemekleri, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde hizmet vermektedir.</p>
+                                                    Yıldız Hisar, harika mimarisi ve boğaz manzarasının yanı sıra
+                                                    kahvaltı, öğle ve akşam yemekleri, kokteyl, mezuniyet geceleri,
+                                                    seminer gibi özel günlerde hizmet vermektedir.</p>
                                                 <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
-                                                    Eşsiz lezzetleriyle boğazın mavi sularını ve esintisini hissedebileceğiniz en güzel konumlardan birisi olan Rumeli Hisa'ında hatırlalardan çıkmayan anlar için sizleri bekliyoruz.</p>
+                                                    Eşsiz lezzetleriyle boğazın mavi sularını ve esintisini
+                                                    hissedebileceğiniz en güzel konumlardan birisi olan Rumeli Hisa'ında
+                                                    hatırlalardan çıkmayan anlar için sizleri bekliyoruz.</p>
                                                 <a href="/table_rezervations"
                                                    class="restbeef_button rezervasyon-text">Rezervasyon</a>
 
@@ -150,14 +214,18 @@
                                                     About Us
                                                 </h2>
                                                 <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
-                                                    In addition to its magnificent architecture and Bosphorus view, Yıldız Hisar serves on special occasions such as breakfast, lunch and dinner, cocktails, graduation nights and seminars. </p>
+                                                    In addition to its magnificent architecture and Bosphorus view,
+                                                    Yıldız Hisar serves on special occasions such as breakfast, lunch
+                                                    and dinner, cocktails, graduation nights and seminars. </p>
                                                 <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
-                                                    We are waiting for you for unforgettable moments in Rumeli Hisa, one of the most beautiful locations where you can feel the blue waters and breeze of the Bosphorus with its unique flavors. </p>
+                                                    We are waiting for you for unforgettable moments in Rumeli Hisa, one
+                                                    of the most beautiful locations where you can feel the blue waters
+                                                    and breeze of the Bosphorus with its unique flavors. </p>
                                                 <a href="/table_rezervations"
                                                    class="restbeef_button rezervasyon-text">Book a Table</a>
 
                                             @endif
-                                            </div><!-- .restbeef_content_box -->
+                                        </div><!-- .restbeef_content_box -->
                                     </div><!-- .col-6 -->
                                 </div>
                             </div><!-- .restbeef_block_inner -->
@@ -168,111 +236,31 @@
                             <div style="box-shadow: none; padding: 37px 49px 0px 49px !important;"
                                  class="col-10 restbeef_content_box restbeef_js_margin">
                                 <div class="restbeef_block">
-                                    <h2  class="restbeef_block_title align_center"
+                                    <h2 class="restbeef_block_title align_center"
                                         style="font-size:60px; border-bottom: 2px solid black; padding-bottom: 15px">
                                         <span style="font-size: 50px" class="restbeef_up_title">Lezzetli</span>
                                         HİSAR MENU
                                     </h2>
                                     <div style="" class="row">
-                                        <div class="col-2 text-center menu-bnt menu-active" id="1"><h5 style="font-weight: normal;">
+                                        <div class="col-2 text-center menu-bnt menu-active" id="1"><h5>
                                                 <a style="font-size: 30px;">Çorbalar</a></h5></div>
-                                        <div class="col-3 text-center menu-bnt" id="2"><h5 style="font-weight: normal;">
+                                        <div class="col-3 text-center menu-bnt" id="2"><h5>
                                                 <a style="font-size: 30px;">Ara Sıcaklar</a></h5></div>
-                                        <div class="col-3 text-center menu-bnt" id="3"><h5 style="font-weight: normal;">
+                                        <div class="col-3 text-center menu-bnt" id="3"><h5>
                                                 <a style="font-size: 30px;">Ana Yemekler</a></h5></div>
-                                        <div class="col-2 offset-0 text-center menu-bnt" id="4"><h5
-                                                style="font-weight: normal;"><a style="font-size: 30px;">Tatlılar</a>
-                                            </h5></div>
-                                        <div class="col-2 text-center menu-bnt" id="5"><h5 style="font-weight: normal;">
+                                        <div class="col-2 offset-0 text-center menu-bnt" id="4"><h5>
+                                                <a style="font-size: 30px;">Tatlılar</a></h5></div>
+                                        <div class="col-2 text-center menu-bnt" id="5"><h5>
                                                 <a style="font-size: 30px;">İçecekler</a></h5></div>
                                     </div>
                                 </div><!-- .restbeef_block -->
                             </div>
-                            <div class="row d-flex-x bottom-menu" id="menu-1" style="background-color: #F7F4EF;  padding: 25px;">
+                            <!-- Çorbalar -->
+                            <div class="row d-flex bottom-menu" id="menu-1"
+                                 style="background-color: #F7F4EF;  padding: 25px;">
+
                                 <div class="col-6">
                                     <div class="restbeef_menu_list">
-
-                                        <div class="restbeef_menu_item">
-                                            <div class="restbeef_menu_item_head">
-                                                <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                    15 TL
-                                                </h5><!-- .restbeef_menu_price -->
-                                            </div><!-- .restbeef_menu_item_head -->
-                                            <div class="restbeef_menu_item_content">
-                                                <div style="font-weight: 600" class="restbeef_menu_item_description">
-                                                    Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                    cheese and dressed with olive oil.
-                                                </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                            </div><!-- .restbeef_menu_item_content -->
-                                        </div><!-- .restbeef_menu_item -->
-                                        <div class="restbeef_menu_item">
-                                            <div class="restbeef_menu_item_head">
-                                                <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                    15 TL
-                                                </h5><!-- .restbeef_menu_price -->
-                                            </div><!-- .restbeef_menu_item_head -->
-                                            <div class="restbeef_menu_item_content">
-                                                <div style="font-weight: 600" class="restbeef_menu_item_description">
-                                                    Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                    cheese and dressed with olive oil.
-                                                </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                            </div><!-- .restbeef_menu_item_content -->
-                                        </div>
-
-                                    </div><!-- .restbeef_menu_list -->
-                                </div><!-- .col-6 -->
-                                <div class="col-6">
-                                    <div class="restbeef_menu_list">
-                                        <div class="restbeef_menu_item">
-                                            <div class="restbeef_menu_item_head">
-                                                <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                    15 TL
-                                                </h5><!-- .restbeef_menu_price -->
-                                            </div><!-- .restbeef_menu_item_head -->
-                                            <div class="restbeef_menu_item_content">
-                                                <div style="font-weight: 600" class="restbeef_menu_item_description">
-                                                    Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                    cheese and dressed with olive oil.
-                                                </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                            </div><!-- .restbeef_menu_item_content -->
-                                        </div>
-                                        <div class="restbeef_menu_item">
-                                            <div class="restbeef_menu_item_head">
-                                                <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5  style="color: #AB945E" class="restbeef_menu_price">
-                                                    15 TL
-                                                </h5><!-- .restbeef_menu_price -->
-                                            </div><!-- .restbeef_menu_item_head -->
-                                            <div  class="restbeef_menu_item_content">
-                                                <div style="font-weight: 600" class="restbeef_menu_item_description">
-                                                    Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                    cheese and dressed with olive oil.
-                                                </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                            </div><!-- .restbeef_menu_item_content -->
-                                        </div>
-                                    </div><!-- .restbeef_menu_list -->
-
-                                </div><!-- .col-6 -->
-                            </div>
-                            <div class="row d-none-x bottom-menu" id="menu-2" style="background-color: #F7F4EF;  padding: 25px;">
-                                <div class="col-6">
-                                    <div class="restbeef_menu_list">
-
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
@@ -293,7 +281,7 @@
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5  style="color: #AB945E" class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -350,14 +338,16 @@
 
                                 </div><!-- .col-6 -->
                             </div>
-                            <div class="row d-none-x bottom-menu" id="menu-3" style="background-color: #F7F4EF;  padding: 25px;">
+                            <!-- Ara Sıcaklar -->
+                            <div class="row d-none bottom-menu" id="menu-2"
+                                 style="background-color: #F7F4EF;  padding: 25px;">
                                 <div class="col-6">
                                     <div class="restbeef_menu_list">
 
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -374,7 +364,7 @@
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -396,7 +386,7 @@
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -413,7 +403,7 @@
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -431,14 +421,16 @@
 
                                 </div><!-- .col-6 -->
                             </div>
-                            <div class="row d-none-x bottom-menu" id="menu-4" style="background-color: #F7F4EF;  padding: 25px;">
+                            <!-- .Ana Yemekler -->
+                            <div class="row d-none bottom-menu" id="menu-3"
+                                 style="background-color: #F7F4EF;  padding: 25px;">
                                 <div class="col-6">
                                     <div class="restbeef_menu_list">
 
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -455,7 +447,7 @@
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -477,7 +469,7 @@
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -494,7 +486,7 @@
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -512,14 +504,16 @@
 
                                 </div><!-- .col-6 -->
                             </div>
-                            <div class="row d-none-x bottom-menu" id="menu-5" style="background-color: #F7F4EF;  padding: 25px;">
+                            <!-- .Tatlılar -->
+                            <div class="row d-none bottom-menu" id="menu-4"
+                                 style="background-color: #F7F4EF;  padding: 25px;">
                                 <div class="col-6">
                                     <div class="restbeef_menu_list">
 
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -536,7 +530,7 @@
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -558,7 +552,7 @@
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -575,7 +569,90 @@
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
                                                 <h5><a href="product.html">Greek salad</a></h5>
-                                                <h5 class="restbeef_menu_price">
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                    15 TL
+                                                </h5><!-- .restbeef_menu_price -->
+                                            </div><!-- .restbeef_menu_item_head -->
+                                            <div class="restbeef_menu_item_content">
+                                                <div class="restbeef_menu_item_description">
+                                                    Is made with pieces of tomatoes, sliced cucumbers, onion, feta
+                                                    cheese and dressed with olive oil.
+                                                </div><!-- .restbeef_menu_item_description
+                                                        <div class="restbeef_menu_item_weight">
+                                                            200/30g
+                                                        </div>--><!-- .restbeef_menu_item_weight -->
+                                            </div><!-- .restbeef_menu_item_content -->
+                                        </div>
+                                    </div><!-- .restbeef_menu_list -->
+
+                                </div><!-- .col-6 -->
+                            </div>
+                            <!-- .İçecekler -->
+                            <div class="row d-none bottom-menu" id="menu-5"
+                                 style="background-color: #F7F4EF;  padding: 25px;">
+                                <div class="col-6">
+                                    <div class="restbeef_menu_list">
+
+                                        <div class="restbeef_menu_item">
+                                            <div class="restbeef_menu_item_head">
+                                                <h5><a href="product.html">Greek salad</a></h5>
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                    15 TL
+                                                </h5><!-- .restbeef_menu_price -->
+                                            </div><!-- .restbeef_menu_item_head -->
+                                            <div class="restbeef_menu_item_content">
+                                                <div class="restbeef_menu_item_description">
+                                                    Is made with pieces of tomatoes, sliced cucumbers, onion, feta
+                                                    cheese and dressed with olive oil.
+                                                </div><!-- .restbeef_menu_item_description
+                                                        <div class="restbeef_menu_item_weight">
+                                                            200/30g
+                                                        </div>--><!-- .restbeef_menu_item_weight -->
+                                            </div><!-- .restbeef_menu_item_content -->
+                                        </div><!-- .restbeef_menu_item -->
+                                        <div class="restbeef_menu_item">
+                                            <div class="restbeef_menu_item_head">
+                                                <h5><a href="product.html">Greek salad</a></h5>
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                    15 TL
+                                                </h5><!-- .restbeef_menu_price -->
+                                            </div><!-- .restbeef_menu_item_head -->
+                                            <div class="restbeef_menu_item_content">
+                                                <div class="restbeef_menu_item_description">
+                                                    Is made with pieces of tomatoes, sliced cucumbers, onion, feta
+                                                    cheese and dressed with olive oil.
+                                                </div><!-- .restbeef_menu_item_description
+                                                        <div class="restbeef_menu_item_weight">
+                                                            200/30g
+                                                        </div>--><!-- .restbeef_menu_item_weight -->
+                                            </div><!-- .restbeef_menu_item_content -->
+                                        </div>
+
+                                    </div><!-- .restbeef_menu_list -->
+                                </div><!-- .col-6 -->
+                                <div class="col-6">
+                                    <div class="restbeef_menu_list">
+                                        <div class="restbeef_menu_item">
+                                            <div class="restbeef_menu_item_head">
+                                                <h5><a href="product.html">Greek salad</a></h5>
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                    15 TL
+                                                </h5><!-- .restbeef_menu_price -->
+                                            </div><!-- .restbeef_menu_item_head -->
+                                            <div class="restbeef_menu_item_content">
+                                                <div class="restbeef_menu_item_description">
+                                                    Is made with pieces of tomatoes, sliced cucumbers, onion, feta
+                                                    cheese and dressed with olive oil.
+                                                </div><!-- .restbeef_menu_item_description
+                                                        <div class="restbeef_menu_item_weight">
+                                                            200/30g
+                                                        </div>--><!-- .restbeef_menu_item_weight -->
+                                            </div><!-- .restbeef_menu_item_content -->
+                                        </div>
+                                        <div class="restbeef_menu_item">
+                                            <div class="restbeef_menu_item_head">
+                                                <h5><a href="product.html">Greek salad</a></h5>
+                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
                                             </div><!-- .restbeef_menu_item_head -->
@@ -605,42 +682,45 @@
                                         <div class="restbeef_content_box align_center">
                                             @if(app()->getLocale() == "tr")
                                                 <h2>
-                                                    <span  class="restbeef_up_title">Tüm Sorularınız İçin</span>
+                                                    <span class="restbeef_up_title">Tüm Sorularınız İçin</span>
                                                     Mesaj Atabilirsiniz.
                                                 </h2>
 
                                             @else
-                                                <h2 >
-                                                    <span  class="restbeef_up_title">You can send a message</span>
+                                                <h2>
+                                                    <span class="restbeef_up_title">You can send a message</span>
                                                     for all your questions.
                                                 </h2>
 
                                             @endif
-                                                <div class="restbeef_block_title align_center">
-                                                    @if(session()->has('message'))
-                                                        <div class="alert {{session('alert') ?? 'info'}} alert-dismissible fade show">
-                                                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                            <div class="restbeef_block_title align_center">
+                                                @if(session()->has('message'))
+                                                    <div
+                                                        class="alert {{session('alert') ?? 'info'}} alert-dismissible fade show">
+                                                        <span class="closebtn"
+                                                              onclick="this.parentElement.style.display='none';">&times;</span>
 
-                                                            @if(session('alert')=="success")
-                                                                @lang('static_text.form_success')
-                                                            @else
-                                                                @lang('static_text.form_error')
-                                                            @endif
-                                                        </div>
-                                                    @endif
-                                                </div>
+                                                        @if(session('alert')=="success")
+                                                            @lang('static_text.form_success')
+                                                        @else
+                                                            @lang('static_text.form_error')
+                                                        @endif
+                                                    </div>
+                                                @endif
+                                            </div>
 
-                                                <form method="POST" class="form-horizontal" action="/add-form-web" enctype="multipart/form-data">
-                                                    @csrf
+                                            <form method="POST" class="form-horizontal" action="/add-form-web"
+                                                  enctype="multipart/form-data">
+                                                @csrf
                                                 <div class="row">
                                                     <div class="col-6">
 
                                                         <input type="text" placeholder="@lang('static_text.firstname')"
-                                                               name="name"required/>
+                                                               name="name" required/>
                                                     </div>
                                                     <div class="col-6">
                                                         <input type="text" placeholder=@lang('static_text.lastname')
-                                                               name="surname" required/>
+                                                            name="surname" required/>
                                                     </div>
                                                 </div><!-- .row -->
                                                 <div class="row">
@@ -652,7 +732,7 @@
                                                     </div>
                                                     <div class="col-6">
                                                         <input type="email" placeholder=@lang('static_text.email')
-                                                                name="email" required/>
+                                                            name="email" required/>
                                                     </div>
                                                 </div><!-- .row -->
                                                 <textarea placeholder="@lang('static_text.message')"
@@ -676,19 +756,18 @@
         </div><!-- .restbeef_container -->
     </div><!-- .restbeef_main_wrapper -->
     <script>
-        /*
         $(".menu-bnt").click(function () {
-            $(".bottom-menu").addClass("d-none-x").removeClass("d-flex-x")
-            $(".menu-bnt").removeClass("menuactive")
+            $(".bottom-menu").addClass("d-none").removeClass("d-flex")
             let id = $(this).attr('id');
-            if ($("#bottom-menu" + id).hasClass('d-none')) {
-                $("#bottom-menu" + id).removeClass("d-none-x").addClass("d-flex-x")
-                $("#"+ id).addClass("menuactive");
+            if ($("#menu-" + id).hasClass('d-none')) {
+                $("#menu-" + id).removeClass("d-none").addClass("d-flex")
+                $("#menu-" + id).addClass("menuactive");
+                $(".menu-bnt").removeClass("menu-active");
+                $("#" + id).addClass("menu-active");
             } else {
-                $("#bottom-menu" + id).addClass("d-none-x").removeClass("d-flex-x")
+                $("#menu-" + id).addClass("d-none-x").removeClass("d-flex")
             }
         })
-         */
     </script>
     <script language="javascript" type="text/javascript">
         function limitText(limitField, limitNum) {

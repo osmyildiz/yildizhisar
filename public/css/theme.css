@@ -3247,12 +3247,9 @@ ul.restbeef_footer_links_list li:before {
 ul.restbeef_footer_links_list li:first-child:before {
     display: none;
 }
-.d-block-x {
-    display: block !important;
+.d-none{
+    display: none;
 }
-.d-none-x {
-    display: none !important;
-}
-.d-flex-x {
-    display: flex !important;
+.d-flex{
+    display: flex;
 }

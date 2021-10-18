@@ -2,51 +2,6 @@
 @section('title','Rezervasyon')
 
 @section('slider')
-    <style>
-
-        body > div > div.restbeef_header_wrapper.restbeef_js_bg_image.restbeef_height100 > div > h1 {
-            font-size: 75px;
-        }
-
-        .restbeef_header_description {
-            font-size: 40px;
-        }
-
-        a.restbeef_button.restbeef_button_white {
-            background-color: #0b0b0b;
-            color: #A38D58;
-            border: 1px solid #A38D58;
-            font-size: 20px;
-        }
-        a.restbeef_button.restbeef_button_white:hover {
-            border: 1px solid #ffffff;
-        }
-
-        .restbeef_header_title a.restbeef_button {
-            max-width: 200px;
-        }
-
-        body > div > div.restbeef_main_wrapper > div > div > div > div > div:nth-child(1) > div > div > div:nth-child(2) > div.restbeef_recent_product_content > h4 {
-            margin-top: -20px;
-            line-height: 52px;
-        }
-
-        body > div > div.restbeef_main_wrapper > div > div > div > div > div.restbeef_block.restbeef_js_bg_image.restbeef_height100.restbeef_fullwidth.restbeef_js_margin.restbeef_home01_block.restbeef_content_on_right > div > div > div:nth-child(2) > div > h2 > span {
-            color: #AD965F;
-            padding-bottom: 24px;
-            font-size: 55px;
-        }
-
-        .rezervasyon-text {
-            font-size: 23px !important;
-        }
-        .menu-bnt{
-            cursor: pointer;
-        }
-        .menu-active{
-            border-bottom: 10px solid #AB945E;
-        }
-    </style>
     <div class="restbeef_header_title restbeef_container">
         @if(app()->getLocale() == "tr")
 
