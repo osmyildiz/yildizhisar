@@ -8,6 +8,7 @@ use App\Models\Form;
 use App\Models\Menu;
 use App\Models\Newsletter;
 use App\Models\Reservation;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -157,6 +158,28 @@ class AdminController extends Controller
 
         }
         return redirect()->back()->with(['message' => 'Beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!', 'alert' => 'danger']);
+
+    }
+    public function add_newsletter(Request $request)
+    {
+
+        $check_email = Newsletter::where('email',$request->email)->first();
+        if($check_email->count()>0){
+            $scroll = true;
+            return redirect(url()->previous() .'#email')->with(['message' => 'Emailiniz kaydedildi.', 'alert' => 'warning'])->with('scroll',$scroll);
+        }else{
+            $newsletter = new Newsletter();
+            $newsletter->email = $request->email;
+            $save = $newsletter->save();
+
+            if($save){
+
+                return redirect()->back()->with(['message' => 'Emailiniz kaydedildi.', 'alert' => 'success']);
+
+            }
+            return redirect()->back()->with(['message' => 'Beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!', 'alert' => 'danger']);
+
+        }
 
     }
     public function edit_reservations($id)

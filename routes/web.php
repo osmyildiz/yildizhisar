@@ -31,6 +31,7 @@ Route::get('/wedding', [App\Http\Controllers\HomeController::class, 'wedding'])-
 Route::get('/restaurant', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant');
 Route::post('/add-reservation-web', [AdminController::class, 'add_reservation_web'])->name('add_reservation_web');
 Route::post('/add-form-web', [AdminController::class, 'add_form_web'])->name('add_form_web');
+Route::post('/add-newsletter', [AdminController::class, 'add_newsletter'])->name('add_newsletter');
 
 
 
