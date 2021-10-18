@@ -167,7 +167,7 @@ class AdminController extends Controller
         if($check_email){
             if($check_email->count()>0){
                 $scroll = true;
-                return redirect(url()->previous() .'#email')->with(['message' => 'Emailiniz kaydedildi.', 'alert' => 'warning'])->with('scroll',$scroll);
+                return redirect(url()->previous() .'#email')->with(['message1' => 'Emailiniz kaydedildi.', 'alert' => 'warning'])->with('scroll',$scroll);
 
                 }
             }else{
@@ -177,10 +177,10 @@ class AdminController extends Controller
 
             if($save){
 
-                return redirect()->back()->with(['message' => 'Emailiniz kaydedildi.', 'alert' => 'success']);
+                return redirect()->back()->with(['message1' => 'Emailiniz kaydedildi.', 'alert' => 'success']);
 
             }
-            return redirect()->back()->with(['message' => 'Beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!', 'alert' => 'danger']);
+            return redirect()->back()->with(['message1' => 'Beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!', 'alert' => 'danger']);
 
         }
 

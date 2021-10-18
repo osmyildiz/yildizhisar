@@ -21,7 +21,7 @@
                      <h3 class="restbeef_up_title">@lang('static_text.newsletter')</h3>
                     <div class="restbeef_in_touch">
                         <div class="restbeef_block_title align_center">
-                            @if(session()->has('message'))
+                            @if(session()->has('message1'))
                                 <div class="alert {{session('alert') ?? 'info'}} alert-dismissible fade show" >
                                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
 
