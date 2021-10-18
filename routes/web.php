@@ -83,5 +83,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['prefix' => 'admin', 'as' => 'admin.','middleware' => 'auth'], function () {
     Route::resource('galleries', GalleryController::class, ['except' => ['index',]]);
     Route::match(['put', 'get'], 'galleries', [GalleryController::class, 'index'])->name('galleries.index');
-
+    Route::post('/category-delete', [GalleryController::class, 'delete'])->name('category.delete');
+    Route::post('/category-update', [GalleryController::class, 'categoryUpdate'])->name('category.update');
+    Route::post('/category-add', [GalleryController::class, 'categoryAdd'])->name('category.add');
 });
