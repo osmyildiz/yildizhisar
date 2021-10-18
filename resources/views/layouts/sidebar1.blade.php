@@ -80,7 +80,13 @@
 
                 </li>
 
+                <li>
+                    <a href="{{route('admin.galleries.index')}}" class="waves-effect">
+                        <i class="bx bx-table"></i>
+                        <span key="t-dashboards">Galeri</span>
+                    </a>
 
+                </li>
 
 
 
