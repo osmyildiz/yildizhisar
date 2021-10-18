@@ -43,14 +43,11 @@
         <!-- end page title -->
 
         <div class="row">
-            <div class="col-10 mx-auto">
+            <div class="col-8">
                 <div class="card">
                     <div class="card-body">
-
                         <h4 class="card-title">Resimler</h4>
-                        <p class="card-title-desc"> <code>Resimler için kategori(ler) seçiniz</code>.
-                        </p>
-
+                        <p class="card-title-desc"><code>Resimler için kategori(ler) seçiniz</code>.</p>
                         <form action="{{route('admin.galleries.index')}}" method="post">
                             @csrf
                             @method('PUT')
@@ -59,7 +56,7 @@
                                 <div class="col-md-8">
                                     <select class="select2 js-example-tags form-control" style="width: 100%"
                                             multiple="multiple"
-                                            data-placeholder="Choose ..." name="category[]">
+                                            data-placeholder="Seçiniz ..." name="category[]">
                                         @foreach($category as $item)
                                             <option value="{{$item->name}}">
                                                 {{$item->name}}
@@ -68,20 +65,20 @@
                                     </select>
                                 </div>
                                 <div class="col-md-2">
-                                    <button type="submit" class="btn btn-success">button</button>
+                                    <button type="submit" class="btn btn-primary">Kategori(ler) Getir</button>
                                 </div>
                             </div>
                         </form>
-
+                        <a href="{{route('admin.galleries.create')}}"
+                           class="btn btn-primary " title="Yeni Ekle" style="float: right">
+                            <i class="far fa-plus-square"></i>
+                            Resim Ekle
+                        </a>
                         <table id="dataable" class="table table-borderless dt-responsive  nowrap w-100">
                             <thead>
                             <tr>
                                 <th>Resimler</th>
-                                <th><a href="{{route('admin.galleries.create')}}"
-                                       class="btn btn-outline-secondary btn-sm " title="Yeni Ekle">
-                                        <i class="far fa-plus-square"></i>
-                                        Ekle
-                                    </a></th>
+                                <th></th>
 
                             </tr>
                             </thead>
@@ -92,7 +89,8 @@
                                 @foreach($categories as $items)
                                     <tr>
                                         <td>
-                                            <h1 style="color: #1a94ff"> Kategori : {{$items->name}}</h1>
+                                            <h5 style="color: #1a94ff"> Kategori :
+                                                <span class="badge badge-soft-primary"> {{$items->name}}</span></h5>
                                         </td>
                                     </tr>
                                     @if(isset($items->images))
@@ -106,7 +104,7 @@
                                                 <td>
                                                     <a href="#"
                                                        onclick="deleteImage({{$item->id}})"
-                                                       class="btn btn-outline-secondary btn-sm " title="Delete">
+                                                       class="btn btn-danger btn-sm " title="Delete">
                                                         <i class="far fa-trash-alt"></i>
                                                     </a>
                                                 </td>
@@ -122,6 +120,80 @@
                     </div>
                 </div>
             </div> <!-- end col -->
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-borderless dt-responsive  nowrap w-100">
+                            <thead>
+                            <tr>
+                                <th>Kategoriler</th>
+                                <th>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                            data-bs-toggle="modal" data-bs-target="#myModal"> + Ekle
+                                    </button>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div>
+                                                <!-- sample modal content -->
+                                                <div id="myModal" class="modal fade" tabindex="-1"
+                                                     aria-labelledby="myModalLabel" style="display: none;"
+                                                     aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+
+                                                            <div class="modal-body">
+                                                                <h4>Kategori Ekle</h4>
+                                                                <input type="text" class="form-control"
+                                                                       id="new-cat"><br>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button"
+                                                                        class="btn btn-secondary waves-effect"
+                                                                        data-bs-dismiss="modal">Kapat
+                                                                </button>
+                                                                <button type="button"
+                                                                        class="btn btn-primary waves-effect waves-light"
+                                                                        onclick="addCategory()">Ekle
+                                                                </button>
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
+                                                </div><!-- /.modal -->
+                                            </div> <!-- end preview-->
+
+                                        </div>
+                                        <!-- end card body -->
+                                    </div>
+                                </th>
+
+                            </tr>
+                            </thead>
+
+
+                            <tbody>
+                            @if(count($category) > 0)
+                                @foreach($category as $item)
+                                    <tr id="category-{{$item->id}}">
+                                        <td>
+                                            <input type="text" value="{{$item->name}}" id="cat-{{$item->id}}"
+                                                   class="form-control form-control-sm" disabled="true"
+                                            >
+                                            <a href="#" onclick="updateCategory({{$item->id}})" id="btn-{{$item->id}}"
+                                               style="display: none">Onayla</a>
+                                        </td>
+                                        <td>
+                                            <a href="#" onclick="editCategory({{$item->id}})">Düzenle</a> /
+                                            <a href="#" onclick="deleteCategory({{$item->id}})">Sil</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            @endif
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
         </div> <!-- end row -->
 
 
@@ -149,13 +221,67 @@
                 data: {id: id, _token: _token}
             })
                 .done(function (data) {
-                    if(data.success){
-                        $('#image-'+id).remove();
+                    if (data.success) {
+                        $('#image-' + id).remove();
                     }
                 });
 
         }
 
+        function deleteCategory(id) {
+            let _token = $('meta[name="csrf-token"]').attr('content');
+            $.ajax({
+                method: "POST",
+                url: "{{route('admin.category.delete')}}",
+                data: {id: id, _token: _token}
+            })
+                .done(function (data) {
+                    if (data.success) {
+                        $('#category-' + id).remove();
+                    }
+                });
+
+        }
+
+        function editCategory(id) {
+            $('#cat-' + id).removeAttr('disabled')
+            $('#btn-' + id).css('display', 'inline')
+        }
+
+        function updateCategory(id) {
+            const name = $('#cat-' + id).val();
+            let _token = $('meta[name="csrf-token"]').attr('content');
+            $.ajax({
+                method: "POST",
+                url: "{{route('admin.category.update')}}",
+                data: {id: id, name: name, _token: _token}
+            })
+                .done(function (data) {
+                    if (data.success) {
+                        $('#cat-' + id).prop('disabled', true)
+                        $('#btn-' + id).css('display', 'none')
+                    }
+                });
+        }
+
+        function addCategory() {
+            const name = $('#new-cat').val();
+            let _token = $('meta[name="csrf-token"]').attr('content');
+            $.ajax({
+                method: "POST",
+                url: "{{route('admin.category.add')}}",
+                data: {name: name, _token: _token}
+            })
+                .done(function (data) {
+                    if (data.success) {
+                        location.reload();
+                    }
+                });
+        }
+
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
     </script>
 
 

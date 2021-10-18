@@ -29,41 +29,26 @@
                     <!-- Content Inner -->
                     <div class="restbeef_content">
                         <div class="restbeef_tiny">
-                            <div class="restbeef_single_post_pf restbeef_blog_pf_gallery" >
-                                <div class="restbeef_grig_gallery_wrapper restbeef_grig_3columns restbeef_photoswipe_wrapper" data-uniqid="8726">
-                                    <div class="restbeef_grig_gallery_item">
-                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="0">
-                                            <img src="img/dummy/740x700.png" alt="Post Image 01"/>
-                                        </a>
-                                    </div><!-- .restbeef_grig_gallery_item -->
-                                    <div class="restbeef_grig_gallery_item">
-                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="1">
-                                            <img src="img/dummy/740x700.png" alt="Post Image 02"/>
-                                        </a>
-                                    </div><!-- .restbeef_grig_gallery_item -->
-                                    <div class="restbeef_grig_gallery_item">
-                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="2">
-                                            <img src="img/dummy/740x700.png" alt="Post Image 03"/>
-                                        </a>
-                                    </div><!-- .restbeef_grig_gallery_item -->
-                                    <div class="restbeef_grig_gallery_item">
-                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="3">
-                                            <img src="img/dummy/740x700.png" alt="Post Image 04"/>
-                                        </a>
-                                    </div><!-- .restbeef_grig_gallery_item -->
-                                    <div class="restbeef_grig_gallery_item">
-                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="4">
-                                            <img src="img/dummy/740x700.png" alt="Post Image 05"/>
-                                        </a>
-                                    </div><!-- .restbeef_grig_gallery_item -->
-                                    <div class="restbeef_grig_gallery_item">
-                                        <a href="img/dummy/740x700.png" class="restbeef_pswp_slide" data-size="740x700" data-count="5">
-                                            <img src="img/dummy/740x700.png" alt="Post Image 06"/>
-                                        </a>
-                                    </div><!-- .restbeef_grig_gallery_item -->
+                            <div class="restbeef_single_post_pf restbeef_blog_pf_gallery">
+                                <div
+                                    class="restbeef_grig_gallery_wrapper restbeef_grig_3columns restbeef_photoswipe_wrapper"
+                                    data-uniqid="8726">
+
+                                    @foreach($categories as $category)
+                                        @if(count($category->images) > 0)
+                                            <h5>{{$category->name}}</h5>
+                                            @foreach($category->images as $key=> $image)
+                                                <div class="restbeef_grig_gallery_item">
+                                                    <a href="{{asset($image->image)}}" class="restbeef_pswp_slide"
+                                                       data-size="740x700" data-count="{{$key}}">
+                                                        <img src="{{asset($image->image)}}" alt="Post Image 01"/>
+                                                    </a>
+                                                </div><!-- .restbeef_grig_gallery_item -->
+                                            @endforeach
+                                        @endif
+                                    @endforeach
                                 </div><!-- .restbeef_grig_gallery_wrapper -->
                             </div><!-- .restbeef_single_post_pf -->
-
 
 
                         </div><!-- .restbeef_tiny -->

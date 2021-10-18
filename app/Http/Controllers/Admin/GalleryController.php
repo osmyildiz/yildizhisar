@@ -103,4 +103,41 @@ class GalleryController extends Controller
         ]);
 
     }
+
+    public function delete(Request $request)
+    {
+        $category = Category::find($request->id);
+        if ($category) {
+            $category->images()->detach();
+            $category->delete();
+        }
+
+        return response()->json([
+            'success' => true,
+        ]);
+
+    }
+
+    public function categoryUpdate(Request $request)
+    {
+        Category::where('id', $request->id)
+            ->update([
+                'name' => $request->name
+            ]);
+
+        return response()->json([
+            'success' => true,
+        ]);
+    }
+
+    public function categoryAdd(Request $request)
+    {
+        Category::create([
+                'name' => $request->name
+            ]);
+
+        return response()->json([
+            'success' => true,
+        ]);
+    }
 }
