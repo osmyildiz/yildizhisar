@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Gallery;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -18,7 +20,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-      //  $this->middleware('auth');
+        //  $this->middleware('auth');
     }
 
     /**
@@ -39,69 +41,79 @@ class HomeController extends Controller
     {
         return view('frontend.homepage');
     }
+
     public function root()
     {
         return view('frontend.homepage');
     }
+
     public function table_rezervations()
     {
         if (app()->getLocale() == "tr") {
             return view('frontend.table_rezervations');
         } else {
-            return view( 'frontend.table_rezervations');
+            return view('frontend.table_rezervations');
         }
 
     }
+
     public function contact()
     {
 
-            return view('frontend.contact');
+        return view('frontend.contact');
 
 
     }
+
     public function about()
     {
 
-            return view('frontend.about');
+        return view('frontend.about');
 
 
     }
+
     public function wedding()
     {
 
-            return view('frontend.wedding');
+        return view('frontend.wedding');
 
 
     }
+
     public function gallery()
     {
-
-            return view('frontend.gallery');
+        $categories = Category::with('images')->get();
+        return view('frontend.gallery', compact('categories'));
 
 
     }
+
     public function events()
     {
 
-            return view('frontend.events');
+        return view('frontend.events');
 
     }
+
     public function restaurant()
     {
 
-            return view('frontend.restaurant');
+        return view('frontend.restaurant');
 
 
     }
+
     public function login_v()
     {
         if (app()->getLocale() == "tr") {
             return view('auth1.login');
         } else {
-            return view( 'auth1.login');
+            return view('auth1.login');
         }
 
     }
+
     public function login(Request $request)
     {
 
@@ -117,11 +129,11 @@ class HomeController extends Controller
     }
 
 
-
     public function ourMenu()
     {
         return view('frontend.our-menu');
     }
+
     /*Language Translation*/
     public function lang($locale)
     {
@@ -211,12 +223,13 @@ class HomeController extends Controller
             }
         }
     }
+
     public function panel()
     {
         if (app()->getLocale() == "tr") {
             return view('panel');
         } else {
-            return view( 'panel');
+            return view('panel');
         }
 
     }
