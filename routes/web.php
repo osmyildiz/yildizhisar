@@ -59,6 +59,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/edit-reservation/{id}', [AdminController::class, 'edit_reservation'])->name('edit.reservation');
     Route::get('/admin-menu', [AdminController::class, 'admin_menu'])->name('admin-menu');
     Route::get('/admin-about', [AdminController::class, 'admin_about'])->name('admin-about');
+    Route::get('/admin-contact', [AdminController::class, 'admin_contact'])->name('admin-contact');
+    Route::get('/admin-forms', [AdminController::class, 'admin_forms'])->name('admin-forms');
+    Route::get('/admin-newsletter', [AdminController::class, 'admin_newsletter'])->name('admin-newsletter');
+    Route::post('/update-about-page', [AdminController::class, 'update_about_page'])->name('update-about-page');
+    Route::post('/update-contact-page', [AdminController::class, 'update_contact_page'])->name('update-contact-page');
 
     Route::get('/test', [AdminController::class, 'test'])->name('test');
 

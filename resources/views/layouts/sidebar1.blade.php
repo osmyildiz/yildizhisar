@@ -23,6 +23,20 @@
 
                 </li>
                 <li>
+                    <a href="/admin-forms" class="waves-effect">
+                        <i class="bx bx-message"></i>
+                        <span key="t-dashboards">Mesajlar</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/admin-newsletter" class="waves-effect">
+                        <i class="bx bx-news"></i>
+                        <span key="t-dashboards">E-Bülten</span>
+                    </a>
+
+                </li>
+                <li>
                     <a href="/admin-menu" class="waves-effect">
                         <i class="bx bx-food-menu"></i>
                         <span key="t-dashboards">Menüler</span>
@@ -30,9 +44,16 @@
 
                 </li>
                 <li>
-                    <a href="/admin-menu" class="waves-effect">
+                    <a href="/admin-about" class="waves-effect">
                         <i class="bx bx-user-x"></i>
-                        <span key="t-dashboards">Hakkımızda</span>
+                        <span key="t-dashboards">Hakkımızda Sayfası</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/admin-contact" class="waves-effect">
+                        <i class="bx bxs-contact"></i>
+                        <span key="t-dashboards">İletişim Sayfası</span>
                     </a>
 
                 </li>
@@ -50,20 +71,7 @@
                     </a>
 
                 </li>
-                <li>
-                    <a href="/admin-menu" class="waves-effect">
-                        <i class="bx bx-image-add"></i>
-                        <span key="t-dashboards">Galeri</span>
-                    </a>
 
-                </li>
-                <li>
-                    <a href="/admin-menu" class="waves-effect">
-                        <i class="bx bxs-contact"></i>
-                        <span key="t-dashboards">İletişim</span>
-                    </a>
-
-                </li>
                 <li>
                     <a href="/test" class="waves-effect">
                         <i class="bx bx-table"></i>

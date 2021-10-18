@@ -27,146 +27,106 @@
     </div>
 
     <div class="card">
-        <form method="POST" class="form-horizontal" action="/add-reservations" enctype="multipart/form-data">
+        <form method="POST" class="form-horizontal" action="/update-about-page" enctype="multipart/form-data">
             @csrf
         <div class="card-body">
-                <h4 class="card-title mb-4">Yeni Rezervasyon Ekle</h4>
+                <h4 class="card-title mb-4">Hakkımızda Sayfası Düzenle</h4>
+            <p>Buradaki verileri değiştirerek hakkımızda sayfasını düzenleyebilirsiniz</p>
                 <div class="row">
 
-                    <div class="col-xl-6">
+                    <div class="col-xl-12">
 
 
-                        <div class="mb-4 row">
-                            <label for="res_date" class="col-md-3 col-form-label">Date</label>
+                        <div class="row mb-12">
+                            <label for="message" class="col-sm-3 col-form-label">Hakkımızda Üst Bölüm Türkçe</label>
                             <div class="col-sm-9">
-                                <input class="form-control" type="date" value="{{date("Y-m-d")}}"
-                                       id="res_date" name="res_date">
+                            <textarea id="message" class="form-control" rows="10" name="about_first_text_tr">{{$about->about_first_text_tr}}</textarea>
                             </div>
                         </div>
-                        <div class="mb-4 row">
-                            <label for="time" class="col-md-3 col-form-label">Saat</label>
-
+                        <div class="row mb-12">
+                            <label for="message" class="col-sm-3 col-form-label">Hakkımızda Üst Bölüm İngilizce</label>
                             <div class="col-sm-9">
-                                <select id="time" class="form-select" name="time">
-                                    <option selected>Saat Seçiniz</option>
-                                    <option>08:00</option>
-                                    <option>08:30</option>
-                                    <option>09:00</option>
-                                    <option>09:30</option>
-                                    <option>10:00</option>
-                                    <option>10:30</option>
-                                    <option>11:00</option>
-                                    <option>11:30</option>
-                                    <option>12:00</option>
-                                    <option>12:30</option>
-                                    <option>13:00</option>
-                                    <option>13:30</option>
-                                    <option>14:00</option>
-                                    <option>14:30</option>
-                                    <option>15:00</option>
-                                    <option>15:30</option>
-                                    <option>16:00</option>
-                                    <option>16:30</option>
-                                    <option>17:00</option>
-                                    <option>17:30</option>
-                                    <option>18:00</option>
-                                    <option>18:30</option>
-                                    <option>19:00</option>
-                                    <option>19:30</option>
-                                    <option>20:00</option>
-                                    <option>20:30</option>
-                                    <option>21:00</option>
-                                    <option>21:30</option>
-                                    <option>22:00</option>
-                                    <option>22:30</option>
-                                    <option>23:00</option>
-                                    <option>23:30</option>
+                            <textarea id="message" class="form-control" rows="10" name="about_first_text_en"
+                                      >{{$about->about_first_text_en}}</textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-12">
+                            <label for="message" class="col-sm-3 col-form-label">Hakkımızda Orta Bölüm Türkçe</label>
+                            <div class="col-sm-9">
+                            <textarea id="message" class="form-control"  rows="10" name="middle_text_tr"
+                                      >{{$about->middle_text_tr}}</textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-12">
+                            <label for="message" class="col-sm-3 col-form-label">Hakkımızda Orta Bölüm İngilizce</label>
+                            <div class="col-sm-9">
+                            <textarea id="message" class="form-control"  rows="10" name="middle_text_en"
+                                      >{{$about->middle_text_en}}</textarea>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="avatar">1.Resim</label>
+                            <div class="media">
+                                <div class="me-3">
+                                    <img src="{{url($about->img1)}}" alt=""
+                                         style="display:block;" width="30%" height="30%">
+                                </div>
+                            </div>
 
-                                </select>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="img1" name="img1" autofous>
 
                             </div>
                         </div>
-                        <div class="row mb-4">
-                            <label for="guest_number" class="col-sm-3 col-form-label">Kişi Sayısı</label>
-                            <div class="col-sm-9">
-                                <input type="number" class="form-control @error('guest_number') is-invalid @enderror" id="guest_number"
-                                value="{{ old('guest_number') }}" name="guest_number" placeholder="Kişi Sayısı?" autofocus required>
 
-                                @error('guest_number')
-                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                @enderror
-                                <div class="alert-message" id="error" name="error"></div>
+
+                        <div class="mb-3">
+                            <label for="avatar">2.Resim</label>
+                            <div class="media">
+                                <div class="me-3">
+                                    <img src="{{url($about->img2)}}" alt=""
+                                         style="display:block;" width="30%" height="30%">
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-4">
-                            <label for="message" class="col-sm-3 col-form-label">Not</label>
-                            <div class="col-sm-9">
-                            <textarea id="message" class="form-control" maxlength="225" rows="3" name="message"
-                                      placeholder="Maksimum 255 karakter"></textarea>
-                        </div></div>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="img2" name="img2" autofous>
 
-
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-
-                    <div class="col-xl-6">
-                        <div class="row mb-4">
-                            <label for="name" class="col-sm-3 col-form-label">Ad Soyad</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                                       value="{{ old('name') }}" name="name" placeholder="Ad Soyad?" autofocus required>
-
-                                @error('name')
-                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                @enderror
-                                <div class="alert-message" id="error" name="error"></div>
                             </div>
                         </div>
 
-                        <div class="row mb-4">
-                            <label for="phone" class="col-sm-3 col-form-label">Telefon</label>
-                            <div class="col-sm-9">
-                                <input type="number" class="form-control @error('phone') is-invalid @enderror" id="phone"
-                                       onKeyDown="limitText(this,10);"
-                                       onKeyUp="limitText(this,10);"
-                                       value="{{ old('phone') }}" name="phone" placeholder="Telefon?" autofocus required>
+                        <div class="mb-3">
+                            <div class="media">
+                                <div class="me-3">
+                                    <img src="{{url($about->img3)}}" alt=""
+                                         style="display:block;" width="30%" height="30%">
+                                </div>
+                            </div>
 
-                                @error('phone')
-                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                @enderror
-                                <div class="alert-message" id="error" name="error"></div>
+                            <label for="avatar">3.Resim</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="img3" name="img3" autofous>
+
                             </div>
                         </div>
-                        <div class="row mb-4">
-                            <label for="email" class="col-sm-3 col-form-label">Email</label>
-                            <div class="col-sm-9">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email?">
-                            </div>
-                        </div>
-
 
 
 
 
                         <div class="row justify-content-end">
-                            <div class="col-sm-9">
+                            <div class="col-sm-12">
 
 
                                 <div>
-                                    <button type="submit" class="btn btn-primary w-md">Rezerve Et</button>
+                                    <button type="submit" class="btn btn-primary w-md">Güncelle</button>
                                 </div>
                             </div>
                         </div>
 
+
+
+                        <!-- end card -->
                     </div>
-                    <!-- end card body -->
+                    <!-- end col -->
 
                     <!-- end col -->
                 </div>
@@ -174,121 +134,7 @@
         </form>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
 
-                    <h4 class="card-title">Rezervasyonlar</h4>
-                    <p class="card-title-desc">Bugüne ait rezervasyonları bu tablodan inceleyebilirsiniz.
-                    </p>
-
-                    <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
-                        <thead>
-                        <tr>
-
-                            <th>Tarih</th>
-                            <th>Saat</th>
-                            <th>Kişi Sayısı</th>
-                            <th>Ad Soyad</th>
-                            <th>Tel</th>
-                            <th>Email</th>
-                            <th>Mesaj</th>
-                            <th>Düzenle/Sil</th>
-                        </tr>
-                        </thead>
-
-
-                        <tbody>
-                        @foreach($res_today as $res)
-                            <tr>
-
-                                <td>{{$res->res_date}}</td>
-                                <td>{{$res->time}}</td>
-                                <td>{{$res->guest_number}}</td>
-                                <td>{{$res->name}}</td>
-                                <td>{{$res->phone}}</td>
-                                <td>{{$res->email}}</td>
-                                <td>{{$res->message}}</td>
-                                <td>
-                                    <ul class="list-inline font-size-20 contact-links mb-0">
-
-                                        <li class="list-inline-item px-1">
-                                            <a href="{{route('reservation.edit',$res->id)}}" title="edit"><i class="bx bxs-edit"></i></a>
-                                        </li>
-                                        <li class="list-inline-item px-1">
-                                            <a href="{{route('reservation.delete',$res->id)}}" title="delete"><i class="bx bxs-trash"></i></a>
-                                        </li>
-
-                                    </ul>
-                                </td>
-                            </tr>
-                        @endforeach
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div> <!-- end col -->
-    </div> <!-- end row -->
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-
-                    <h4 class="card-title">Tüm Rezervasyonlar</h4>
-                    <p class="card-title-desc">Tarih sıralı olarak gelir.
-                    </p>
-
-                    <table id="datatable" class="table table-bordered dt-responsive  nowrap w-100">
-                        <thead>
-                        <tr>
-
-                            <th>Tarih</th>
-                            <th>Saat</th>
-                            <th>Kişi Sayısı</th>
-                            <th>Ad Soyad</th>
-                            <th>Tel</th>
-                            <th>Email</th>
-                            <th>Mesaj</th>
-                            <th>Düzenle/Sil</th>
-                        </tr>
-                        </thead>
-
-
-                        <tbody>
-                        @foreach($res_all as $res)
-                            <tr>
-
-                                <td>{{$res->res_date}}</td>
-                                <td>{{$res->time}}</td>
-                                <td>{{$res->guest_number}}</td>
-                                <td>{{$res->name}}</td>
-                                <td>{{$res->phone}}</td>
-                                <td>{{$res->email}}</td>
-                                <td>{{$res->message}}</td>
-                                <td>
-                                    <ul class="list-inline font-size-20 contact-links mb-0">
-
-                                        <li class="list-inline-item px-1">
-                                            <a href="{{route('reservation.edit',$res->id)}}" title="edit"><i class="bx bxs-edit"></i></a>
-                                        </li>
-                                        <li class="list-inline-item px-1">
-                                            <a href="{{route('reservation.delete',$res->id)}}" title="delete"><i class="bx bxs-trash"></i></a>
-                                        </li>
-
-                                    </ul>
-                                </td>
-                            </tr>
-                        @endforeach
-
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-        </div> <!-- end col -->
-    </div> <!-- end row -->
 
 @endsection
 @section('script')

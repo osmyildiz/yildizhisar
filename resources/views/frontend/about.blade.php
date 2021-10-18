@@ -103,21 +103,6 @@
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_grig_gallery_wrapper restbeef_grig_3columns restbeef_photoswipe_wrapper" data-uniqid="624">
                                         <div class="restbeef_grig_gallery_item">
-                                            <a href="img/y1.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="0">
-                                                <img src="img/y1.jpeg" alt="Gallery Image 01"/>
-                                            </a>
-                                        </div>
-                                        <div class="restbeef_grig_gallery_item">
-                                            <a href="img/y2.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="1">
-                                                <img src="img/y2.jpeg" alt="Gallery Image 02"/>
-                                            </a>
-                                        </div>
-                                        <div class="restbeef_grig_gallery_item">
-                                            <a href="img/y7.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="2">
-                                                <img src="img/y7.jpeg" alt="Gallery Image 03"/>
-                                            </a>
-                                        </div>
-                                        <div class="restbeef_grig_gallery_item">
                                             <a href="img/y4.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="3">
                                                 <img src="img/y4.jpeg" alt="Gallery Image 04"/>
                                             </a>

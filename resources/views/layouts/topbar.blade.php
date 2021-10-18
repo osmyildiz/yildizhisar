@@ -5,7 +5,7 @@
             <div class="navbar-brand-box">
                 <a href="/" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{asset("img/yildiz-1@2x.png")}}" alt="" height="88">
+                        <img src="{{asset("img/yildiz-2@2x.png")}}" alt="" height="32">
                     </span>
                     <span class="logo-lg">
                         <img src="{{asset("img/yildiz-2@2x.png")}}" alt="" height="64">
@@ -14,7 +14,7 @@
 
                 <a href="/" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{asset("img/yildiz-1@2x.png")}}" alt="" height="88">
+                        <img src="{{asset("img/yildiz-2@2x.png")}}" alt="" height="32">
                     </span>
                     <span class="logo-lg">
                         <img src="{{asset("img/yildiz-2@2x.png")}}" alt="" height="64">
@@ -22,9 +22,7 @@
                 </a>
             </div>
 
-            <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
-                <i class="fa fa-fw fa-bars"></i>
-            </button>
+
 
            <!-- App Search-->
 

@@ -51,12 +51,12 @@
         @if(app()->getLocale() == "tr")
 
             <h1>
-                <span class="restbeef_up_title">En güzel anılar burda</span>
+                <span class="restbeef_up_title">En güzel anılar burda başlar</span>
                 DÜĞÜN & DAVET
             </h1>
         @else
             <h1>
-                <span class="restbeef_up_title">The best memories are here</span>
+                <span class="restbeef_up_title">The most beautiful moments start here</span>
                 WEDDING
             </h1>
         @endif
@@ -80,35 +80,47 @@
                                 <div class="row">
                                     <div class="col-3"></div>
                                     <div class="col-6 align_center">
-                                        <p>We delivering the fastest way! It does not matter where you are: working at office, sitting at home or take a walk in the park. If you will be hungry - we will find you everywhere and deliver to you perfect meal from our menu.</p>
-                                    </div><!-- .col-6 -->
-                                    <div class="col-3"></div>
+                                        @if(app()->getLocale() == "tr")
+                                            <p>Havuz başı düğün denilince Yıldız Hisar Tesisleri, muhteşem manzarası ile ilk gelen mekanlar arasında yer almaktadır. Mekanımız yıllardır şık tasarımı, büyüleyici manzarası ve geniş hizmet yelpazesi ile birlikte çiftlerin tercih sebebi olmaktadır. Sunduğu ayrıcalıklara karşın fiyatları da her bütçeye hitap etmektedir. Düğün fiyatlarımız seçilen menüye göre kişi başı 290 TL’den başlıyor.</p>  </div><!-- .col-6 -->
+
+
+                                @else
+                                        <p>Havuz başı düğün denilince Yıldız Hisar Tesisleri, muhteşem manzarası ile ilk gelen mekanlar arasında yer almaktadır. Mekanımız yıllardır şık tasarımı, büyüleyici manzarası ve geniş hizmet yelpazesi ile birlikte çiftlerin tercih sebebi olmaktadır. Sunduğu ayrıcalıklara karşın fiyatları da her bütçeye hitap etmektedir. Düğün fiyatlarımız seçilen menüye göre kişi başı 290 TL’den başlıyor.</p>  </div><!-- .col-6 -->
+
+
+                                @endif
+                                           <div class="col-3"></div>
                                 </div>
                             </div><!-- .restbeef_block -->
 
                             <!-- Contact Icons -->
                             <div class="restbeef_block restbeef_js_margin restbeef_iconbox_block" data-margin="0 0 90px 0">
                                 <div class="restbeef_block_inner align_center">
+                                    <h2 class="restbeef_block_title align_center">
+                                        <span class="restbeef_up_title">How It Works</span>
+                                        Making an order
+                                    </h2>
                                     <div class="row">
+
                                         <div class="col-4">
                                             <div class="restbeef_iconbox align_center">
-                                                <i class="fa fa-clock-o"></i>
-                                                <h4>Fast Delivery</h4>
-                                                <p>Our delivery time is up to one hour.<br>Note: cooking time is not included.</p>
+                                                <i class="fa fa-check-circle-o"></i>
+                                                <h4>Menü SEÇİMİ</h4>
+                                                <p>Size sunduğumuz<br>6 menüden birini seçiniz.</p>
                                             </div>
                                         </div><!-- .col1-4 -->
                                         <div class="col-4">
                                             <div class="restbeef_iconbox align_center">
                                                 <i class="fa fa-money"></i>
-                                                <h4>Reasonable Prices</h4>
-                                                <p>Delivery price depends on the distance and is $0.99 for one mile from us to you.</p>
+                                                <h4>Hizmet Seçimi</h4>
+                                                <p>Müzik, Dekorasyon, Video ve Fotoğraf Hizmetlerimizi İnceleyiniz</p>
                                             </div>
                                         </div><!-- .col1-4 -->
                                         <div class="col-4">
                                             <div class="restbeef_iconbox align_center">
                                                 <i class="fa fa-smile-o"></i>
-                                                <h4>Free Delivery</h4>
-                                                <p>Orders from $100 are delivered free of charge within 5 miles of the restaurant.</p>
+                                                <h4>Teklif</h4>
+                                                <p>Siz karar verdikten sonra size uygun bir teklif tarafımızdan hazırlaranarak size ulaştırılacaktır.</p>
                                             </div>
                                         </div><!-- .col1-4 -->
                                     </div><!-- .row -->
@@ -117,10 +129,7 @@
 
                             <!-- Delivery Steps -->
                             <div class="restbeef_block restbeef_js_margin"  data-margin="0 0 100px 0">
-                                <h2 class="restbeef_block_title align_center">
-                                    <span class="restbeef_up_title">How It Works</span>
-                                    Making an order
-                                </h2>
+
                                 <div class="restbeef_block_inner">
                                     <div class="row restbeef_step_item">
                                         <div class="col-8">

@@ -130,7 +130,7 @@
                                     <div class="col-3"></div>
                                 </div>
                             </div><!-- .restbeef_block -->
-                            <form method="POST" class="form-horizontal" action="/add-reservation-web" enctype="multipart/form-data">
+                            <form method="POST" class="form-horizontal" action="/add-form-web" enctype="multipart/form-data">
                                 @csrf
                             <div class="restbeef_block restbeef_js_margin" data-margin="0 0 90px 0">
                                 <div class="restbeef_block_inner">

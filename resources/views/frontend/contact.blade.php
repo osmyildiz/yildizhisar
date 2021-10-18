@@ -234,7 +234,22 @@
                                             <span class="restbeef_up_title">Sorunuz mu var?</span>
                                             Bizimle iletişime geçin
                                         </h2>
-                                        <form method="post" id="contact_form">
+                                        <div class="restbeef_block_title align_center">
+                                            @if(session()->has('message'))
+                                                <div class="alert {{session('alert') ?? 'info'}} alert-dismissible fade show">
+                                                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+
+                                                    @if(session('alert')=="success")
+                                                        @lang('static_text.form_success')
+                                                    @else
+                                                        @lang('static_text.form_error')
+                                                    @endif
+                                                </div>
+                                            @endif
+                                        </div>
+
+                                        <form method="POST" class="form-horizontal" action="/add-form-web" enctype="multipart/form-data">
+                                            @csrf
                                         <div class="restbeef_block_inner">
                                             <div class="row restbeef_keep_tablet_row">
                                                 <div class="col-2"></div>
@@ -242,23 +257,24 @@
 
                                                         <div class="row">
                                                             <div class="col-6">
-                                                                <input type="text" placeholder=@lang('static_text.firstname') name="name"/>
+                                                                <input type="text" placeholder=@lang('static_text.firstname') name="name" required/>
                                                             </div>
                                                             <div class="col-6">
-                                                                <input type="text" placeholder=@lang('static_text.lastname') name="surname"/>
+                                                                <input type="text" placeholder=@lang('static_text.lastname') name="surname" required/>
                                                             </div>
 
                                                         </div><!-- .row -->
                                                     <div class="row">
 
                                                         <div class="col-6">
-                                                            <input type="number" placeholder=@lang('static_text.phone') name="phone"/>
+                                                            <input type="number" placeholder=@lang('static_text.phone') name="phone" required onKeyDown="limitText(this,10);"
+                                                                   onKeyUp="limitText(this,10);"/>
                                                         </div>
                                                         <div class="col-6">
-                                                            <input type="email" placeholder=@lang('static_text.email') name="email"/>
+                                                            <input type="email" placeholder=@lang('static_text.email') name="email" required />
                                                         </div>
                                                     </div><!-- .row -->
-                                                        <textarea placeholder="@lang('static_text.message')" name="message"></textarea>
+                                                        <textarea placeholder="@lang('static_text.message')" name="message" required></textarea>
                                                         <input type="submit" value="@lang('static_text.send')"/>
 
                                                 </div><!-- .col-8 -->
@@ -283,5 +299,14 @@
         </div><!-- .restbeef_main_wrapper -->
 
     </div>
+        <script language="javascript" type="text/javascript">
+            function limitText(limitField, limitNum) {
+                if (limitField.value.length > limitNum) {
+                    limitField.value = limitField.value.substring(0, limitNum);
+                }
+            }
+
+
+        </script>
 @endsection
 

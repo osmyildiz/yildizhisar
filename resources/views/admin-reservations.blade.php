@@ -183,10 +183,12 @@
                     <p class="card-title-desc">Bugüne ait rezervasyonları bu tablodan inceleyebilirsiniz.
                     </p>
 
-                    <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                    <div class="table-responsive">
+
+                    <table id="today_table" class="table table-bordered table-hover">
                         <thead>
                         <tr>
-
+                            <th>No</th>
                             <th>Tarih</th>
                             <th>Saat</th>
                             <th>Kişi Sayısı</th>
@@ -200,9 +202,13 @@
 
 
                         <tbody>
-                        @foreach($res_today as $res)
-                            <tr>
+                        @if($res_today->count()==0)
+                            <td colspan="8">Bugüne ait bir kayıt bulunamadı.</td>
+                            @else
 
+                        @foreach($res_today as $key=>$res)
+                            <tr>
+                                <td>{{$key+1}}</td>
                                 <td>{{$res->res_date}}</td>
                                 <td>{{$res->time}}</td>
                                 <td>{{$res->guest_number}}</td>
@@ -225,12 +231,25 @@
                             </tr>
                         @endforeach
 
+                            @endif
+
                         </tbody>
+
                     </table>
-                </div>
+                    {{$res_today->links("pagination::bootstrap-4")}}
+
+
+
+
+                </div></div>
+
             </div>
+
         </div> <!-- end col -->
+
     </div> <!-- end row -->
+    <div class="d-flex justify-content-center"></div>
+
     <div class="row">
         <div class="col-12">
             <div class="card">

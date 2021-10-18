@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Contact;
 use App\Models\Form;
 use App\Models\Menu;
+use App\Models\Newsletter;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 
@@ -16,10 +19,24 @@ class AdminController extends Controller
      */
     public function reservations()
     {
-        $res_today = Reservation::whereDay('res_date', now()->day)->get();
+        $res_today = Reservation::whereDay('res_date', now()->day)->paginate(10);
         $res_all =Reservation::get();
 
         return view('admin-reservations',compact('res_today','res_all'));
+    }
+    public function admin_forms()
+    {
+        $all_forms = Form::orderBy('created_at','DESC')->paginate(20);
+
+
+        return view('admin-forms',compact('all_forms'));
+    }
+    public function admin_newsletter()
+    {
+        $all_newsletter = Newsletter::orderBy('created_at','DESC')->paginate(20);
+
+
+        return view('admin-newsletter',compact('all_newsletter'));
     }
     public function admin_menu()
     {
@@ -30,10 +47,17 @@ class AdminController extends Controller
     }
     public function admin_about()
     {
-        $res_today = Reservation::whereDay('res_date', now()->day)->get();
-        $res_all =Reservation::get();
+        $about = About::find(1);
 
-        return view('admin-about',compact('res_today','res_all'));
+
+        return view('admin-about',compact('about'));
+    }
+    public function admin_contact()
+    {
+        $contact = Contact::find(1);
+
+
+        return view('admin-contact',compact('contact'));
     }
     public function add_reservations(Request $request)
     {
@@ -148,6 +172,78 @@ class AdminController extends Controller
 
 
     }
+    public function update_about_page(Request $request)
+    {
+
+
+        $about = About::find(1);
+        $about->about_first_text_tr = $request->about_first_text_tr;
+        $about->about_first_text_en = $request->about_first_text_en;
+        $about->middle_text_tr = $request->middle_text_tr;
+        $about->middle_text_en = $request->middle_text_en;
+
+        if($request->hasFile('img1')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->img1->extension();
+
+        $request->img1->move(public_path('img'), $imageName);
+        $about->img1 = "/img/".$imageName;
+        }
+        if($request->hasFile('img2')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->img2->extension();
+
+            $request->img2->move(public_path('img'), $imageName);
+            $about->img2 = "/img/".$imageName;
+        }
+        if($request->hasFile('img3')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->img3->extension();
+
+            $request->img3->move(public_path('img'), $imageName);
+            $about->img3 = "/img/".$imageName;
+        }
+
+        $save = $about->save();
+
+        if($save){
+            return back()->with('success', 'Hakkımızda sayfası güncellendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function update_contact_page(Request $request)
+    {
+
+
+        $contact = Contact::find(1);
+        $contact->working_hours_weekdays_tr = $request->working_hours_weekdays_tr;
+        $contact->working_hours_weekdays_en = $request->working_hours_weekdays_en;
+        $contact->working_hours_weekend_tr = $request->working_hours_weekend_tr;
+        $contact->working_hours_weekend_en = $request->working_hours_weekend_en;
+        $contact->phone = $request->phone;
+        $contact->address = $request->address;
+        $contact->contact_us_email_1 = $request->contact_us_email_1;
+        $contact->contact_us_email_text_tr_1 = $request->contact_us_email_text_tr_1;
+        $contact->contact_us_email_text_en_1 = $request->contact_us_email_text_en_1;
+        $contact->contact_us_email_2 = $request->contact_us_email_2;
+        $contact->contact_us_email_text_tr_2 = $request->contact_us_email_text_tr_2;
+        $contact->contact_us_email_text_en_2 = $request->contact_us_email_text_en_2;
+
+        $save = $contact->save();
+
+        if($save){
+            return back()->with('success', 'İletişim sayfası güncellendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
     public function delete_reservations($id)
     {
         $res = Reservation::destroy($id);
@@ -165,7 +261,7 @@ class AdminController extends Controller
     public function test()
     {
 
-        return view('resources.form-advanced');
+        return view('resources.tables-responsive');
     }
 
     /**
