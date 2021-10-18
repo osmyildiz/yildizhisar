@@ -25,7 +25,6 @@ class AboutSeeder extends Seeder
             'img3'=>"/img/y7.jpeg",
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
-
         ]);
 
 

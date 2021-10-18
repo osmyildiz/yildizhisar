@@ -24,6 +24,7 @@ class CreateAboutsTable extends Migration
             $table->String('img3')->default("/img/y7.jpeg");
             $table->softDeletes();
             $table->timestamps();
+
         });
     }
 
