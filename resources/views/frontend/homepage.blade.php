@@ -4,43 +4,7 @@
     restbeef_header_wrapper restbeef_js_bg_image restbeef_height100 data-background="img/yildiz-hisar-sariyer-1.jpg"
 @endsection
 @section('slider')
-    <style>
-        .menu-bnt{
-            cursor: pointer;
-        }
-        .menu-active{
-            border-bottom: 10px solid #AB945E;
-        }
-    </style>
-    <style>
-        .alert {
-            padding: 20px;
-            background-color: #f44336;
-            color: white;
-            opacity: 0.83;
-            transition: opacity 0.6s;
-            margin-bottom: 15px;
-        }
 
-        .alert.success {background-color: #04AA6D;}
-        .alert.info {background-color: #2196F3;}
-        .alert.warning {background-color: #ff9800;}
-
-        .closebtn {
-            padding-left: 15px;
-            color: white;
-            font-weight: bold;
-            float: right;
-            font-size: 20px;
-            line-height: 18px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .closebtn:hover {
-            color: black;
-        }
-    </style>
     <div class="restbeef_header_title restbeef_container">
         @if(app()->getLocale() == "tr")
             <h1>
@@ -50,7 +14,7 @@
             <p class="restbeef_header_description">
                 Etkinlik - Davet - Restoran
             </p>
-            <a href="our_menu.html" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Galeri</a>
+            <a href="/gallery" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Galeri</a>
             <a href="/table_rezervations" style=" border: 1px solid white;"
                class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Rezervasyon</a>
         @else
@@ -61,7 +25,7 @@
             <p class="restbeef_header_description">
                 Event & Wedding & Restaurant
             </p>
-            <a href="our_menu.html" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Gallery</a>
+            <a href="/gallery" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Gallery</a>
             <a href="/table_rezervations" style=" border: 1px solid white;"
                class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Booking Table</a>
         @endif

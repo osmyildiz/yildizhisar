@@ -112,6 +112,8 @@
                                             HİSAR MENU
                                         </h2>
                                         <div style="" class="row">
+
+
                                             <div class="col-2 text-center menu-bnt menu-active" id="1"><h5 style="font-weight: normal;">
                                                     <a style="font-size: 30px;">Çorbalar</a></h5></div>
                                             <div class="col-3 text-center menu-bnt" id="2"><h5 style="font-weight: normal;">
@@ -124,6 +126,7 @@
                                             <div class="col-2 text-center menu-bnt" id="5"><h5 style="font-weight: normal;">
                                                     <a style="font-size: 30px;">İçecekler</a></h5></div>
                                         </div>
+
                                     </div><!-- .restbeef_block -->
                                 </div>
                                 <div class="row d-flex-x bottom-menu" id="menu-1" style="background-color: #F7F4EF;  padding: 25px;">

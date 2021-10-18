@@ -40,10 +40,10 @@ class AdminController extends Controller
     }
     public function admin_menu()
     {
-        $res_today = Reservation::whereDay('res_date', now()->day)->get();
-        $res_all =Reservation::get();
+        $menu_all = Menu::orderBy('category','ASC')->paginate(30); ;
+        
 
-        return view('admin-menu',compact('res_today','res_all'));
+        return view('admin-menu',compact('menu_all'));
     }
     public function admin_about()
     {
@@ -92,6 +92,25 @@ class AdminController extends Controller
 
         if($save){
                 return back()->with('success', 'Rezervasyon oluşturuldu!');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+    }
+    public function add_menu(Request $request)
+    {
+
+
+        $menu = new Menu();
+        $menu->name = $request->name;
+        $menu->category = $request->category;
+        $menu->price = $request->rice;
+        $menu->description = $request->description;
+        $save = $menu->save();
+
+        if($save){
+                return back()->with('success', 'Menu eklendi!');
 
         }
 
@@ -147,6 +166,13 @@ class AdminController extends Controller
     return view('reservation-edit',compact('res'));
 
 }
+    public function edit_menu($id)
+{
+    $res = Menu::find($id);
+
+    return view('menu-edit',compact('res'));
+
+}
     public function edit_reservation(Request $request,$id)
     {
 
@@ -165,6 +191,27 @@ class AdminController extends Controller
 
         if($save){
             return back()->with('success', 'Rezervasyon değiştirildi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function update_menu(Request $request,$id)
+    {
+
+
+        $menu = Menu::find($id);
+        $menu->name = $request->name;
+        $menu->category = $request->category;
+        $menu->price = $request->price;
+        $menu->description =$request->description;
+
+        $save = $menu->save();
+
+        if($save){
+            return back()->with('success', 'Menu güncellendi.');
 
         }
 
@@ -251,6 +298,20 @@ class AdminController extends Controller
 
         if($res){
             return back()->with('success', 'Rezervasyon silindi!');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function delete_menu($id)
+    {
+        $res = Menu::destroy($id);
+
+
+        if($res){
+            return back()->with('success', 'Menu silindi!');
 
         }
 

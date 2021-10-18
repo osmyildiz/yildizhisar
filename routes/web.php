@@ -55,9 +55,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/panel', [HomeController::class, 'panel'])->name('panel');
     Route::get('/reservations', [AdminController::class, 'reservations'])->name('reservations');
     Route::post('/add-reservations', [AdminController::class, 'add_reservations'])->name('add_reservations');
+    Route::post('/add-menu', [AdminController::class, 'add_menu'])->name('add_menu');
     Route::get ('/delete-reservations/{id}', [AdminController::class, 'delete_reservations'])->name('reservation.delete');
+    Route::get ('/delete-menu/{id}', [AdminController::class, 'delete_menu'])->name('menu.delete');
     Route::get ('/edit-reservations/{id}', [AdminController::class, 'edit_reservations'])->name('reservation.edit');
     Route::post('/edit-reservation/{id}', [AdminController::class, 'edit_reservation'])->name('edit.reservation');
+    Route::get('/edit-menu/{id}', [AdminController::class, 'edit_menu'])->name('menu.edit');
+    Route::post('/update-menu/{id}', [AdminController::class, 'update_menu'])->name('menu.update');
     Route::get('/admin-menu', [AdminController::class, 'admin_menu'])->name('admin-menu');
     Route::get('/admin-about', [AdminController::class, 'admin_about'])->name('admin-about');
     Route::get('/admin-contact', [AdminController::class, 'admin_contact'])->name('admin-contact');

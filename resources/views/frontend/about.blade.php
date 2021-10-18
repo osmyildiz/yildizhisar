@@ -1,7 +1,17 @@
 @extends('frontend.layouts.master')
 @section('title','Rezervasyon')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 @section('slider')
+    <style>
+        .gallery-img img{
+            float: left;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
     <div class="restbeef_header_title restbeef_container">
         @if(app()->getLocale() == "tr")
 
@@ -95,33 +105,35 @@
                             </div><!-- .restbeef_block -->
 
                             <!-- Our Gallery -->
+
                             <div class="restbeef_block">
                                 <h2 class="restbeef_block_title align_center restbeef_js_margin" data-margin="0 0 40px 0">
                                     <span class="restbeef_up_title">New Photos</span>
                                     Our Gallery
                                 </h2>
-                                <div class="restbeef_block_inner">
-                                    <div class="restbeef_grig_gallery_wrapper restbeef_grig_3columns restbeef_photoswipe_wrapper" data-uniqid="624">
-                                        <div class="restbeef_grig_gallery_item">
-                                            <a href="img/y4.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="3">
-                                                <img src="img/y4.jpeg" alt="Gallery Image 04"/>
-                                            </a>
-                                        </div>
-                                        <div class="restbeef_grig_gallery_item">
-                                            <a href="img/y5.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="4">
-                                                <img src="img/y5.jpeg" alt="Gallery Image 05"/>
-                                            </a>
-                                        </div>
-                                        <div class="restbeef_grig_gallery_item">
-                                            <a href="img/y6.jpeg" class="restbeef_pswp_slide" data-size="1920x1280" data-count="5">
-                                                <img src="img/y6.jpeg" alt="Gallery Image 06"/>
-                                            </a>
-                                        </div>
-                                    </div><!-- .restbeef_grig_gallery_wrapper -->
-                                </div><!-- .restbeef_block_inner -->
-                            </div><!-- .restbeef_block -->
+                            </div>
+                            <div class="owl-carousel owl-theme">
+                                <div class="item gallery-img"><a href="img/y6.jpeg" data-size="1920x1280" data-count="5">
+                                        <img class="owl-lazy" data-src="img/y6.jpeg" alt="Gallery Image 06"/>
+                                    </a></div>
+                                <div class="item gallery-img"><a href="img/y6.jpeg" data-size="1920x1280" data-count="5">
+                                        <img class="owl-lazy" data-src="img/y3.jpeg" alt="Gallery Image 06"/>
+                                    </a></div>
+                                <div class="item gallery-img"><a href="img/y6.jpeg" data-size="1920x1280" data-count="5">
+                                        <img class="owl-lazy" data-src="img/y4.jpeg" alt="Gallery Image 06"/>
+                                    </a></div>
+                                <div class="item gallery-img"><a href="img/y6.jpeg" data-size="1920x1280" data-count="5">
+                                        <img class="owl-lazy" data-src="img/y9.jpeg" alt="Gallery Image 06"/>
+                                    </a></div>
+                                <div class="item gallery-img"><a href="img/y6.jpeg" data-size="1920x1280" data-count="5">
+                                        <img class="owl-lazy" data-src="img/y11.jpeg" alt="Gallery Image 06"/>
+                                    </a></div>
+                            </div>
+
+
 
                         </div><!-- .restbeef_tiny -->
+
                     </div><!-- .restbeef_content -->
 
                 </div><!-- .restbeef_content_wrapper -->
@@ -129,5 +141,37 @@
         </div><!-- .restbeef_main_wrapper -->
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script language="javascript" type="text/javascript">
+
+            $(".owl-carousel").owlCarousel({
+
+                loop:true,
+                rtl: false,
+                lazyLoad:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:2
+                    },
+                    600:{
+                        items:2
+                    },
+                    800:{
+                        items: 3
+                    },
+                    1000:{
+                        items:2
+                    },
+                    1200:{
+                        items: 3
+                    }
+                }
+            });
+
+
+    </script>
 @endsection
 
