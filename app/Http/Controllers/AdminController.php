@@ -163,10 +163,14 @@ class AdminController extends Controller
     public function add_newsletter(Request $request)
     {
         $check_email = Newsletter::where('email',$request->email)->first();
-        if($check_email->count()>0){
-            $scroll = true;
-            return redirect(url()->previous() .'#email')->with(['message' => 'Emailiniz kaydedildi.', 'alert' => 'warning'])->with('scroll',$scroll);
-        }else{
+
+        if($check_email){
+            if($check_email->count()>0){
+                $scroll = true;
+                return redirect(url()->previous() .'#email')->with(['message' => 'Emailiniz kaydedildi.', 'alert' => 'warning'])->with('scroll',$scroll);
+
+                }
+            }else{
             $newsletter = new Newsletter();
             $newsletter->email = $request->email;
             $save = $newsletter->save();
