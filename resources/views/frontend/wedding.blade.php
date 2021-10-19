@@ -74,21 +74,12 @@
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_content_box02 align_center">
                                         @if(app()->getLocale() == "tr")
-                                            <h2 style="font-size: 60px" class="align_center restbeef_js_padding"
-                                                data-padding="0 0 15px 0">
-                                                <span style="font-size: 50px" class="restbeef_up_title">Hikayemiz</span>
 
-                                            </h2>
                                             <p>Havuz başı düğün denilince Yıldız Hisar Tesisleri, muhteşem manzarası ile ilk gelen mekanlar arasında yer almaktadır. Mekanımız yıllardır şık tasarımı, büyüleyici manzarası ve geniş hizmet yelpazesi ile birlikte çiftlerin tercih sebebi olmaktadır. Sunduğu ayrıcalıklara karşın fiyatları da her bütçeye hitap etmektedir. Düğün fiyatlarımız seçilen menüye göre kişi başı 290 TL’den başlıyor.</p>  </div><!-- .col-6 -->
 
 
                                 @else
-                                            <h2 style="font-size: 60px" class="align_center restbeef_js_padding"
-                                                data-padding="0 0 15px 0">
-                                                <span style="font-size: 50px"
-                                                      class="restbeef_up_title">Our History</span>
 
-                                            </h2>
                                         <p>Havuz başı düğün denilince Yıldız Hisar Tesisleri, muhteşem manzarası ile ilk gelen mekanlar arasında yer almaktadır. Mekanımız yıllardır şık tasarımı, büyüleyici manzarası ve geniş hizmet yelpazesi ile birlikte çiftlerin tercih sebebi olmaktadır. Sunduğu ayrıcalıklara karşın fiyatları da her bütçeye hitap etmektedir. Düğün fiyatlarımız seçilen menüye göre kişi başı 290 TL’den başlıyor.</p>  </div><!-- .col-6 -->
 
 
@@ -130,142 +121,308 @@
                                     </div><!-- .row -->
                                 </div><!-- .restbeef_block_inner -->
                             </div><!-- .restbeef_block -->
+                                <div class="restbeef_main_wrapper">
+                                    <div class="restbeef_container">
+                                        <div class="restbeef_content_wrapper restbeef_no_sidebar">
 
-                            <!-- Delivery Steps -->
-                            <div class="restbeef_block restbeef_js_margin"  data-margin="0 0 100px 0">
+                                            <!-- Content Inner -->
+                                            <div class="restbeef_content">
+                                                <div class="restbeef_tiny">
 
-                                <div class="restbeef_block_inner">
-                                    <div class="row restbeef_step_item">
-                                        <div class="col-8">
-                                            <div class="restbeef_step_content">
-                                                <h2>
-                                                    <span class="restbeef_up_title">Menü 01</span>
-                                                    290 TL + KDV
-                                                </h2>
-                                                <div class="align_center">
-                                                    <div class="restbeef_poduct_description">
-                                                        <h6>Meze Tabağı</h6>
-                                                        <p>
-                                                            <span>Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
-                                                        </span><span>kısır, kaşar peynir, somon füme</span>
-                                                        </p>
+                                                    <!-- Team Member -->
+                                                    <div class="restbeef_block restbeef_team_block restbeef_js_margin" data-margin="0 0 90px 0">
+                                                        <div class="restbeef_block_inner">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <img src="img/y3.jpeg" alt="menu1" />
+                                                                </div><!-- .col1-6 -->
+                                                                <div class="col-6">
+                                                                    <div class="restbeef_team_block_content align_center">
+                                                                        <h2>
+                                                                            <span class="restbeef_up_title">Menü 01</span>
+                                                                            290 TL + KDV
+                                                                        </h2>
+                                                                        <div class="restbeef_poduct_description">
 
-                                                        <h6>Ara Sıcaklar</h6>
-                                                        <p>Peynirli Su Böreği</p>
-
-                                                        <h6>Ana Yemek</h6>
-                                                        <p>Fırında Tavuk Göğsü ‘ Florantine ‘ Sote ıspanak yatağında, baharatlı patates ile</p>
-                                                        <h6>Düğün Pastası</h6>
-                                                        <p>Düğün Pastası,Çay & Nescafe Türk Lokumu ile Limitsiz Meşrubat</p>
-                                                    </div><!-- .restbeef_poduct_description -->
-                                                </div><!-- .restbeef_poduct_summary_content -->
+                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
+                                                                            kısır, kaşar peynir, somon füme
 
 
-                                            </div>
-                                        </div><!-- .col-8 -->
-                                        <div class="col-4 restbeef_step_path">
-                                        </div><!-- .col-4 -->
-                                    </div><!-- .restbeef_step_item -->
-                                    <div class="row restbeef_step_item">
-                                        <div class="col-8">
-                                            <div class="restbeef_step_content">
-                                                <h2>
-                                                    <span class="restbeef_up_title">Menü 02</span>
-                                                    Order Form
-                                                </h2>
-                                                <p>Next step is to place your order. To do that you can go to shopping cart, by using widget in sidebar, pressing button with the same name or by click on cart icon in header. In shopping cart you can check your order, fill form fields and after that confirm your order.</p>
+                                                                            <strong>Ara Sıcaklar</strong>
+                                                                            Peynirli Su Böreği
 
-                                            </div>
-                                        </div><!-- .col-8 -->
-                                        <div class="col-4 restbeef_step_path">
-                                        </div><!-- .col-4 -->
-                                    </div><!-- .restbeef_step_item -->
-                                    <div class="row restbeef_step_item">
-                                        <div class="col-8">
-                                            <div class="restbeef_step_content">
-                                                <h2>
-                                                    <span class="restbeef_up_title">Menü 03</span>
-                                                    Select meal
-                                                </h2>
-                                                <p>To make an order at first step you need select meal, that you want to order. You can do it on our menu page, where all dishes are sorted by categories. Click on menu item and in opened page press “Add to Cart” button. You can add as more items, as you need.</p>
+                                                                            <strong>Ana Yemek</strong>
+                                                                            Fırında Tavuk Göğsü ‘ Florantine ‘ Sote ıspanak yatağında, baharatlı patates ile
+                                                                            <strong>Düğün Pastası</strong>
+                                                                           Düğün Pastası,Çay & Nescafe Türk Lokumu ile Limitsiz Meşrubat</p>
+                                                                        </div>
+                                                                         </div><!-- .restbeef_team_block_content -->
+                                                                </div><!-- .col1-6 -->
+                                                            </div><!-- .row -->
+                                                        </div><!-- .restbeef_block_inner -->
+                                                    </div><!-- .restbeef_block -->
 
-                                            </div>
-                                        </div><!-- .col-8 -->
-                                        <div class="col-4 restbeef_step_path">
-                                        </div><!-- .col-4 -->
-                                    </div><!-- .restbeef_step_item -->
-                                    <div class="row restbeef_step_item">
-                                        <div class="col-8">
-                                            <div class="restbeef_step_content">
-                                                <h2>
-                                                    <span class="restbeef_up_title">Menü 04</span>
-                                                    Order Form
-                                                </h2>
-                                                <p>Next step is to place your order. To do that you can go to shopping cart, by using widget in sidebar, pressing button with the same name or by click on cart icon in header. In shopping cart you can check your order, fill form fields and after that confirm your order.</p>
+                                                    <!-- Team Member -->
+                                                    <div class="restbeef_block restbeef_team_block restbeef_js_margin" data-margin="0 0 90px 0">
+                                                        <div class="restbeef_block_inner">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <img src="img/y4.jpeg" alt="menu2" />
+                                                                </div><!-- .col1-6 -->
+                                                                <div class="col-6">
+                                                                    <div class="restbeef_team_block_content align_center">
+                                                                        <h2>
+                                                                            <span class="restbeef_up_title">Menü 02</span>
+                                                                            290 TL + KDV
+                                                                        </h2>
+                                                                        <div class="restbeef_poduct_description">
 
-                                            </div>
-                                        </div><!-- .col-8 -->
-                                        <div class="col-4 restbeef_step_path">
-                                        </div><!-- .col-4 -->
-                                    </div><!-- .restbeef_step_item -->
-                                    <div class="row restbeef_step_item">
-                                        <div class="col-8">
-                                            <div class="restbeef_step_content">
-                                                <h2>
-                                                    <span class="restbeef_up_title">Menü 05</span>
-                                                    Select meal
-                                                </h2>
-                                                <p>To make an order at first step you need select meal, that you want to order. You can do it on our menu page, where all dishes are sorted by categories. Click on menu item and in opened page press “Add to Cart” button. You can add as more items, as you need.</p>
-                                                <a href="our_menu.html" class="restbeef_button">View menu</a>
-                                            </div>
-                                        </div><!-- .col-8 -->
-                                        <div class="col-4 restbeef_step_path">
-                                        </div><!-- .col-4 -->
-                                    </div><!-- .restbeef_step_item -->
-                                    <div class="row restbeef_step_item">
-                                        <div class="col-8">
-                                            <div class="restbeef_step_content">
-                                                <h2>
-                                                    <span class="restbeef_up_title">Menü 06</span>
-                                                    Wait for a call
-                                                </h2>
-                                                <p>After all that steps we call you back immediately (or maybe in 3-5 minutes) to confirm your order and to clarify details.  And after that we will sent your order for you. All our delivery men are fastest drivers in the world, so your order will not have time to cool!</p>
-                                                <a href="contacts01.html" class="restbeef_button">Contact Us</a>
-                                            </div>
-                                        </div><!-- .col-8 -->
-                                        <div class="col-4 restbeef_step_path">
-                                        </div><!-- .col-4 -->
-                                    </div><!-- .restbeef_step_item -->
-                                </div>
-                            </div><!-- .restbeef_block -->
+                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
+                                                                            kısır, kaşar peynir, somon füme
+
+
+                                                                            <strong>Ara Sıcaklar</strong>
+                                                                            Peynirli Su Böreği
+
+                                                                            <strong>Ana Yemek</strong>
+                                                                            Fırında Tavuk Göğsü ‘ Florantine ‘ Sote ıspanak yatağında, baharatlı patates ile
+                                                                            <strong>Düğün Pastası</strong>
+                                                                            Düğün Pastası,Çay & Nescafe Türk Lokumu ile Limitsiz Meşrubat</p>
+                                                                        </div>
+                                                                    </div><!-- .restbeef_team_block_content -->
+                                                                </div><!-- .col1-6 -->
+                                                            </div><!-- .row -->
+                                                        </div><!-- .restbeef_block_inner -->
+                                                    </div><!-- .restbeef_block -->
+
+                                                    <!-- Team Member -->
+                                                    <div class="restbeef_block restbeef_team_block restbeef_js_margin" data-margin="0 0 90px 0">
+                                                        <div class="restbeef_block_inner">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <img src="img/y5.jpeg" alt="menu3" />
+                                                                </div><!-- .col1-6 -->
+                                                                <div class="col-6">
+                                                                    <div class="restbeef_team_block_content align_center">
+                                                                        <h2>
+                                                                            <span class="restbeef_up_title">Menü 03</span>
+                                                                            290 TL + KDV
+                                                                        </h2>
+                                                                        <div class="restbeef_poduct_description">
+
+                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
+                                                                            kısır, kaşar peynir, somon füme
+
+
+                                                                            <strong>Ara Sıcaklar</strong>
+                                                                            Peynirli Su Böreği
+
+                                                                            <strong>Ana Yemek</strong>
+                                                                            Fırında Tavuk Göğsü ‘ Florantine ‘ Sote ıspanak yatağında, baharatlı patates ile
+                                                                            <strong>Düğün Pastası</strong>
+                                                                            Düğün Pastası,Çay & Nescafe Türk Lokumu ile Limitsiz Meşrubat</p>
+                                                                        </div>
+                                                                    </div><!-- .restbeef_team_block_content -->
+                                                                </div><!-- .col1-6 -->
+                                                            </div><!-- .row -->
+                                                        </div><!-- .restbeef_block_inner -->
+                                                    </div><!-- .restbeef_block -->
+
+                                                    <!-- Team Member -->
+                                                    <div class="restbeef_block restbeef_team_block restbeef_js_margin" data-margin="0 0 90px 0">
+                                                        <div class="restbeef_block_inner">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <img src="img/y3.jpeg" alt="menu4" />
+                                                                </div><!-- .col1-6 -->
+                                                                <div class="col-6">
+                                                                    <div class="restbeef_team_block_content align_center">
+                                                                        <h2>
+                                                                            <span class="restbeef_up_title">Menü 04</span>
+                                                                            290 TL + KDV
+                                                                        </h2>
+                                                                        <div class="restbeef_poduct_description">
+
+                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
+                                                                            kısır, kaşar peynir, somon füme
+
+
+                                                                            <strong>Ara Sıcaklar</strong>
+                                                                            Peynirli Su Böreği
+
+                                                                            <strong>Ana Yemek</strong>
+                                                                            Fırında Tavuk Göğsü ‘ Florantine ‘ Sote ıspanak yatağında, baharatlı patates ile
+                                                                            <strong>Düğün Pastası</strong>
+                                                                            Düğün Pastası,Çay & Nescafe Türk Lokumu ile Limitsiz Meşrubat</p>
+                                                                        </div>
+                                                                    </div><!-- .restbeef_team_block_content -->
+                                                                </div><!-- .col1-6 -->
+                                                            </div><!-- .row -->
+                                                        </div><!-- .restbeef_block_inner -->
+                                                    </div><!-- .restbeef_block -->
+
+                                                    <!-- Team Member -->
+                                                    <div class="restbeef_block restbeef_team_block">
+                                                        <div class="restbeef_block_inner">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <img src="img/y5.jpeg" alt="menu5" />
+                                                                </div><!-- .col1-6 -->
+                                                                <div class="col-6">
+                                                                    <div class="restbeef_team_block_content align_center">
+                                                                        <h2>
+                                                                            <span class="restbeef_up_title">Menü 05</span>
+                                                                            290 TL + KDV
+                                                                        </h2>
+                                                                        <div class="restbeef_poduct_description">
+
+                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
+                                                                            kısır, kaşar peynir, somon füme
+
+
+                                                                            <strong>Ara Sıcaklar</strong>
+                                                                            Peynirli Su Böreği
+
+                                                                            <strong>Ana Yemek</strong>
+                                                                            Fırında Tavuk Göğsü ‘ Florantine ‘ Sote ıspanak yatağında, baharatlı patates ile
+                                                                            <strong>Düğün Pastası</strong>
+                                                                            Düğün Pastası,Çay & Nescafe Türk Lokumu ile Limitsiz Meşrubat</p>
+                                                                        </div>
+                                                                    </div><!-- .restbeef_team_block_content -->
+                                                                </div><!-- .col1-6 -->
+                                                            </div><!-- .row -->
+                                                        </div><!-- .restbeef_block_inner -->
+                                                    </div><!-- .restbeef_block -->
+                                                    <div class="restbeef_block restbeef_team_block restbeef_js_margin" data-margin="0 0 90px 0">
+                                                        <div class="restbeef_block_inner">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <img src="img/y3.jpeg" alt="menu6" />
+                                                                </div><!-- .col1-6 -->
+                                                                <div class="col-6">
+                                                                    <div class="restbeef_team_block_content align_center">
+                                                                        <h2>
+                                                                            <span class="restbeef_up_title">Menü 06</span>
+                                                                            290 TL + KDV
+                                                                        </h2>
+                                                                        <div class="restbeef_poduct_description">
+
+                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
+                                                                            kısır, kaşar peynir, somon füme
+
+
+                                                                            <strong>Ara Sıcaklar</strong>
+                                                                            Peynirli Su Böreği
+
+                                                                            <strong>Ana Yemek</strong>
+                                                                            Fırında Tavuk Göğsü ‘ Florantine ‘ Sote ıspanak yatağında, baharatlı patates ile
+                                                                            <strong>Düğün Pastası</strong>
+                                                                            Düğün Pastası,Çay & Nescafe Türk Lokumu ile Limitsiz Meşrubat</p>
+                                                                        </div>
+                                                                    </div><!-- .restbeef_team_block_content -->
+                                                                </div><!-- .col1-6 -->
+                                                            </div><!-- .row -->
+                                                        </div><!-- .restbeef_block_inner -->
+                                                    </div>
+
+                                                    <div class="restbeef_block restbeef_team_block restbeef_team_summary">
+
+                                                        <div class="restbeef_block_inner">
+                                                            <div class="restbeef_recent_posts restbeef_grig_2columns">
+                                                                <div class="restbeef_recent_post">
+
+                                                                    <div class="restbeef_recent_post_content">
+                                                                        <h5>
+
+                                                                        </h5>
+
+                                                                            <h5>
+                                                                                MÜZİK HİZMETİ
+                                                                            </h5>
+
+
+
+                                                                        <p>Müzik hizmeti Yıldız Hisar’ın anlaşmalı olduğu İzzet & Yakar Müzik Hizmetleri firması  tarafından yapılmaktadır. DJ Müzik & Ses & Işık ( haftasonu geçerlidir )
+                                                                            <strong>İZZET & YAKAR MÜZİK / İzzet Biton</strong>
+                                                                            4.000 TL + KDV
+                                                                            <p>0212 275 67 69</p>
+                                                                            <p>0212 288 32 93</p>
+                                                                            <p>0532 231 75 95</p>
+                                                                        www.izzetyakar.com
+                                                                        </p>
+
+
+                                                                    </div><!-- .restbeef_recent_post_content -->
+                                                                </div><!-- .restbeef_recent_post -->
+
+                                                                <div class="restbeef_recent_post">
+
+                                                                    <div class="restbeef_recent_post_content">
+                                                                        <h5>
+
+                                                                        </h5>
+                                                                        <h5>
+                                                                            DEKORASYON HİZMETİ
+                                                                        </h5>
+
+                                                                        <p>Süsleme hizmeti Yıldız Hisar’ın anlaşmalı olduğu  A Plus Davet & Organizasyon firması
+                                                                            tarafından yapılmaktadır. (Giriş alanına büyük ve orta boy fener süsleme, 4 adet yapay çiçeklerden oluşan gelin yolu, alternatif renk seçeneklerinden oluşan masa örtüsü ve dantel kapağı, masa ortası kare ayna, 5 farklı masa ortası görsel kristal bardak mumluklarda, duni peçete, masa numaratörleri, Lake nikah kürsüsü veya Nikah masası yapay çiçek süsleme ile birlikte düğün paket fiyatına dahildir.) *Ekstra talepleriniz süsleme firması tarafından fiyatlandırılacaktır.
+                                                                            <p>A PLUS DAVET & ORGANİZASYON / Aslı Kubilay 0212 267 57 91 / 0532 571 19 43 www.aplusdavet.com</p>
+
+                                                                        </p>
+
+                                                                    </div><!-- .restbeef_recent_post_content -->
+                                                                </div><!-- .restbeef_recent_post -->
+                                                                <div class="restbeef_recent_post">
+
+                                                                    <div class="restbeef_recent_post_content">
+                                                                        <h5>
+
+                                                                        </h5>
+                                                                        <h5>
+                                                                            Video ve Fotoğraf Hizmeti
+                                                                        </h5>
+                                                                        <p>Video ve Fotoğraf hizmeti Yıldız Hisar’ın anlaşmalı olduğu firması tarafından yapılmaktadır
+                                                                            STUDIOS MCM / Nihat Tanrıverdi 0212 218 24 55 / 0532 504 10 13 www.studiosmcm.com
+                                                                        </p>
+                                                                    </div><!-- .restbeef_recent_post_content -->
+                                                                </div><!-- .restbeef_recent_post -->
+                                                                <div class="restbeef_recent_post">
+
+                                                                    <div class="restbeef_recent_post_content">
+                                                                        <h5>
+
+                                                                        </h5>
+                                                                        <h5>
+                                                                            Karşılama Kokteyli
+                                                                        </h5>
+
+
+                                                                        <p>19.00-20.00 saatleri arasında gerçekleşecek karşılama kokteyli esnasında misafirlerimize cips, çerez, yeşil zeytin, peynir topları ve çıtır grissini çubukları ikram edilecektir.
+                                                                        </p>
+                                                                    </div><!-- .restbeef_recent_post_content -->
+                                                                </div><!-- .restbeef_recent_post -->
+                                                            </div><!-- .restbeef_recent_posts -->
+                                                        </div>
+                                                    </div><!-- .restbeef_block -->
+
+
+                                                    <!-- .restbeef_block -->
+
+                                                </div><!-- .restbeef_tiny -->
+                                            </div><!-- .restbeef_content -->
+
+                                        </div><!-- .restbeef_content_wrapper -->
+                                    </div><!-- .restbeef_container -->
+                                </div><!-- .restbeef_main_wrapper -->     <!-- Delivery Steps -->
 
                             <!-- Contact Form -->
-                            <div class="restbeef_block restbeef_intro_block">
-                                <h2 class="restbeef_block_title align_center">
-                                    <span class="restbeef_up_title">Got Questions?</span>
-                                    Get in touch with US
-                                </h2>
-                                <div class="restbeef_block_inner">
-                                    <div class="row">
-                                        <div class="col-2"></div>
-                                        <div class="col-8">
-                                            <form method="post" id="contact_form">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <input type="text" placeholder="Enter Your Name" name="your_name"/>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <input type="email" placeholder="Enter Your Email" name="your_email"/>
-                                                    </div>
-                                                </div><!-- .row -->
-                                                <textarea placeholder="Enter Your Message" name="your_message"></textarea>
-                                                <input type="submit" value="Send Your Message"/>
-                                            </form>
-                                        </div><!-- .col-8 -->
-                                        <div class="col-2"></div>
-                                    </div>
-                                </div>
-                            </div><!-- .restbeef_block -->
 
                         </div><!-- .restbeef_tiny -->
                     </div><!-- .restbeef_content -->
