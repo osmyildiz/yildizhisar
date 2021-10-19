@@ -68,7 +68,7 @@
 
 
         <!-- Content -->
-        <div class="restbeef_main_wrapper">
+        <div class="restbeef_main_wrapper restbeef_no_top_padding">
             <div class="restbeef_container">
                 <div class="restbeef_content_wrapper restbeef_no_sidebar">
 
@@ -76,30 +76,42 @@
                     <div class="restbeef_content">
                         <div class="restbeef_tiny">
 
-                            <div class="restbeef_block restbeef_js_margin restbeef_intro_block" data-margin="0 0 80px 0">
-                                <div class="row">
-                                    <div class="col-3"></div>
-                                    <div class="col-6 align_center">
+                            <!-- Team Member -->
+                            <div class="restbeef_block restbeef_team_block restbeef_js_margin"
+                                 data-margin="-100px 0 90px 0">
+                                <div class="restbeef_block_inner">
+                                    <div class="restbeef_content_box02 align_center">
                                         @if(app()->getLocale() == "tr")
+                                            <h2 style="font-size: 60px" class="align_center restbeef_js_padding"
+                                                data-padding="0 0 15px 0">
+                                                <span style="font-size: 50px" class="restbeef_up_title">Hikayemiz</span>
+
+                                            </h2>
                                             <p>Havuz başı düğün denilince Yıldız Hisar Tesisleri, muhteşem manzarası ile ilk gelen mekanlar arasında yer almaktadır. Mekanımız yıllardır şık tasarımı, büyüleyici manzarası ve geniş hizmet yelpazesi ile birlikte çiftlerin tercih sebebi olmaktadır. Sunduğu ayrıcalıklara karşın fiyatları da her bütçeye hitap etmektedir. Düğün fiyatlarımız seçilen menüye göre kişi başı 290 TL’den başlıyor.</p>  </div><!-- .col-6 -->
 
 
                                 @else
+                                            <h2 style="font-size: 60px" class="align_center restbeef_js_padding"
+                                                data-padding="0 0 15px 0">
+                                                <span style="font-size: 50px"
+                                                      class="restbeef_up_title">Our History</span>
+
+                                            </h2>
                                         <p>Havuz başı düğün denilince Yıldız Hisar Tesisleri, muhteşem manzarası ile ilk gelen mekanlar arasında yer almaktadır. Mekanımız yıllardır şık tasarımı, büyüleyici manzarası ve geniş hizmet yelpazesi ile birlikte çiftlerin tercih sebebi olmaktadır. Sunduğu ayrıcalıklara karşın fiyatları da her bütçeye hitap etmektedir. Düğün fiyatlarımız seçilen menüye göre kişi başı 290 TL’den başlıyor.</p>  </div><!-- .col-6 -->
 
 
                                 @endif
-                                           <div class="col-3"></div>
-                                </div>
+                                    </div><!-- .restbeef_content_box -->
+                                </div><!-- .restbeef_block_inner -->
                             </div><!-- .restbeef_block -->
+
+
+                            <div class="restbeef_block restbeef_js_margin restbeef_intro_block" data-margin="0 0 80px 0">
 
                             <!-- Contact Icons -->
                             <div class="restbeef_block restbeef_js_margin restbeef_iconbox_block" data-margin="0 0 90px 0">
                                 <div class="restbeef_block_inner align_center">
-                                    <h2 class="restbeef_block_title align_center">
-                                        <span class="restbeef_up_title">How It Works</span>
-                                        Making an order
-                                    </h2>
+
                                     <div class="row">
 
                                         <div class="col-4">

@@ -18,7 +18,7 @@ return [
     'name' => 'Ad Soyad',
     'firstname' => 'Ad',
     'lastname' => 'Soyad',
-    'open' => 'Her gün 9:00 - 23:00 arası açık',
+    'open' => 'Her Gün 10:00 - 23:00 Arası Hizmet Vermekteyiz',
     'newsletter' => 'E-Bülten',
     'email' => 'E-MAIL',
     'date' => 'Tarih',
