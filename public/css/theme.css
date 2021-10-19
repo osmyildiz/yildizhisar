@@ -2174,6 +2174,7 @@ a.restbeef_testimonials_flow_next:hover {
     background-size: cover;
     text-align: center;
     padding: 0 30px 46px 30px;
+    height: 180px;
 }
 .restbeef_recent_product_price {
     display: inline-block;
@@ -2190,7 +2191,7 @@ a.restbeef_testimonials_flow_next:hover {
     display: inline-block;
     vertical-align: top;
     white-space: nowrap;
-    padding: 6px 15px 4px 15px;
+   /* padding: 6px 15px 4px 15px; */
 }
 .restbeef_recent_product_price del {
     font-weight: 400;
@@ -3248,8 +3249,8 @@ ul.restbeef_footer_links_list li:first-child:before {
     display: none;
 }
 .d-none{
-    display: none;
+    display: none !important;
 }
 .d-flex{
-    display: flex;
+    display: flex !important;
 }

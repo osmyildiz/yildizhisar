@@ -4,14 +4,6 @@
 @section('slider')
     <style>
 
-        body > div > div.restbeef_header_wrapper.restbeef_js_bg_image.restbeef_height100 > div > h1 {
-            font-size: 75px;
-        }
-
-        .restbeef_header_description {
-            font-size: 40px;
-        }
-
         a.restbeef_button.restbeef_button_white {
             background-color: #0b0b0b;
             color: #A38D58;
@@ -85,7 +77,7 @@
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_content_box02 align_center">
                                         @if(app()->getLocale() == "tr")
-                                            <h2 style="font-size: 60px" class="align_center restbeef_js_padding"
+                                            <h2 class="align_center restbeef_js_padding"
                                                 data-padding="0 0 15px 0">
                                                 <span style="font-size: 50px" class="restbeef_up_title">Hikayemiz</span>
 
@@ -103,7 +95,7 @@
                                             </p>
 
                                         @else
-                                            <h2 style="font-size: 60px" class="align_center restbeef_js_padding"
+                                            <h2 class="align_center restbeef_js_padding"
                                                 data-padding="0 0 15px 0">
                                                 <span style="font-size: 50px"
                                                       class="restbeef_up_title">Our History</span>
@@ -128,8 +120,7 @@
                                 <div style="box-shadow: none; padding: 37px 49px 0px 49px !important;"
                                      class="col-10 restbeef_content_box restbeef_js_margin">
                                     <div class="restbeef_block">
-                                        <h2 class="restbeef_block_title align_center"
-                                            style="font-size:60px; border-bottom: 2px solid black; padding-bottom: 15px">
+                                        <h2 class="restbeef_block_title align_center">
                                             <span style="font-size: 50px" class="restbeef_up_title">Lezzetli</span>
                                             HİSAR MENU
                                         </h2>
