@@ -139,8 +139,8 @@
                                                                 <div class="col-6">
                                                                     <div class="restbeef_team_block_content align_center">
                                                                         <h2>
-                                                                            <span class="restbeef_up_title">Menü 01</span>
-                                                                            290 TL + KDV
+                                                                            <span class="restbeef_up_title">Yıldız Hisar</span>
+                                                                            MENÜ 01
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
@@ -173,8 +173,8 @@
                                                                 <div class="col-6">
                                                                     <div class="restbeef_team_block_content align_center">
                                                                         <h2>
-                                                                            <span class="restbeef_up_title">Menü 02</span>
-                                                                            290 TL + KDV
+                                                                            <span class="restbeef_up_title">Yıldız Hisar</span>
+                                                                            Menü 02
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
@@ -207,8 +207,8 @@
                                                                 <div class="col-6">
                                                                     <div class="restbeef_team_block_content align_center">
                                                                         <h2>
-                                                                            <span class="restbeef_up_title">Menü 03</span>
-                                                                            290 TL + KDV
+                                                                            <span class="restbeef_up_title">Yıldız Hisar</span>
+                                                                            Menü 03
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
@@ -241,8 +241,8 @@
                                                                 <div class="col-6">
                                                                     <div class="restbeef_team_block_content align_center">
                                                                         <h2>
-                                                                            <span class="restbeef_up_title">Menü 04</span>
-                                                                            290 TL + KDV
+                                                                            <span class="restbeef_up_title">Yıldız Hisar</span>
+                                                                            Menü 04
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
@@ -275,8 +275,8 @@
                                                                 <div class="col-6">
                                                                     <div class="restbeef_team_block_content align_center">
                                                                         <h2>
-                                                                            <span class="restbeef_up_title">Menü 05</span>
-                                                                            290 TL + KDV
+                                                                            <span class="restbeef_up_title">Yıldız Hisar</span>
+                                                                            Menü 05
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
@@ -307,8 +307,8 @@
                                                                 <div class="col-6">
                                                                     <div class="restbeef_team_block_content align_center">
                                                                         <h2>
-                                                                            <span class="restbeef_up_title">Menü 06</span>
-                                                                            290 TL + KDV
+                                                                            <span class="restbeef_up_title">Yıldız Hisar</span>
+                                                                            Menü 06
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
