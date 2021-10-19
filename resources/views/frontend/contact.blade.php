@@ -154,7 +154,7 @@
                                                     </div><!-- .restbeef_contact_info -->
                                                     <div class="restbeef_contact_info">
                                                         <h6>Adres</h6>
-                                                        Rumeli Hisarı, Salih Bey Sk. No:6
+                                                        Rumeli Hisarı, Salih Bey Sk. No:5
                                                         <br>
                                                         34470 Sarıyer / İstanbul
                                                     </div><!-- .restbeef_contact_info -->

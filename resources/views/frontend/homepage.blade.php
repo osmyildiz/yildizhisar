@@ -293,7 +293,7 @@
 
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
-                                                <h5><a href="product.html">Greek salad</a></h5>
+                                                <h5><a href="product.html">Ezogelin</a></h5>
                                                 <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
@@ -410,7 +410,7 @@
 
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
-                                                <h5><a href="product.html">Greek salad</a></h5>
+                                                <h5><a href="product.html">Paçanga</a></h5>
                                                 <h5 style="color: #AB945E" class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
@@ -528,7 +528,7 @@
 
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
-                                                <h5><a href="product.html">Greek salad</a></h5>
+                                                <h5><a href="product.html">Tavuk Facile</a></h5>
                                                 <h5 style="color: #AB945E"  class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
@@ -646,7 +646,7 @@
 
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
-                                                <h5><a href="product.html">Greek salad</a></h5>
+                                                <h5><a href="product.html">Sütlaç</a></h5>
                                                 <h5 style="color: #AB945E"  class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->
@@ -764,7 +764,7 @@
 
                                         <div class="restbeef_menu_item">
                                             <div class="restbeef_menu_item_head">
-                                                <h5><a href="product.html">Greek salad</a></h5>
+                                                <h5><a href="product.html">Hibiskus Şerbeti</a></h5>
                                                 <h5 style="color: #AB945E"  class="restbeef_menu_price">
                                                     15 TL
                                                 </h5><!-- .restbeef_menu_price -->

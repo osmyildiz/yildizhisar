@@ -22,7 +22,7 @@ class ContactSeeder extends Seeder
             'working_hours_weekend_tr'    =>"09:00 - 23:00",
             'working_hours_weekend_en'    =>"From 09:00 to 23:00",
             'phone'                       =>"+90 212 287 70 45",
-            'address'                     =>"Rumeli Hisarı, Salih Bey Sk. No:6 34470 Sarıyer / İstanbul",
+            'address'                     =>"Rumeli Hisarı, Salih Bey Sk. No:5 34470 Sarıyer / İstanbul",
             'contact_us_email_text_tr_1'  =>"Genel",
             'contact_us_email_1'          =>"info@yildizhisar.com",
             'contact_us_email_text_en_1'  =>"General",
