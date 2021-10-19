@@ -46,7 +46,7 @@
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_content_box02 align_center">
                                         @if(app()->getLocale() == "tr")
-                                            <h2 style="font-size: 60px" class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
+                                            <h2 class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
                                                 <span style="font-size: 50px" class="restbeef_up_title">Hikayemiz</span>
 
                                             </h2>
@@ -55,7 +55,7 @@
                                             </p>
 
                                         @else
-                                            <h2 style="font-size: 60px" class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
+                                            <h2 class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
                                                 <span style="font-size: 50px" class="restbeef_up_title">Our History</span>
 
                                             </h2>

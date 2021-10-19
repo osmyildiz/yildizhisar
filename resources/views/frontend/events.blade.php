@@ -4,14 +4,6 @@
 @section('slider')
     <style>
 
-        body > div > div.restbeef_header_wrapper.restbeef_js_bg_image.restbeef_height100 > div > h1 {
-            font-size: 75px;
-        }
-
-        .restbeef_header_description {
-            font-size: 40px;
-        }
-
         a.restbeef_button.restbeef_button_white {
             background-color: #0b0b0b;
             color: #A38D58;
