@@ -144,7 +144,7 @@
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
-                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            <p>Meze Tabağı
                                                                             Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
                                                                             kısır, kaşar peynir, somon füme
 
@@ -178,7 +178,7 @@
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
-                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            <p>Meze Tabağı
                                                                             Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
                                                                             kısır, kaşar peynir, somon füme
 
@@ -212,7 +212,7 @@
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
-                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            <p>Meze Tabağı
                                                                             Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
                                                                             kısır, kaşar peynir, somon füme
 
@@ -246,7 +246,7 @@
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
-                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            <p>Meze Tabağı
                                                                             Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
                                                                             kısır, kaşar peynir, somon füme
 
@@ -280,7 +280,7 @@
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
-                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            <p>Meze Tabağı
                                                                             Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
                                                                             kısır, kaşar peynir, somon füme
 
@@ -312,7 +312,7 @@
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
-                                                                            <p><h6>Meze Tabağı</h6>
+                                                                            <p>Meze Tabağı
                                                                             Yaprak sarma, Ezine Beyaz peynir, domates, salatalık, acılı ezme,
                                                                             kısır, kaşar peynir, somon füme
 
