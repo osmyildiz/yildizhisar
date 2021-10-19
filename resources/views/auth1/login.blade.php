@@ -16,17 +16,14 @@
                     <div class="col-md-8 col-lg-6 col-xl-5">
                         <div class="card overflow-hidden">
                             <div class="bg-primary bg-soft">
-                                <div class="row">
+                                <div class="row" style="background-image: url('/img/hisar_admin.jpg');">
                                     <div class="col-7">
-                                        <div class="text-primary p-4">
-                                            <h5 class="text-primary">Yıldız Hisar</h5>
+                                        <div class="text-white p-4">
+                                            <h5 class="text-white">Yıldız Hisar</h5>
                                             <p>Admin Panel</p>
                                         </div>
                                     </div>
-                                    <div class="col-5 align-self-end">
-                                        <img src="{{ URL::asset('/assets/images/profile-img.png') }}" alt=""
-                                            class="img-fluid">
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="card-body pt-0">
@@ -34,7 +31,7 @@
                                     <a href="index" class="auth-logo-light">
                                         <div class="avatar-md profile-user-wid mb-4">
                                             <span class="avatar-title rounded-circle bg-light">
-                                                <img src="{{ URL::asset('/assets/images/logo-light.svg') }}" alt=""
+                                                <img src="{{ URL::asset('/img/hisar_admin.jpg') }}" alt=""
                                                     class="rounded-circle" height="34">
                                             </span>
                                         </div>
@@ -43,8 +40,8 @@
                                     <a href="index" class="auth-logo-dark">
                                         <div class="avatar-md profile-user-wid mb-4">
                                             <span class="avatar-title rounded-circle bg-light">
-                                                <img src="{{ URL::asset('/assets/images/logo.svg') }}" alt=""
-                                                    class="rounded-circle" height="34">
+                                                <img src="{{ URL::asset('/img/hisar_200x200.jpg') }}" alt=""
+                                                    class="rounded-circle" height="60">
                                             </span>
                                         </div>
                                     </a>

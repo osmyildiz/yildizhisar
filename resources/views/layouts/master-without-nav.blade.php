@@ -3,14 +3,18 @@
 
     <head>
         <meta charset="utf-8" />
-        <title> @yield('title') | Skote - Responsive Bootstrap 4 Admin Dashboard</title>
+        @if(app()->getLocale() == "tr")
+            <title>Yıldız Hisar Sosyal Tesisleri</title>
+        @else
+            <title>Yıldız Hisar Restaurant</title>
+        @endif
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="Themesbrand" name="author" />
+        <meta content="Yıldız Hisar Restaurant" name="description" />
+        <meta content="Düğün, Davet, Nişan, Nikah, Kına" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="/img/hisar_icon.png">
         @include('layouts.head-css')
   </head>
 

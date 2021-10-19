@@ -14,7 +14,7 @@
     <meta content="Yıldız Hisar Sosyal Tesisleri" name="description" />
     <meta content="Yıldız Hisar" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="/img/hisar_icon.png">
     @include('layouts.head-css')
 </head>
 @section('body')
