@@ -5,8 +5,15 @@
 @endsection
 
 @section('body')
+    <style>
+        #adminbanner {
 
+            background: url("/img/hisar_admin.jpg") no-repeat;
+            background-size:cover;
+        }
+    </style>
     <body>
+
     @endsection
 
     @section('content')
@@ -16,7 +23,7 @@
                     <div class="col-md-8 col-lg-6 col-xl-5">
                         <div class="card overflow-hidden">
                             <div class="bg-primary bg-soft">
-                                <div class="row" style="background-image: url('/img/hisar_admin.jpg');">
+                                <div class="row" id="adminbanner" >
                                     <div class="col-7">
                                         <div class="text-white p-4">
                                             <h5 class="text-white">Yıldız Hisar</h5>
