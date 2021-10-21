@@ -1,4 +1,10 @@
 <!-- Footer Widgets -->
+@php
+
+    use App\Models\Contact;
+    $contact=Contact::find(1);
+
+@endphp
 <div class="restbeef_footer_widgets" style="background-color: #AB945E">
     <!--  Back to Top Button  -->
     <a style="background: #AB945E;" href="#" class="restbeef_back_to_top"><i class="fa fa-chevron-up"></i></a>
@@ -8,10 +14,20 @@
             <div class="col-4 align_center">
                 <div class="widget widget_text">
                     <h2><span class="restbeef_up_title"> @lang('static_text.about1')</span></h2>
-                    <div class="textwidget">
-                        <p>Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermekteyiz. </p>
+                    @if(app()->getLocale() == "tr")
+                        <div class="textwidget">
+                            <p>Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi her türlü davet organizasyonu için alternatif mekanlara yer vermekteyiz. </p>
 
-                    </div><!-- .textwidget -->
+                        </div><!-- .textwidget -->
+
+                    @else
+                        <div class="textwidget">
+                            <p>Located in Rumeli Fortress, right next to Fatih Sultan Mehmet Bridge, with its wonderful architecture and Bosphorus view, we offer alternative venues for breakfast, lunch and dinner as well as for all kinds of invitation organizations such as weddings, engagement parties, cocktails, graduation nights, seminars. </p>
+
+                        </div><!-- .textwidget -->
+
+                    @endif
+
                 </div><!-- .widget_text -->
             </div><!-- .col-4 -->
 
@@ -54,10 +70,10 @@
                             <input type="submit" value=@lang('static_text.send')>
                         </form><!-- .restbeef_intouch_form -->
                         <ul class="restbeef_intouch_socials">
-                            <li><a href="https://www.facebook.com/yildizhisarcom/"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://twitter.com/yildizhisarcom">      <i class="fab fa-twitter"></i></a></li>
-                            <li><a href="https://instagram.com/yildizhisarcom">    <i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/yıldız-hisar"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="{{$contact->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="{{$contact->twitter}}"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="{{$contact->instagram}}"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="{{$contact->linkedin}}"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
                     </div><!-- .restbeef_in_touch -->
                 </div><!-- .widget_text -->
@@ -67,8 +83,8 @@
                 <div class="widget widget_text">
                     <h2 ><span class="restbeef_up_title">@lang('static_text.contact1')</span></h2>
                     <div class="textwidget">
-                        <p>Rumeli Hisarı, Salih Bey Sk. No:5, <br> 34470 Sarıyer / İstanbul</p>
-                        <p><span>Tel: </span>+90 212 287 70 45</p>
+                        <p>{{$contact->address}}</p>
+                        <p><span>@lang('static_text.phone'): </span>{{$contact->phone}}</p>
                         <p>@lang('static_text.open')</p>
                     </div><!-- .textwidget -->
                 </div><!-- .widget_text -->

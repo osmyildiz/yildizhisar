@@ -82,15 +82,15 @@
     <div class="restbeef_header_title restbeef_container">
         @if(app()->getLocale() == "tr")
             <h1>
-                <span class="restbeef_up_title">Boğaz Manzarası Eşliğinde</span>
-                UNUTULMAYAN HATIRALAR
+                <span class="restbeef_up_title"></span>
+                BOĞAZ MANZARASI EŞLİĞİNDE
             </h1>
             <p class="restbeef_header_description">
                 Etkinlik - Davet - Restoran
             </p>
             <a href="/gallery" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Galeri</a>
-            <a href="/table_rezervations" style=" border: 1px solid white;"
-               class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Rezervasyon</a>
+            <a href="/contact" style=" border: 1px solid white;"
+               class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">İletişim</a>
         @else
             <h1>
                 <span class="restbeef_up_title">Unforgettable Moment</span>

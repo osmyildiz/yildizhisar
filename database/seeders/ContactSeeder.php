@@ -29,6 +29,10 @@ class ContactSeeder extends Seeder
             'contact_us_email_text_tr_2'  =>"Düğün & Davet",
             'contact_us_email_text_en_2'  =>"Wedding",
             'contact_us_email_2'          =>"dugundavet@yildizhisar.com",
+            'instagram'          =>"https://instagram.com/yildizhisarcom",
+            'linkedin'          =>"https://www.linkedin.com/in/yıldız-hisar",
+            'facebook'          =>"https://www.facebook.com/yildizhisarcom/",
+            'twitter'          =>"https://twitter.com/yildizhisarcom",
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
         ]);

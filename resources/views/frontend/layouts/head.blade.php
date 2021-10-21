@@ -1,6 +1,8 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Great+Vibes%7COpen+Sans:400,700%7CRoboto%7CRoboto+Condensed:400,700&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
 <!-- CSS Files -->
 <link rel="stylesheet" href="{{asset('css/kube.css')}}">
 <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">

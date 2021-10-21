@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Category;
+use App\Models\Contact;
 use App\Models\Gallery;
+use App\Models\Menu;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -59,16 +62,17 @@ class HomeController extends Controller
 
     public function contact()
     {
+        $contact = Contact::find(1);
 
-        return view('frontend.contact');
+        return view('frontend.contact',compact('contact'));
 
 
     }
 
     public function about()
     {
-
-        return view('frontend.about');
+        $about = About::find(1);
+        return view('frontend.about'.compact('about'));
 
 
     }
@@ -98,8 +102,8 @@ class HomeController extends Controller
 
     public function restaurant()
     {
-
-        return view('frontend.restaurant');
+        $menu = Menu::get();
+        return view('frontend.restaurant',compact('menu'));
 
 
     }

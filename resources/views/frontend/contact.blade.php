@@ -109,11 +109,11 @@
                                                     </h2>
                                                     <div class="restbeef_contact_info">
                                                         <h6>Hafta içi</h6>
-                                                        09:00 - 23:00
+                                                        {{$contact->working_hours_weekdays_tr}}
                                                     </div><!-- .restbeef_contact_info -->
                                                     <div class="restbeef_contact_info">
                                                         <h6>Hafta sonu</h6>
-                                                        09:00 - 23:00
+                                                        {{$contact->working_hours_weekend_tr}}
 
                                                     </div><!-- .restbeef_contact_info -->
                                                 @else
@@ -122,11 +122,11 @@
                                                     </h2>
                                                     <div class="restbeef_contact_info">
                                                         <h6>Weekdays</h6>
-                                                        From 09:00 to 23:00
+                                                        {{$contact->working_hours_weekdays_en}}
                                                     </div><!-- .restbeef_contact_info -->
                                                     <div class="restbeef_contact_info">
                                                         <h6>Weekend</h6>
-                                                        From 09:00 to 23:00
+                                                        {{$contact->working_hours_weekend_en}}
 
                                                     </div><!-- .restbeef_contact_info -->
                                                 @endif
@@ -141,14 +141,12 @@
                                                     </h2>
                                                     <div class="restbeef_contact_info">
                                                         <h6>Telefon</h6>
-                                                        +90 212 287 70 45
+                                                        {{$contact->phone}}
 
                                                     </div><!-- .restbeef_contact_info -->
                                                     <div class="restbeef_contact_info">
                                                         <h6>Adres</h6>
-                                                        Rumeli Hisarı, Salih Bey Sk. No:5
-                                                        <br>
-                                                        34470 Sarıyer / İstanbul
+                                                        {{$contact->address}}
                                                     </div><!-- .restbeef_contact_info -->
                                                 @else
                                                     <h2>
@@ -156,13 +154,11 @@
                                                     </h2>
                                                     <div class="restbeef_contact_info">
                                                         <h6>Our Phone</h6>
-                                                        +90 212 287 70 45
+                                                        {{$contact->phone}}
                                                     </div><!-- .restbeef_contact_info -->
                                                     <div class="restbeef_contact_info">
                                                         <h6>Our Location</h6>
-                                                        Rumeli Hisarı, Salih Bey Sk. No:6
-                                                        <br>
-                                                        34470 Sarıyer / İstanbul
+                                                        {{$contact->address}}
                                                     </div><!-- .restbeef_contact_info -->
                                                 @endif
 
@@ -177,18 +173,16 @@
                                                     <div class="restbeef_contact_info">
                                                         <h6>SOSYAL Medyadan Bizi Takip Edin</h6>
                                                         <ul class="restbeef_contact_socials">
-                                                            <li><a href="https://www.facebook.com/yildizhisarcom/"><i class="fab fa-facebook-f"></i></a></li>
-                                                            <li><a href="https://twitter.com/yildizhisarcom"><i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="https://instagram.com/yildizhisarcom"><i class="fab fa-instagram"></i></a></li>
-                                                            <li><a href="https://www.linkedin.com/in/yıldız-hisar"><i class="fab fa-linkedin"></i></a></li>
+                                                            <li><a href="{{$contact->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
+                                                            <li><a href="{{$contact->twitter}}"><i class="fab fa-twitter"></i></a></li>
+                                                            <li><a href="{{$contact->instagram}}"><i class="fab fa-instagram"></i></a></li>
+                                                            <li><a href="{{$contact->linkedin}}"><i class="fab fa-linkedin"></i></a></li>
 
                                                         </ul>
                                                     </div><!-- .restbeef_contact_info -->
                                                     <div class="restbeef_contact_info">
                                                         <h6>Bize Ulaşın</h6>
-                                                        <strong>Genel:</strong> <a href="mailto:info@yildizhisar.com">info@yildizhisar.com</a>
-                                                        <br>
-                                                        <strong>Düğün & Davet:</strong> <a href="mailto:dugundavet@yildizhisar.com">dugundavet@yildizhisar.com</a>
+                                                        <a href="mailto:info@yildizhisar.com">{{$contact->contact_us_email_1}}</a>
 
                                                     @else
                                                             <h2>
@@ -197,18 +191,16 @@
                                                             <div class="restbeef_contact_info">
                                                                 <h6>SOCIAL LINKS</h6>
                                                                 <ul class="restbeef_contact_socials">
-                                                                    <li><a href="https://www.facebook.com/yildizhisarcom/"><i class="fab fa-facebook-f"></i></a></li>
-                                                                    <li><a href="https://twitter.com/yildizhisarcom"><i class="fab fa-twitter"></i></a></li>
-                                                                    <li><a href="https://instagram.com/yildizhisarcom"><i class="fab fa-instagram"></i></a></li>
-                                                                    <li><a href="https://www.linkedin.com/in/yıldız-hisar"><i class="fab fa-linkedin"></i></a></li>
+                                                                    <li><a href="{{$contact->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
+                                                                    <li><a href="{{$contact->twitter}}"><i class="fab fa-twitter"></i></a></li>
+                                                                    <li><a href="{{$contact->instagram}}"><i class="fab fa-instagram"></i></a></li>
+                                                                    <li><a href="{{$contact->linkedin}}"><i class="fab fa-linkedin"></i></a></li>
 
                                                                 </ul>
                                                             </div><!-- .restbeef_contact_info -->
                                                             <div class="restbeef_contact_info">
                                                                 <h6>Contact Us</h6>
-                                                                <strong>General:</strong> <a href="mailto:info@yildizhisar.com">info@yildizhisar.com</a>
-                                                                <br>
-                                                                <strong>Wedding:</strong> <a href="mailto:dugundavet@yildizhisar.com">dugundavet@yildizhisar.com</a>
+                                                                <a href="mailto:info@yildizhisar.com">{{$contact->contact_us_email_1}}</a>
 
                                                                 @endif
                                                 </div><!-- .restbeef_contact_info -->
@@ -276,11 +268,12 @@
                                         </form>
                                     </div><!-- .restbeef_block -->
 
+                                <!-- Map Block -->
 
                             <!-- Map Block -->
                             <div class="restbeef_block restbeef_fullwidth">
                                 <div class="restbeef_block_inner">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.030937094061!2d29.052250715214413!3d41.09017067929267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caca06b29c9be7%3A0x1c410cdfc7d4fdf4!2sYildiz%20Technical%20University%20Hisar%20Facilities!5e0!3m2!1sen!2str!4v1634040789774!5m2!1sen!2str" width="1920" height="545" style="border:0;" allowfullscreen></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d751.7558758826452!2d29.05265932922161!3d41.0903330987058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caca046b576153%3A0x4fb4e8066952decb!2sY%C4%B1ld%C4%B1z%20Teknik%20%C3%9Cniversitesi%20Hisar%20Yerle%C5%9Fim%20Birimi!5e0!3m2!1str!2str!4v1634761471571!5m2!1str!2str" width="1920" height="545" style="border:0;" allowfullscreen></iframe>
                                 </div><!-- .restbeef_block_inner -->
                             </div><!-- .restbeef_block -->
                         </div><!-- .restbeef_tiny -->
@@ -300,5 +293,7 @@
 
 
         </script>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
+
 @endsection
 

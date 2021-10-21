@@ -33,17 +33,13 @@
         "label" => __("static_text.contact")
         ],
 
-        [
-        "routeName" => "table_rezervations",
-        "label" => __("static_text.reservations")
-        ],
         ];
     @endphp
     <nav class="restbeef_nav">
         <ul id="menu-main-menu" class="restbeef_menu">
             @foreach ($routes as $key => $route)
 
-                @if($route['routeName']!="table_rezervations")
+                @if($route['routeName']!="contact")
 
                     <li id="nav-menu-item-12333"
                         class="menu-item menu-item-has-children{{ request()->routeIs($route["routeName"]) ? " current-menu-ancestor" : "" }}">

@@ -27,6 +27,10 @@ class CreateContactsTable extends Migration
             $table->String('contact_us_email_text_tr_2');
             $table->String('contact_us_email_text_en_2');
             $table->String('contact_us_email_2');
+            $table->String('instagram');
+            $table->String('facebook');
+            $table->String('twitter');
+            $table->String('linkedin');
             $table->softDeletes();
             $table->timestamps();
         });
