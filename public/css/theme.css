@@ -3254,3 +3254,8 @@ ul.restbeef_footer_links_list li:first-child:before {
 .d-flex{
     display: flex !important;
 }
+
+.card-height{
+    height: 410px;
+    margin-bottom: 50px !important;
+}

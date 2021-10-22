@@ -335,9 +335,9 @@
 
                                                         <div class="restbeef_block_inner">
                                                             <div class="restbeef_recent_posts restbeef_grig_2columns">
-                                                                <div class="restbeef_recent_post">
+                                                                <div class="restbeef_recent_post card-height">
 
-                                                                    <div class="restbeef_recent_post_content">
+                                                                    <div class="restbeef_recent_post_content ">
                                                                         <h5>
 
                                                                         </h5>
@@ -359,41 +359,41 @@
 
 
                                                                     </div><!-- .restbeef_recent_post_content -->
-                                                                </div><!-- .restbeef_recent_post -->
+                                                                       </div><!-- .restbeef_recent_post -->
 
-                                                                <div class="restbeef_recent_post">
+                                                                    <div class="restbeef_recent_post card-height">
 
-                                                                    <div class="restbeef_recent_post_content">
-                                                                        <h5>
+                                                                        <div class="restbeef_recent_post_content">
+                                                                            <h5>
 
-                                                                        </h5>
-                                                                        <h5>
-                                                                            DEKORASYON HİZMETİ
-                                                                        </h5>
+                                                                            </h5>
+                                                                            <h5>
+                                                                                DEKORASYON HİZMETİ
+                                                                            </h5>
 
-                                                                        <p>Süsleme hizmeti Yıldız Hisar’ın anlaşmalı olduğu  A Plus Davet & Organizasyon firması
-                                                                            tarafından yapılmaktadır. (Giriş alanına büyük ve orta boy fener süsleme, 4 adet yapay çiçeklerden oluşan gelin yolu, alternatif renk seçeneklerinden oluşan masa örtüsü ve dantel kapağı, masa ortası kare ayna, 5 farklı masa ortası görsel kristal bardak mumluklarda, duni peçete, masa numaratörleri, Lake nikah kürsüsü veya Nikah masası yapay çiçek süsleme ile birlikte düğün paket fiyatına dahildir.) *Ekstra talepleriniz süsleme firması tarafından fiyatlandırılacaktır.
-                                                                            <p>A PLUS DAVET & ORGANİZASYON / Aslı Kubilay 0212 267 57 91 / 0532 571 19 43 www.aplusdavet.com</p>
+                                                                            <p>Süsleme hizmeti Yıldız Hisar’ın anlaşmalı olduğu  A Plus Davet & Organizasyon firması
+                                                                                tarafından yapılmaktadır. (Giriş alanına büyük ve orta boy fener süsleme, 4 adet yapay çiçeklerden oluşan gelin yolu, alternatif renk seçeneklerinden oluşan masa örtüsü ve dantel kapağı, masa ortası kare ayna, 5 farklı masa ortası görsel kristal bardak mumluklarda, duni peçete, masa numaratörleri, Lake nikah kürsüsü veya Nikah masası yapay çiçek süsleme ile birlikte düğün paket fiyatına dahildir.) *Ekstra talepleriniz süsleme firması tarafından fiyatlandırılacaktır.
+                                                                                <p>A PLUS DAVET & ORGANİZASYON / Aslı Kubilay 0212 267 57 91 / 0532 571 19 43 www.aplusdavet.com</p>
 
-                                                                        </p>
+                                                                            </p>
 
-                                                                    </div><!-- .restbeef_recent_post_content -->
-                                                                </div><!-- .restbeef_recent_post -->
-                                                                <div class="restbeef_recent_post">
+                                                                        </div><!-- .restbeef_recent_post_content -->
+                                                                    </div><!-- .restbeef_recent_post -->
+                                                                    <div class="restbeef_recent_post">
 
-                                                                    <div class="restbeef_recent_post_content">
-                                                                        <h5>
+                                                                        <div class="restbeef_recent_post_content">
+                                                                            <h5>
 
-                                                                        </h5>
-                                                                        <h5>
-                                                                            Video ve Fotoğraf Hizmeti
-                                                                        </h5>
-                                                                        <p>Video ve Fotoğraf hizmeti Yıldız Hisar’ın anlaşmalı olduğu firması tarafından yapılmaktadır
-                                                                            STUDIOS MCM / Nihat Tanrıverdi 0212 218 24 55 / 0532 504 10 13 www.studiosmcm.com
-                                                                        </p>
-                                                                    </div><!-- .restbeef_recent_post_content -->
-                                                                </div><!-- .restbeef_recent_post -->
-                                                                <div class="restbeef_recent_post">
+                                                                            </h5>
+                                                                            <h5>
+                                                                                Video ve Fotoğraf Hizmeti
+                                                                            </h5>
+                                                                            <p>Video ve Fotoğraf hizmeti Yıldız Hisar’ın anlaşmalı olduğu firması tarafından yapılmaktadır
+                                                                                STUDIOS MCM / Nihat Tanrıverdi 0212 218 24 55 / 0532 504 10 13 www.studiosmcm.com
+                                                                            </p>
+                                                                        </div><!-- .restbeef_recent_post_content -->
+                                                                    </div><!-- .restbeef_recent_post -->
+                                                                    <div class="restbeef_recent_post">
 
                                                                     <div class="restbeef_recent_post_content">
                                                                         <h5>

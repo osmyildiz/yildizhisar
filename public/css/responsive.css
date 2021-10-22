@@ -67,6 +67,9 @@
 
 /* Tablet Portrait */
 @media only screen and (min-width: 760px) and (max-width: 960px) {
+    .card-height{
+        height: 512px;
+    }
     .restbeef_container,
     .restbeef_fullwidth_boxed .restbeef_block_inner {
         width: 742px;
@@ -523,6 +526,9 @@
 }
 
 @media only screen and (max-width: 760px) {
+    .card-height{
+        height: auto;
+    }
     .restbeef_container,
     .restbeef_fullwidth_boxed .restbeef_block_inner {
         width: calc(100% - 20px);
