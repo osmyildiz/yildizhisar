@@ -72,7 +72,8 @@ class HomeController extends Controller
     public function about()
     {
         $about = About::find(1);
-        return view('frontend.about'.compact('about'));
+
+        return view('frontend.about',compact('about'));
 
 
     }

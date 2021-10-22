@@ -42,7 +42,7 @@
                 @if($route['routeName']!="contact")
 
                     <li id="nav-menu-item-12333"
-                        class="menu-item menu-item-has-children{{ request()->routeIs($route["routeName"]) ? " current-menu-ancestor" : "" }}">
+                        class="menu-item {{ request()->routeIs($route["routeName"]) ? " current-menu-ancestor" : "" }}">
                         <a href="{{route($route['routeName'])}}">{{$route['label']}}</a>
                     </li>
                     @endif

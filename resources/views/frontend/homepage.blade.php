@@ -878,8 +878,8 @@
                                         <div class="restbeef_content_box align_center">
                                             @if(app()->getLocale() == "tr")
                                                 <h2>
-                                                    <span class="restbeef_up_title">Tüm Sorularınız İçin</span>
-                                                    Mesaj Atabilirsiniz.
+                                                    <span class="restbeef_up_title"></span>
+                                                    BİZE ULAŞIN
                                                 </h2>
 
                                             @else

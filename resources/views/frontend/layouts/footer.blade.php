@@ -100,7 +100,8 @@
         &copy; 2021 Yıldız Hisar - Tüm Hakları Saklıdır
     </div><!-- .restbeef_copyright -->
     <div class="restbeef_copyright" style="font-size: 14px">
-        <a style="font-size: 14px" href="/admin" >Gizlilik Politikası</a>
+        <a href="/img/kvkk.docx" style="font-size: 14px" href="/admin" >KVKK Başvuru Formu</a>
+        <a style="font-size: 14px" href="" >| Gizlilik Politikası</a>
 
     </div><!-- .restbeef_footer_links -->
 </div><!-- .restbeef_footer -->

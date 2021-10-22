@@ -76,44 +76,55 @@
                                         <div class="restbeef_event_item">
                                             <div class="restbeef_event_item_image">
                                                 <a href="img/y12.jpeg">
-                                                    <img src="img/y12.jpeg" alt="dugun organizayonu"/>
+                                                    <img src="img/y12.jpeg" alt="dogum_gunu"/>
                                                 </a>
                                             </div><!-- .restbeef_event_item_image -->
                                             <div class="restbeef_event_item_content">
-                                            <a href=""> <div class="restbeef_event_date">Düğün Organizayonu</div></a>
+                                            <a href=""> <div class="restbeef_event_date">Doğum Günü</div></a>
                                             </div>
                                         </div><!-- .restbeef_event_item -->
 
                                         <div class="restbeef_event_item">
                                             <div class="restbeef_event_item_image">
                                                 <a href="img/y13.jpeg">
-                                                    <img src="img/y13.jpeg" alt="nisan organizasyonu"/>
+                                                    <img src="img/y13.jpeg" alt="toplanti"/>
                                                 </a>
                                             </div><!-- .restbeef_event_item_image -->
                                             <div class="restbeef_event_item_content">
-                                            <a href=""> <div class="restbeef_event_date">Nişan Organizayonu</div></a>
+                                            <a href=""> <div class="restbeef_event_date">Toplantı & Lansman</div></a>
                                             </div>
                                         </div><!-- .restbeef_event_item -->
 
                                         <div class="restbeef_event_item">
                                             <div class="restbeef_event_item_image">
                                                 <a href="img/y14.jpeg">
-                                                    <img src="img/y14.jpeg" alt="Kina organizayonu"/>
+                                                    <img src="img/y14.jpeg" alt="baby"/>
                                                 </a>
                                             </div><!-- .restbeef_event_item_image -->
                                             <div class="restbeef_event_item_content">
-                                            <a href=""> <div class="restbeef_event_date">Kına Organizayonu</div></a>
+                                            <a href=""> <div class="restbeef_event_date">Baby Shower</div></a>
                                             </div>
                                         </div><!-- .restbeef_event_item -->
 
                                         <div class="restbeef_event_item">
                                             <div class="restbeef_event_item_image">
                                                 <a href="img/y7.jpeg">
-                                                    <img src="img/y7.jpeg" alt="nikah organizayonu"/>
+                                                    <img src="img/y7.jpeg" alt="sirket_yemegi"/>
                                                 </a>
                                             </div><!-- .restbeef_event_item_image -->
                                             <div class="restbeef_event_item_content">
-                                                <a href=""> <div class="restbeef_event_date">Nikah Organizayonu</div></a>
+                                                <a href=""> <div class="restbeef_event_date">Şirket Akşam Yemeği</div></a>
+
+                                            </div><!-- .restbeef_event_item_content -->
+                                        </div><!-- .restbeef_event_item -->
+                                        <div class="restbeef_event_item">
+                                            <div class="restbeef_event_item_image">
+                                                <a href="img/y7.jpeg">
+                                                    <img src="img/y7.jpeg" alt="veda"/>
+                                                </a>
+                                            </div><!-- .restbeef_event_item_image -->
+                                            <div class="restbeef_event_item_content">
+                                                <a href=""> <div class="restbeef_event_date">Bekarlığa Veda</div></a>
 
                                             </div><!-- .restbeef_event_item_content -->
                                         </div><!-- .restbeef_event_item -->
