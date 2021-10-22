@@ -871,7 +871,7 @@
                         <!-- Contact Block -->
                         <div
                             class="restbeef_block restbeef_js_bg_image restbeef_height100 restbeef_fullwidth restbeef_js_margin restbeef_home01_block restbeef_content_on_left"
-                            data-background="img/fish_alt.jpg" data-margin="0 0 -92px 0">
+                            data-background="img/fish3.jpg" data-margin="0 0 -92px 0">
                             <div class="restbeef_block_inner">
                                 <div class="row row_no_gap restbeef_height100">
                                     <div class="col-5 restbeef_js_padding restbeef_align_middle">
