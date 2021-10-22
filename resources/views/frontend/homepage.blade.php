@@ -138,7 +138,7 @@
                                     <div class="restbeef_recent_product">
                                         <div class="restbeef_recent_product_image">
                                             <a href="product.html">
-                                                <img src="img/hamburger.jpg" alt="Product 01"/>
+                                                <img src="img/fish2.jpg" alt="Product 01"/>
                                             </a>
                                         </div><!-- .restbeef_recent_product_image -->
                                         <div class="restbeef_recent_product_content">
@@ -871,7 +871,7 @@
                         <!-- Contact Block -->
                         <div
                             class="restbeef_block restbeef_js_bg_image restbeef_height100 restbeef_fullwidth restbeef_js_margin restbeef_home01_block restbeef_content_on_left"
-                            data-background="img/1624012337617_1125x522.jpeg" data-margin="0 0 -92px 0">
+                            data-background="img/fish_alt.jpg" data-margin="0 0 -92px 0">
                             <div class="restbeef_block_inner">
                                 <div class="row row_no_gap restbeef_height100">
                                     <div class="col-5 restbeef_js_padding restbeef_align_middle">
