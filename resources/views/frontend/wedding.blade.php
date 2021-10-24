@@ -44,7 +44,7 @@
 
             <h1>
                 <span class="restbeef_up_title">En güzel anılar burda başlar</span>
-                DÜĞÜN & DAVET
+                DÜĞÜN ORGANİZASYONU
             </h1>
         @else
             <h1>

@@ -48,6 +48,10 @@
         "routeName" => "weddingceremony",
         "label" => __("static_text.weddingceremony")
         ],
+        [
+        "routeName" => "wedding",
+        "label" => __("static_text.wedding")
+        ],
 
         ];
     @endphp
@@ -64,7 +68,7 @@
             <li class="menu-item menu-item-has-children">
                 <a href="#">{{$routes[2]['label']}}</a>
                 <ul class="sub-menu">
-                    <li><a href="{{route($routes[2]['routeName'])}}">{{$routes[2]['label']}}</a></li>
+                    <li><a href="{{route($routes[10]['routeName'])}}">{{$routes[10]['label']}}</a></li>
                     <li><a href="{{route($routes[6]['routeName'])}}">{{$routes[6]['label']}}</a></li>
                     <li><a href="{{route($routes[7]['routeName'])}}">{{$routes[7]['label']}}</a></li>
                     <li><a href="{{route($routes[8]['routeName'])}}">{{$routes[8]['label']}}</a></li>
