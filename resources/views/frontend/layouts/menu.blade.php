@@ -34,19 +34,19 @@
         ],
         [
         "routeName" => "engagement",
-        "label" => __("static_text.contact")
+        "label" => __("static_text.engagement")
         ],
         [
         "routeName" => "hennanight",
-        "label" => __("static_text.contact")
+        "label" => __("static_text.hennanight")
         ],
         [
         "routeName" => "circumcision",
-        "label" => __("static_text.contact")
+        "label" => __("static_text.circumcision")
         ],
         [
         "routeName" => "weddingceremony",
-        "label" => __("static_text.contact")
+        "label" => __("static_text.weddingceremony")
         ],
 
         ];
@@ -62,13 +62,13 @@
                 <a href="{{route($routes[1]['routeName'])}}">{{$routes[1]['label']}}</a>
             </li>
             <li class="menu-item menu-item-has-children">
-                <a href="#">Düğün & Davet</a>
+                <a href="#">{{$routes[2]['label']}}</a>
                 <ul class="sub-menu">
-                    <li><a href="{{route($routes[2]['routeName'])}}">Düğün</a></li>
-                    <li><a href="{{route($routes[6]['routeName'])}}">Nişan</a></li>
-                    <li><a href="{{route($routes[7]['routeName'])}}">Kına</a></li>
-                    <li><a href="{{route($routes[8]['routeName'])}}">Nikah</a></li>
-                    <li><a href="{{route($routes[9]['routeName'])}}">Sünnet</a></li>
+                    <li><a href="{{route($routes[2]['routeName'])}}">{{$routes[2]['label']}}</a></li>
+                    <li><a href="{{route($routes[6]['routeName'])}}">{{$routes[6]['label']}}</a></li>
+                    <li><a href="{{route($routes[7]['routeName'])}}">{{$routes[7]['label']}}</a></li>
+                    <li><a href="{{route($routes[8]['routeName'])}}">{{$routes[8]['label']}}</a></li>
+                    <li><a href="{{route($routes[9]['routeName'])}}">{{$routes[9]['label']}}</a></li>
                 </ul><!-- .sub-menu -->
             </li>
             <li id="nav-menu-item-12333"

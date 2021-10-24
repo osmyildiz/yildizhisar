@@ -85,6 +85,38 @@ class HomeController extends Controller
 
 
     }
+    public function nikah()
+    {
+
+        return view('frontend.nikah');
+
+
+    }
+    public function sunnet()
+    {
+
+        return view('frontend.sunnet');
+
+
+    }
+    public function kina()
+    {
+
+        return view('frontend.kina');
+
+
+    }
+    public function nisan()
+    {
+
+        return view('frontend.nisan');
+
+
+    }
+    public function dogumgunu()
+    {
+        return view('frontend.dogumgunu');
+    }
 
     public function gallery()
     {

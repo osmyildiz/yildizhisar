@@ -28,10 +28,11 @@ Route::get('/etkinlikler', [App\Http\Controllers\HomeController::class, 'events'
 Route::get('/iletişim', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('/galeri', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
 Route::get('/düğün', [App\Http\Controllers\HomeController::class, 'wedding'])->name('wedding');
-Route::get('/nişan', [App\Http\Controllers\HomeController::class, 'wedding'])->name('engagement');
-Route::get('/kına-gecesi', [App\Http\Controllers\HomeController::class, 'wedding'])->name('hennanight');
-Route::get('/sünnet-düğünü', [App\Http\Controllers\HomeController::class, 'wedding'])->name('circumcision');
-Route::get('/nikah', [App\Http\Controllers\HomeController::class, 'wedding'])->name('weddingceremony');
+Route::get('/nişan', [App\Http\Controllers\HomeController::class, 'nisan'])->name('engagement');
+Route::get('/kına-gecesi', [App\Http\Controllers\HomeController::class, 'kina'])->name('hennanight');
+Route::get('/sünnet-düğünü', [App\Http\Controllers\HomeController::class, 'sunnet'])->name('circumcision');
+Route::get('/nikah', [App\Http\Controllers\HomeController::class, 'nikah'])->name('weddingceremony');
+Route::get('/doğum-günü-kutlamaları', [App\Http\Controllers\HomeController::class, 'dogumgunu'])->name('birthday');
 Route::get('/restoran', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant');
 Route::post('/add-reservation-web', [AdminController::class, 'add_reservation_web'])->name('add_reservation_web');
 Route::post('/add-form-web', [AdminController::class, 'add_form_web'])->name('add_form_web');
