@@ -45,28 +45,21 @@
                             <div class="restbeef_block restbeef_team_block restbeef_js_margin" data-margin="-100px 0 0 0">
                                 <div class="restbeef_block_inner">
 
-                                    <div class="restbeef_content_box02">
-                                        <div class="restbeef_block restbeef_js_margin" data-margin="0 0 0 0">
-                                            <div class="restbeef_block_inner">
-                                                <blockquote>
-                                                    @if(app()->getLocale() == "tr")
+                                    <div class="restbeef_content_box02 align_center">
+                                        @if(app()->getLocale() == "tr")
 
-                                                        <p>Sevdikleriniz ile beraber geçireceğiniz unutulmaz anıların birikeceği hem gösterişli hem de şık görünümüyle istediğiniz kombin ile uyumlu hale getirebileceğiniz mekan alternatifi Yıldız Hisar’da!
-                                                            Tüm ayrıntıları sizin için düşünülmüş Boğaz manzarasında doğum günü organizasyonu için bize ulaşın.
-                                                            Özel günlerinizi birlikte dizayn edelim!
-                                                        </p>
+                                            <p>Sevdikleriniz ile beraber geçireceğiniz unutulmaz anıların birikeceği hem gösterişli hem de şık görünümüyle istediğiniz kombin ile uyumlu hale getirebileceğiniz mekan alternatifi Yıldız Hisar’da!
+                                                Tüm ayrıntıları sizin için düşünülmüş Boğaz manzarasında doğum günü organizasyonu için bize ulaşın.
+                                                Özel günlerinizi birlikte dizayn edelim!
+                                            </p>
 
-                                                    @else
+                                        @else
 
-                                                        <p>Yildiz Hisar is an alternative to the place where you can make unforgettable memories with your loved ones, which you can harmonize with the combination you want with its flashy and stylish appearance!
-                                                            Contact us for a birthday organization with a view of the Bosphorus, all details of which have been thought for you.
-                                                            Let's design your special days together!
-                                                        </p>
-                                                    @endif
-                                                </blockquote>
-                                            </div><!-- .restbeef_block_inner -->
-                                        </div><!-- .restbeef_block -->
-
+                                            <p>Yildiz Hisar is an alternative to the place where you can make unforgettable memories with your loved ones, which you can harmonize with the combination you want with its flashy and stylish appearance!
+                                                Contact us for a birthday organization with a view of the Bosphorus, all details of which have been thought for you.
+                                                Let's design your special days together!
+                                            </p>
+                                        @endif
                                          </div><!-- .restbeef_content_box -->
                                 </div><!-- .restbeef_block_inner -->
                             </div><!-- .restbeef_block -->
