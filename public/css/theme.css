@@ -3259,3 +3259,7 @@ ul.restbeef_footer_links_list li:first-child:before {
     height: 410px;
     margin-bottom: 50px !important;
 }
+.card-height-medium{
+    height: 200px;
+    margin-bottom: 50px !important;
+}

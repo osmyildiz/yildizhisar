@@ -86,6 +86,13 @@ class HomeController extends Controller
 
 
     }
+    public function campaigns()
+    {
+
+        return view('frontend.kampanyalar');
+
+
+    }
     public function nikah()
     {
 

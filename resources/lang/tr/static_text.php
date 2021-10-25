@@ -11,6 +11,7 @@ return [
     'gallery' => 'GALERİ',
     'contact' => 'İLETİŞİM',
     'wedding' => 'DÜĞÜN ORGANİZASYONU',
+    'campaigns' => 'KAMPANYALAR',
     'engagement' => 'NİŞAN ORGANİZASYONU',
     'hennanight' => 'KINA ORGANİZASYONU',
     'circumcision' => 'SÜNNET ORGANİZASYONU',

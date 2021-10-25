@@ -52,6 +52,10 @@
         "routeName" => "wedding",
         "label" => __("static_text.wedding")
         ],
+        [
+        "routeName" => "campaigns",
+        "label" => __("static_text.campaigns")
+        ],
 
         ];
     @endphp
@@ -73,6 +77,7 @@
                     <li><a href="{{route($routes[7]['routeName'])}}">{{$routes[7]['label']}}</a></li>
                     <li><a href="{{route($routes[8]['routeName'])}}">{{$routes[8]['label']}}</a></li>
                     <li><a href="{{route($routes[9]['routeName'])}}">{{$routes[9]['label']}}</a></li>
+                    <li><a href="{{route($routes[11]['routeName'])}}">{{$routes[11]['label']}}</a></li>
                 </ul><!-- .sub-menu -->
             </li>
             <li id="nav-menu-item-12333"

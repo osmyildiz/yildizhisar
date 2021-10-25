@@ -11,6 +11,7 @@ return [
     'gallery' => 'GALLERY',
     'contact' => 'CONTACT US',
     'wedding' => 'WEDDING',
+    'campaigns' => 'CAMPAIGNS',
     'engagement' => 'ENGAGEMENT',
     'hennanight' => 'HENNA NIGHT',
     'circumcision' => 'CIRCUMCISION',
