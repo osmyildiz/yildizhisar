@@ -22,6 +22,7 @@ class CreateWeddingsTable extends Migration
             $table->String('slug_tr');
             $table->String('slug_en');
             $table->String('is_active')->default(1);
+
             $table->softDeletes();
             $table->timestamps();
         });

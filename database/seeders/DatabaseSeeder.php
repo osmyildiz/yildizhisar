@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
             ContactSeeder::class,
             NewsletterSeeder::class,
             MenuSeeder::class,
-            WeddingSeeder::class,
             EventSeeder::class,
+            WeddingSeeder::class,
 
         ]);
     }
