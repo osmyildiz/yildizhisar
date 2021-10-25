@@ -105,8 +105,8 @@
                                                                 <div class="col-6">
                                                                     <div class="restbeef_team_block_content align_center">
                                                                         <h2>
-                                                                            <span class="restbeef_up_title">Yıldız Hisar</span>
-                                                                            MENÜ 01
+                                                                            <span class="restbeef_up_title">MENÜ 01</span>
+                                                                            240 TL + KDV
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
                                                                             <p>Klasik Meze Tabağı,
@@ -137,8 +137,8 @@
                                                                 <div class="col-6">
                                                                     <div class="restbeef_team_block_content align_center">
                                                                         <h2>
-                                                                            <span class="restbeef_up_title">Yıldız Hisar</span>
-                                                                            Menü 02
+                                                                            <span class="restbeef_up_title">Menü 02</span>
+                                                                            260 TL + KDV
                                                                         </h2>
                                                                         <div class="restbeef_poduct_description">
 
@@ -163,8 +163,90 @@
                                                     <div class="restbeef_block restbeef_team_block restbeef_team_summary">
 
                                                         <div class="restbeef_block_inner">
+
+
                                                             <div class="restbeef_recent_posts restbeef_grig_2columns">
                                                                 <div class="restbeef_recent_post card-height">
+
+                                                                    <div class="restbeef_recent_post_content ">
+                                                                        <h5>
+
+                                                                        </h5>
+
+                                                                        <h5>
+                                                                            AÇIKLAMA
+                                                                        </h5>
+
+                                                                        <div class="align_left">
+                                                                            <p >
+                                                                            <ul>
+                                                                                <li>Menü fiyatlarımıza %8 KDV dahil değildir.</li>
+                                                                                <li>Menü fiyatlarımız kişi başı olup, mekân kullanımı dahildir.</li>
+                                                                                <li>Yukarıdaki menü fiyatlarımız Kasım, Aralık, Ocak, Şubat ayları için geçerli olup,
+                                                                                    minimum 150 kişi garanti edildiği takdirde uygulanmaktadır.</li>
+                                                                                <li>Fiyatlarımız 2021 yılı için geçerlidir.</li>
+                                                                                <li>Toplam tutara istinaden %5 servis bedeli alınmaktadır.</li>
+                                                                                <li>İşletme menü, paket ve fiyatları değiştirme değiştirme hakkını saklı tutar</li>
+
+
+                                                                            </ul>
+                                                                            </p>
+                                                                        </div>
+
+
+
+
+
+
+                                                                    </div><!-- .restbeef_recent_post_content -->
+                                                                </div>
+
+                                                                <div class="restbeef_recent_post card-height">
+
+                                                                    <div class="restbeef_recent_post_content ">
+                                                                        <h5>
+
+                                                                        </h5>
+
+                                                                        <h5>
+                                                                            Kış Paketine Dahil Olan Hizmetler
+                                                                        </h5>
+
+                                                                        <div class="align_left">
+                                                                            <p >
+                                                                            <ul>
+                                                                                <li>Hoş Geldiniz Kokteyli</li>
+                                                                                <li>Show Pasta</li>
+                                                                                <li>Davet Öncesinde Düğün Menü Tadımı</li>
+                                                                                <li>Masa ve Sandalyelerin Süslenmesi</li>
+                                                                                <li>Dj Müzik ve Ses & Işık Sistemi</li>
+                                                                                <li>Düğün Günü Gelin & Damat İçin Hazırlık Odası</li>
+                                                                                <li>Düğün Günü Gelin & Damada Özel Akşam Yemeği</li>
+                                                                                <li>1. Evlilik yıldönümünde Şömineli Oda da Özel Akşam Yemeği</li>
+                                                                                <li>20 adet Resimden oluşan Gelin & Damat albümü</li>
+
+                                                                            </ul>
+                                                                            </p>
+                                                                        </div>
+
+
+
+
+
+
+                                                                    </div><!-- .restbeef_recent_post_content -->
+                                                                </div>
+
+
+
+
+
+                                                                <!-- .restbeef_recent_post -->
+
+                                                            </div>
+                                                            <div class="restbeef_recent_posts restbeef_grig_1columns">
+
+                                                                <div class="restbeef_recent_post ">
 
                                                                     <div class="restbeef_recent_post_content ">
                                                                         <h5>
@@ -190,7 +272,7 @@
                                                                     </div><!-- .restbeef_recent_post_content -->
                                                                 </div><!-- .restbeef_recent_post -->
 
-                                                                <div class="restbeef_recent_post card-height">
+                                                                <div class="restbeef_recent_post">
 
                                                                     <div class="restbeef_recent_post_content">
                                                                         <h5>
@@ -208,7 +290,7 @@
 
                                                                     </div><!-- .restbeef_recent_post_content -->
                                                                 </div><!-- .restbeef_recent_post -->
-                                                                <div class="restbeef_recent_post card-height-medium" >
+                                                                <div class="restbeef_recent_post" >
 
                                                                     <div class="restbeef_recent_post_content ">
                                                                         <h5>
@@ -222,7 +304,7 @@
                                                                         </p>
                                                                     </div><!-- .restbeef_recent_post_content -->
                                                                 </div><!-- .restbeef_recent_post -->
-                                                                <div class="restbeef_recent_post card-height-medium">
+                                                                <div class="restbeef_recent_post">
 
                                                                     <div class="restbeef_recent_post_content">
                                                                         <h5>
@@ -237,7 +319,7 @@
                                                                         </p>
                                                                     </div><!-- .restbeef_recent_post_content -->
                                                                 </div><!-- .restbeef_recent_post -->
-                                                                <div class="restbeef_recent_post card-height-medium">
+                                                                <div class="restbeef_recent_post card-width">
 
                                                                     <div class="restbeef_recent_post_content">
                                                                         <h5>
@@ -248,8 +330,11 @@
                                                                         </h5>
                                                                         <p>Vestiyer hizmetimiz davet boyunca ücretsiz olarak verilmektedir.  </p>
                                                                     </div><!-- .restbeef_recent_post_content -->
-                                                                </div><!-- .restbeef_recent_post -->
-                                                                <div class="restbeef_recent_post card-height-medium">
+
+
+                                                                </div>
+
+                                                                <div class="restbeef_recent_post card-width">
 
                                                                     <div class="restbeef_recent_post_content">
                                                                         <h5>
@@ -263,9 +348,12 @@
                                                                         <p>Davetinizden önce düğün danışmanınız ile
                                                                             yapacağınız menü tadımı hizmeti,
                                                                             pakete dahil olarak verilmektedir.</p>
-                                                                    </div><!-- .restbeef_recent_post_content -->
+
+                                                                    </div>
+
+
                                                                 </div>
-                                                                <div class="restbeef_recent_post card-height-medium">
+                                                                <div class="restbeef_recent_post card-width">
 
                                                                     <div class="restbeef_recent_post_content">
                                                                         <h5>
@@ -280,7 +368,7 @@
                                                                             araç başı 25 TL + KDV dir.</p>
                                                                     </div><!-- .restbeef_recent_post_content -->
                                                                 </div>
-                                                                <div class="restbeef_recent_post card-height-medium">
+                                                                <div class="restbeef_recent_post card-width">
 
                                                                     <div class="restbeef_recent_post_content">
                                                                         <h5>
@@ -294,6 +382,26 @@
                                                                         <p>Düğün organizasyonlarımızda anlaşma sağlandığı takdirde, ön ödeme %30 sözleşme imzalandığında alınacak olup, ara ödemeleriniz ise sözleşmede bildirilecektir. Tüm tutarın ise organizasyondan en geç 20 gün öncesine kadar ödenerek kapatılması gerekmektedir.</p>
                                                                     </div><!-- .restbeef_recent_post_content -->
                                                                 </div>
+                                                                <div class="restbeef_recent_post">
+
+                                                                    <div class="restbeef_recent_post_content ">
+                                                                        <h5>
+
+                                                                        </h5>
+
+                                                                        <h5>
+                                                                            Rezervasyon Durumu
+                                                                        </h5>
+
+
+
+                                                                        <p>Teklifimizin sadece bilgilendirme amaçlı olduğunu hatırlar, herhangi bir salon rezervasyonunun yapılmadığını tarafınıza bildiririz. Teklifimizin olumlu olması halinde, talebinizi yazılı olarak bildirmenizi rica eder, müsaitlik doğrultusunda ön rezervasyonunuzun memnuniyetle yapacağımızı bilgilerinize sunarız.
+                                                                            Yıldız Hisar Davet ve Etkinlik Mekânı olarak, siz ve değerli misafirlerinizi
+                                                                            ağırlamaktan dolayı memnuniyet duyacağımızı belirtir, sağlıklı ve güzel günler dileriz.</p>
+
+
+                                                                    </div><!-- .restbeef_recent_post_content -->
+                                                                </div>
 
 
 
@@ -301,41 +409,10 @@
                                                                 <!-- .restbeef_recent_post -->
 
                                                             </div>
-                                                            <div class="restbeef_recent_posts restbeef_grig_1columns">
-                                                                <div class="restbeef_recent_posts restbeef_grig_1columns">
-                                                                    <div class="restbeef_recent_post card-height-medium">
 
-                                                                        <div class="restbeef_recent_post_content ">
-                                                                            <h5>
-
-                                                                            </h5>
-
-                                                                            <h5>
-                                                                                Rezervasyon Durumu
-                                                                            </h5>
-
-
-
-                                                                            <p>Teklifimizin sadece bilgilendirme amaçlı olduğunu hatırlar, herhangi bir salon rezervasyonunun yapılmadığını tarafınıza bildiririz. Teklifimizin olumlu olması halinde, talebinizi yazılı olarak bildirmenizi rica eder, müsaitlik doğrultusunda ön rezervasyonunuzun memnuniyetle yapacağımızı bilgilerinize sunarız.
-                                                                                Yıldız Hisar Davet ve Etkinlik Mekânı olarak, siz ve değerli misafirlerinizi
-                                                                                ağırlamaktan dolayı memnuniyet duyacağımızı belirtir, sağlıklı ve güzel günler dileriz.</p>
-
-
-                                                                        </div><!-- .restbeef_recent_post_content -->
-                                                                    </div><!-- .restbeef_recent_post -->
-
-
-
-
-                                                                    <!-- .restbeef_recent_post -->
-
-                                                                </div>
-                                                            </div>
                                                         </div>
+                                                    </div>
                                                     </div><!-- .restbeef_block -->
-
-
-                                                    <!-- .restbeef_block -->
 
                                                 </div><!-- .restbeef_tiny -->
                                             </div><!-- .restbeef_content -->
