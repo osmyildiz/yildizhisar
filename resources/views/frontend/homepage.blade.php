@@ -1,3 +1,4 @@
+{{--
 @extends('frontend.layouts.master')
 @section('title','Yıldız Hisar')
 @section('data-image')
@@ -975,3 +976,4 @@
     </script>
 @endsection
 
+--}}
