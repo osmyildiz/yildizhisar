@@ -260,11 +260,11 @@
 
 
                                                                         <p>Müzik hizmeti Yıldız Hisar’ın anlaşmalı olduğu İzzet & Yakar Müzik Hizmetleri firması  tarafından yapılmaktadır. DJ Müzik & Ses & Işık ( haftasonu geçerlidir )
-                                                                            <strong>İZZET & YAKAR MÜZİK / İzzet Biton</strong>
+                                                                            İZZET & YAKAR MÜZİK / İzzet Biton
                                                                             4.000 TL + KDV
-                                                                        <p>0212 275 67 69</p>
-                                                                        <p>0212 288 32 93</p>
-                                                                        <p>0532 231 75 95</p>
+                                                                        0212 275 67 69,
+                                                                        0212 288 32 93,
+                                                                        0532 231 75 95,
                                                                         www.izzetyakar.com
                                                                         </p>
 
