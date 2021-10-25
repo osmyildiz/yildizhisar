@@ -60,14 +60,14 @@
                 <li>
                     <a href="/admin-menu" class="waves-effect">
                         <i class="bx bx-calendar-event"></i>
-                        <span key="t-dashboards">Düğün & Davet</span>
+                        <span key="t-dashboards">Düğün & Davet Sayfası</span>
                     </a>
 
                 </li>
                 <li>
-                    <a href="/admin-menu" class="waves-effect">
+                    <a href="/admin-events" class="waves-effect">
                         <i class="bx bx-bookmarks"></i>
-                        <span key="t-dashboards">Etkinlik</span>
+                        <span key="t-dashboards">Etkinlik Sayfası</span>
                     </a>
 
                 </li>

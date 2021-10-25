@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Category;
 use App\Models\Contact;
+use App\Models\Events;
 use App\Models\Gallery;
 use App\Models\Menu;
 use App\Models\User;
@@ -117,6 +118,27 @@ class HomeController extends Controller
     {
         return view('frontend.dogumgunu');
     }
+    public function babyshower()
+    {
+        return view('frontend.babyshower');
+    }
+    public function companydinner()
+    {
+        return view('frontend.companydinner');
+    }
+    public function stagparty()
+    {
+        return view('frontend.stagparty');
+    }
+    public function toplanti()
+    {
+        return view('frontend.toplanti');
+    }
+    public function eventspage($id,$slug)
+    {
+        $event = Events::find($id);
+        return view('frontend.eventpage',compact('event'));
+    }
 
     public function gallery()
     {
@@ -128,8 +150,9 @@ class HomeController extends Controller
 
     public function events()
     {
+        $events = Events::where('is_active',1)->get();
 
-        return view('frontend.events');
+        return view('frontend.events',compact('events'));
 
     }
 

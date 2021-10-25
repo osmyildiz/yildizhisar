@@ -5,7 +5,7 @@
 
 @endphp
 <div class="restbeef_header_wrapper restbeef_js_bg_image restbeef_height100"
-     data-background="img/yildiz-hisar-sariyer-1.jpg">
+     data-background="/img/yildiz-hisar-sariyer-1.jpg">
 
 <header class="restbeef_main_header">
 

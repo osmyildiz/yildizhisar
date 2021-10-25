@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Contact;
+use App\Models\Events;
 use App\Models\Form;
 use App\Models\Menu;
 use App\Models\Newsletter;
 use App\Models\Reservation;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AdminController extends Controller
 {
@@ -345,10 +347,90 @@ class AdminController extends Controller
 
 
     }
+    public function admin_events()
+    {
+        $events =Events::get();
+
+        return view('admin-events',compact('events'));
+    }
+    public function edit_event($id)
+    {
+        $event = Events::find($id);
+
+        return view('event-edit',compact('event'));
+
+    }
+    public function edit_event1(Request $request,$id)
+    {
+
+
+        if($request->is_active=="on"){
+            $is_active =1;
+        }else{
+            $is_active =0;
+        }
+
+        $event = Events::find($id);
+        $event->name_tr = $request->name_tr;
+        $event->name_en = $request->name_en;
+        $event->main_text_tr = $request->main_text_tr;
+        $event->main_text_en = $request->main_text_en;
+        $event->is_active = $is_active;
+        if($request->hasFile('img1')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->img1->extension();
+
+            $request->img1->move(public_path('img'), $imageName);
+            $event->img1 = "/img/".$imageName;
+        }
+        $save = $event->save();
+
+        if($save){
+            return back()->with('success', 'Etkinlik güncellendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function add_event(Request $request)
+    {
+        $event = new Events();
+        $event->name_tr = $request->name_tr;
+
+        $event->name_en = $request->name_en;
+        $event->slug_tr = Str::slug($request->name_tr);
+        $event->slug_en = Str::slug($request->name_en);
+        $event->main_text_tr = $request->main_text_tr;
+        $event->main_text_en = $request->main_text_en;
+
+
+
+
+        if($request->hasFile('img1')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->img1->extension();
+
+            $request->img1->move(public_path('img'), $imageName);
+            $event->img1 = "/img/".$imageName;
+        }
+
+        $save = $event->save();
+
+        if($save){
+            return back()->with('success', 'Etkinlik eklendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
     public function test()
     {
 
-        return view('resources.tables-responsive');
+        return view('resources.form-elements');
     }
 
     /**

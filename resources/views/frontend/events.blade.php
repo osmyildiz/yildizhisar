@@ -58,7 +58,6 @@
 @section('content')
     <div class="restbeef_site_wrapper fadeOnLoad">
 
-
         <!-- Content -->
         <div class="restbeef_main_wrapper">
             <div class="restbeef_container">
@@ -72,62 +71,30 @@
                             <div class="restbeef_block">
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_events restbeef_events_2columns">
+                                        @php
+                                        $lang = app()->getLocale();
+                                        if($lang =="tr"){
+                                            $word = "etkinlik";
+                                        }else{
+                                        $word = "event";
+                                        }
 
-                                        <div class="restbeef_event_item">
-                                            <div class="restbeef_event_item_image">
-                                                <a href="img/y12.jpeg">
-                                                    <img src="img/y12.jpeg" alt="dogum_gunu"/>
-                                                </a>
-                                            </div><!-- .restbeef_event_item_image -->
-                                            <div class="restbeef_event_item_content">
-                                                <a href="{{route("birthday")}}"> <div class="restbeef_event_date">@lang('static_text.birthday')</div></a>
-                                            </div>
-                                        </div><!-- .restbeef_event_item -->
+                                        @endphp
+                                        @foreach($events as $event)
 
-                                        <div class="restbeef_event_item">
-                                            <div class="restbeef_event_item_image">
-                                                <a href="img/y13.jpeg">
-                                                    <img src="img/y13.jpeg" alt="toplanti"/>
-                                                </a>
-                                            </div><!-- .restbeef_event_item_image -->
-                                            <div class="restbeef_event_item_content">
-                                            <a href=""> <div class="restbeef_event_date">@lang('static_text.meeting')</div></a>
-                                            </div>
-                                        </div><!-- .restbeef_event_item -->
+                                            <div class="restbeef_event_item">
+                                                <div class="restbeef_e<vent_item_image">
+                                                    <a href="{{$event->img1}}">
+                                                        <img src="{{$event->img1}}" alt="dogum_gunu"/>
+                                                    </a>
+                                                </div><!-- .restbeef_event_item_image -->
+                                                <div class="restbeef_event_item_content">
+                                                    <a href="{{"/".$word."/".$event->id."/".($lang == "tr"?$event->slug_tr:$event->slug_en)}}"> <div class="restbeef_event_date">{{$lang == "tr"?$event->name_tr:$event->name_en}}</div></a>
+                                                </div>
+                                            </div><!-- .restbeef_event_item -->
+                                        @endforeach
 
-                                        <div class="restbeef_event_item">
-                                            <div class="restbeef_event_item_image">
-                                                <a href="img/y14.jpeg">
-                                                    <img src="img/y14.jpeg" alt="baby"/>
-                                                </a>
-                                            </div><!-- .restbeef_event_item_image -->
-                                            <div class="restbeef_event_item_content">
-                                            <a href=""> <div class="restbeef_event_date">@lang('static_text.babyshower')</div></a>
-                                            </div>
-                                        </div><!-- .restbeef_event_item -->
 
-                                        <div class="restbeef_event_item">
-                                            <div class="restbeef_event_item_image">
-                                                <a href="img/y7.jpeg">
-                                                    <img src="img/y7.jpeg" alt="sirket_yemegi"/>
-                                                </a>
-                                            </div><!-- .restbeef_event_item_image -->
-                                            <div class="restbeef_event_item_content">
-                                                <a href=""> <div class="restbeef_event_date">@lang('static_text.companydinner')</div></a>
-
-                                            </div><!-- .restbeef_event_item_content -->
-                                        </div><!-- .restbeef_event_item -->
-                                        <div class="restbeef_event_item">
-                                            <div class="restbeef_event_item_image">
-                                                <a href="img/y7.jpeg">
-                                                    <img src="img/y7.jpeg" alt="veda"/>
-                                                </a>
-                                            </div><!-- .restbeef_event_item_image -->
-                                            <div class="restbeef_event_item_content">
-                                                <a href=""> <div class="restbeef_event_date">@lang('static_text.stagnight')</div></a>
-
-                                            </div><!-- .restbeef_event_item_content -->
-                                        </div><!-- .restbeef_event_item -->
 
 
                                     </div><!-- .restbeef_promo_block -->

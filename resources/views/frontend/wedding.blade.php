@@ -75,14 +75,15 @@
                                     <div class="restbeef_content_box02 align_center">
                                         @if(app()->getLocale() == "tr")
 
-                                            <p>Havuz başı düğün denilince Yıldız Hisar Tesisleri, muhteşem manzarası ile ilk gelen mekanlar arasında yer almaktadır. Mekanımız yıllardır şık tasarımı, büyüleyici manzarası ve geniş hizmet yelpazesi ile birlikte çiftlerin tercih sebebi olmaktadır. Sunduğu ayrıcalıklara karşın fiyatları da her bütçeye hitap etmektedir. Düğün fiyatlarımız seçilen menüye göre kişi başı 290 TL’den başlıyor.</p>  </div><!-- .col-6 -->
-
+                                            <p>
+                                                Bazı anların tekrarı yoktur… Eşinizle hayatınızı birleştirdiğiniz düğün gününüz ise biricik ve sadece size özel olmalıdır. Bu yüzden hayallerinizi gerçekleştirebilmek, sizlere ve konuklarınıza unutulmaz bir deneyim yaşatmak için hem biz hem de eşsiz Boğaz manzaramız her daim hazır…
+                                            </p>
 
                                 @else
 
-                                        <p>Havuz başı düğün denilince Yıldız Hisar Tesisleri, muhteşem manzarası ile ilk gelen mekanlar arasında yer almaktadır. Mekanımız yıllardır şık tasarımı, büyüleyici manzarası ve geniş hizmet yelpazesi ile birlikte çiftlerin tercih sebebi olmaktadır. Sunduğu ayrıcalıklara karşın fiyatları da her bütçeye hitap etmektedir. Düğün fiyatlarımız seçilen menüye göre kişi başı 290 TL’den başlıyor.</p>  </div><!-- .col-6 -->
-
-
+                                       <p>
+                                           Some moments cannot be repeated… Your wedding day, when you unite your life with your spouse, should be unique and special only to you. That's why we and our unique Bosphorus view are always ready to make your dreams come true and to give you and your guests an unforgettable experience...
+                                       </p>
                                 @endif
                                     </div><!-- .restbeef_content_box -->
                                 </div><!-- .restbeef_block_inner -->

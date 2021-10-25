@@ -17,12 +17,12 @@
 
             <h1>
                 <span class="restbeef_up_title"></span>
-                DOĞUM GÜNÜ
+                BABY SHOWER
             </h1>
         @else
             <h1>
                 <span class="restbeef_up_title"></span>
-                BIRTHDAY PARTY
+                BABY SHOWER
             </h1>
         @endif
 
@@ -48,16 +48,18 @@
                                     <div class="restbeef_content_box02 align_center">
                                         @if(app()->getLocale() == "tr")
 
-                                            <p>Sevdikleriniz ile beraber geçireceğiniz unutulmaz anıların birikeceği hem gösterişli hem de şık görünümüyle istediğiniz kombin ile uyumlu hale getirebileceğiniz mekan alternatifi Yıldız Hisar’da!
-                                                Tüm ayrıntıları sizin için düşünülmüş Boğaz manzarasında doğum günü organizasyonu için bize ulaşın.
-                                                Özel günlerinizi birlikte dizayn edelim!
+                                            <p>Partilerin en tatlısı; Baby Shower..
+
+                                                Siz anne ve babaların kucağına alacağınız bebek sevincini eşsiz boğaz manzaramızda tüm sevdiklerinizle kutlayabilmeniz için şıklık ve eğlenceyi bir arada sunarak en özel anınıza ev sahipliği yapıyoruz.
+
                                             </p>
 
                                         @else
 
-                                            <p>Yildiz Hisar is an alternative to the place where you can make unforgettable memories with your loved ones, which you can harmonize with the combination you want with its flashy and stylish appearance!
-                                                Contact us for a birthday organization with a view of the Bosphorus, all details of which have been thought for you.
-                                                Let's design your special days together!
+                                            <p>The sweetest of parties; Baby Shower..
+
+                                                We are hosting your most special moment by offering elegance and fun together so that you can celebrate the joy of your baby in your arms with all your loved ones in our unique Bosphorus view.
+
                                             </p>
                                         @endif
                                          </div><!-- .restbeef_content_box -->

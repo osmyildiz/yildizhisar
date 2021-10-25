@@ -33,6 +33,12 @@ Route::get('/kına-gecesi', [App\Http\Controllers\HomeController::class, 'kina']
 Route::get('/sünnet-düğünü', [App\Http\Controllers\HomeController::class, 'sunnet'])->name('circumcision');
 Route::get('/nikah', [App\Http\Controllers\HomeController::class, 'nikah'])->name('weddingceremony');
 Route::get('/doğum-günü-kutlamaları', [App\Http\Controllers\HomeController::class, 'dogumgunu'])->name('birthday');
+Route::get('/bekarlığa-veda', [App\Http\Controllers\HomeController::class, 'stagparty'])->name('stagparty');
+Route::get('/toplantı-lansman', [App\Http\Controllers\HomeController::class, 'toplanti'])->name('toplanti');
+Route::get('/baby-shower', [App\Http\Controllers\HomeController::class, 'babyshower'])->name('babyshower');
+Route::get('/şirket-akşam-yemeği', [App\Http\Controllers\HomeController::class, 'companydinner'])->name('companydinner');
+Route::get('/event/{id}/{slug}', [App\Http\Controllers\HomeController::class, 'eventspage'])->name('etkinlikpage');
+Route::get('/etkinlik/{id}/{slug}', [App\Http\Controllers\HomeController::class, 'eventspage'])->name('eventspage');
 Route::get('/restoran', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant');
 Route::post('/add-reservation-web', [AdminController::class, 'add_reservation_web'])->name('add_reservation_web');
 Route::post('/add-form-web', [AdminController::class, 'add_form_web'])->name('add_form_web');
@@ -75,8 +81,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin-newsletter', [AdminController::class, 'admin_newsletter'])->name('admin-newsletter');
     Route::post('/update-about-page', [AdminController::class, 'update_about_page'])->name('update-about-page');
     Route::post('/update-contact-page', [AdminController::class, 'update_contact_page'])->name('update-contact-page');
+    Route::get('/admin-events', [AdminController::class, 'admin_events'])->name('admin-events');
 
     Route::get('/test', [AdminController::class, 'test'])->name('test');
+    Route::get ('/edit-event/{id}', [AdminController::class, 'edit_event'])->name('event.edit');
+    Route::post('/edit-event/{id}', [AdminController::class, 'edit_event1'])->name('edit.event');
+    Route::post('/add-event', [AdminController::class, 'add_event'])->name('add_event');
+
 
 
 });
