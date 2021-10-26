@@ -11,7 +11,7 @@
 
     @component('components.breadcrumb')
         @slot('li_1') Admin Panel @endslot
-        @slot('title') Menu Güncelleme Sayfası @endslot
+        @slot('title') Kategori Güncelleme Sayfası @endslot
     @endcomponent
     <div class="flash-message">
         @foreach (['danger', 'warning', 'success', 'info'] as $msg)
@@ -27,68 +27,30 @@
     </div>
 
     <div class="card">
-        <form method="POST" class="form-horizontal" action="/update-menu/{{$res->id}}" enctype="multipart/form-data">
+        <form method="POST" class="form-horizontal" action="/update-foodtype/{{$res->id}}" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
-                <h4 class="card-title mb-4">Menüyü Güncelle</h4>
+                <h4 class="card-title mb-4">Kategoriyi Güncelle</h4>
                 <div class="row">
 
                     <div class="col-xl-6">
 
 
-
                         <div class="mb-4 row">
-                            <label for="time" class="col-md-3 col-form-label">Kategori</label>
-
-                            <div class="col-sm-9">
-                                <select id="time" class="form-select" name="category">
-                                    @foreach($kategori_all as $kategori)
-                                        <option value="{{$kategori->id}}" {{$kategori->id == $kategori1->id?"selected":""}}>{{$kategori->name_tr}}</option>
-                                    @endforeach
-                                </select>
-
-                            </div>
-                        </div>
-                        <div class="mb-4 row">
-                            <label for="name_tr" class="col-md-3 col-form-label">Ad(TR)</label>
+                            <label for="name_tr" class="col-md-3 col-form-label">Kategori Adı(TR)</label>
                             <div class="col-sm-9">
                                 <input class="form-control" type="text"
-                                       value="{{$res->name_tr}}"     id="name_tr" autofocus name="name_tr">
+                                       value="{{$res->name_tr}}"     id="name_tr" name="name_tr">
                             </div>
                         </div>
                         <div class="mb-4 row">
-                            <label for="name_en" class="col-md-3 col-form-label">Ad(EN)</label>
+                            <label for="name_en" class="col-md-3 col-form-label">Kategori Adı(EN)</label>
                             <div class="col-sm-9">
                                 <input class="form-control" type="text"
                                        value="{{$res->name_en}}"     id="name_en" name="name_en">
                             </div>
                         </div>
-                        <div class="row mb-4">
-                            <label for="price_tl" class="col-sm-3 col-form-label">Fiyat(TL)</label>
-                            <div class="col-sm-9">
-                                <input type="number" class="form-control" id="price_tl"
-                                       name="price_tl" value="{{$res->price_tl}}" required>
 
-                            </div>
-                        </div>
-                        <div class="row mb-4">
-                            <label for="price_usd" class="col-sm-3 col-form-label">Fiyat(USD)</label>
-                            <div class="col-sm-9">
-                                <input type="number" class="form-control" id="price_usd"
-                                       name="price_usd" value="{{$res->price_usd}}" required>
-
-                            </div>
-                        </div>
-                        <div class="row mb-4">
-                            <label for="description_tr" class="col-sm-3 col-form-label">Açıklama(TR)</label>
-                            <div class="col-sm-9">
-                            <textarea id="description_tr" class="form-control"  rows="4" name="description_tr">{{$res->description_tr}}</textarea>
-                            </div></div>
-                        <div class="row mb-4">
-                            <label for="description_en" class="col-sm-3 col-form-label">Açıklama(EN)</label>
-                            <div class="col-sm-9">
-                                <textarea id="description_en" class="form-control"  rows="4" name="description_en">{{$res->description_en}}</textarea>
-                            </div></div>
                         <div class="row mb-4">
                             <div class="row justify-content-end">
                                 <div class="col-sm-9">

@@ -89,6 +89,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/edit-event/{id}', [AdminController::class, 'edit_event1'])->name('edit.event');
     Route::post('/add-event', [AdminController::class, 'add_event'])->name('add_event');
 
+    Route::post('/add-foodtype', [AdminController::class, 'add_foodtype'])->name('add_foodtype');
+    Route::get('/edit-foodtype/{id}', [AdminController::class, 'edit_foodtype'])->name('foodtype.edit');
+    Route::get ('/delete-foodtype/{id}', [AdminController::class, 'delete_foodtype'])->name('foodtype.delete');
+    Route::post('/update-foodtype/{id}', [AdminController::class, 'update_foodtype'])->name('foodtype.update');
+
+    Route::get('/admin-campaign', [AdminController::class, 'admin_campaign'])->name('admin-campaign');
+    Route::post('/update-campaign', [AdminController::class, 'update_campaign_page'])->name('campaign.update');
+
+
+
+
 
 
 });

@@ -86,7 +86,7 @@
                 Etkinlik - Davet - Restoran
             </p>
             <a href="/gallery" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Galeri</a>
-            <a href="/contact" style=" border: 1px solid white;"
+            <a href="{{route('contact')}}" style=" border: 1px solid white;"
                class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">İletişim</a>
         @else
             <h1>
@@ -97,9 +97,8 @@
                 Event & Wedding & Restaurant
             </p>
             <a href="/gallery" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Gallery</a>
-            <a href="/table_rezervations" style=" border: 1px solid white;"
-               class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Booking
-                Table</a>
+            <a href="{{route('contact')}}" style=" border: 1px solid white;"
+               class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Contact Us</a>
         @endif
 
     </div><!-- .restbeef_header_title -->
@@ -881,8 +880,8 @@
 
                                             @else
                                                 <h2>
-                                                    <span class="restbeef_up_title">You can send a message</span>
-                                                    for all your questions.
+                                                    <span class="restbeef_up_title"></span>
+                                                    CONTACT US
                                                 </h2>
 
                                             @endif

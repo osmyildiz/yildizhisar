@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Campaign;
 use App\Models\Contact;
 use App\Models\Events;
+use App\Models\FoodType;
 use App\Models\Form;
 use App\Models\Menu;
 use App\Models\Newsletter;
 use App\Models\Reservation;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class AdminController extends Controller
@@ -43,10 +47,11 @@ class AdminController extends Controller
     }
     public function admin_menu()
     {
-        $menu_all = Menu::orderBy('category','ASC')->paginate(30); ;
+        $menu_all = Menu::orderBy('category','ASC')->paginate(30);
+        $kategori_all = FoodType::orderBy('name_tr','ASC')->get();
         
 
-        return view('admin-menu',compact('menu_all'));
+        return view('admin-menu',compact('menu_all','kategori_all'));
     }
     public function admin_about()
     {
@@ -54,6 +59,13 @@ class AdminController extends Controller
 
 
         return view('admin-about',compact('about'));
+    }
+    public function admin_campaign()
+    {
+        $campaign = Campaign::find(1);
+
+
+        return view('admin-campaign',compact('campaign'));
     }
     public function admin_contact()
     {
@@ -120,6 +132,24 @@ class AdminController extends Controller
         return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
 
     }
+    public function add_foodtype(Request $request)
+    {
+
+
+        $foodtype = new FoodType();
+        $foodtype->name_tr = $request->name_tr;
+        $foodtype->name_en = $request->name_en;
+
+        $save = $foodtype->save();
+
+        if($save){
+            return back()->with('success', 'Kategori eklendi!');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+    }
     public function add_reservation_web(Request $request)
     {
 
@@ -154,6 +184,23 @@ class AdminController extends Controller
         $form->message = $request->message;
         $save = $form->save();
 
+        $data = [
+            'subject' => 'İletişim Formu',
+            'email1' => $request->email,
+            'email' => "info@yildizhisar.com",
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'phone' => $request->phone,
+            'message1' => $request->message,
+        ];
+
+
+        Mail::send('frontend.emailcontact', $data, function ($message) use ($data) {
+            $message->to($data['email'])
+                ->subject($data['subject']);
+        });
+
+
         if($save){
 
             return redirect()->back()->with(['message' => 'Mesajınız iletildi!', 'alert' => 'success']);
@@ -164,6 +211,7 @@ class AdminController extends Controller
     }
     public function add_newsletter(Request $request)
     {
+
         $check_email = Newsletter::where('email',$request->email)->first();
 
         if($check_email){
@@ -176,6 +224,20 @@ class AdminController extends Controller
             $newsletter = new Newsletter();
             $newsletter->email = $request->email;
             $save = $newsletter->save();
+
+            $data = [
+                'subject' => 'E-bülten Formu',
+                'email' => "info@yildizhisar.com",
+                'email1' => $request->email,
+            ];
+
+            Mail::send('frontend.emailebulten', $data, function ($message) use ($data) {
+                $message->to($data['email'])
+                    ->subject($data['subject']);
+            });
+
+
+
 
             if($save){
 
@@ -197,10 +259,20 @@ class AdminController extends Controller
     public function edit_menu($id)
 {
     $res = Menu::find($id);
+    $kategori_all = FoodType::orderBy('name_tr','ASC')->get();
+    $kategori1 = FoodType::find($res->category);
 
-    return view('menu-edit',compact('res'));
+
+    return view('menu-edit',compact('res','kategori_all','kategori1'));
 
 }
+    public function edit_foodtype($id)
+    {
+    $res = FoodType::find($id);
+
+    return view('foodtype-edit',compact('res'));
+
+    }
     public function edit_reservation(Request $request,$id)
     {
 
@@ -231,15 +303,37 @@ class AdminController extends Controller
 
 
         $menu = Menu::find($id);
-        $menu->name = $request->name;
+        $menu->name_tr = $request->name_tr;
+        $menu->name_en = $request->name_en;
         $menu->category = $request->category;
-        $menu->price = $request->price;
-        $menu->description =$request->description;
+        $menu->price_tl = $request->price_tl;
+        $menu->price_usd = $request->price_usd;
+        $menu->description_tr =$request->description_tr;
+        $menu->description_en =$request->description_en;
 
         $save = $menu->save();
 
         if($save){
             return back()->with('success', 'Menu güncellendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function update_foodtype(Request $request,$id)
+    {
+
+
+        $foodtype = FoodType::find($id);
+        $foodtype->name_tr = $request->name_tr;
+        $foodtype->name_en = $request->name_en;
+
+        $save = $foodtype->save();
+
+        if($save){
+            return back()->with('success', 'Kategori güncellendi.');
 
         }
 
@@ -283,6 +377,91 @@ class AdminController extends Controller
 
         if($save){
             return back()->with('success', 'Hakkımızda sayfası güncellendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function update_campaign_page(Request $request)
+    {
+
+
+        $campaign = Campaign::find(1);
+        $campaign->main_text_tr = $request->main_text_tr;
+        $campaign->main_text_en = $request->main_text_en;
+        $campaign->menu1_tr = $request->menu1_tr;
+        $campaign->menu1_en = $request->menu1_en;
+        $campaign->menu2_tr = $request->menu2_tr;
+        $campaign->menu2_en = $request->menu2_en;
+
+        $campaign->menu1_fiyat_tr = $request->menu1_fiyat_tr;
+        $campaign->menu1_fiyat_en = $request->menu1_fiyat_en;
+
+        $campaign->menu2_fiyat_tr = $request->menu2_fiyat_tr;
+        $campaign->menu2_fiyat_en = $request->menu2_fiyat_en;
+
+        $campaign->aciklama_tr = $request->aciklama_tr;
+        $campaign->aciklama_en = $request->aciklama_en;
+
+        $campaign->pakete_dahil_tr = $request->pakete_dahil_tr;
+        $campaign->pakete_dahil_en = $request->pakete_dahil_en;
+
+        $campaign->muzik_tr = $request->muzik_tr;
+        $campaign->muzik_en = $request->muzik_en;
+
+        $campaign->dekorasyon_tr = $request->dekorasyon_tr;
+        $campaign->dekorasyon_en = $request->dekorasyon_en;
+
+        $campaign->video_tr = $request->video_tr;
+        $campaign->video_en = $request->video_en;
+        $campaign->karsilama_tr = $request->karsilama_tr;
+        $campaign->karsilama_en = $request->karsilama_en;
+
+        $campaign->vestiyer_tr = $request->vestiyer_tr;
+        $campaign->vestiyer_en = $request->vestiyer_en;
+
+        $campaign->menu_tadimi_tr = $request->menu_tadimi_tr;
+        $campaign->menu_tadimi_en = $request->menu_tadimi_en;
+
+        $campaign->vale_tr = $request->vale_tr;
+        $campaign->vale_en = $request->vale_en;
+
+        $campaign->odeme_tr = $request->odeme_tr;
+        $campaign->odeme_en = $request->odeme_en;
+
+        $campaign->rezervasyon_tr = $request->rezervasyon_tr;
+        $campaign->rezervasyon_en = $request->rezervasyon_en;
+
+
+        if($request->hasFile('menu1_img')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->menu1_img->extension();
+
+        $request->menu1_img->move(public_path('img'), $imageName);
+        $campaign->menu1_img = "/img/".$imageName;
+        }
+        if($request->hasFile('menu2_img')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->menu2_img->extension();
+
+            $request->menu2_img->move(public_path('img'), $imageName);
+            $campaign->menu2_img = "/img/".$imageName;
+        }
+        if($request->is_active=="on"){
+            $is_active =1;
+        }else{
+            $is_active =0;
+        }
+
+        $campaign->is_active = $is_active;
+
+
+        $save = $campaign->save();
+
+        if($save){
+            return back()->with('success', 'Kampanyalar sayfası güncellendi.');
 
         }
 
@@ -340,6 +519,20 @@ class AdminController extends Controller
 
         if($res){
             return back()->with('success', 'Menu silindi!');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function delete_foodtype($id)
+    {
+        $res = FoodType::destroy($id);
+
+
+        if($res){
+            return back()->with('success', 'Kategori silindi!');
 
         }
 
@@ -430,7 +623,7 @@ class AdminController extends Controller
     public function test()
     {
 
-        return view('resources.form-elements');
+        return view('resources.form-advanced');
     }
 
     /**

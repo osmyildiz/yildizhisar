@@ -16,13 +16,13 @@
                     <h2><span class="restbeef_up_title"> @lang('static_text.about1')</span></h2>
                     @if(app()->getLocale() == "tr")
                         <div class="textwidget">
-                            <p>Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi her türlü davet organizasyonu için alternatif mekanlara yer vermekteyiz. </p>
+                            <p>İşletmemiz, Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer almaktadır. Muhteşem mimarisi ve benzersiz Boğaz manzarası eşliğinde kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermektedir.</p>
 
                         </div><!-- .textwidget -->
 
                     @else
                         <div class="textwidget">
-                            <p>Located in Rumeli Fortress, right next to Fatih Sultan Mehmet Bridge, with its wonderful architecture and Bosphorus view, we offer alternative venues for breakfast, lunch and dinner as well as for all kinds of invitation organizations such as weddings, engagement parties, cocktails, graduation nights, seminars. </p>
+                            <p>Our restaurant is located in Rumeli Fortress, right next to Fatih Sultan Mehmet Bridge. In addition to breakfast, lunch and dinner with its magnificent architecture and unique Bosphorus view, it also serves on special occasions such as weddings, engagement parties, cocktail parties, graduation nights and seminars. </p>
 
                         </div><!-- .textwidget -->
 

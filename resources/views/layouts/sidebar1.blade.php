@@ -71,6 +71,13 @@
                     </a>
 
                 </li>
+                <li>
+                    <a href="/admin-campaign" class="waves-effect">
+                        <i class="bx bx-bookmarks"></i>
+                        <span key="t-dashboards">Kampanyalar Sayfası</span>
+                    </a>
+
+                </li>
 
                 <li>
                     <a href="/test" class="waves-effect">

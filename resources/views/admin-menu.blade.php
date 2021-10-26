@@ -25,59 +25,65 @@
             @endif
         @endforeach
     </div>
-
-    <div class="card">
-        <form method="POST" class="form-horizontal" action="/add-menu" enctype="multipart/form-data">
-            @csrf
-            <div class="card-body">
-                <h4 class="card-title mb-4">Yeni Menü Ekle</h4>
-                <div class="row">
-
-                    <div class="col-xl-6">
-
-
-
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Yeni Menü Ekle</h4>
+                    <form method="POST" class="form-horizontal" action="/add-menu" enctype="multipart/form-data">
+                        @csrf
                         <div class="mb-4 row">
                             <label for="time" class="col-md-3 col-form-label">Kategori</label>
 
                             <div class="col-sm-9">
                                 <select id="time" class="form-select" name="category">
                                     <option selected>Kategori Seçiniz</option>
-                                    <option>Çorbalar</option>
-                                    <option>Ara Sıcaklar</option>
-                                    <option>Ana Yemekler</option>
-                                    <option>Tatlılar</option>
-                                    <option>İçecekler</option>
+                                    @foreach($kategori_all as $kategori)
+                                    <option value="{{$kategori->id}}">{{$kategori->name_tr}}</option>
+                                    @endforeach
                                 </select>
 
                             </div>
                         </div>
                         <div class="mb-4 row">
-                            <label for="name" class="col-md-3 col-form-label">Ad</label>
+                            <label for="name_tr" class="col-md-3 col-form-label">Yemek İsmi (TR)</label>
                             <div class="col-sm-9">
-                                <input class="form-control" type="text"
-                                       placeholder="Adı?"     id="name" name="name">
+                                <input class="form-control" type="text" id="name_tr" name="name_tr">
+                            </div>
+                        </div>
+                        <div class="mb-4 row">
+                            <label for="name_en" class="col-md-3 col-form-label">Yemek İsmi (EN)</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" id="name_en" name="name_en">
                             </div>
                         </div>
                         <div class="row mb-4">
-                            <label for="guest_number" class="col-sm-3 col-form-label">Fiyat</label>
+                            <label for="price_tr" class="col-sm-3 col-form-label">Fiyat(TL)</label>
                             <div class="col-sm-9">
-                                <input type="number" class="form-control" id="price"
-                                        name="price" placeholder="Fiyat?" autofocus required>
+                                <input type="number" class="form-control" id="price_tr"
+                                       name="price_tr" required>
 
-                                @error('guest_number')
-                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                @enderror
-                                <div class="alert-message" id="error" name="error"></div>
                             </div>
                         </div>
                         <div class="row mb-4">
-                            <label for="message" class="col-sm-3 col-form-label">Açıklama</label>
+                            <label for="price_en" class="col-sm-3 col-form-label">Fiyat(USD)</label>
                             <div class="col-sm-9">
-                            <textarea id="description" class="form-control"  rows="4" name="description"
-                                      placeholder="Açıklama"></textarea>
+                                <input type="number" class="form-control" id="price_en"
+                                       name="price_en" required>
+
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <label for="description_tr" class="col-sm-3 col-form-label">Açıklama(TR)</label>
+                            <div class="col-sm-9">
+                            <textarea id="description_tr" class="form-control"  rows="4" name="description_tr"
+                                      ></textarea>
+                            </div></div>
+                        <div class="row mb-4">
+                            <label for="description_en" class="col-sm-3 col-form-label">Açıklama(EN)</label>
+                            <div class="col-sm-9">
+                            <textarea id="description_en" class="form-control"  rows="4" name="description_en"
+                                      ></textarea>
                             </div></div>
                         <div class="row mb-4">
                             <div class="row justify-content-end">
@@ -90,21 +96,115 @@
                                 </div>
                             </div>
                         </div>
+                    </form>
 
-
-
-                        <!-- end card -->
-                    </div>
-
-
-
-
-                    <!-- end col -->
                 </div>
             </div>
-        </form>
+        </div>
+        <div class="col-xl-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Yeni Kategori Ekle</h4>
+                    <form method="POST" class="form-horizontal" action="/add-foodtype" enctype="multipart/form-data">
+                        @csrf
+                        <div class="mb-4 row">
+                            <label for="name_tr" class="col-md-3 col-form-label">Kategori Adı(TR)</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text"
+                                       placeholder="Adı?"     id="name_tr" name="name_tr" required>
+                            </div>
+                        </div>
+                        <div class="mb-4 row">
+                            <label for="name_en" class="col-md-3 col-form-label">Kategori Adı(EN)</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text"
+                                       placeholder="Adı?"     id="name_en" name="name_en" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="row justify-content-end">
+                                <div class="col-sm-9">
+
+
+                                    <div>
+                                        <button type="submit" class="btn btn-primary w-md">Kategori Ekle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </div>
 
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+
+                    <h4 class="card-title">Kategoriler</h4>
+                    <p class="card-title-desc">Tüm kategorileri bu tablodan inceleyebilirsiniz.
+                    </p>
+
+                    <div class="table-responsive">
+
+                        <table id="today_table" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Kategori Adı(TR)</th>
+                                <th>Kategori Adı(EN)</th>
+                                <th>Düzenle/Sil</th>
+                            </tr>
+                            </thead>
+
+
+                            <tbody>
+                            @if($kategori_all->count()==0)
+                                <td colspan="8">Bugüne ait bir kayıt bulunamadı.</td>
+                            @else
+
+                                @foreach($kategori_all as $key=>$kategori)
+                                    <tr>
+                                        <td>{{$key+1}}</td>
+                                        <td>{{$kategori->name_tr}}</td>
+                                        <td>{{$kategori->name_en}}</td>
+
+                                        <td>
+                                            <ul class="list-inline font-size-20 contact-links mb-0">
+
+                                                <li class="list-inline-item px-1">
+                                                    <a href="{{route('foodtype.edit',$kategori->id)}}" title="edit"><i class="bx bxs-edit"></i></a>
+                                                </li>
+                                                <li class="list-inline-item px-1">
+                                                    <a href="{{route('foodtype.delete',$kategori->id)}}" title="delete"><i class="bx bxs-trash"></i></a>
+                                                </li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                @endforeach
+
+                            @endif
+
+                            </tbody>
+
+                        </table>
+
+
+
+
+                    </div></div>
+
+            </div>
+
+        </div> <!-- end col -->
+
+    </div>
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -120,10 +220,13 @@
                             <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Adı</th>
+                                <th>Adı(TR)</th>
+                                <th>Adı(EN)</th>
                                 <th>Kategori</th>
-                                <th>Fiyat</th>
-                                <th>Açıklama</th>
+                                <th>Fiyat(TL)</th>
+                                <th>Fiyat(USD)</th>
+                                <th>Açıklama(TR)</th>
+                                <th>Açıklama(EN)</th>
                                 <th>Düzenle/Sil</th>
                             </tr>
                             </thead>
@@ -137,10 +240,13 @@
                                 @foreach($menu_all as $key=>$menu)
                                     <tr>
                                         <td>{{$key+1}}</td>
-                                        <td>{{$menu->name}}</td>
+                                        <td>{{$menu->name_tr}}</td>
+                                        <td>{{$menu->name_en}}</td>
                                         <td>{{$menu->category}}</td>
-                                        <td>{{$menu->price}}</td>
-                                        <td>{{$menu->description}}</td>
+                                        <td>{{$menu->price_tl}}</td>
+                                        <td>{{$menu->price_usd}}</td>
+                                        <td>{{$menu->description_tr}}</td>
+                                        <td>{{$menu->description_en}}</td>
 
 
 

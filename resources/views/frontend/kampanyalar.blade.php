@@ -246,7 +246,7 @@
                                                             </div>
                                                             <div class="restbeef_recent_posts restbeef_grig_1columns">
 
-                                                                <div class="restbeef_recent_post ">
+                                                                <div class="restbeef_recent_post card-width ">
 
                                                                     <div class="restbeef_recent_post_content ">
                                                                         <h5>
@@ -272,7 +272,7 @@
                                                                     </div><!-- .restbeef_recent_post_content -->
                                                                 </div><!-- .restbeef_recent_post -->
 
-                                                                <div class="restbeef_recent_post">
+                                                                <div class="restbeef_recent_post card-width">
 
                                                                     <div class="restbeef_recent_post_content">
                                                                         <h5>
@@ -290,7 +290,7 @@
 
                                                                     </div><!-- .restbeef_recent_post_content -->
                                                                 </div><!-- .restbeef_recent_post -->
-                                                                <div class="restbeef_recent_post" >
+                                                                <div class="restbeef_recent_post card-width" >
 
                                                                     <div class="restbeef_recent_post_content ">
                                                                         <h5>
@@ -304,7 +304,7 @@
                                                                         </p>
                                                                     </div><!-- .restbeef_recent_post_content -->
                                                                 </div><!-- .restbeef_recent_post -->
-                                                                <div class="restbeef_recent_post">
+                                                                <div class="restbeef_recent_post card-width">
 
                                                                     <div class="restbeef_recent_post_content">
                                                                         <h5>
@@ -382,7 +382,7 @@
                                                                         <p>Düğün organizasyonlarımızda anlaşma sağlandığı takdirde, ön ödeme %30 sözleşme imzalandığında alınacak olup, ara ödemeleriniz ise sözleşmede bildirilecektir. Tüm tutarın ise organizasyondan en geç 20 gün öncesine kadar ödenerek kapatılması gerekmektedir.</p>
                                                                     </div><!-- .restbeef_recent_post_content -->
                                                                 </div>
-                                                                <div class="restbeef_recent_post">
+                                                                <div class="restbeef_recent_post card-width">
 
                                                                     <div class="restbeef_recent_post_content ">
                                                                         <h5>

@@ -3,9 +3,9 @@
 <head>
 
     @if(app()->getLocale() == "tr")
-        <title>Yıldız Hisar Sosyal Tesisleri</title>
+        <title>Yıldız Hisar Etkinlik Davet Restoran</title>
     @else
-        <title>Yıldız Hisar Restaurant</title>
+        <title>Yıldız Hisar Event - Invitation - Restaurant</title>
     @endif
     <meta charset="utf-8">
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
