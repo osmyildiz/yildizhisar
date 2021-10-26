@@ -43,12 +43,12 @@ class HomeController extends Controller
 
     public function homepage()
     {
-        return view('frontend.homepage');
+    //    return view('frontend.homepage');
     }
 
     public function root()
     {
-        return view('frontend.homepage');
+     //   return view('frontend.homepage');
     }
 
     public function table_rezervations()
