@@ -27,7 +27,7 @@
     </div>
 
     <div class="card">
-        <form method="POST" class="form-horizontal" action="/update-contact-page" enctype="multipart/form-data">
+        <form method="POST" class="form-horizontal" action="/update-campaign" enctype="multipart/form-data">
             @csrf
         <div class="card-body">
                 <h4 class="card-title mb-4">Kampanyalar Sayfası Düzenle</h4>

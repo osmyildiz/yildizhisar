@@ -48,7 +48,7 @@ return [
     "reservations" => "REZERVASYON",
     "reservation_success"=>"Rezervasyonunuz oluşturulmuştur.",
     "reservation_error"=>"Rezervasyonunuz oluşturulurken bir hata oluştu. Lütfen tekrar deneyiniz.",
-    "form_success"=>"Mesajınız gönderilmiştir. En kısa zamanda size dönüş yapıalcaktır.",
+    "form_success"=>"Mesajınız gönderilmiştir. En kısa zamanda size dönüş yapılacaktır.",
     "form_error"=>"Mesajınız gönderilirken beklenmeyen bir hata oluştu. Lütfen tekrar deneyiniz."
 
 

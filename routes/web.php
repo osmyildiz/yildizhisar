@@ -45,6 +45,8 @@ Route::post('/add-reservation-web', [AdminController::class, 'add_reservation_we
 Route::post('/add-form-web', [AdminController::class, 'add_form_web'])->name('add_form_web');
 Route::post('/add-newsletter', [AdminController::class, 'add_newsletter'])->name('add_newsletter');
 Route::get('/kampanyalar', [HomeController::class, 'campaigns'])->name('campaigns');
+Route::get('/dugun-davet/{id}/{slug}', [HomeController::class, 'dugun_davet'])->name('dugun_davet');
+Route::post('/send-offer', [AdminController::class, 'offer_form'])->name('send_offer');
 
 
 
@@ -98,7 +100,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin-campaign', [AdminController::class, 'admin_campaign'])->name('admin-campaign');
     Route::post('/update-campaign', [AdminController::class, 'update_campaign_page'])->name('campaign.update');
 
-
+    Route::get('/admin-wedding', [AdminController::class, 'admin_wedding'])->name('admin-wedding');
+    Route::post('/update-wedding/{id}', [AdminController::class, 'update_wedding'])->name('wedding.update');
+    Route::get ('/edit-wedding/{id}', [AdminController::class, 'edit_wedding'])->name('wedding.edit');
+    Route::post('/add-wedding', [AdminController::class, 'add_wedding'])->name('wedding.add');
 
 
 

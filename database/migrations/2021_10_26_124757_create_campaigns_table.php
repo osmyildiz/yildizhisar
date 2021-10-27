@@ -25,8 +25,8 @@ class CreateCampaignsTable extends Migration
             $table->longText('menu2_en');
             $table->string('menu2_fiyat_tr');
             $table->string('menu2_fiyat_en');
-            $table->String('menu1_img')->default("/img/y1.jpeg");
-            $table->String('menu2_img')->default("/img/y2.jpeg");
+            $table->String('menu1_img')->default("/img/y3.jpeg");
+            $table->String('menu2_img')->default("/img/y4.jpeg");
             $table->longText('aciklama_tr');
             $table->longText('aciklama_en');
             $table->longText('pakete_dahil_tr');

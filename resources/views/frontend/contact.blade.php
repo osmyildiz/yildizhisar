@@ -293,7 +293,6 @@
 
 
         </script>
-        <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
 
 @endsection
 

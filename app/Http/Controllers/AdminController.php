@@ -10,7 +10,9 @@ use App\Models\FoodType;
 use App\Models\Form;
 use App\Models\Menu;
 use App\Models\Newsletter;
+use App\Models\Offer;
 use App\Models\Reservation;
+use App\Models\Wedding;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -66,6 +68,13 @@ class AdminController extends Controller
 
 
         return view('admin-campaign',compact('campaign'));
+    }
+    public function admin_wedding()
+    {
+        $weddings = Wedding::get();
+
+
+        return view('admin-weddings',compact('weddings'));
     }
     public function admin_contact()
     {
@@ -209,6 +218,50 @@ class AdminController extends Controller
         return redirect()->back()->with(['message' => 'Beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!', 'alert' => 'danger']);
 
     }
+    public function offer_form(Request $request)
+    {
+
+        $offer = new Offer();
+        $offer->res_date = $request->res_date;
+        $offer->name = $request->name;
+
+        $offer->email = $request->email;
+        $offer->time = $request->time;
+        $offer->guest_number = $request->guest_number;
+        $offer->phone = $request->phone;
+        $offer->message = $request->message;
+        $offer->offer_name = $request->offer_name;
+        $save = $offer->save();
+
+        $data = [
+            'subject' => $request->offer_name.' Formu',
+            'email1' => $request->email,
+            'email' => "osmyildiz@gmail.com",
+            'name' => $request->name,
+
+            'phone' => $request->phone,
+            'message1' => $request->message,
+            'offer_name' => $request->offer_name,
+            'guest_number' => $request->guest_number,
+            'res_date' => $request->res_date,
+            'time' => $request->time,
+        ];
+
+
+        Mail::send('frontend.emailoffer', $data, function ($message) use ($data) {
+            $message->to($data['email'])
+                ->subject($data['subject']);
+        });
+
+
+        if($save){
+
+            return redirect()->back()->with(['message' => 'Mesajınız iletildi, Müşteri temsilcimiz sizinle en kısa zamanda iletişime geçecektir.', 'alert' => 'success']);
+
+        }
+        return redirect()->back()->with(['message' => 'Beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!', 'alert' => 'danger']);
+
+    }
     public function add_newsletter(Request $request)
     {
 
@@ -250,14 +303,14 @@ class AdminController extends Controller
 
     }
     public function edit_reservations($id)
-{
+    {
     $res = Reservation::find($id);
 
     return view('reservation-edit',compact('res'));
 
-}
+    }
     public function edit_menu($id)
-{
+    {
     $res = Menu::find($id);
     $kategori_all = FoodType::orderBy('name_tr','ASC')->get();
     $kategori1 = FoodType::find($res->category);
@@ -265,7 +318,7 @@ class AdminController extends Controller
 
     return view('menu-edit',compact('res','kategori_all','kategori1'));
 
-}
+    }
     public function edit_foodtype($id)
     {
     $res = FoodType::find($id);
@@ -613,6 +666,69 @@ class AdminController extends Controller
 
         if($save){
             return back()->with('success', 'Etkinlik eklendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function edit_wedding($id)
+    {
+        $wedding = Wedding::find($id);
+
+        return view('wedding-edit',compact('wedding'));
+
+    }
+    public function add_wedding(Request $request)
+    {
+        $wedding = new Wedding();
+        $wedding->name_tr = $request->name_tr;
+        $wedding->name_en = $request->name_en;
+        $wedding->slug_tr = Str::slug($request->name_tr);
+        $wedding->slug_en = Str::slug($request->name_en);
+        $wedding->main_text_tr = $request->main_text_tr;
+        $wedding->main_text_en = $request->main_text_en;
+        if($request->is_active=="on"){
+            $is_active =1;
+        }else{
+            $is_active =0;
+        }
+
+        $wedding->is_active = $is_active;
+
+        $save = $wedding->save();
+
+        if($save){
+            return back()->with('success', 'Yeni Organizasyon eklendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function update_wedding(Request $request,$id)
+    {
+
+
+        if($request->is_active=="on"){
+            $is_active =1;
+        }else{
+            $is_active =0;
+        }
+
+        $wedding = Wedding::find($id);
+        $wedding->name_tr = $request->name_tr;
+        $wedding->name_en = $request->name_en;
+        $wedding->main_text_tr = $request->main_text_tr;
+        $wedding->main_text_en = $request->main_text_en;
+        $wedding->is_active = $is_active;
+
+        $save = $wedding->save();
+
+        if($save){
+            return back()->with('success', 'Organizasyon güncellendi.');
 
         }
 

@@ -49,7 +49,7 @@ return [
     "reservation_success"=>"Your reservation has been created.",
     "reservation_error"=>"An error occurred while creating your reservation. Please try again. ",
     "form_success"=>"Your message has been sent. We will get back to you as soon as possible. ",
-    "form_error"=>"There was an unexpected error while sending your message. Please try again."
+    "form_error"=>"There was an unexpected error while sending your message. Please try again.",
 
 
 

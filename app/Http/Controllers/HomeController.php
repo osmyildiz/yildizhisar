@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Campaign;
 use App\Models\Category;
 use App\Models\Contact;
 use App\Models\Events;
 use App\Models\Gallery;
 use App\Models\Menu;
 use App\Models\User;
+use App\Models\Wedding;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -88,8 +90,8 @@ class HomeController extends Controller
     }
     public function campaigns()
     {
-
-        return view('frontend.kampanyalar');
+        $campaign = Campaign::find(1);
+        return view('frontend.kampanyalar',compact('campaign'));
 
 
     }
@@ -145,6 +147,11 @@ class HomeController extends Controller
     {
         $event = Events::find($id);
         return view('frontend.eventpage',compact('event'));
+    }
+    public function dugun_davet($id,$slug)
+    {
+        $wedding = Wedding::find($id);
+        return view('frontend.dugun-davet',compact('wedding'));
     }
 
     public function gallery()

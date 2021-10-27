@@ -58,7 +58,7 @@
 
                 </li>
                 <li>
-                    <a href="/admin-menu" class="waves-effect">
+                    <a href="/admin-wedding" class="waves-effect">
                         <i class="bx bx-calendar-event"></i>
                         <span key="t-dashboards">Düğün & Davet Sayfası</span>
                     </a>

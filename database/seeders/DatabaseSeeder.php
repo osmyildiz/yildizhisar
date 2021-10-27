@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\FoodType;
+use App\Models\Organization;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

@@ -5,6 +5,9 @@
 </style>
 <div class="restbeef_menu_part">
     @php
+        $weddings = \App\Models\Wedding::selectRaw('id,name_tr,name_en,slug_tr,slug_en')->where('is_active','=',1)->get();
+        $campaign = \App\Models\Campaign::where('id',1)->where('is_active',1)->get();
+
         $routes = [
 
         [
@@ -72,13 +75,24 @@
             <li class="menu-item menu-item-has-children">
                 <a href="#">{{$routes[2]['label']}}</a>
                 <ul class="sub-menu">
-                    <li><a href="{{route($routes[10]['routeName'])}}">{{$routes[10]['label']}}</a></li>
-                    <li><a href="{{route($routes[6]['routeName'])}}">{{$routes[6]['label']}}</a></li>
-                    <li><a href="{{route($routes[7]['routeName'])}}">{{$routes[7]['label']}}</a></li>
-                    <li><a href="{{route($routes[8]['routeName'])}}">{{$routes[8]['label']}}</a></li>
-                    <li><a href="{{route($routes[9]['routeName'])}}">{{$routes[9]['label']}}</a></li>
-                    <li><a href="{{route($routes[11]['routeName'])}}">{{$routes[11]['label']}}</a></li>
-                </ul><!-- .sub-menu -->
+                    @if(app()->getLocale() == "tr")
+                        @foreach($weddings as $wedding)
+                            <li><a href="/dugun-davet/{{$wedding->id.'/'.$wedding->slug_tr}}">{{$wedding->name_tr}}</a></li>
+                        @endforeach
+                    @else
+                        @foreach($weddings as $wedding)
+                            <li><a href="/dugun-davet/{{$wedding->id.'/'.$wedding->slug_en}}">{{$wedding->name_en}}</a></li>
+                        @endforeach
+                    @endif
+
+                        @if(count($campaign)==1)
+                            <li><a href="{{route($routes[11]['routeName'])}}">{{$routes[11]['label']}}</a></li>
+
+                        @endif
+
+
+
+                      </ul><!-- .sub-menu -->
             </li>
             <li id="nav-menu-item-12333"
                 class="menu-item {{ request()->routeIs($routes[3]["routeName"]) ? " current-menu-ancestor" : "" }}">
