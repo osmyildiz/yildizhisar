@@ -9,6 +9,8 @@ use App\Models\Contact;
 use App\Models\Events;
 use App\Models\Gallery;
 use App\Models\Menu;
+use App\Models\Photo;
+use App\Models\PhotoCategory;
 use App\Models\User;
 use App\Models\Wedding;
 use Illuminate\Support\Facades\Auth;
@@ -154,6 +156,34 @@ class HomeController extends Controller
         return view('frontend.dugun-davet',compact('wedding'));
     }
 
+    public function gallery1()
+    {
+        $kategoriler = PhotoCategory::get();
+        if(count($kategoriler)>0){
+            $data=1;
+            return view('frontend.gallery1', compact('kategoriler','data'));
+        }else{
+            $data=0;
+            return view('frontend.gallery1','data');
+        }
+
+
+    }
+    public function gallery_photos($id)
+    {
+        $photos = Photo::where('category_id',$id)->get();
+        $kategori = PhotoCategory::find($id);
+        if(count($photos)>0){
+            $data=1;
+            return view('frontend.gallery-photos', compact('photos','kategori','data'));
+
+        }else{
+            $data=0;
+            return view('frontend.gallery-photos', compact('kategori','data'));
+
+        }
+
+    }
     public function gallery()
     {
         $categories = Category::with('images')->get();

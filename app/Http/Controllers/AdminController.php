@@ -750,6 +750,13 @@ class AdminController extends Controller
         $photo_category = new PhotoCategory();
         $photo_category->name_tr = $request->name_tr;
         $photo_category->name_en = $request->name_en;
+        if($request->hasFile('category_img')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->category_img->extension();
+
+            $request->category_img->move(public_path('photos'), $imageName);
+            $photo_category->kapak_resmi = "/photos/".$imageName;
+        }
 
         $save = $photo_category->save();
 
@@ -765,16 +772,24 @@ class AdminController extends Controller
     {
         if($id==0){
             $kategori_all = PhotoCategory::orderBy('name_tr','ASC')->get();
-            $kategori1 = $kategori_all[0];
-            $photo_all = DB::table('photos')
-                ->join('photo_categories', 'photo_categories.id', '=', 'photos.category_id')
-                ->select('photo_categories.name_tr','photo_categories.name_en','photos.*')
-                ->where('photos.deleted_at',"=",null)
-                ->where('photos.category_id',"=",$kategori_all[0]->id)
-                ->orderBy('photos.category_id','ASC')->paginate(30);
 
+            if(count($kategori_all)>0){
+                $kategori1 = $kategori_all[0];
+                $photo_all = DB::table('photos')
+                    ->join('photo_categories', 'photo_categories.id', '=', 'photos.category_id')
+                    ->select('photo_categories.name_tr','photo_categories.name_en','photos.*')
+                    ->where('photos.deleted_at',"=",null)
+                    ->where('photos.category_id',"=",$kategori_all[0]->id)
+                    ->orderBy('photos.category_id','ASC')->paginate(30);
 
-            return view('admin-photos',compact('photo_all','kategori_all','kategori1'));
+                $data = 1;
+                return view('admin-photos',compact('photo_all','kategori_all','kategori1','data'));
+
+            }else{
+                $data = 0;
+                return view('admin-photos',compact('data'));
+
+            }
 
         }else{
             $kategori_all = PhotoCategory::orderBy('name_tr','ASC')->get();
@@ -786,8 +801,8 @@ class AdminController extends Controller
                 ->where('photos.category_id',"=",$id)
                 ->orderBy('photos.category_id','ASC')->paginate(30);
 
-
-            return view('admin-photos',compact('photo_all','kategori_all','kategori1'));
+            $data = 1;
+            return view('admin-photos',compact('photo_all','kategori_all','kategori1','data'));
 
         }
     }

@@ -27,7 +27,10 @@ Route::get('/table_rezervations', [App\Http\Controllers\HomeController::class, '
 Route::get('/hakkımızda', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/etkinlikler', [App\Http\Controllers\HomeController::class, 'events'])->name('events');
 Route::get('/iletişim', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
-Route::get('/galeri', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
+//Route::get('/galeri', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
+Route::get('/galeri1', [App\Http\Controllers\HomeController::class, 'gallery1'])->name('gallery1');
+Route::get('/galeri/{id}', [App\Http\Controllers\HomeController::class, 'gallery_photos'])->name('gallery_photos');
+Route::get('/gallery/{id}', [App\Http\Controllers\HomeController::class, 'gallery_photos'])->name('gallery_photos1');
 Route::get('/düğün', [App\Http\Controllers\HomeController::class, 'wedding'])->name('wedding');
 Route::get('/nişan', [App\Http\Controllers\HomeController::class, 'nisan'])->name('engagement');
 Route::get('/kına-gecesi', [App\Http\Controllers\HomeController::class, 'kina'])->name('hennanight');

@@ -17,6 +17,7 @@ class CreatePhotoCategoriesTable extends Migration
             $table->id();
             $table->string('name_tr');
             $table->string('name_en');
+            $table->string('kapak_resmi')->default('/img/y6.jgp');
             $table->softDeletes();
             $table->timestamps();
         });

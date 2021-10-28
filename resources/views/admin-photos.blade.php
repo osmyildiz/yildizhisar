@@ -50,8 +50,12 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title mb-4">Yeni Resim Ekle</h4>
+                    @if($data==0)
+                        <p>Henüz bir kategori yok. Önce bir kategori ekleyiniz.</p>
+                    @else
                     <form class="form-horizontal" enctype="multipart/form-data" method="post" action="/add-photo">
                     @csrf
+
                         <div class="mb-4 row">
                             <label for="time" class="col-md-3 col-form-label">Kategori</label>
 
@@ -64,6 +68,9 @@
                                 </select>
 
                             </div>
+
+
+
                         </div>
                         <div>
 
@@ -75,7 +82,7 @@
                         </div>
 
                     </form>
-
+                    @endif
                 </div>
             </div>
         </div>
@@ -99,6 +106,18 @@
                                        placeholder="Adı?"     id="name_en" name="name_en" required>
                             </div>
                         </div>
+                        <div class="mb-3">
+                            <label for="img1">Kapak Resmi</label>
+                            <div class="media">
+                                <div class="input-group">
+                                    <input type="file" class="form-control" id="category_img" name="category_img">
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
 
                         <div class="row mb-4">
                             <div class="row justify-content-end">
@@ -136,14 +155,15 @@
                                 <th>No</th>
                                 <th>Kategori Adı(TR)</th>
                                 <th>Kategori Adı(EN)</th>
+                                <th>Kapak Resmi</th>
                                 <th>Düzenle/Sil</th>
                             </tr>
                             </thead>
 
 
                             <tbody>
-                            @if($kategori_all->count()==0)
-                                <td colspan="8">Bugüne ait bir kayıt bulunamadı.</td>
+                            @if($data==0)
+                                <td colspan="8">Herhangi bir kayıt bulunamadı.</td>
                             @else
 
                                 @foreach($kategori_all as $key=>$kategori)
@@ -151,6 +171,8 @@
                                         <td>{{$key+1}}</td>
                                         <td>{{$kategori->name_tr}}</td>
                                         <td>{{$kategori->name_en}}</td>
+                                        <td><img src="{{url($kategori->kapak_resmi)}}" alt=""
+                                                 style="display:block;" width="100" height="70"></td>
 
                                         <td>
                                             <ul class="list-inline font-size-20 contact-links mb-0">
@@ -194,11 +216,13 @@
                     <form method="POST" class="form-horizontal" onsubmit="return submitForm()" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
-                            <h4 class="card-title mb-4">Resim Düzenle</h4>
                             <div class="row">
 
                                 <div class="mb-4 row">
                                     <label for="time" class="col-md-3 col-form-label">Kategori</label>
+                                    @if($data==0)
+                                        <td colspan="8">Herhangi bir kayıt bulunamadı.</td>
+                                    @else
 
                                     <div class="col-sm-9">
                                         <select id="select-action" class="form-select" name="action">
@@ -213,6 +237,8 @@
                                     </div>
                                 </div>
 
+                                @if($photo_all->count()!=0)
+
                                 <div class="row justify-content-end">
                                     <div class="col-sm-9">
 
@@ -222,6 +248,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endif
+
 
 
                                 <!-- end card -->
@@ -288,9 +316,11 @@
                         {{$photo_all->links("pagination::bootstrap-4")}}
 
 
-
+                        @endif
 
                     </div></div>
+
+
 
             </div>
 

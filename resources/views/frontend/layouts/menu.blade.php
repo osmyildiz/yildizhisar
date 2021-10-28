@@ -28,7 +28,7 @@
         "label" => __("static_text.events")
         ],
         [
-        "routeName" => "gallery",
+        "routeName" => "gallery1",
         "label" => __("static_text.gallery")
         ],
         [
