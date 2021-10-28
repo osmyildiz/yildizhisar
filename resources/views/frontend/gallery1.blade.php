@@ -86,9 +86,9 @@
 
                                             <div class="restbeef_event_item">
                                                 <div class="restbeef_e<vent_item_image">
-
+                                                    <a href="{{"/".$word."/".$kategori->id}}">
                                                         <img src="{{$kategori->kapak_resmi}}" alt="dogum_gunu"/>
-
+                                                    </a>
                                                 </div><!-- .restbeef_event_item_image -->
                                                 <div class="restbeef_event_item_content">
                                                     <a href="{{"/".$word."/".$kategori->id}}"> <div class="restbeef_event_date">{{$lang == "tr"?$kategori->name_tr:$kategori->name_en}}</div></a>
