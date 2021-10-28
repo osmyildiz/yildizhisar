@@ -160,6 +160,7 @@
     </div><!-- .restbeef_header_title -->
 @endsection
 @section('content')
+
     <div class="restbeef_site_wrapper fadeOnLoad">
 
         <!-- Content -->
@@ -167,13 +168,26 @@
             <div class="restbeef_container">
                 <div class="restbeef_content_wrapper restbeef_no_sidebar">
 
+
                     <!-- Content Inner -->
                     @if($data==0)
+
                         @if(app()->getLocale() == "tr")
-                            <h4>Yeni fotoğraflarımız çok yakında eklenecektir.</h4>
+                                    <div class="restbeef_recent_post card-width ">
+                                        <div class="restbeef_recent_post_content ">
+                                            <h5></h5>
+                                            <h5>Yeni fotoğraflarımız çok yakında eklenecektir.</h5>
+                                        </div><!-- .restbeef_recent_post_content -->
+                                    </div>
                         @else
-                            <h4>New photos will be added soon. </h4>
+                                    <div class="restbeef_recent_post card-width ">
+                                        <div class="restbeef_recent_post_content ">
+                                            <h5></h5>
+                                            <h5>New photos will be added soon. </h5>
+                                        </div><!-- .restbeef_recent_post_content -->
+                                    </div>
                         @endif
+
 
                     @else
                     <div class="restbeef_content">

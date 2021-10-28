@@ -102,7 +102,24 @@
                                     </div><!-- .restbeef_promo_block -->
                                 </div><!-- .restbeef_block_inner -->
                             </div>
-                                @endif<!-- .restbeef_block -->
+
+                        @else
+                                @if(app()->getLocale() == "tr")
+                                    <div class="restbeef_recent_post card-width ">
+
+                                            <h5></h5>
+                                            <h6>Yeni fotoğraflarımız çok yakında eklenecektir.</h6>
+
+                                    </div>
+                                @else
+                                    <div class="restbeef_recent_post card-width ">
+
+                                            <h5></h5>
+                                            <h6>New photos will be added soon. </h6>
+
+                                    </div>
+                            @endif
+                        @endif<!-- .restbeef_block -->
 
                         </div><!-- .restbeef_tiny -->
                     </div><!-- .restbeef_content -->

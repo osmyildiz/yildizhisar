@@ -164,7 +164,8 @@ class HomeController extends Controller
             return view('frontend.gallery1', compact('kategoriler','data'));
         }else{
             $data=0;
-            return view('frontend.gallery1','data');
+
+            return view('frontend.gallery1',compact('data'));
         }
 
 
