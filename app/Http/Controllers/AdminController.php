@@ -21,6 +21,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
 
@@ -760,19 +761,35 @@ class AdminController extends Controller
         return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
 
     }
-    public function admin_photos()
+    public function admin_photos($id)
     {
-        $photo_all = DB::table('photos')
-            ->join('photo_categories', 'photo_categories.id', '=', 'photos.category_id')
-            ->select('photo_categories.name_tr','photo_categories.name_en','photos.*')
-            ->where('photos.deleted_at',"=",null)
-            ->orderBy('photos.category_id','ASC')->paginate(30);
+        if($id==0){
+            $kategori_all = PhotoCategory::orderBy('name_tr','ASC')->get();
+            $kategori1 = $kategori_all[0];
+            $photo_all = DB::table('photos')
+                ->join('photo_categories', 'photo_categories.id', '=', 'photos.category_id')
+                ->select('photo_categories.name_tr','photo_categories.name_en','photos.*')
+                ->where('photos.deleted_at',"=",null)
+                ->where('photos.category_id',"=",$kategori_all[0]->id)
+                ->orderBy('photos.category_id','ASC')->paginate(30);
 
 
-        $kategori_all = PhotoCategory::orderBy('name_tr','ASC')->get();
+            return view('admin-photos',compact('photo_all','kategori_all','kategori1'));
+
+        }else{
+            $kategori_all = PhotoCategory::orderBy('name_tr','ASC')->get();
+            $kategori1 = PhotoCategory::find($id);
+            $photo_all = DB::table('photos')
+                ->join('photo_categories', 'photo_categories.id', '=', 'photos.category_id')
+                ->select('photo_categories.name_tr','photo_categories.name_en','photos.*')
+                ->where('photos.deleted_at',"=",null)
+                ->where('photos.category_id',"=",$id)
+                ->orderBy('photos.category_id','ASC')->paginate(30);
 
 
-        return view('admin-photos',compact('photo_all','kategori_all'));
+            return view('admin-photos',compact('photo_all','kategori_all','kategori1'));
+
+        }
     }
     public function update_photo(Request $request,$id)
     {
@@ -808,6 +825,13 @@ class AdminController extends Controller
     }
     public function add_photos(Request $request)
     {
+
+
+
+        $request->validate([
+            'image' => 'required',
+            'image.*' => 'mimes:jpeg,jpg,png,gif,csv,txt,pdf|max:2048'
+        ]);
 
         if($request->category ==0){
 
@@ -897,6 +921,32 @@ class AdminController extends Controller
 
         if($res){
             return back()->with('success', 'Kategori silindi!');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function edit_photocategory($id)
+    {
+        $res = PhotoCategory::find($id);
+
+        return view('photocategory-edit',compact('res'));
+
+    }
+    public function update_photocategory(Request $request,$id)
+    {
+
+
+        $photocategory = PhotoCategory::find($id);
+        $photocategory->name_tr = $request->name_tr;
+        $photocategory->name_en = $request->name_en;
+
+        $save = $photocategory->save();
+
+        if($save){
+            return back()->with('success', 'Kategori güncellendi.');
 
         }
 

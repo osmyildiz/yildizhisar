@@ -26,6 +26,25 @@
             @endif
         @endforeach
     </div>
+    @if (count($errors) > 0)
+
+        <div class="alert alert-danger">
+
+            <strong>Whoops!</strong> There were some problems with your input.
+
+            <ul>
+
+                @foreach ($errors->all() as $error)
+
+                    <li>{{ $error }}</li>
+
+                @endforeach
+
+            </ul>
+
+        </div>
+
+    @endif
     <div class="row">
         <div class="col-xl-6">
             <div class="card">
@@ -48,9 +67,9 @@
                         </div>
                         <div>
 
-                            <input required type="file" class="form-control" name="image[]" placeholder="address" multiple>
+                            <input required type="file" class="form-control" name="image[]" id="images" multiple="multiple" >
                         </div>
-                        <p>En fazla 9 resim.</p>
+                        <p>Maximum 2MB resim kullanınız. Resimlerin büyük olması web sitesinin açılma hızını yavaşlatır.</p>
                         <div>
                             <button type="submit" class="btn btn-primary w-md">Resim Ekle</button>
                         </div>
@@ -137,10 +156,10 @@
                                             <ul class="list-inline font-size-20 contact-links mb-0">
 
                                                 <li class="list-inline-item px-1">
-                                                    <a href="{{route('foodtype.edit',$kategori->id)}}" title="edit"><i class="bx bxs-edit"></i></a>
+                                                    <a href="{{route('photocategory.edit',$kategori->id)}}" title="edit"><i class="bx bxs-edit"></i></a>
                                                 </li>
                                                 <li class="list-inline-item px-1">
-                                                    <a href="{{route('foodtype.delete',$kategori->id)}}" title="delete"><i class="bx bxs-trash"></i></a>
+                                                    <a href="{{route('photocategory.delete',$kategori->id)}}" title="delete"><i class="bx bxs-trash"></i></a>
                                                 </li>
 
                                             </ul>
@@ -172,6 +191,47 @@
                     <h4 class="card-title">Resimler</h4>
                     <p class="card-title-desc">Tüm menüleri bu tablodan inceleyebilirsiniz.
                     </p>
+                    <form method="POST" class="form-horizontal" onsubmit="return submitForm()" enctype="multipart/form-data">
+                        @csrf
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Resim Düzenle</h4>
+                            <div class="row">
+
+                                <div class="mb-4 row">
+                                    <label for="time" class="col-md-3 col-form-label">Kategori</label>
+
+                                    <div class="col-sm-9">
+                                        <select id="select-action" class="form-select" name="action">
+                                            <option value="{{$kategori1->id}}" selected>{{$kategori1->name_tr}}</option>
+                                            @foreach($kategori_all as $kategori)
+                                                @if($kategori->id !=$kategori1->id)
+                                                <option value="{{$kategori->id}}">{{$kategori->name_tr}}</option>
+                                                @endif
+                                            @endforeach
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-end">
+                                    <div class="col-sm-9">
+
+
+                                        <div>
+                                            <button type="submit" class="btn btn-primary w-md">Getir</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+
+
+                        </div>
+                </div>
+                </form>
 
                     <div class="table-responsive">
 
@@ -264,6 +324,17 @@
             $('.alert-success').fadeIn().delay(3000).fadeOut('slow');
             $('.alert-danger').fadeIn().delay(3000).fadeOut('slow');
         });
+    </script>
+    <script type="text/javascript">
+
+        function submitForm() {
+
+            var selectedOption = $('#select-action').val();
+            var url = "/admin-photos/"+selectedOption;
+
+            location.href=url;
+            return false;
+        }
     </script>
 
 

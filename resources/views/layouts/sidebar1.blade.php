@@ -95,7 +95,7 @@
 
                 </li>
                 <li>
-                    <a href="{{route('admin-photos')}}" class="waves-effect">
+                    <a href="/admin-photos/0" class="waves-effect">
                         <i class="bx bx-table"></i>
                         <span key="t-dashboards">Galeri1</span>
                     </a>
