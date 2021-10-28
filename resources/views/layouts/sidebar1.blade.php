@@ -9,19 +9,19 @@
             <ul class="metismenu list-unstyled" id="side-menu">
 
                 <li>
-                    <a href="javascript: void(0);" class="waves-effect">
+                    <a href="/panel" class="waves-effect">
                         <i class="bx bx-home-circle"></i>
                         <span key="t-dashboards">Ana Sayfa</span>
                     </a>
 
                 </li>
-                <li>
+                <!--<li>
                     <a href="/reservations" class="waves-effect">
                         <i class="bx bx-table"></i>
                         <span key="t-dashboards">Rezervasyon</span>
                     </a>
 
-                </li>
+                </li>-->
                 <li>
                     <a href="/admin-forms" class="waves-effect">
                         <i class="bx bx-message"></i>
@@ -79,7 +79,7 @@
 
                 </li>
 
-                <li>
+            <!--<li>
                     <a href="/test" class="waves-effect">
                         <i class="bx bx-table"></i>
                         <span key="t-dashboards">Deneme</span>
@@ -93,7 +93,7 @@
                         <span key="t-dashboards">Galeri</span>
                     </a>
 
-                </li>
+                </li>-->
                 <li>
                     <a href="/admin-photos/0" class="waves-effect">
                         <i class="bx bx-table"></i>
