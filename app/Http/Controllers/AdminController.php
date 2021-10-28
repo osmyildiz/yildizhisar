@@ -11,13 +11,19 @@ use App\Models\Form;
 use App\Models\Menu;
 use App\Models\Newsletter;
 use App\Models\Offer;
+use App\Models\Photo;
+use App\Models\PhotoCategory;
 use App\Models\Reservation;
 use App\Models\Wedding;
+use Faker\Provider\Image;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
+
+
 
 class AdminController extends Controller
 {
@@ -729,6 +735,168 @@ class AdminController extends Controller
 
         if($save){
             return back()->with('success', 'Organizasyon güncellendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function add_photo_category(Request $request)
+    {
+
+
+        $photo_category = new PhotoCategory();
+        $photo_category->name_tr = $request->name_tr;
+        $photo_category->name_en = $request->name_en;
+
+        $save = $photo_category->save();
+
+        if($save){
+            return back()->with('success', 'Kategori eklendi!');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+    }
+    public function admin_photos()
+    {
+        $photo_all = DB::table('photos')
+            ->join('photo_categories', 'photo_categories.id', '=', 'photos.category_id')
+            ->select('photo_categories.name_tr','photo_categories.name_en','photos.*')
+            ->where('photos.deleted_at',"=",null)
+            ->orderBy('photos.category_id','ASC')->paginate(30);
+
+
+        $kategori_all = PhotoCategory::orderBy('name_tr','ASC')->get();
+
+
+        return view('admin-photos',compact('photo_all','kategori_all'));
+    }
+    public function update_photo(Request $request,$id)
+    {
+
+
+        if($request->is_active=="on"){
+            $is_active =1;
+        }else{
+            $is_active =0;
+        }
+
+        $photo = Photo::find($id);
+        if($request->hasFile('img1')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->img1->extension();
+
+            $request->img1->move(public_path('photos'), $imageName);
+            $photo->url = "/photos/".$imageName;
+        }
+        $photo->category_id = $request->category;
+        $photo->is_active = $is_active;
+
+        $save = $photo->save();
+
+        if($save){
+            return back()->with('success', 'Resim güncellendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function add_photos(Request $request)
+    {
+
+        if($request->category ==0){
+
+
+            return back()->with('danger', 'Kategori seçiniz!');
+
+        }
+
+
+        if($file = $request->file('image')){
+
+
+            foreach($file as $file){
+                $id = mt_rand(100, 999);
+                $name = $id.'_'.time().'.'.$file->extension();
+                $file->move(public_path('photos'), $name);
+                $url = "/photos/".$name;
+                $save=Photo::insert([
+                    'url' => $url,
+                    'category_id' => $request->category,
+                    'created_at'=>date('Y-m-d'),
+                    'updated_at'=>date('Y-m-d')
+                ]);
+
+            }
+
+
+        }
+
+
+        if($save){
+            return back()->with('success', 'Resim(ler) eklendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+        //if ($request->ajax()) {
+        //    $request->validate([
+        //        'file' => 'required|mimes:jpg,jpeg,png,gif|max:5000'
+        //    ]);
+        //
+        //    if ($request->hasFile('file')) ;
+        //    {
+        //
+        //        $photos= new Photo();
+        //        $id = mt_rand(100, 999);
+        //        $name = $id.'_'.time().'.'.$request->file('file')->extension();
+        //        $request->file('file')->move(public_path('photos'), $name);
+        //        $data[] = $name;
+        //        $photos->img1 = "/photos/".$name;
+        //        $photos->category_id = $request->category;
+        //        $save = $photos->save();
+        //    }
+        //}
+
+    }
+    public function edit_photo(Request $request,$id)
+    {
+
+        $photo = Photo::find($id);
+        $kategori = PhotoCategory::where('id',$photo->category_id)->first();
+        $kategori_all = PhotoCategory::get();
+
+        return view('photo-edit',compact('photo','kategori_all','kategori'));
+
+    }
+    public function delete_photo($id)
+    {
+        $res = Photo::destroy($id);
+
+
+        if($res){
+            return back()->with('success', 'Resim silindi!');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function delete_photo_category($id)
+    {
+        $res = PhotoCategory::destroy($id);
+
+
+        if($res){
+            return back()->with('success', 'Kategori silindi!');
 
         }
 

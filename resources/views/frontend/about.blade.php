@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','Rezervasyon')
+@section('title','About')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -107,12 +107,39 @@
                             <!-- Our Gallery -->
 
                             <div class="restbeef_block">
-                                <h2 class="restbeef_block_title align_center restbeef_js_margin" data-margin="0 0 40px 0">
-                                    <span class="restbeef_up_title">New Photos</span>
-                                    Our Gallery
-                                </h2>
+                                @if(app()->getLocale() == "tr")
+                                    <h2 class="restbeef_block_title align_center restbeef_js_margin" data-margin="0 0 40px 0">
+                                        <span class="restbeef_up_title">Yeni Fotoğraflar</span>
+                                        Galeri
+                                    </h2>
+
+                                @else
+                                    <h2 class="restbeef_block_title align_center restbeef_js_margin" data-margin="0 0 40px 0">
+                                        <span class="restbeef_up_title">New Photos</span>
+                                        Our Gallery
+                                    </h2>
+
+                                @endif
+
                             </div>
+
                             <div class="owl-carousel owl-theme">
+                                @foreach($categories as $category)
+                                    @if(count($category->images) > 0)
+                                        <h5>{{$category->name}}</h5>
+                                        <div class="owl-carousel owl-theme">
+                                            @foreach($category->images as $key=> $image)
+
+                                                <div class="item gallery-img"><a href="{{asset($image->image)}}" data-size="1920x1280" >
+                                                        <img class="owl-lazy" data-src="{{asset($image->image)}}" alt="Gallery Image 06"/>
+                                                    </a></div>
+
+
+
+                                            @endforeach
+                                        </div>
+                                    @endif
+                                @endforeach
                                 <div class="item gallery-img"><a href="img/y6.jpeg" data-size="1920x1280" data-count="5">
                                         <img class="owl-lazy" data-src="img/y6.jpeg" alt="Gallery Image 06"/>
                                     </a></div>
@@ -148,10 +175,10 @@
             $(".owl-carousel").owlCarousel({
 
                 loop:true,
-                rtl: false,
+                rtl: true,
                 lazyLoad:true,
                 margin:10,
-                nav:true,
+                nav:false,
                 responsive:{
                     0:{
                         items:2
@@ -163,7 +190,7 @@
                         items: 3
                     },
                     1000:{
-                        items:2
+                        items:3
                     },
                     1200:{
                         items: 3

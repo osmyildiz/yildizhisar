@@ -157,6 +157,8 @@ class HomeController extends Controller
     public function gallery()
     {
         $categories = Category::with('images')->get();
+
+
         return view('frontend.gallery', compact('categories'));
 
 

@@ -105,6 +105,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get ('/edit-wedding/{id}', [AdminController::class, 'edit_wedding'])->name('wedding.edit');
     Route::post('/add-wedding', [AdminController::class, 'add_wedding'])->name('wedding.add');
 
+    Route::get('/admin-photos', [AdminController::class, 'admin_photos'])->name('admin-photos');
+    Route::post('/update-photo/{id}', [AdminController::class, 'update_photo'])->name('photo.update');
+    Route::get ('/edit-photo/{id}', [AdminController::class, 'edit_photo'])->name('photo.edit');
+    Route::post('/add-photo', [AdminController::class, 'add_photos'])->name('photos.add');
+    Route::get('/delete-photo/{id}', [AdminController::class, 'delete_photo'])->name('photo.delete');
+    Route::post('/add-photo_category', [AdminController::class, 'add_photo_category'])->name('photo_category.add');
+    Route::get ('/delete-photo_category/{id}', [AdminController::class, 'delete_photo_category'])->name('photo_category.delete');
+
 
 
 

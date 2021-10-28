@@ -45,7 +45,7 @@ class GalleryController extends Controller
                 'file' => 'required|mimes:jpg,jpeg,png,gif|max:5000'
             ]);
 
-            if ($request->hasFile('file')) ;
+            if ($request->hasFile('file'))
             {
 
                 $file = $request->file('file');
