@@ -85,7 +85,7 @@
             <p class="restbeef_header_description">
                 Etkinlik - Davet - Restoran
             </p>
-            <a href="/gallery" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Galeri</a>
+            <a href="/galeri1" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Galeri</a>
             <a href="{{route('contact')}}" style=" border: 1px solid white;"
                class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">İletişim</a>
         @else
@@ -96,7 +96,7 @@
             <p class="restbeef_header_description">
                 Event & Wedding & Restaurant
             </p>
-            <a href="/gallery" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Gallery</a>
+            <a href="/galeri1" class="galeri restbeef_button restbeef_button_small restbeef_button_white">Gallery</a>
             <a href="{{route('contact')}}" style=" border: 1px solid white;"
                class="restbeef_button restbeef_button_small restbeef_button_white restbeef_button_reverse">Contact Us</a>
         @endif
