@@ -42,7 +42,7 @@ class GalleryController extends Controller
 
         if ($request->ajax()) {
             $request->validate([
-                'file' => 'required|mimes:jpg,jpeg,png,gif|max:5000'
+                'file' => 'required|mimes:jpg,jpeg,png,gif|max:10000'
             ]);
 
             if ($request->hasFile('file'))
