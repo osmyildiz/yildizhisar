@@ -7,6 +7,7 @@ use App\Models\Campaign;
 use App\Models\Category;
 use App\Models\Contact;
 use App\Models\Events;
+use App\Models\FoodType;
 use App\Models\Gallery;
 use App\Models\Menu;
 use App\Models\Photo;
@@ -47,7 +48,36 @@ class HomeController extends Controller
 
     public function homepage()
     {
-    //    return view('frontend.homepage');
+        $menus = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->orderBy('food_types.priority','ASC')->get();
+        $food_types = FoodType::orderBy('priority','ASC')->get();
+        $menu1 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',1)->get();
+        $menu2 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',2)->get();
+        $menu3 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',3)->get();
+        $menu4 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',4)->get();
+        $menu5 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',5)->get();
+        $menu6 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',6)->get();
+        $menu7 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',7)->get();
+        $menu8 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',8)->get();
+        $menu9 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',9)->get();
+        $menu10 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',10)->get();
+        $menu11 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',11)->get();
+        $menu12 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',12)->get();
+
+        return view('frontend.homepage',compact('menus','food_types','menu1','menu2','menu3','menu4','menu5','menu6','menu7','menu8','menu9','menu10','menu11','menu12'));
+
     }
 
     public function root()
@@ -205,8 +235,36 @@ class HomeController extends Controller
 
     public function restaurant()
     {
-        $menu = Menu::get();
-        return view('frontend.restaurant',compact('menu'));
+
+        $menus = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->orderBy('food_types.priority','ASC')->get();
+        $food_types = FoodType::orderBy('priority','ASC')->get();
+        $menu1 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',1)->get();
+        $menu2 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',2)->get();
+        $menu3 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',3)->get();
+        $menu4 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',4)->get();
+        $menu5 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',5)->get();
+        $menu6 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',6)->get();
+        $menu7 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',7)->get();
+        $menu8 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',8)->get();
+        $menu9 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',9)->get();
+        $menu10 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',10)->get();
+        $menu11 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',11)->get();
+        $menu12 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
+            ->where('food_types.priority','=',12)->get();
+
+        return view('frontend.restaurant',compact('menus','food_types','menu1','menu2','menu3','menu4','menu5','menu6','menu7','menu8','menu9','menu10','menu11','menu12'));
 
 
     }

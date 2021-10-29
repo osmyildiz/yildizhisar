@@ -18,6 +18,7 @@ class CreateFoodTypesTable extends Migration
             $table->String('name_tr');
             $table->String('name_en');
             $table->String('is_active')->default(1);
+            $table->integer('priority');
             $table->softDeletes();
             $table->timestamps();
         });

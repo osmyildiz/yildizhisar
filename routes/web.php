@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Session;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'homepage'])->name('homepage');
-Route::view('/home', 'frontend.homepage')->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'homepage'])->name('home');
 Route::get('/table_rezervations', [App\Http\Controllers\HomeController::class, 'table_rezervations'])->name('table_rezervations');
 Route::get('/hakkımızda', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/etkinlikler', [App\Http\Controllers\HomeController::class, 'events'])->name('events');

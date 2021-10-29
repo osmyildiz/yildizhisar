@@ -121,6 +121,13 @@
                                        placeholder="Adı?"     id="name_en" name="name_en" required>
                             </div>
                         </div>
+                        <div class="mb-4 row">
+                            <label for="priority" class="col-md-3 col-form-label">Kategori Sıra No</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="number"
+                                       placeholder="Sıra"     id="priority" name="priority" required>
+                            </div>
+                        </div>
 
                         <div class="row mb-4">
                             <div class="row justify-content-end">
@@ -158,6 +165,7 @@
                                 <th>No</th>
                                 <th>Kategori Adı(TR)</th>
                                 <th>Kategori Adı(EN)</th>
+                                <th>Sıra No</th>
                                 <th>Düzenle/Sil</th>
                             </tr>
                             </thead>
@@ -173,6 +181,7 @@
                                         <td>{{$key+1}}</td>
                                         <td>{{$kategori->name_tr}}</td>
                                         <td>{{$kategori->name_en}}</td>
+                                        <td>{{$kategori->priority}}</td>
 
                                         <td>
                                             <ul class="list-inline font-size-20 contact-links mb-0">

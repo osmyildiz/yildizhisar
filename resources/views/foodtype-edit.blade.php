@@ -50,6 +50,13 @@
                                        value="{{$res->name_en}}"     id="name_en" name="name_en">
                             </div>
                         </div>
+                        <div class="mb-4 row">
+                            <label for="priority" class="col-md-3 col-form-label">Kategori Sıra No</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="number"
+                                       value="{{$res->priority}}"     id="priority" name="priority">
+                            </div>
+                        </div>
 
                         <div class="row mb-4">
                             <div class="row justify-content-end">

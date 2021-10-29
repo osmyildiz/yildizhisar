@@ -57,7 +57,7 @@ class AdminController extends Controller
     public function admin_menu()
     {
         $menu_all = Menu::orderBy('category','ASC')->paginate(30);
-        $kategori_all = FoodType::orderBy('name_tr','ASC')->get();
+        $kategori_all = FoodType::orderBy('priority','ASC')->get();
         
 
         return view('admin-menu',compact('menu_all','kategori_all'));
@@ -155,6 +155,7 @@ class AdminController extends Controller
         $foodtype = new FoodType();
         $foodtype->name_tr = $request->name_tr;
         $foodtype->name_en = $request->name_en;
+        $foodtype->priority = $request->priority;
 
         $save = $foodtype->save();
 
@@ -389,6 +390,7 @@ class AdminController extends Controller
         $foodtype = FoodType::find($id);
         $foodtype->name_tr = $request->name_tr;
         $foodtype->name_en = $request->name_en;
+        $foodtype->priority = $request->priority;
 
         $save = $foodtype->save();
 

@@ -20,6 +20,7 @@ class FoodTypeSeeder extends Seeder
             'name_tr'=>"Kahvaltı",
             'name_en'=>"BREAKFAST",
             "is_active"=>1,
+            "priority"=>1,
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
         ]);
@@ -27,6 +28,7 @@ class FoodTypeSeeder extends Seeder
             'name_tr'=>"Soğuk Başlangıçlar",
             'name_en'=>"Cold STARTERS",
             "is_active"=>1,
+            "priority"=>2,
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
         ]);
@@ -34,6 +36,7 @@ class FoodTypeSeeder extends Seeder
             'name_tr'=>"Sıcak Aperatifler",
             'name_en'=>"Hot APPETIZERS",
             "is_active"=>1,
+            "priority"=>3,
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
         ]);
@@ -41,6 +44,7 @@ class FoodTypeSeeder extends Seeder
             'name_tr'=>"Makarnalar",
             'name_en'=>"PASTAS",
             "is_active"=>1,
+            "priority"=>4,
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
         ]);
@@ -48,6 +52,7 @@ class FoodTypeSeeder extends Seeder
             'name_tr'=>"Salatalar",
             'name_en'=>"SALADS",
             "is_active"=>1,
+            "priority"=>5,
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
         ]);
@@ -55,6 +60,7 @@ class FoodTypeSeeder extends Seeder
             'name_tr'=>"Ana Yemekler",
             'name_en'=>"MAIN DISHES",
             "is_active"=>1,
+            "priority"=>6,
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
         ]);
@@ -62,6 +68,7 @@ class FoodTypeSeeder extends Seeder
             'name_tr'=>"Tatlılar",
             'name_en'=>"Desserts",
             "is_active"=>1,
+            "priority"=>7,
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
         ]);
@@ -69,6 +76,7 @@ class FoodTypeSeeder extends Seeder
             'name_tr'=>"Soft İçecekler",
             'name_en'=>"Soft Drinks",
             "is_active"=>1,
+            "priority"=>8,
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
         ]);
@@ -76,6 +84,7 @@ class FoodTypeSeeder extends Seeder
             'name_tr'=>"Sıcak İçecekler",
             'name_en'=>"Hot Drinks",
             "is_active"=>1,
+            "priority"=>9,
             "created_at"=>date("Y-m-d"),
             "updated_at"=>date("Y-m-d"),
         ]);

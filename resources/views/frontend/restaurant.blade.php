@@ -76,12 +76,12 @@
 
                             <!-- Team Member -->
                             <div class="restbeef_block restbeef_team_block restbeef_js_margin"
-                                 data-margin="-100px 0 90px 0">
+                                 data-margin="-100px 0 0 0">
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_content_box02 align_center">
                                         @if(app()->getLocale() == "tr")
                                             <h2 class="align_center restbeef_js_padding"
-                                                data-padding="0 0 15px 0">
+                                                data-padding="0 0 0 0">
                                                 <span style="font-size: 50px" class="restbeef_up_title">Hikayemiz</span>
 
                                             </h2>
@@ -122,273 +122,233 @@
                             <div class="restbeef_block restbeef_js_margin">
                                 <div style="box-shadow: none; padding: 37px 49px 0px 49px !important;"
                                      class="col-10 restbeef_content_box restbeef_js_margin">
-                                    <div class="restbeef_block">
-                                        <h2 class="restbeef_block_title align_center">
-                                            <span style="font-size: 50px" class="restbeef_up_title">Lezzetli</span>
-                                            HİSAR MENU
-                                        </h2>
-                                        <div style="" class="row">
+                                    @if(app()->getLocale() == "tr")
+                                        <div class="restbeef_block">
+                                            <h2 class="restbeef_block_title align_center">
+                                                <span style="font-size: 50px" class="restbeef_up_title">Lezzetli</span>
+                                                HİSAR MENU
+                                            </h2>
+                                            <div style="" class="row">
+
+                                                @foreach($food_types as $key=>$type)
 
 
-                                            <div class="col-2 text-center menu-bnt menu-active" id="1">
-                                                <h6 style="font-weight: normal;">
-                                                    Çorbalar</h6></div>
-                                            <div class="col-2 text-center menu-bnt" id="2"><h6
-                                                    style="font-weight: normal;">
-                                                    Ara Sıcaklar</h6></div>
-                                            <div class="col-2 text-center menu-bnt" id="3"><h6
-                                                    style="font-weight: normal;">
-                                                    Ana Yemekler</h6></div>
-                                            <div class="col-2 offset-0 text-center menu-bnt" id="4"><h6
-                                                    style="font-weight: normal;">Tatlılar
-                                                </h6></div>
-                                            <div class="col-2 text-center menu-bnt" id="5"><h6
-                                                    style="font-weight: normal;">
-                                                    İçecekler</h6></div>
-                                            <div class="col-2 text-center menu-bnt" id="6"><h6
-                                                        style="font-weight: normal;">
-                                                    İçecekler</h6></div>
-                                        </div>
+                                                    @if($key<6)
+                                                        <div class="col-2 text-center menu-bnt {{$key==0?"menu-active":""}}" id="{{$key+1}}">
+                                                            <h6 style="font-weight: normal;">{{$type->name_tr}}</h6></div>
+                                                    @endif
 
-                                    </div><!-- .restbeef_block -->
+                                                @endforeach
+                                            </div>
+
+                                        </div><!-- .restbeef_block -->
+
+                                    @else
+                                        <div class="restbeef_block">
+                                            <h2 class="restbeef_block_title align_center">
+                                                <span style="font-size: 50px" class="restbeef_up_title">Lezzetli</span>
+                                                HİSAR MENU
+                                            </h2>
+                                            <div style="" class="row">
+
+
+                                                @foreach($food_types as $key=>$type)
+
+
+                                                    @if($key<6)
+                                                        <div class="col-2 text-center menu-bnt {{$key==0?"menu-active":""}}" id="{{$key+1}}">
+                                                            <h6 style="font-weight: normal;">{{$type->name_en}}</h6></div>
+                                                    @endif
+
+                                                @endforeach
+                                            </div>
+
+                                        </div><!-- .restbeef_block -->
+                                    @endif
+
                                 </div>
+
+
                                 <div class="row d-flex bottom-menu" id="menu-1" style="background-color: #F7F4EF;  padding: 25px;">
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
 
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                         class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
+                                            @foreach($menu1 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
 
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                         class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                         class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
+                                                        </div>
 
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                         class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                    @endif
+
+                                            @endforeach
+
 
                                         </div><!-- .restbeef_menu_list -->
                                     </div><!-- .col-6 -->
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                         class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                         class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                         class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                         class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu1 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
                                         </div><!-- .restbeef_menu_list -->
 
                                     </div><!-- .col-6 -->
                                 </div>
-                                <div class="row d-none bottom-menu" id="menu-2"
-                                     style="background-color: #F7F4EF;  padding: 25px;">
+                                <div class="row d-none bottom-menu" id="menu-2" style="background-color: #F7F4EF;  padding: 25px;">
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
 
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu2 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+
 
                                         </div><!-- .restbeef_menu_list -->
                                     </div><!-- .col-6 -->
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu2 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
                                         </div><!-- .restbeef_menu_list -->
 
                                     </div><!-- .col-6 -->
@@ -398,79 +358,90 @@
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
 
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu3 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+
 
                                         </div><!-- .restbeef_menu_list -->
                                     </div><!-- .col-6 -->
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu3 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
                                         </div><!-- .restbeef_menu_list -->
 
                                     </div><!-- .col-6 -->
@@ -480,79 +451,90 @@
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
 
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu4 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+
 
                                         </div><!-- .restbeef_menu_list -->
                                     </div><!-- .col-6 -->
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu4 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
                                         </div><!-- .restbeef_menu_list -->
 
                                     </div><!-- .col-6 -->
@@ -562,79 +544,90 @@
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
 
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu5 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+
 
                                         </div><!-- .restbeef_menu_list -->
                                     </div><!-- .col-6 -->
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu5 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
                                         </div><!-- .restbeef_menu_list -->
 
                                     </div><!-- .col-6 -->
@@ -644,79 +637,90 @@
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
 
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu6 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+
 
                                         </div><!-- .restbeef_menu_list -->
                                     </div><!-- .col-6 -->
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu6 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
                                         </div><!-- .restbeef_menu_list -->
 
                                     </div><!-- .col-6 -->
@@ -730,16 +734,32 @@
 
                                         <div style="" class="row">
 
+                                            @if(app()->getLocale() == "tr")
 
-                                            <div class="col-2 text-center menu-bnt1 menu-active" id="7">
-                                                <h6 style="font-weight: normal;">
-                                                    Çorbalar2</h6></div>
-                                            <div class="col-2 text-center menu-bnt1" id="8"><h6
-                                                        style="font-weight: normal;">
-                                                    Ara Sıcaklar2</h6></div>
-                                            <div class="col-2 text-center menu-bnt1" id="9"><h6
-                                                        style="font-weight: normal;">
-                                                    Ana Yemekler2</h6></div>
+                                                        @foreach($food_types as $key=>$type)
+
+
+                                                            @if($key>=6)
+                                                                <div class="col-2 text-center menu-bnt1 {{$key==6?"menu-active":""}}" id="{{$key+1}}">
+                                                                    <h6 style="font-weight: normal;">{{$type->name_tr}}</h6></div>
+                                                            @endif
+
+                                                        @endforeach
+
+
+                                            @else
+                                                @foreach($food_types as $key=>$type)
+
+
+                                                    @if($key>=6)
+                                                        <div class="col-2 text-center menu-bnt1 {{$key==6?"menu-active":""}}" id="{{$key+1}}">
+                                                            <h6 style="font-weight: normal;">{{$type->name_tr}}</h6></div>
+                                                    @endif
+
+                                                @endforeach
+
+                                            @endif
+
 
                                         </div>
 
@@ -749,157 +769,91 @@
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
 
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                            class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
+                                            @foreach($menu7 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
 
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                            class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                            class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
+                                                        </div>
 
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                            class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+
+                                                @endif
+
+                                            @endforeach
+
 
                                         </div><!-- .restbeef_menu_list -->
                                     </div><!-- .col-6 -->
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                            class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                            class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                            class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div
-                                                            class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu7 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
                                         </div><!-- .restbeef_menu_list -->
 
                                     </div><!-- .col-6 -->
@@ -909,79 +863,90 @@
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
 
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu8 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+
 
                                         </div><!-- .restbeef_menu_list -->
                                     </div><!-- .col-6 -->
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 style="color: #AB945E" class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu8 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
                                         </div><!-- .restbeef_menu_list -->
 
                                     </div><!-- .col-6 -->
@@ -991,83 +956,380 @@
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
 
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div><!-- .restbeef_menu_item -->
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu9 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+
 
                                         </div><!-- .restbeef_menu_list -->
                                     </div><!-- .col-6 -->
                                     <div class="col-6">
                                         <div class="restbeef_menu_list">
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
-                                            <div class="restbeef_menu_item">
-                                                <div class="restbeef_menu_item_head">
-                                                    <h5><a href="product.html">Greek salad</a></h5>
-                                                    <h5 class="restbeef_menu_price">
-                                                        15 TL
-                                                    </h5><!-- .restbeef_menu_price -->
-                                                </div><!-- .restbeef_menu_item_head -->
-                                                <div class="restbeef_menu_item_content">
-                                                    <div class="restbeef_menu_item_description">
-                                                        Is made with pieces of tomatoes, sliced cucumbers, onion, feta
-                                                        cheese and dressed with olive oil.
-                                                    </div><!-- .restbeef_menu_item_description
-                                                        <div class="restbeef_menu_item_weight">
-                                                            200/30g
-                                                        </div>--><!-- .restbeef_menu_item_weight -->
-                                                </div><!-- .restbeef_menu_item_content -->
-                                            </div>
+                                            @foreach($menu9 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
                                         </div><!-- .restbeef_menu_list -->
 
                                     </div><!-- .col-6 -->
                                 </div>
+                                @if(count($menu10)>0)
+                                <div class="row d-none bottom-menu1" id="menu1-10"
+                                     style="background-color: #F7F4EF;  padding: 25px;">
+                                    <div class="col-6">
+                                        <div class="restbeef_menu_list">
+
+                                            @foreach($menu10 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+
+
+                                        </div><!-- .restbeef_menu_list -->
+                                    </div><!-- .col-6 -->
+                                    <div class="col-6">
+                                        <div class="restbeef_menu_list">
+                                            @foreach($menu10 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+                                        </div><!-- .restbeef_menu_list -->
+
+                                    </div><!-- .col-6 -->
+                                </div>
+                                @endif
+                                @if(count($menu11)>0)
+                                <div class="row d-none bottom-menu1" id="menu1-11"
+                                     style="background-color: #F7F4EF;  padding: 25px;">
+                                    <div class="col-6">
+                                        <div class="restbeef_menu_list">
+
+                                            @foreach($menu11 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+
+
+                                        </div><!-- .restbeef_menu_list -->
+                                    </div><!-- .col-6 -->
+                                    <div class="col-6">
+                                        <div class="restbeef_menu_list">
+                                            @foreach($menu11 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+                                        </div><!-- .restbeef_menu_list -->
+
+                                    </div><!-- .col-6 -->
+                                </div>
+                                @endif
+                                @if(count($menu12)>0)
+                                <div class="row d-none bottom-menu1" id="menu1-12"
+                                     style="background-color: #F7F4EF;  padding: 25px;">
+                                    <div class="col-6">
+                                        <div class="restbeef_menu_list">
+
+                                            @foreach($menu12 as $key1=>$menu)
+                                                @if($key1%2==0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+
+
+                                        </div><!-- .restbeef_menu_list -->
+                                    </div><!-- .col-6 -->
+                                    <div class="col-6">
+                                        <div class="restbeef_menu_list">
+                                            @foreach($menu12 as $key1=>$menu)
+                                                @if($key1%2!=0)
+                                                    @if(app()->getLocale() == "tr")
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_tr}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_tl}} TL
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_tr}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+
+                                                    @else
+                                                        <div class="restbeef_menu_item">
+                                                            <div class="restbeef_menu_item_head">
+                                                                <h5>{{$menu->name_en}}</h5>
+                                                                <h5 style="color: #AB945E" class="restbeef_menu_price">
+                                                                    {{$menu->price_usd}} USD
+                                                                </h5><!-- .restbeef_menu_price -->
+                                                            </div><!-- .restbeef_menu_item_head -->
+                                                            <div class="restbeef_menu_item_content">
+                                                                <div
+                                                                        class="restbeef_menu_item_description">
+                                                                    {{$menu->description_en}}
+                                                                </div>
+                                                            </div><!-- .restbeef_menu_item_content -->
+
+                                                        </div>
+                                                    @endif
+                                                @endif
+
+                                            @endforeach
+                                        </div><!-- .restbeef_menu_list -->
+
+                                    </div><!-- .col-6 -->
+                                </div>
+                                @endif
+
 
                             </div>
 
