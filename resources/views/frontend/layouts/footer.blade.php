@@ -84,6 +84,7 @@
                     <h2 ><span class="restbeef_up_title">@lang('static_text.contact1')</span></h2>
                     <div class="textwidget">
                         <p>{{$contact->address}}</p>
+                        <p><span>E-mail: </span>{{$contact->contact_us_email_1}}</p>
                         <p><span>@lang('static_text.phone'): </span>{{$contact->phone}}</p>
                         <p>@lang('static_text.open')</p>
                     </div><!-- .textwidget -->
