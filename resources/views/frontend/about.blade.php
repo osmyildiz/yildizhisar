@@ -50,18 +50,38 @@
                                                 <span style="font-size: 50px" class="restbeef_up_title">Hikayemiz</span>
 
                                             </h2>
-                                            <p>Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermekteyiz.
-                                                Yıldız Ana Restoran, Havuz başı Restoran, Alt Teras Restoran, şömineli toplantı salonlarımız bulunmaktadır. Havuz başı Restoranda; yaz aylarında 650, kış aylarında 130 kişiye hizmet verirken, Yıldız Ana Restoranda 450 kişiye hizmet vermekteyiz. 2021 Haziran ayında gerçekleşen tadilatımız itibariyle Yalı Tarım işletmesine geçmiş bulunmaktayız.
-                                            </p>
+
+                                        @if($about)
+
+                                               <p>
+                                                   {{$about->about_first_text_tr}}
+
+                                               </p>
+                                            @else
+                                                <p>İşletmemiz, Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer almaktadır. Muhteşem mimarisi ve benzersiz Boğaz manzarası eşliğinde kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermektedir. Yıldız Ana Restoran, Havuz Başı Restoran, Alt Teras Restoran ve şömineli toplantı salonları gibi farklı alanları sayesinde tüm ihtiyaçlarınızı karşılayabilecek bir tasarıma sahiptir. Havuz Başı Restoran yaz aylarında 650, kış aylarında 130; Yıldız Ana Restoran ise 450 kişiye hizmet verebilecek kapasiteye sahiptir. 2021 Haziran ayında gerçekleşen tadilatımız itibarıyla Yalı Tarım işletmesine geçmiş olan işletmemiz, Yıldız Teknik Üniversitesi mensuplarının yanı sıra, tüm misafirlerimize açıktır. </p>
+
+                                            @endif
+
 
                                         @else
                                             <h2 class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
                                                 <span style="font-size: 50px" class="restbeef_up_title">Our History</span>
 
                                             </h2>
-                                            <p>Located in Rumeli Fortress, right next to Fatih Sultan Mehmet Bridge, with its wonderful architecture and Bosphorus view, we serve breakfast, lunch and dinner as well as special occasions such as weddings, engagement parties, cocktails, graduation nights, seminars.
-                                                We have Yıldız Main Restaurant, Poolside Restaurant, Lower Terrace Restaurant, meeting rooms with fireplace. At the poolside restaurant; While we serve 650 people in summer and 130 people in winter, we serve 450 people in Yıldız Main Restaurant. As of our renovation in June 2021, we have moved to Yalı Tarım. </p>
-                                        @endif
+                                            @if($about)
+
+                                                <p>
+                                                    {{$about->about_first_text_en}}
+
+                                                </p>
+                                            @else
+                                                <p>Located in Rumeli Fortress, right next to Fatih Sultan Mehmet Bridge, with its wonderful architecture and Bosphorus view, we serve breakfast, lunch and dinner as well as special occasions such as weddings, engagement parties, cocktails, graduation nights, seminars.
+                                                    We have Yıldız Main Restaurant, Poolside Restaurant, Lower Terrace Restaurant, meeting rooms with fireplace. At the poolside restaurant; While we serve 650 people in summer and 130 people in winter, we serve 450 people in Yıldız Main Restaurant. As of our renovation in June 2021, we have moved to Yalı Tarım. </p>
+
+                                            @endif
+
+
+                                             @endif
                                          </div><!-- .restbeef_content_box -->
                                 </div><!-- .restbeef_block_inner -->
                             </div><!-- .restbeef_block -->
@@ -80,20 +100,40 @@
                                                         <span class="restbeef_up_title">Muhteşem Ambiyanslar</span>
                                                         Yıldız Hisar'da
                                                     </h2>
-                                                    <p class="restbeef_js_margin" data-margin="0 0 43px 0">
-                                                        Yıldız Hisar Tesisleri, yaz aylarında teras dahil edilerek ve açılır tavan sisteminden faydalanarak oldukça şık bir ambiyansa sahiptir. Ayrıca, Davet ve Etkinlik için oldukça şık bir davet alanı daha sunmaktadır. Dilerseniz mekânın havuz başı alanında göze hitap eden, elegant ve romantik bir davet gerçekleştirebilirsiniz. Boğazın muhteşem görünümü bu alanda da davetinize eşlik edecek ve gecenizi aydınlatacaktır. Yıldız Hisar Tesisleri ağırlıklı olarak yemekli düğün ve davetlerde Türk mutfağının eşsiz lezzetlerini sunmaktadır. Bununla sınırlı kalmayıp ikramlarında Dünya mutfağına da yer vermektedir. Menü konusunda çeşitlilik sunarak, herkesi mutlu edebilmektedir. Oldukça profesyonel aşçılar ve mutfak ekibine sahip olan tesisimiz, davetlerinde ikram edilecek yemekler konusunda oldukça hassastır.
+                                                    @if($about)
 
-                                                    </p>
+                                                        <p class="restbeef_js_margin" data-margin="0 0 43px 0">
+                                                            {{$about->middle_text_tr}}
+
+                                                        </p>
+                                                    @else
+                                                        <p class="restbeef_js_margin" data-margin="0 0 43px 0">
+
+                                                            Yıldız Hisar Tesisleri, yaz aylarında teras dahil edilerek ve açılır tavan sisteminden faydalanarak oldukça şık bir ambiyansa sahiptir. Ayrıca, Davet ve Etkinlik için oldukça şık bir davet alanı daha sunmaktadır. Dilerseniz mekânın havuz başı alanında göze hitap eden, elegant ve romantik bir davet gerçekleştirebilirsiniz. Boğazın muhteşem görünümü bu alanda da davetinize eşlik edecek ve gecenizi aydınlatacaktır. Yıldız Hisar Tesisleri ağırlıklı olarak yemekli düğün ve davetlerde Türk mutfağının eşsiz lezzetlerini sunmaktadır. Bununla sınırlı kalmayıp ikramlarında Dünya mutfağına da yer vermektedir. Menü konusunda çeşitlilik sunarak, herkesi mutlu edebilmektedir. Oldukça profesyonel aşçılar ve mutfak ekibine sahip olan tesisimiz, davetlerinde ikram edilecek yemekler konusunda oldukça hassastır.
+
+                                                        </p>
+                                                    @endif
+
+
 
                                                 @else
                                                     <h2>
                                                         <span class="restbeef_up_title">Magnificent Ambiances at</span>
                                                         YILDIZ Hisar
                                                     </h2>
-                                                    <p class="restbeef_js_margin" data-margin="0 0 43px 0">
+                                                    @if($about)
 
-                                                        Yıldız Hisar Facilities have a very stylish ambiance by including the terrace in the summer months and making use of the sunroof system. It also offers a very stylish invitation area for Invitation and Event. If you wish, you can organize an elegant and romantic invitation in the poolside area of the venue. The magnificent view of the Bosphorus will accompany your invitation in this area as well and will illuminate your night. Yıldız Hisar Facilities mainly offer the unique tastes of Turkish cuisine in weddings and invitations with dinner. Not limited to this, it also includes world cuisine in its offerings. It can make everyone happy by offering a variety on the menu. Our facility, which has very professional cooks and kitchen team, is very sensitive about the meals to be served at their invitations.
-                                                    </p>
+                                                        <p class="restbeef_js_margin" data-margin="0 0 43px 0">
+                                                            {{$about->middle_text_en}}
+
+                                                        </p>
+                                                    @else
+                                                        <p class="restbeef_js_margin" data-margin="0 0 43px 0">
+
+                                                            Yıldız Hisar Facilities have a very stylish ambiance by including the terrace in the summer months and making use of the sunroof system. It also offers a very stylish invitation area for Invitation and Event. If you wish, you can organize an elegant and romantic invitation in the poolside area of the venue. The magnificent view of the Bosphorus will accompany your invitation in this area as well and will illuminate your night. Yıldız Hisar Facilities mainly offer the unique tastes of Turkish cuisine in weddings and invitations with dinner. Not limited to this, it also includes world cuisine in its offerings. It can make everyone happy by offering a variety on the menu. Our facility, which has very professional cooks and kitchen team, is very sensitive about the meals to be served at their invitations.
+                                                        </p>
+                                                    @endif
+
 
                                                 @endif
 

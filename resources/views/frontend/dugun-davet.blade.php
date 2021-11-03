@@ -131,7 +131,7 @@
                                                                onKeyUp="limitText(this,10);" />
                                                     </div><!-- .col-4 -->
                                                     <div class="col-4">
-                                                        <input type="date" data-placeholder="@lang('static_text.date1')" name="res_date" min="<?= date('Y-m-d'); ?>"/>
+                                                        <input type="date" data-placeholder="@lang('static_text.date1')" name="res_date" min="<?= date('Y-m-d'); ?>" required/>
                                                     </div><!-- .col-4 -->
                                                 <!--<div class="col-4">
                                                         <select name="time">
