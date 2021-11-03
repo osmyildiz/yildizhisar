@@ -82,14 +82,22 @@
             <div class="col-4 align_center">
                 <div class="widget widget_text">
                     <h2 ><span class="restbeef_up_title">@lang('static_text.contact1')</span></h2>
-                    <div class="textwidget">
-                        <p>{{$contact->address}}</p>
-                        <p><span>E-mail: </span>{{$contact->contact_us_email_1}}</p>
-                        <p><span>@lang('static_text.phone'): </span>{{$contact->phone}}</p>
-                        <p>@lang('static_text.open')</p>
-                    </div><!-- .textwidget -->
-                </div><!-- .widget_text -->
+                    <p>{{$contact->address}}</br>
+                        E-mail: </span>{{$contact->contact_us_email_1}}</br>
+                        @lang('static_text.phone'): {{$contact->phone}}</br>
+                        @lang('static_text.open')</br>
+
+                    </p>
+
+                </div>
+                <a href="https://www.yildiz.edu.tr">
+                <div class="restbeef_ytu_logo justify-content-center" >
+            </div></a>
+
+
+
             </div><!-- .col-4 -->
+
 
         </div><!-- .row -->
     </div><!-- .restbeef_container -->

@@ -1119,6 +1119,15 @@ blockquote {
     background-size: 155px 84px;
     display: block;
 }
+.restbeef_ytu_logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+    background: url(../img/ytulogo.png) no-repeat;
+    background-size: 150px 150px;
+    display: block;
+}
 
 /* Header Menu */
 .restbeef_mobile_menu_part {
