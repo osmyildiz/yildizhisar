@@ -204,8 +204,7 @@
                                                     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
                                                     <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 18px; line-height: 25.2px; color: #666666;">Ad ve Soyad: {{$name}}</span></p>
                                                     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
-                                                    <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 18px; line-height: 25.2px; color: #666666;">Tarih: {{$res_date}} Saat: {{$time}}</span></p>
-                                                    <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
+
                                                     <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 18px; line-height: 25.2px; color: #666666;">Kişi Sayısı: {{$guest_number}}</span></p>
                                                     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
 

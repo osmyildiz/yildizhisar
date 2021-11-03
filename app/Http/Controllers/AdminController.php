@@ -232,9 +232,10 @@ class AdminController extends Controller
         $offer = new Offer();
         $offer->res_date = $request->res_date;
         $offer->name = $request->name;
+        $offer->surname = $request->surname;
 
         $offer->email = $request->email;
-        $offer->time = $request->time;
+        //$offer->time = $request->time;
         $offer->guest_number = $request->guest_number;
         $offer->phone = $request->phone;
         $offer->message = $request->message;
@@ -245,14 +246,14 @@ class AdminController extends Controller
             'subject' => $request->offer_name.' Formu',
             'email1' => $request->email,
             'email' => "osmyildiz@gmail.com",
-            'name' => $request->name,
+            'name' => $request->name.' '.$request->surname,
 
             'phone' => $request->phone,
             'message1' => $request->message,
             'offer_name' => $request->offer_name,
             'guest_number' => $request->guest_number,
             'res_date' => $request->res_date,
-            'time' => $request->time,
+
         ];
 
 

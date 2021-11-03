@@ -33,6 +33,7 @@ return [
     'newsletter' => 'E-Bülten',
     'email' => 'E-MAIL',
     'date' => 'Tarih',
+    'date1' => 'Davet Tarihi',
     'time' => 'Saat Aralığı',
     'guest_number' => 'Kişi Sayısı',
     'table_sentence' => 'Güzel anlarınız için önceden yerinizi ayırtın.',

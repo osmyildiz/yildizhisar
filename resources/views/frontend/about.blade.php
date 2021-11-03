@@ -123,23 +123,23 @@
 
                             </div>
 
-                            <div class="owl-carousel owl-theme">
-                                @foreach($categories as $category)
-                                    @if(count($category->images) > 0)
-                                        <h5>{{$category->name}}</h5>
-                                        <div class="owl-carousel owl-theme">
-                                            @foreach($category->images as $key=> $image)
 
-                                                <div class="item gallery-img"><a href="{{asset($image->image)}}" data-size="1920x1280" >
-                                                        <img class="owl-lazy" data-src="{{asset($image->image)}}" alt="Gallery Image 06"/>
+                                @if(count($categories)>0)
+
+                                        <div class="owl-carousel owl-theme">
+                                            @foreach($categories as $key=> $image)
+
+                                                <div class="item gallery-img"><a href="{{asset($image->url)}}" data-size="1920x1280" >
+                                                        <img class="owl-lazy" data-src="{{asset($image->url)}}" alt="Gallery Image 06"/>
                                                     </a></div>
 
 
 
                                             @endforeach
                                         </div>
-                                    @endif
-                                @endforeach
+
+                                @else
+                                <div class="owl-carousel owl-theme">
                                 <div class="item gallery-img"><a href="img/y6.jpeg" data-size="1920x1280" data-count="5">
                                         <img class="owl-lazy" data-src="img/y6.jpeg" alt="Gallery Image 06"/>
                                     </a></div>
@@ -155,6 +155,7 @@
                                 <div class="item gallery-img"><a href="img/y6.jpeg" data-size="1920x1280" data-count="5">
                                         <img class="owl-lazy" data-src="img/y11.jpeg" alt="Gallery Image 06"/>
                                     </a></div>
+                                    @endif
                             </div>
 
 

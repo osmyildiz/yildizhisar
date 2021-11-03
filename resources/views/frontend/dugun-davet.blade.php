@@ -87,12 +87,12 @@
                                 @if(app()->getLocale() == "tr")
                                     <h2 class="restbeef_block_title align_center">
                                         <span class="restbeef_up_title"></span>
-                                        FİYAT TEKLİFİ ALIN!
+                                        FİYAT TEKLİFİ ALIN
                                     </h2>
                                 @else
                                     <h2 class="restbeef_block_title align_center">
                                         <span class="restbeef_up_title"></span>
-                                        GET AN OFFER!
+                                        GET AN OFFER
                                     </h2>
                                 @endif
                                     @if(session()->has('message'))
@@ -118,9 +118,22 @@
 
                                                 <div class="row">
                                                     <div class="col-4">
-                                                        <input type="date" data-placeholder="@lang('static_text.date')" name="res_date" min="<?= date('Y-m-d'); ?>"/>
+                                                        <input type="text" placeholder="@lang('static_text.firstname')" name="name" required />
                                                     </div><!-- .col-4 -->
                                                     <div class="col-4">
+                                                        <input type="text" placeholder="@lang('static_text.lastname')" name="surname" required />
+                                                    </div><!-- .col-4 -->
+                                                    <div class="col-4">
+                                                        <input type="email" placeholder="@lang('static_text.email')" name="email" required />
+                                                    </div><!-- .col-4 -->
+                                                    <div class="col-4">
+                                                        <input type="number" placeholder="@lang('static_text.phone')" name="phone" required onKeyDown="limitText(this,10);"
+                                                               onKeyUp="limitText(this,10);" />
+                                                    </div><!-- .col-4 -->
+                                                    <div class="col-4">
+                                                        <input type="date" data-placeholder="@lang('static_text.date1')" name="res_date" min="<?= date('Y-m-d'); ?>"/>
+                                                    </div><!-- .col-4 -->
+                                                <!--<div class="col-4">
                                                         <select name="time">
                                                             <option value="" selected>@lang('static_text.time')</option>
                                                             <option value="10:00">10:00</option>
@@ -148,22 +161,14 @@
                                                             <option value="21:00">21:00</option>
                                                             <option value="21:30">21:30</option>
                                                         </select>
-                                                    </div><!-- .col-4 -->
+                                                    </div> .col-4 -->
                                                     <div class="col-4">
                                                         <input type="number"  placeholder="@lang('static_text.guest_number')" name="guest_number" required />
                                                     </div><!-- .col-4 -->
                                                 </div><!-- .row -->
                                                 <div class="row">
-                                                    <div class="col-4">
-                                                        <input type="text" placeholder="@lang('static_text.name')" name="name" required />
-                                                    </div><!-- .col-4 -->
-                                                    <div class="col-4">
-                                                        <input type="email" placeholder="@lang('static_text.email')" name="email" required />
-                                                    </div><!-- .col-4 -->
-                                                    <div class="col-4">
-                                                        <input type="number" placeholder="@lang('static_text.phone')" name="phone" required onKeyDown="limitText(this,10);"
-                                                               onKeyUp="limitText(this,10);" />
-                                                    </div><!-- .col-4 -->
+
+
                                                 </div><!-- .row -->
                                                 <textarea placeholder="@lang('static_text.message')" name="message" required ></textarea>
                                                 <input type="submit" value="@lang('static_text.send')" />

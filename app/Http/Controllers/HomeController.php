@@ -107,8 +107,10 @@ class HomeController extends Controller
     public function about()
     {
         $about = About::find(1);
+        $categories = Photo::inRandomOrder()->limit(5)->get();
 
-        return view('frontend.about',compact('about'));
+
+        return view('frontend.about',compact('about','categories'));
 
 
     }

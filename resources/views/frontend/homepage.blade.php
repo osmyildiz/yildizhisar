@@ -133,7 +133,7 @@
                                 <div class="restbeef_recent_products restbeef_grig_3columns">
                                     <div class="restbeef_recent_product">
                                         <div class="restbeef_recent_product_image">
-                                            <a href="product.html">
+                                            <a href="">
                                                 <img src="img/fish2.jpg" alt="Product 01"/>
                                             </a>
                                         </div><!-- .restbeef_recent_product_image -->
@@ -154,7 +154,7 @@
 
                                     <div class="restbeef_recent_product">
                                         <div class="restbeef_recent_product_image">
-                                            <a href="product.html">
+                                            <a href="">
                                                 <img src="img/yildiz-hisar-009.jpg" alt="Product 02"/>
                                             </a>
                                         </div><!-- .restbeef_recent_product_image -->
@@ -176,7 +176,7 @@
 
                                     <div class="restbeef_recent_product">
                                         <div class="restbeef_recent_product_image">
-                                            <a href="product.html">
+                                            <a href="">
                                                 <img src="img/yildiz-hisar-011.jpg" alt="Product 03"/>
                                             </a>
                                         </div><!-- .restbeef_recent_product_image -->
@@ -214,16 +214,16 @@
                                                     <span class="restbeef_up_title">Yıldız Hisar</span>
                                                     Hakkımızda
                                                 </h2>
-                                                <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
+                                                <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">
                                                     Yıldız Hisar, harika mimarisi ve boğaz manzarasının yanı sıra
                                                     kahvaltı, öğle ve akşam yemekleri, kokteyl, mezuniyet geceleri,
                                                     seminer gibi özel günlerde hizmet vermektedir.</p>
-                                                <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
+                                                <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">
                                                     Eşsiz lezzetleriyle boğazın mavi sularını ve esintisini
                                                     hissedebileceğiniz en güzel konumlardan birisi olan Rumeli Hisa'ında
                                                     hatırlalardan çıkmayan anlar için sizleri bekliyoruz.</p>
-                                                <a href="/table_rezervations"
-                                                   class="restbeef_button rezervasyon-text">Rezervasyon</a>
+                                                <a href="{{route('contact')}}"
+                                                   class="restbeef_button rezervasyon-text">İletişim</a>
 
                                             @else
                                                 <h2>
@@ -256,7 +256,7 @@
                                     <div class="restbeef_block">
                                         <h2 class="restbeef_block_title align_center">
                                             <span style="font-size: 50px" class="restbeef_up_title">Lezzetli</span>
-                                            HİSAR MENU
+                                            YILDIZ HİSAR MENU
                                         </h2>
                                         <div style="" class="row">
 
@@ -276,8 +276,8 @@
                                 @else
                                     <div class="restbeef_block">
                                         <h2 class="restbeef_block_title align_center">
-                                            <span style="font-size: 50px" class="restbeef_up_title">Lezzetli</span>
-                                            HİSAR MENU
+                                            <span style="font-size: 50px" class="restbeef_up_title">Delicious</span>
+                                            YILDIZ HISAR MENU
                                         </h2>
                                         <div style="" class="row">
 

@@ -33,6 +33,7 @@ return [
     'telephone' => 'Phone or E-MAIL',
     'email' => 'E-MAIL',
     'date' => 'DATE',
+    'date1' => 'INVITATION DATE',
     'time' => 'SELECT TIME',
     'guest_number' => 'Guests Numbers',
     'table_sentence' => 'Book your place in advance for your beautiful moments.',
