@@ -110,7 +110,7 @@
                                                                     <div class="col-6">
                                                                         <div class="restbeef_team_block_content align_center">
                                                                             <h2>
-                                                                                <span class="restbeef_up_title">Kış Kampanyası Menü I</span>
+                                                                                <span class="restbeef_up_title">Kış Paketi Menü I</span>
 
                                                                                 {{$campaign->menu1_fiyat_tr}}
                                                                             </h2>
@@ -134,7 +134,7 @@
                                                                     <div class="col-6">
                                                                         <div class="restbeef_team_block_content align_center">
                                                                             <h2>
-                                                                                <span class="restbeef_up_title">Kış Kampanyası Menü II</span>
+                                                                                <span class="restbeef_up_title">Kış Paketi Menü II</span>
                                                                                 {{$campaign->menu2_fiyat_tr}}
                                                                             </h2>
                                                                             <div class="restbeef_poduct_description">
@@ -393,7 +393,7 @@
                                                                     <div class="col-6">
                                                                         <div class="restbeef_team_block_content align_center">
                                                                             <h2>
-                                                                                <span class="restbeef_up_title">Kış Kampanyası Menü I</span>
+                                                                                <span class="restbeef_up_title">Kış Paketi Menü I</span>
 
                                                                                 {{$campaign->menu1_fiyat_en}}
                                                                             </h2>
@@ -417,7 +417,7 @@
                                                                     <div class="col-6">
                                                                         <div class="restbeef_team_block_content align_center">
                                                                             <h2>
-                                                                                <span class="restbeef_up_title">Kış Kampanyası Menü II</span>
+                                                                                <span class="restbeef_up_title">Kış Paketi Menü II</span>
                                                                                 {{$campaign->menu2_fiyat_en}}
                                                                             </h2>
                                                                             <div class="restbeef_poduct_description">
