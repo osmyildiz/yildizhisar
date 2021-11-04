@@ -126,7 +126,7 @@
                                         <div class="restbeef_block">
                                             <h2 class="restbeef_block_title align_center">
                                                 <span style="font-size: 50px" class="restbeef_up_title">Lezzetli</span>
-                                                HİSAR MENU
+                                                YILDIZ HİSAR MENU
                                             </h2>
                                             <div style="" class="row">
 
@@ -147,7 +147,7 @@
                                         <div class="restbeef_block">
                                             <h2 class="restbeef_block_title align_center">
                                                 <span style="font-size: 50px" class="restbeef_up_title">Lezzetli</span>
-                                                HİSAR MENU
+                                                YILDIZ HİSAR MENU
                                             </h2>
                                             <div style="" class="row">
 
