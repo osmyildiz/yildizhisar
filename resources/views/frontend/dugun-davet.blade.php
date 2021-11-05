@@ -35,12 +35,17 @@
         @if(app()->getLocale() == "tr")
 
             <h1>
+                <span class="restbeef_up_title"><!--En güzel anılar burda başlar--></span>
+                {{$wedding->name_tr}}
+            </h1>
 
-                {{$wedding->namet_tr}}
+
+
+
             </h1>
         @else
             <h1>
-
+                <span class="restbeef_up_title"><!--En güzel anılar burda başlar--></span>
                 {{$wedding->name_en}}
             </h1>
         @endif

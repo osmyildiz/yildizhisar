@@ -51,6 +51,14 @@
                              required></textarea>
                         </div></div>
 
+                        <div class="row mb-4">
+                            <label for="img1" class="col-sm-3 col-form-label">Header Resmi (1800x1200 ve katları şeklinde olmalıdır)</label>
+                            <div class="col-sm-9">
+                                <input type="file" class="form-control" id="img1" name="img1" autofous required>
+
+                            </div>
+                        </div>
+
 
 
                         <div class="form-check">
@@ -117,6 +125,7 @@
                             <th>Adı (EN)</th>
                             <th>İçerik (TR)</th>
                             <th>İçerik (EN)</th>
+                            <th>Header Resim</th>
                             <th>Aktif/Pasif</th>
                             <th>Düzenle</th>
                         </tr>
@@ -135,6 +144,11 @@
                                 <td>{{$wedding->name_en}}</td>
                                 <td>{{$wedding->main_text_tr}}</td>
                                 <td>{{$wedding->main_text_en}}</td>
+                                @if(isset($wedding->url))
+                                <td><img src="{{url($wedding->url)}}" alt="" style="display:block;" width="100" height="70"></td>
+                                @else
+                                    <td></td>
+                                    @endif
                                 <td>{{$wedding->is_active==1?"Aktif":"Pasif"}}</td>
                                 <td>
                                     <ul class="list-inline font-size-20 contact-links mb-0">

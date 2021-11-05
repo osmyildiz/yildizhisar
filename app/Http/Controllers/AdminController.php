@@ -698,6 +698,7 @@ class AdminController extends Controller
         $wedding->slug_en = Str::slug($request->name_en);
         $wedding->main_text_tr = $request->main_text_tr;
         $wedding->main_text_en = $request->main_text_en;
+        $wedding->url = isset($request->img1)?$request->img1:null;
         if($request->is_active=="on"){
             $is_active =1;
         }else{
@@ -732,6 +733,7 @@ class AdminController extends Controller
         $wedding->name_en = $request->name_en;
         $wedding->main_text_tr = $request->main_text_tr;
         $wedding->main_text_en = $request->main_text_en;
+
         $wedding->is_active = $is_active;
 
         $save = $wedding->save();

@@ -36,8 +36,8 @@
         }
 
         .image-slide {
-            width: 100%;
-            max-width: 100%;
+            width: 70%;
+            max-width: 70%;
         }
 
         .modal-preview {
@@ -200,7 +200,7 @@
 
                                             <img id="myImg" src="{{$photo->url}}" class="img-fluid" onclick="openLightbox();toSlide({{$key+1}})"
                                                  alt="Post Image {{$key}}"
-                                                 style="width: 400px; height: 400px; object-fit: cover; object-position: 100% 0;"/>
+                                                 style="width: 400px; height: 400px; object-fit: cover; object-position: 50% 0;"/>
 
                                     </div><!-- .restbeef_grig_gallery_item -->
                                     @endforeach
@@ -214,7 +214,7 @@
                             <div class="modal-content">
                                 @foreach($photos as $key=>$photo)
                                     <div class="slide">
-                                        <img src="{{$photo->url}}" class="image-slide" style="width: 100%;height: 80%" />
+                                        <img src="{{$photo->url}}" class="image-slide" style="width: 100%;height: 50%" />
                                     </div>
                                 @endforeach
                                 <a class="previous" onclick="changeSlide(-1)">&#10094;</a>

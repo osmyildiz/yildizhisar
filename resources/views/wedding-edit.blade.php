@@ -61,6 +61,28 @@
                             >{{$wedding->main_text_en}}</textarea>
                             </div></div>
 
+                        <div class="mb-3">
+                            <label for="img1">Etkinlik Resmi (1800x1200 ve katları şeklinde olmalıdır)</label>
+                            <div class="media">
+                                @if(isset($wedding->url))
+                                <div class="me-3">
+                                    <img src="{{url($wedding->url)}}" alt=""
+                                         style="display:block;" width="100" height="70">
+                                </div>
+                                @else
+                                    <div>
+
+                                    </div>
+                                @endif
+                                <div class="input-group">
+                                    <input type="file" class="form-control" id="img1" name="img1" autofous>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
 
 
                         <div class="form-check">

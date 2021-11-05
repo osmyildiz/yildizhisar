@@ -4,8 +4,13 @@
     $contact=Contact::find(1);
 
 @endphp
+@if(isset($header_img))
 <div class="restbeef_header_wrapper restbeef_js_bg_image restbeef_height100"
-     data-background="/img/yildiz-hisar-sariyer-2.jpg">
+     data-background={{$header_img}}>
+    @else
+        <div class="restbeef_header_wrapper restbeef_js_bg_image restbeef_height100"
+             data-background="/img/yildiz-hisar-sariyer-2.jpg">
+        @endif
 
 <header class="restbeef_main_header">
 

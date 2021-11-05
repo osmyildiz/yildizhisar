@@ -185,7 +185,9 @@ class HomeController extends Controller
     public function dugun_davet($id,$slug)
     {
         $wedding = Wedding::find($id);
-        return view('frontend.dugun-davet',compact('wedding'));
+        $header_img = $wedding->url;
+
+        return view('frontend.dugun-davet',compact('wedding','header_img'));
     }
 
     public function gallery1()
