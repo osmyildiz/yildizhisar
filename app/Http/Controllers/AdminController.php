@@ -740,6 +740,13 @@ class AdminController extends Controller
         $wedding->name_en = $request->name_en;
         $wedding->main_text_tr = $request->main_text_tr;
         $wedding->main_text_en = $request->main_text_en;
+        if($request->hasFile('img1')){
+        $id = mt_rand(1000, 9999);
+        $imageName = $id."_".time().'.'.$request->img1->extension();
+
+        $request->img1->move(public_path('img'), $imageName);
+        $wedding->url = "/img/".$imageName;
+    }
 
         $wedding->is_active = $is_active;
 
