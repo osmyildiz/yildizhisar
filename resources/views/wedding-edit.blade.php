@@ -71,7 +71,6 @@
                                 </div>
                                 @else
                                     <div>
-
                                     </div>
                                 @endif
                                 <div class="input-group">

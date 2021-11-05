@@ -39,10 +39,6 @@
                 {{$wedding->name_tr}}
             </h1>
 
-
-
-
-            </h1>
         @else
             <h1>
                 <span class="restbeef_up_title"><!--En güzel anılar burda başlar--></span>
