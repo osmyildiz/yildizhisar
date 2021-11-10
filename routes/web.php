@@ -106,7 +106,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin-campaign', [AdminController::class, 'admin_campaign_new'])->name('admin-campaign');
     Route::post('/add-campaign', [AdminController::class, 'add_campaign'])->name('add_campaign');
     Route::get ('/edit-campaign/{id}', [AdminController::class, 'edit_campaign'])->name('campaign.edit');
-    Route::post('/update-campaign', [AdminController::class, 'update_campaign_page'])->name('campaign.update');
+    Route::post('/update-campaign/{id}', [AdminController::class, 'update_campaign_new'])->name('campaign.update');
 
     Route::get('/admin-wedding', [AdminController::class, 'admin_wedding'])->name('admin-wedding');
     Route::post('/update-wedding/{id}', [AdminController::class, 'update_wedding'])->name('wedding.update');
