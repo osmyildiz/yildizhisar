@@ -210,7 +210,7 @@
 
                         </div><!-- .restbeef_tiny -->
                         <div id="Lightbox" class="modal">
-                            <span class="close pointer" onclick="closeLightbox()">&times;</span>
+                            <span class="close pointer" onclick="closeLightbox()"></span>
                             <div class="modal-content">
                                 @foreach($photos as $key=>$photo)
                                     <div class="slide">

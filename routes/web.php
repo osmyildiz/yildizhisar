@@ -50,6 +50,9 @@ Route::post('/add-newsletter', [AdminController::class, 'add_newsletter'])->name
 Route::get('/kampanyalar', [HomeController::class, 'campaigns'])->name('campaigns');
 Route::get('/dugun-davet/{id}/{slug}', [HomeController::class, 'dugun_davet'])->name('dugun_davet');
 Route::post('/send-offer', [AdminController::class, 'offer_form'])->name('send_offer');
+Route::get('/kampanya/{id}/{slug}', [App\Http\Controllers\HomeController::class, 'campaignpage'])->name('kampanyasayfasi');
+Route::get('/campaign/{id}/{slug}', [App\Http\Controllers\HomeController::class, 'campaignpage'])->name('campaignpage');
+
 
 
 
@@ -100,7 +103,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get ('/delete-foodtype/{id}', [AdminController::class, 'delete_foodtype'])->name('foodtype.delete');
     Route::post('/update-foodtype/{id}', [AdminController::class, 'update_foodtype'])->name('foodtype.update');
 
-    Route::get('/admin-campaign', [AdminController::class, 'admin_campaign'])->name('admin-campaign');
+    Route::get('/admin-campaign', [AdminController::class, 'admin_campaign_new'])->name('admin-campaign');
+    Route::post('/add-campaign', [AdminController::class, 'add_campaign'])->name('add_campaign');
+    Route::get ('/edit-campaign/{id}', [AdminController::class, 'edit_campaign'])->name('campaign.edit');
     Route::post('/update-campaign', [AdminController::class, 'update_campaign_page'])->name('campaign.update');
 
     Route::get('/admin-wedding', [AdminController::class, 'admin_wedding'])->name('admin-wedding');

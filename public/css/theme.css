@@ -221,6 +221,10 @@ iframe {
     min-height: 100vh;
     box-sizing: border-box;
 }
+.restbeef_height50 {
+    min-height: 50vh;
+    box-sizing: border-box;
+}
 .restbeef_align_middle {
     align-items: center;
     display: inline-flex;

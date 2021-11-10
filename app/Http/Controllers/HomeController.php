@@ -10,6 +10,7 @@ use App\Models\Events;
 use App\Models\FoodType;
 use App\Models\Gallery;
 use App\Models\Menu;
+use App\Models\New_Campaign;
 use App\Models\Photo;
 use App\Models\PhotoCategory;
 use App\Models\User;
@@ -124,6 +125,13 @@ class HomeController extends Controller
     }
     public function campaigns()
     {
+        $campaigns = New_Campaign::where('is_active','=',1)->get();
+        return view('frontend.kampanyalar1',compact('campaigns'));
+
+
+    }
+    public function campaigns1()
+    {
         $campaign = Campaign::find(1);
         return view('frontend.kampanyalar',compact('campaign'));
 
@@ -181,6 +189,11 @@ class HomeController extends Controller
     {
         $event = Events::find($id);
         return view('frontend.eventpage',compact('event'));
+    }
+    public function campaignpage($id,$slug)
+    {
+        $campaign = New_Campaign::find($id);
+        return view('frontend.campaignpage',compact('campaign'));
     }
     public function dugun_davet($id,$slug)
     {

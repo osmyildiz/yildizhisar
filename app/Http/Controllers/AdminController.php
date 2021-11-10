@@ -9,6 +9,7 @@ use App\Models\Events;
 use App\Models\FoodType;
 use App\Models\Form;
 use App\Models\Menu;
+use App\Models\New_Campaign;
 use App\Models\Newsletter;
 use App\Models\Offer;
 use App\Models\Photo;
@@ -69,12 +70,19 @@ class AdminController extends Controller
 
         return view('admin-about',compact('about'));
     }
-    public function admin_campaign()
+    public function admin_campaign1()
     {
         $campaign = Campaign::find(1);
 
 
-        return view('admin-campaign',compact('campaign'));
+        return view('admin-campaign1',compact('campaign'));
+    }
+    public function admin_campaign_new()
+    {
+        $campaigns = New_Campaign::get();
+
+
+        return view('admin-campaign',compact('campaigns'));
     }
     public function admin_wedding()
     {
@@ -446,6 +454,34 @@ class AdminController extends Controller
 
 
     }
+    public function add_campaign(Request $request)
+    {
+        $campaign = new New_Campaign();
+        $campaign->name_tr = $request->name_tr;
+
+        $campaign->name_en = $request->name_en;
+        $campaign->slug_tr = Str::slug($request->name_tr);
+        $campaign->slug_en = Str::slug($request->name_en);
+
+       if($request->hasFile('img1')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->img1->extension();
+
+            $request->img1->move(public_path('img'), $imageName);
+            $campaign->img1 = "/img/".$imageName;
+        }
+
+        $save = $campaign->save();
+
+        if($save){
+            return back()->with('success', 'Kampanya eklendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
     public function update_campaign_page(Request $request)
     {
 
@@ -682,6 +718,13 @@ class AdminController extends Controller
 
 
     }
+    public function edit_campaign($id)
+    {
+        $campaign = New_Campaign::find($id);
+
+        return view('campaign-edit',compact('campaign'));
+
+    }
     public function edit_wedding($id)
     {
         $wedding = Wedding::find($id);
@@ -754,6 +797,40 @@ class AdminController extends Controller
 
         if($save){
             return back()->with('success', 'Organizasyon güncellendi.');
+
+        }
+
+        return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
+
+
+    }
+    public function update_campaign_new(Request $request,$id)
+    {
+
+
+        if($request->is_active=="on"){
+            $is_active =1;
+        }else{
+            $is_active =0;
+        }
+
+        $campaign = New_Campaign::find($id);
+        $campaign->name_tr = $request->name_tr;
+        $campaign->name_en = $request->name_en;
+
+
+        $campaign->is_active = $is_active;
+        if($request->hasFile('img1')){
+            $id = mt_rand(1000, 9999);
+            $imageName = $id."_".time().'.'.$request->img1->extension();
+
+            $request->img1->move(public_path('img'), $imageName);
+            $campaign->img1 = "/img/".$imageName;
+        }
+        $save = $campaign->save();
+
+        if($save){
+            return back()->with('success', 'Kampanya güncellendi.');
 
         }
 

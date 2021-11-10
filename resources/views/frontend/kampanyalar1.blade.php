@@ -43,13 +43,13 @@
         @if(app()->getLocale() == "tr")
 
             <h1>
-                <span class="restbeef_up_title">Bize daha yakından bakın.</span>
-                Galeri
+                <span class="restbeef_up_title"></span>
+                KAMPANYALAR
             </h1>
         @else
             <h1>
-                <span class="restbeef_up_title">Take a Closer Look at Us</span>
-                GALLERY
+                <span class="restbeef_up_title"></span>
+                CAMPAIGNS
             </h1>
         @endif
 
@@ -68,58 +68,59 @@
                         <div class="restbeef_tiny">
 
                             <!-- Grid Events -->
-                            @if($data==1)
                             <div class="restbeef_block">
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_events restbeef_events_2columns">
                                         @php
                                         $lang = app()->getLocale();
                                         if($lang =="tr"){
-                                            $word = "galeri";
+                                            $word = "kampanya";
                                         }else{
-                                        $word = "gallery";
+                                        $word = "campaign";
                                         }
 
                                         @endphp
+                                        @if(count($campaigns)>0)
+                                        @foreach($campaigns as $campaign)
 
-                                        @foreach($kategoriler as $kategori)
-
-                                            <div class="restbeef_event_item">
+                                            <div class="restbeef_event_item restbeef_height50">
                                                 <div class="restbeef_event_item_image">
-                                                    <a href="{{"/".$word."/".$kategori->id}}">
-                                                        <img src="{{$kategori->kapak_resmi}}" alt="dogum_gunu"/>
+                                                    <a href="{{"/".$word."/".$campaign->id."/".($lang == "tr"?$campaign->slug_tr:$campaign->slug_en)}}">
+                                                        <img src="{{$campaign->img1}}" alt="kampanya" style="width: 600px; height: 400px; object-fit: cover; object-position: 50% 0;"/>
                                                     </a>
                                                 </div><!-- .restbeef_event_item_image -->
                                                 <div class="restbeef_event_item_content">
-                                                    <a href="{{"/".$word."/".$kategori->id}}"> <div class="restbeef_event_date">{{$lang == "tr"?$kategori->name_tr:$kategori->name_en}}</div></a>
+                                                    <a href="{{"/".$word."/".$campaign->id."/".($lang == "tr"?$campaign->slug_tr:$campaign->slug_en)}}"> <div class="restbeef_event_date">{{$lang == "tr"?$campaign->name_tr:$campaign->name_en}}</div></a>
                                                 </div>
                                             </div><!-- .restbeef_event_item -->
                                         @endforeach
+                                            @else
+                                            @if(app()->getLocale() == "tr")
+                                                <div class="restbeef_recent_post ">
+                                                    <div class="restbeef_recent_post_content ">
+                                                        <h5></h5>
+                                                        <h5>Yeni kampanyalarımız çok yakında eklenecektir.</h5>
+                                                    </div><!-- .restbeef_recent_post_content -->
+                                                </div>
+                                            @else
+                                                <div class="restbeef_recent_post">
+                                                    <div class="restbeef_recent_post_content ">
+                                                        <h5></h5>
+                                                        <h5>New campaigns will be added soon. </h5>
+                                                    </div><!-- .restbeef_recent_post_content -->
+                                                </div>
+                                            @endif
+
+
+
+                                        @endif
 
 
 
 
                                     </div><!-- .restbeef_promo_block -->
                                 </div><!-- .restbeef_block_inner -->
-                            </div>
-
-                        @else
-                                @if(app()->getLocale() == "tr")
-                                    <div class="restbeef_recent_post card-width ">
-
-                                            <h5></h5>
-                                            <h6>Yeni fotoğraflarımız çok yakında eklenecektir.</h6>
-
-                                    </div>
-                                @else
-                                    <div class="restbeef_recent_post card-width ">
-
-                                            <h5></h5>
-                                            <h6>New photos will be added soon. </h6>
-
-                                    </div>
-                            @endif
-                        @endif<!-- .restbeef_block -->
+                            </div><!-- .restbeef_block -->
 
                         </div><!-- .restbeef_tiny -->
                     </div><!-- .restbeef_content -->
