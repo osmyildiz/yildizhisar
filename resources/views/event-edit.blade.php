@@ -61,6 +61,14 @@
                             >{{$event->main_text_en}}</textarea>
                             </div></div>
 
+                        <div class="row mb-4">
+                            <label for="name_en" class="col-sm-3 col-form-label">Sayfadaki Sırası</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="priority" value="{{$event->priority}}" name="priority" required>
+                            </div>
+                        </div>
+
+
                         <div class="mb-3">
                             <label for="img1">Etkinlik Resmi (570x380 ve katları şeklinde olmalıdır)</label>
                             <div class="media">

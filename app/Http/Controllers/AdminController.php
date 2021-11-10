@@ -667,6 +667,7 @@ class AdminController extends Controller
         $event->name_en = $request->name_en;
         $event->main_text_tr = $request->main_text_tr;
         $event->main_text_en = $request->main_text_en;
+        $event->priority = $request->priority;
         $event->is_active = $is_active;
         if($request->hasFile('img1')){
             $id = mt_rand(1000, 9999);
@@ -696,6 +697,7 @@ class AdminController extends Controller
         $event->slug_en = Str::slug($request->name_en);
         $event->main_text_tr = $request->main_text_tr;
         $event->main_text_en = $request->main_text_en;
+        $event->priority = $request->priority;
 
 
 

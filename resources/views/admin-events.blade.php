@@ -95,7 +95,14 @@
                             <label for="main_text_en" class="col-sm-3 col-form-label">İçerik (TR)</label>
                             <div class="col-sm-9">
                             <textarea id="main_text_en" class="form-control" rows="5" name="main_text_en" required></textarea>
-                            </div></div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <label for="name_en" class="col-sm-3 col-form-label">Sayfadaki Sırası</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="priority" placeholder="Sayfadaki Sıralaması?" name="priority" required>
+                            </div>
+                        </div>
 
                     </div>
                     <!-- end card body -->
@@ -126,6 +133,7 @@
                             <th>İçerik (TR)</th>
                             <th>İçerik (EN)</th>
                             <th>Resim</th>
+                            <th>Sayfadaki Sıralaması</th>
                             <th>Aktif/Pasif</th>
                             <th>Düzenle</th>
                         </tr>
@@ -146,6 +154,7 @@
                                 <td>{{$event->main_text_en}}</td>
                                 <td><img src="{{url($event->img1)}}" alt=""
                                          style="display:block;" width="100" height="70"></td>
+                                <td>{{$event->priority}}</td>
                                 <td>{{$event->is_active==1?"Aktif":"Pasif"}}</td>
                                 <td>
                                     <ul class="list-inline font-size-20 contact-links mb-0">

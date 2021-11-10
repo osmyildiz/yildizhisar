@@ -244,7 +244,7 @@ class HomeController extends Controller
 
     public function events()
     {
-        $events = Events::where('is_active',1)->get();
+        $events = Events::where('is_active',1)->orderBy('priority','ASC')->get();
 
         return view('frontend.events',compact('events'));
 
