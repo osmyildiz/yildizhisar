@@ -79,7 +79,7 @@ class AdminController extends Controller
     }
     public function admin_campaign_new()
     {
-        $campaigns = New_Campaign::get();
+        $campaigns = New_Campaign::orderBy('priority','ASC')->get();
 
 
         return view('admin-campaign',compact('campaigns'));

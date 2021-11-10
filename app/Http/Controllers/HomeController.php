@@ -125,7 +125,7 @@ class HomeController extends Controller
     }
     public function campaigns()
     {
-        $campaigns = New_Campaign::where('is_active','=',1)->get();
+        $campaigns = New_Campaign::where('is_active','=',1)->orderBy('priority','ASC')->get();
         return view('frontend.kampanyalar1',compact('campaigns'));
 
 
