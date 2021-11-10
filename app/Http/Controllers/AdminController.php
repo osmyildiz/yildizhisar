@@ -80,8 +80,6 @@ class AdminController extends Controller
     public function admin_campaign_new()
     {
         $campaigns = New_Campaign::get();
-        print_r($campaigns);
-        die();
 
 
         return view('admin-campaign',compact('campaigns'));
