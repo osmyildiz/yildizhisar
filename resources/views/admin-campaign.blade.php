@@ -39,7 +39,7 @@
                         <div class="row mb-4">
                             <label for="name_tr" class="col-sm-3 col-form-label">Kampanya Adı(TR)</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="name_tr" name="name_tr" placeholder="Kampanya Adı?" autofocus required>
+                                <input type="text" class="form-control" id="name_tr" name="name_tr" placeholder="Kampanya Adı?" required>
                             </div>
                         </div>
 
@@ -47,7 +47,7 @@
                         <div class="row mb-4">
                             <label for="img1" class="col-sm-3 col-form-label">Kampanya Resmi (1135px eninde olmalıdır.)</label>
                             <div class="col-sm-9">
-                                <input type="file" class="form-control" id="img1" name="img1" autofous required>
+                                <input type="file" class="form-control" id="img1" name="img1"required>
 
                             </div>
                         </div>
@@ -80,12 +80,19 @@
                         <div class="row mb-4">
                             <label for="name_en" class="col-sm-3 col-form-label">Kampanya Adı(EN)</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="name_en" name="name_en" placeholder="Kampanya Adı?" autofocus required>
+                                <input type="text" class="form-control" id="name_en" name="name_en" placeholder="Kampanya Adı?"required>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <label for="name_en" class="col-sm-3 col-form-label">Sayfadaki Sırası</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="priority" name="priority" placeholder="Sayfadaki Sırası?" >
                             </div>
                         </div>
 
 
                     </div>
+
                     <!-- end card body -->
 
                     <!-- end col -->
@@ -113,6 +120,7 @@
                                 <th>Adı (EN)</th>
 
                                 <th>Resim</th>
+                                <th>Sıralama</th>
                                 <th>Aktif/Pasif</th>
                                 <th>Düzenle</th>
                             </tr>
@@ -132,6 +140,7 @@
 
                                         <td><img src="{{url($campaign->img1)}}" alt=""
                                                  style="display:block;" width="100" height="70"></td>
+                                        <td>{{$campaign->priority}}</td>
                                         <td>{{$campaign->is_active==1?"Aktif":"Pasif"}}</td>
                                         <td>
                                             <ul class="list-inline font-size-20 contact-links mb-0">

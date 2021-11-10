@@ -21,6 +21,7 @@ class CreateNewCampaignsTable extends Migration
             $table->String('slug_en');
             $table->String('img1')->default("/img/y1.jpeg");
             $table->String('is_active')->default(1);
+            $table->integer('priority')->default(1000);
             $table->softDeletes();
             $table->timestamps();
         });

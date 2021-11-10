@@ -37,13 +37,19 @@
                         <div class="row mb-4">
                             <label for="name_tr" class="col-sm-3 col-form-label">Kampanya Adı (TR)</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="name_tr" value="{{$campaign->name_tr}}" name="name_tr"  autofocus required>
+                                <input type="text" class="form-control" id="name_tr" value="{{$campaign->name_tr}}" name="name_tr" required>
                             </div>
                         </div>
                         <div class="row mb-4">
                             <label for="name_en" class="col-sm-3 col-form-label">Kampanya Adı (EN)</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="name_en" value="{{$campaign->name_en}}" name="name_en"  autofocus required>
+                                <input type="text" class="form-control" id="name_en" value="{{$campaign->name_en}}" name="name_en" required>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <label for="name_en" class="col-sm-3 col-form-label">Sayfadaki Sırası</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="priority" value="{{$campaign->priority}}" name="priority" required>
                             </div>
                         </div>
 

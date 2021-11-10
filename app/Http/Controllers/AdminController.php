@@ -80,6 +80,8 @@ class AdminController extends Controller
     public function admin_campaign_new()
     {
         $campaigns = New_Campaign::get();
+        print_r($campaigns);
+        die();
 
 
         return view('admin-campaign',compact('campaigns'));
@@ -460,6 +462,7 @@ class AdminController extends Controller
         $campaign->name_tr = $request->name_tr;
 
         $campaign->name_en = $request->name_en;
+        $campaign->priority = $request->priority;
         $campaign->slug_tr = Str::slug($request->name_tr);
         $campaign->slug_en = Str::slug($request->name_en);
 
@@ -817,6 +820,7 @@ class AdminController extends Controller
         $campaign = New_Campaign::find($id);
         $campaign->name_tr = $request->name_tr;
         $campaign->name_en = $request->name_en;
+        $campaign->priority = $request->priority;
 
 
         $campaign->is_active = $is_active;
