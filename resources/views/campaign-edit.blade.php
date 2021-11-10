@@ -49,7 +49,7 @@
 
 
                         <div class="mb-3">
-                            <label for="img1">Etkinlik Resmi (570x380 ve katları şeklinde olmalıdır)</label>
+                            <label for="img1">Etkinlik Resmi (eni 1135 px olmalıdır.)</label>
                             <div class="media">
                                 <div class="me-3">
                                     <img src="{{url($campaign->img1)}}" alt=""
