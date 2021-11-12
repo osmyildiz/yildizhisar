@@ -215,8 +215,8 @@
 
                                     <div class="restbeef_block restbeef_js_margin" data-margin="0 0 90px 0">
                                         <h2 class="restbeef_block_title align_center">
-                                            <span class="restbeef_up_title">Sorunuz mu var?</span>
-                                            Bizimle iletişime geçin
+                                            <span class="restbeef_up_title"></span>
+                                            Bize Ulaşın
                                         </h2>
                                         <div class="restbeef_block_title align_center">
                                             @if(session()->has('message'))

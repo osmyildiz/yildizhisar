@@ -29,7 +29,7 @@ return [
     'name' => 'Ad Soyad',
     'firstname' => 'Ad',
     'lastname' => 'Soyad',
-    'open' => 'Her Gün 10:00 - 23:00 Arası Hizmet Vermekteyiz',
+    'open' => 'Alacarte Restoranımızda Her Gün 10:00 - 23:00 Arası Hizmet Vermekteyiz. Davet ve Etkinlik günlerinde saatlerimiz değişiklik gösterebilmektedir.',
     'newsletter' => 'E-Bülten',
     'email' => 'E-MAIL',
     'date' => 'Tarih',
