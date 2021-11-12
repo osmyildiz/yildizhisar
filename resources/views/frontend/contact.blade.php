@@ -72,8 +72,8 @@
         @if(app()->getLocale() == "tr")
 
             <h1>
-                <span class="restbeef_up_title">Bize Ulaşın</span>
-                İLETİŞİM
+                <span class="restbeef_up_title">Tüm Sorularınız İçin</span>
+                BİZİMLE İLETİŞİME GEÇİN
             </h1>
         @else
             <h1>
