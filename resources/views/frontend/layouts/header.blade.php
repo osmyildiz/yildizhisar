@@ -9,7 +9,7 @@
      data-background={{$header_img}}>
     @else
         <div class="restbeef_header_wrapper restbeef_js_bg_image restbeef_height100"
-             data-background="/img/yildiz-hisar-sariyer-2.jpg">
+             data-background="/img/yildiz-hisar-sariyer-3.jpg">
         @endif
 
 
