@@ -72,8 +72,8 @@
         @if(app()->getLocale() == "tr")
 
             <h1>
-                <span class="restbeef_up_title">Tüm Sorularınız İçin</span>
-                BİZİMLE İLETİŞİME GEÇİN
+                <span class="restbeef_up_title">Bize Ulaşın</span>
+                İLETİŞİM
             </h1>
         @else
             <h1>
@@ -215,8 +215,8 @@
 
                                     <div class="restbeef_block restbeef_js_margin" data-margin="0 0 90px 0">
                                         <h2 class="restbeef_block_title align_center">
-                                            <span class="restbeef_up_title"></span>
-                                            Bize Ulaşın
+                                            <span class="restbeef_up_title">Tüm sorularınız için</span>
+                                            BİZİMLE İLETİŞİME GEÇİNİZ
                                         </h2>
                                         <div class="restbeef_block_title align_center">
                                             @if(session()->has('message'))
