@@ -155,7 +155,7 @@
                                     <div class="restbeef_recent_product">
                                         <div class="restbeef_recent_product_image">
                                             <a href="">
-                                                <img src="img/yildiz-hisar-009.jpg" alt="Product 02"/>
+                                                <img src="img/homewedding.jpg" alt="Product 02"/>
                                             </a>
                                         </div><!-- .restbeef_recent_product_image -->
                                         <div class="restbeef_recent_product_content">
@@ -177,7 +177,7 @@
                                     <div class="restbeef_recent_product">
                                         <div class="restbeef_recent_product_image">
                                             <a href="">
-                                                <img src="img/yildiz-hisar-011.jpg" alt="Product 03"/>
+                                                <img src="img/homeetkinlik.jpg" alt="Product 03"/>
                                             </a>
                                         </div><!-- .restbeef_recent_product_image -->
                                         <div class="restbeef_recent_product_content">
