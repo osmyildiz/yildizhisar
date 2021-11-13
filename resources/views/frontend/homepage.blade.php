@@ -201,7 +201,7 @@
                         <!-- Story Block -->
                         <div
                             class="restbeef_block restbeef_js_bg_image restbeef_height100 restbeef_fullwidth restbeef_js_margin restbeef_home01_block restbeef_content_on_right"
-                            data-background="img/yildiz-hisar-009.jpg" data-margin="0 0 71px 0">
+                            data-background="img/home_about.jpg" data-margin="0 0 71px 0">
                             <div class="restbeef_block_inner">
                                 <div class="row row_no_gap restbeef_align_middle restbeef_height100">
                                     <div class="col-6 restbeef_js_padding" data-padding="50px 0 50px 50px">
