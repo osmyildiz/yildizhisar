@@ -142,10 +142,13 @@ class AdminController extends Controller
 
 
         $menu = new Menu();
-        $menu->name = $request->name;
+        $menu->name_tr = $request->name_tr;
+        $menu->name_en = $request->name_en;
         $menu->category = $request->category;
-        $menu->price = $request->rice;
-        $menu->description = $request->description;
+        $menu->price_tr = $request->price_tr;
+        $menu->price_en = $request->price_en;
+        $menu->description_tr = $request->description_tr;
+        $menu->description_en = $request->description_en;
         $save = $menu->save();
 
         if($save){

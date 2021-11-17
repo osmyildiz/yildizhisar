@@ -215,13 +215,8 @@
                                                     Hakkımızda
                                                 </h2>
                                                 <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">
-                                                    Yıldız Hisar, harika mimarisi ve boğaz manzarasının yanı sıra
-                                                    kahvaltı, öğle ve akşam yemekleri, kokteyl, mezuniyet geceleri,
-                                                    seminer gibi özel günlerde hizmet vermektedir.</p>
-                                                <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">
-                                                    Eşsiz lezzetleriyle boğazın mavi sularını ve esintisini
-                                                    hissedebileceğiniz en güzel konumlardan birisi olan Rumeli Hisa'ında
-                                                    hatırlalardan çıkmayan anlar için sizleri bekliyoruz.</p>
+                                                    Boğaz’ın mavi sularını ve esintisini hissetmenin ayrıcalığını yaşayabileceğiniz Rumeli Hisarı’nda, yeni hatıralar biriktirmeniz için sizleri bekliyoruz.</p>
+
                                                 <a href="{{route('contact')}}"
                                                    class="restbeef_button rezervasyon-text">İletişim</a>
 
@@ -234,10 +229,7 @@
                                                     In addition to its magnificent architecture and Bosphorus view,
                                                     Yıldız Hisar serves on special occasions such as breakfast, lunch
                                                     and dinner, cocktails, graduation nights and seminars. </p>
-                                                <p class="align_center restbeef_js_margin" data-margin="0 0 43px 0">The
-                                                    We are waiting for you for unforgettable moments in Rumeli Hisa, one
-                                                    of the most beautiful locations where you can feel the blue waters
-                                                    and breeze of the Bosphorus with its unique flavors. </p>
+
                                                 <a href="/table_rezervations"
                                                    class="restbeef_button rezervasyon-text">Book a Table</a>
 
