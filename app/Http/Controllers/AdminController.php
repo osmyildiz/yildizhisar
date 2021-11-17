@@ -57,10 +57,7 @@ class AdminController extends Controller
     }
     public function admin_menu($id)
     {
-        $menu_all = Menu::orderBy('category','ASC')->orderBy('priority','ASC')->paginate(30);
-        $kategori_all = FoodType::orderBy('priority','ASC')->get();
-        
-        //return view('admin-menu',compact('menu_all','kategori_all'));
+
         if($id==0){
             $kategori_all = FoodType::orderBy('priority','ASC')->get();
 
@@ -89,8 +86,8 @@ class AdminController extends Controller
                 ->join('food_types', 'food_types.id', '=', 'menus.category')
                 ->select('food_types.name_tr','food_types.name_en','menus.*')
                 ->where('menus.deleted_at',"=",null)
-                ->where('menus.category_id',"=",$id)
-                ->orderBy('menus.category_id','ASC')->paginate(30);
+                ->where('menus.category',"=",$id)
+                ->orderBy('menus.category','ASC')->paginate(30);
 
             $data = 1;
             return view('admin-menu',compact('menu_all','kategori_all','kategori1','data'));
