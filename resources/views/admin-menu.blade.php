@@ -61,7 +61,7 @@
                             <label for="price_tr" class="col-sm-3 col-form-label">Fiyat(TL)</label>
                             <div class="col-sm-9">
                                 <input type="number" class="form-control" id="price_tr"
-                                       name="price_tr" required>
+                                       name="price_tr">
 
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                             <label for="price_en" class="col-sm-3 col-form-label">Fiyat(USD)</label>
                             <div class="col-sm-9">
                                 <input type="number" class="form-control" id="price_en"
-                                       name="price_en" required>
+                                       name="price_en">
 
                             </div>
                         </div>
