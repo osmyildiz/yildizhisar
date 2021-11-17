@@ -68,7 +68,10 @@ class AdminController extends Controller
                     ->select('food_types.name_tr','food_types.name_en','menus.*')
                     ->where('menus.deleted_at',"=",null)
                     ->where('menus.category',"=",$kategori_all[0]->id)
-                    ->orderBy('menus.category','ASC')->paginate(30);
+                    ->orderBy('menus.category','ASC')
+                    ->orderBy('menus.priority','ASC')
+
+                    ->paginate(30);
 
                 $data = 1;
                 return view('admin-menu',compact('menu_all','kategori_all','kategori1','data'));
@@ -87,7 +90,9 @@ class AdminController extends Controller
                 ->select('food_types.name_tr','food_types.name_en','menus.*')
                 ->where('menus.deleted_at',"=",null)
                 ->where('menus.category',"=",$id)
-                ->orderBy('menus.category','ASC')->paginate(30);
+                ->orderBy('menus.category','ASC')
+                ->orderBy('menus.priority','ASC')
+                ->paginate(30);
 
             $data = 1;
             return view('admin-menu',compact('menu_all','kategori_all','kategori1','data'));
