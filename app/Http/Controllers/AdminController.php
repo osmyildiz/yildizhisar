@@ -175,7 +175,8 @@ class AdminController extends Controller
     }
     public function add_menu(Request $request)
     {
-
+        print_r($request->category);
+        die();
         if(!$request->category){
             return back()->with('danger', 'Kategori seçiniz.');
         }else{
