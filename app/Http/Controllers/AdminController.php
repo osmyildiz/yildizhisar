@@ -176,22 +176,26 @@ class AdminController extends Controller
     public function add_menu(Request $request)
     {
 
+        if(!$request->category){
+            return back()->with('danger', 'Kategori seçiniz.');
+        }else{
+            $menu = new Menu();
+            $menu->name_tr = $request->name_tr;
+            $menu->name_en = $request->name_en;
+            $menu->category = $request->category;
+            $menu->price_tl = $request->price_tr;
+            $menu->price_usd = $request->price_en;
+            $menu->description_tr = $request->description_tr;
+            $menu->description_en = $request->description_en;
+            $menu->priority =$request->priority;
+            $save = $menu->save();
 
-        $menu = new Menu();
-        $menu->name_tr = $request->name_tr;
-        $menu->name_en = $request->name_en;
-        $menu->category = $request->category;
-        $menu->price_tl = $request->price_tr;
-        $menu->price_usd = $request->price_en;
-        $menu->description_tr = $request->description_tr;
-        $menu->description_en = $request->description_en;
-        $menu->priority =$request->priority;
-        $save = $menu->save();
-
-        if($save){
+            if($save){
                 return back()->with('success', 'Menu eklendi!');
 
+            }
         }
+
 
         return back()->with('danger', 'Hiç beklenmeyen bir hata oluştu. Lütfen yeniden deneyiniz.!');
 
