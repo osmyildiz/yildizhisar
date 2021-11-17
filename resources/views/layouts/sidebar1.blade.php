@@ -37,7 +37,7 @@
 
                 </li>
                 <li>
-                    <a href="/admin-menu" class="waves-effect">
+                    <a href="/admin-menu/0" class="waves-effect">
                         <i class="bx bx-food-menu"></i>
                         <span key="t-dashboards">Menüler</span>
                     </a>

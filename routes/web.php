@@ -84,7 +84,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/edit-reservation/{id}', [AdminController::class, 'edit_reservation'])->name('edit.reservation');
     Route::get('/edit-menu/{id}', [AdminController::class, 'edit_menu'])->name('menu.edit');
     Route::post('/update-menu/{id}', [AdminController::class, 'update_menu'])->name('menu.update');
-    Route::get('/admin-menu', [AdminController::class, 'admin_menu'])->name('admin-menu');
+    Route::get('/admin-menu/{id}', [AdminController::class, 'admin_menu'])->name('admin-menu');
     Route::get('/admin-about', [AdminController::class, 'admin_about'])->name('admin-about');
     Route::get('/admin-contact', [AdminController::class, 'admin_contact'])->name('admin-contact');
     Route::get('/admin-forms', [AdminController::class, 'admin_forms'])->name('admin-forms');

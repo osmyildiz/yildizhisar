@@ -222,6 +222,7 @@
         </div> <!-- end col -->
 
     </div>
+
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -230,77 +231,124 @@
                     <h4 class="card-title">Menüler</h4>
                     <p class="card-title-desc">Tüm menüleri bu tablodan inceleyebilirsiniz.
                     </p>
+                    <form method="POST" class="form-horizontal" onsubmit="return submitForm()" enctype="multipart/form-data">
+                        @csrf
+                        <div class="card-body">
+                            <div class="row">
 
-                    <div class="table-responsive">
+                                <div class="mb-4 row">
+                                    <label for="time" class="col-md-3 col-form-label">Kategori</label>
+                                    @if($data==0)
+                                        <td colspan="8">Herhangi bir kayıt bulunamadı.</td>
+                                    @else
 
-                        <table id="today_table" class="table table-bordered table-hover">
-                            <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Adı(TR)</th>
-                                <th>Adı(EN)</th>
-                                <th>Kategori</th>
-                                <th>Fiyat(TL)</th>
-                                <th>Fiyat(USD)</th>
-                                <th>Açıklama(TR)</th>
-                                <th>Açıklama(EN)</th>
-                                <th>Sıralama</th>
-                                <th>Düzenle/Sil</th>
-                            </tr>
-                            </thead>
+                                        <div class="col-sm-9">
+                                            <select id="select-action" class="form-select" name="action">
+                                                <option value="{{$kategori1->id}}" selected>{{$kategori1->name_tr}}</option>
+                                                @foreach($kategori_all as $kategori)
+                                                    @if($kategori->id !=$kategori1->id)
+                                                        <option value="{{$kategori->id}}">{{$kategori->name_tr}}</option>
+                                                    @endif
+                                                @endforeach
+                                            </select>
 
+                                        </div>
+                                </div>
 
-                            <tbody>
-                            @if($menu_all->count()==0)
-                                <td colspan="8">Bugüne ait bir kayıt bulunamadı.</td>
-                            @else
+                                @if($menu_all->count()!=0)
 
-                                @foreach($menu_all as $key=>$menu)
-                                    <tr>
-                                        <td>{{$key+1}}</td>
-                                        <td>{{$menu->name_tr}}</td>
-                                        <td>{{$menu->name_en}}</td>
-                                        <td>{{$menu->category}}</td>
-                                        <td>{{$menu->price_tl}}</td>
-                                        <td>{{$menu->price_usd}}</td>
-                                        <td>{{$menu->description_tr}}</td>
-                                        <td>{{$menu->description_en}}</td>
-                                        <td>{{$menu->priority}}</td>
+                                    <div class="row justify-content-end">
+                                        <div class="col-sm-9">
 
 
-
-                                        <td>
-                                            <ul class="list-inline font-size-20 contact-links mb-0">
-
-                                                <li class="list-inline-item px-1">
-                                                    <a href="{{route('menu.edit',$menu->id)}}" title="edit"><i class="bx bxs-edit"></i></a>
-                                                </li>
-                                                <li class="list-inline-item px-1">
-                                                    <a href="{{route('menu.delete',$menu->id)}}" title="delete"><i class="bx bxs-trash"></i></a>
-                                                </li>
-
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                @endforeach
-
+                                            <div>
+                                                <button type="submit" class="btn btn-primary w-md">Getir</button>
+                                            </div>
+                                        </div>
+                                    </div>
                             @endif
 
-                            </tbody>
-
-                        </table>
-                        {{$menu_all->links("pagination::bootstrap-4")}}
 
 
+                            <!-- end card -->
+                            </div>
+                            <!-- end col -->
 
 
-                    </div></div>
+                        </div>
+                </div>
+                </form>
 
-            </div>
+                <div class="table-responsive">
 
-        </div> <!-- end col -->
+                    <table id="today_table" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Adı(TR)</th>
+                            <th>Adı(EN)</th>
+                            <th>Kategori</th>
+                            <th>Fiyat(TL)</th>
+                            <th>Fiyat(USD)</th>
+                            <th>Açıklama(TR)</th>
+                            <th>Açıklama(EN)</th>
+                            <th>Sıralama</th>
+                            <th>Düzenle/Sil</th>
+                        </tr>
+                        </thead>
 
-    </div> <!-- end row -->
+
+                        <tbody>
+                        @if($photo_all->count()==0)
+                            <td colspan="8">Bugüne ait bir kayıt bulunamadı.</td>
+                        @else
+
+                            @foreach($menu_all as $key=>$menu)
+                                <tr>
+                                    <td>{{$key+1}}</td>
+                                    <td>{{$menu->name_tr}}</td>
+                                    <td>{{$menu->name_en}}</td>
+                                    <td>{{$menu->category}}</td>
+                                    <td>{{$menu->price_tl}}</td>
+                                    <td>{{$menu->price_usd}}</td>
+                                    <td>{{$menu->description_tr}}</td>
+                                    <td>{{$menu->description_en}}</td>
+                                    <td>{{$menu->priority}}</td>
+
+
+
+                                    <td>
+                                        <ul class="list-inline font-size-20 contact-links mb-0">
+
+                                            <li class="list-inline-item px-1">
+                                                <a href="{{route('menu.edit',$menu->id)}}" title="edit"><i class="bx bxs-edit"></i></a>
+                                            </li>
+                                            <li class="list-inline-item px-1">
+                                                <a href="{{route('menu.delete',$menu->id)}}" title="delete"><i class="bx bxs-trash"></i></a>
+                                            </li>
+
+                                        </ul>
+                                    </td>
+                                </tr>
+                            @endforeach
+
+                        @endif
+
+                        </tbody>
+
+                    </table>
+                    {{$menu_all->links("pagination::bootstrap-4")}}
+
+
+                    @endif
+
+                </div></div>
+
+
+
+        </div>
+
+    </div>
     <div class="d-flex justify-content-center"></div>
 
 
@@ -327,5 +375,16 @@
             $('.alert-success').fadeIn().delay(3000).fadeOut('slow');
             $('.alert-danger').fadeIn().delay(3000).fadeOut('slow');
         });
+    </script>
+    <script type="text/javascript">
+
+        function submitForm() {
+
+            var selectedOption = $('#select-action').val();
+            var url = "/admin-menus/"+selectedOption;
+
+            location.href=url;
+            return false;
+        }
     </script>
 @endsection
