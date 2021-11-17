@@ -381,6 +381,7 @@ class AdminController extends Controller
         $menu->price_usd = $request->price_usd;
         $menu->description_tr =$request->description_tr;
         $menu->description_en =$request->description_en;
+        $menu->priority =$request->priority;
 
         $save = $menu->save();
 

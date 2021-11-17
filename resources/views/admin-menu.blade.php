@@ -236,6 +236,7 @@
                                 <th>Fiyat(USD)</th>
                                 <th>Açıklama(TR)</th>
                                 <th>Açıklama(EN)</th>
+                                <th>Sıralama</th>
                                 <th>Düzenle/Sil</th>
                             </tr>
                             </thead>
@@ -256,6 +257,7 @@
                                         <td>{{$menu->price_usd}}</td>
                                         <td>{{$menu->description_tr}}</td>
                                         <td>{{$menu->description_en}}</td>
+                                        <td>{{$menu->priority}}</td>
 
 
 
