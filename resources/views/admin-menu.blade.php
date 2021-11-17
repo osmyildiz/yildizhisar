@@ -381,7 +381,7 @@
         function submitForm() {
 
             var selectedOption = $('#select-action').val();
-            var url = "/admin-menus/"+selectedOption;
+            var url = "/admin-menu/"+selectedOption;
 
             location.href=url;
             return false;
