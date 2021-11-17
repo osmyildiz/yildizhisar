@@ -57,10 +57,9 @@ class AdminController extends Controller
     }
     public function admin_menu()
     {
-        $menu_all = Menu::orderBy('category','ASC')->paginate(30);
+        $menu_all = Menu::orderBy('category','ASC')->orderBy('priority','ASC')->paginate(30);
         $kategori_all = FoodType::orderBy('priority','ASC')->get();
         
-
         return view('admin-menu',compact('menu_all','kategori_all'));
     }
     public function admin_about()
