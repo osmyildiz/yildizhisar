@@ -86,6 +86,14 @@
                                       ></textarea>
                             </div></div>
                         <div class="row mb-4">
+                            <label for="priority" class="col-sm-3 col-form-label">Sıralama</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="priority"
+                                       name="priority" required>
+
+                            </div>
+                        </div>
+                        <div class="row mb-4">
                             <div class="row justify-content-end">
                                 <div class="col-sm-9">
 
