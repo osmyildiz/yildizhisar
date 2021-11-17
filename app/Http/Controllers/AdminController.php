@@ -70,8 +70,8 @@ class AdminController extends Controller
                     ->join('food_types', 'food_types.id', '=', 'menus.category')
                     ->select('food_types.name_tr','food_types.name_en','menus.*')
                     ->where('menus.deleted_at',"=",null)
-                    ->where('menus.category_id',"=",$kategori_all[0]->id)
-                    ->orderBy('menus.category_id','ASC')->paginate(30);
+                    ->where('menus.category',"=",$kategori_all[0]->id)
+                    ->orderBy('menus.category','ASC')->paginate(30);
 
                 $data = 1;
                 return view('admin-menu',compact('menu_all','kategori_all','kategori1','data'));
