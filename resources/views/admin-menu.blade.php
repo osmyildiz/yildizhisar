@@ -299,7 +299,7 @@
 
 
                         <tbody>
-                        @if($photo_all->count()==0)
+                        @if($menu_all->count()==0)
                             <td colspan="8">Bugüne ait bir kayıt bulunamadı.</td>
                         @else
 
