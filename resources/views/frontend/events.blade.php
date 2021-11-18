@@ -83,9 +83,9 @@
                                         @foreach($events as $event)
 
                                             <div class="restbeef_event_item">
-                                                <div class="restbeef_e<vent_item_image">
+                                                <div class="restbeef_event_item_image">
                                                     <a href="{{"/".$word."/".$event->id."/".($lang == "tr"?$event->slug_tr:$event->slug_en)}}">
-                                                        <img src="{{$event->img1}}" alt="dogum_gunu"/>
+                                                        <img src="{{$event->img1}}" alt="dogum_gunu" style="width: 570px;height: 380px" />
                                                     </a>
                                                 </div><!-- .restbeef_event_item_image -->
                                                 <div class="restbeef_event_item_content">

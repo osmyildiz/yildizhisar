@@ -85,16 +85,7 @@
                                                 <span style="font-size: 50px" class="restbeef_up_title">Hikayemiz</span>
 
                                             </h2>
-                                            <p>Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan,
-                                                harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam
-                                                yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri,
-                                                seminer gibi özel günlerde de hizmet vermekteyiz.
-                                                Yıldız Ana Restoran, Havuz başı Restoran, Alt Teras Restoran, şömineli
-                                                toplantı salonlarımız bulunmaktadır. Havuz başı Restoranda; yaz
-                                                aylarında 650, kış aylarında 130 kişiye hizmet verirken, Yıldız Ana
-                                                Restoranda 450 kişiye hizmet vermekteyiz. 2021 Haziran ayında
-                                                gerçekleşen tadilatımız itibariyle Yalı Tarım işletmesine geçmiş
-                                                bulunmaktayız.
+                                            <p>Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermekteyiz. Alacarte Restoran, Cam Salon, Havuz Başı, Alt Teras ve Şömineli salonumuz bulunmaktadır. Havuz başımız yaz aylarında 650 kişiye, kış aylarında 130 kişiye kadar hizmet verirken, Alacarte Restoranımız ise yaz aylarında 350 kişiye kadar hizmet vermektedir.“Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermekteyiz. Alacarte Restoran, Cam Salon, Havuz Başı, Alt Teras ve Şömineli salonumuz bulunmaktadır. Havuz başımız yaz aylarında 650 kişiye, kış aylarında 130 kişiye kadar hizmet verirken, Alacarte Restoranımız ise yaz aylarında 350 kişiye kadar hizmet vermektedir.
                                             </p>
 
                                         @else

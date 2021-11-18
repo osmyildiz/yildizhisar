@@ -85,7 +85,12 @@
                     <p>{{$contact->address}}</br>
                         E-mail: </span>{{$contact->contact_us_email_1}}</br>
                         @lang('static_text.phone'): {{$contact->phone}}</br>
-                        @lang('static_text.open')</br>
+                    @if(app()->getLocale() == "tr")
+                        {{$contact->working_hours_weekdays_tr}}
+                    @else
+                            {{$contact->working_hours_weekdays_en}}
+                        @endif
+
 
                     </p>
 
