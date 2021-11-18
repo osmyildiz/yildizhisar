@@ -108,27 +108,19 @@
                                                         <span class="restbeef_up_title">Çalışma Saatleri</span>
                                                     </h2>
                                                     <div class="restbeef_contact_info">
-                                                        <h6>Hafta içi</h6>
+                                                        <h6>Hafta içi & Hafta Sonu</h6>
                                                         {{$contact->working_hours_weekdays_tr}}
                                                     </div><!-- .restbeef_contact_info -->
-                                                    <div class="restbeef_contact_info">
-                                                        <h6>Hafta sonu</h6>
-                                                        {{$contact->working_hours_weekend_tr}}
 
-                                                    </div><!-- .restbeef_contact_info -->
                                                 @else
                                                     <h2>
                                                         <span class="restbeef_up_title">Working Hours</span>
                                                     </h2>
                                                     <div class="restbeef_contact_info">
-                                                        <h6>Weekdays</h6>
+                                                        <h6>Weekdays & Weekend</h6>
                                                         {{$contact->working_hours_weekdays_en}}
                                                     </div><!-- .restbeef_contact_info -->
-                                                    <div class="restbeef_contact_info">
-                                                        <h6>Weekend</h6>
-                                                        {{$contact->working_hours_weekend_en}}
 
-                                                    </div><!-- .restbeef_contact_info -->
                                                 @endif
 
                                             </div><!-- .restbeef_contact_info_wrapper -->
