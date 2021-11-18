@@ -1078,8 +1078,39 @@ class AdminController extends Controller
         $res = PhotoCategory::destroy($id);
 
 
+
+
         if($res){
-            return back()->with('success', 'Kategori silindi!');
+            $id=0;
+            if($id==0){
+                $kategori_all = PhotoCategory::orderBy('name_tr','ASC')->get();
+
+                if(count($kategori_all)>0){
+                    $kategori1 = $kategori_all[0];
+                    $photo_all = DB::table('photos')
+                        ->join('photo_categories', 'photo_categories.id', '=', 'photos.category_id')
+                        ->select('photo_categories.name_tr','photo_categories.name_en','photos.*')
+                        ->where('photos.deleted_at',"=",null)
+                        ->where('photos.category_id',"=",$kategori_all[0]->id)
+                        ->orderBy('photos.category_id','ASC')->paginate(30);
+
+                    $data = 1;
+                    $success = "Kategori Silindi";
+                    return view('admin-photos',compact('photo_all','kategori_all','kategori1','data','success'));
+
+                }else{
+                    $data = 0;
+                    $success = "Kategori Silindi";
+                    return view('admin-photos',compact('data','success'));
+
+                }
+
+            }
+
+
+
+
+            //return back()->with('success', 'Kategori silindi!');
 
         }
 
