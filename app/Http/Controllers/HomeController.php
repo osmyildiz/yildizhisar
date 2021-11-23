@@ -249,6 +249,12 @@ class HomeController extends Controller
         return view('frontend.events',compact('events'));
 
     }
+    public function photo360()
+    {
+
+        return view('frontend.photo360');
+
+    }
 
     public function restaurant()
     {

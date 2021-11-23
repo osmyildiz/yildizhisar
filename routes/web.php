@@ -52,6 +52,7 @@ Route::get('/dugun-davet/{id}/{slug}', [HomeController::class, 'dugun_davet'])->
 Route::post('/send-offer', [AdminController::class, 'offer_form'])->name('send_offer');
 Route::get('/kampanya/{id}/{slug}', [App\Http\Controllers\HomeController::class, 'campaignpage'])->name('kampanyasayfasi');
 Route::get('/campaign/{id}/{slug}', [App\Http\Controllers\HomeController::class, 'campaignpage'])->name('campaignpage');
+Route::get('/photo360', [App\Http\Controllers\HomeController::class, 'photo360'])->name('photo360');
 
 
 
