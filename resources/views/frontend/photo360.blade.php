@@ -43,13 +43,13 @@
         @if(app()->getLocale() == "tr")
 
             <h1>
-                <span class="restbeef_up_title">En güzel anılar burda</span>
-                ETKİNLİK
+                <span class="restbeef_up_title"></span>
+                360° Fotoğraflar
             </h1>
         @else
             <h1>
-                <span class="restbeef_up_title">The best memories are here</span>
-                EVENTS
+                <span class="restbeef_up_title"></span>
+                360° PHOTOS
             </h1>
         @endif
 
