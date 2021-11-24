@@ -110,6 +110,7 @@
                                             @else
                                                 <p>Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermekteyiz. Alacarte Restoran, Cam Salon, Havuz Başı, Alt Teras ve Şömineli salonumuz bulunmaktadır. Havuz başımız yaz aylarında 650 kişiye, kış aylarında 130 kişiye kadar hizmet verirken, Alacarte Restoranımız ise yaz aylarında 350 kişiye kadar hizmet vermektedir.</p>
                                             @endif
+                                        @endif
                                     </div><!-- .restbeef_content_box -->
                                 </div><!-- .restbeef_block_inner -->
                             </div><!-- .restbeef_block -->
