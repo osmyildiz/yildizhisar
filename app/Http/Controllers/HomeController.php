@@ -259,6 +259,8 @@ class HomeController extends Controller
     public function restaurant()
     {
 
+        $about = About::find(1);
+
         $menus = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
             ->orderBy('food_types.priority','ASC')->get();
         $food_types = FoodType::orderBy('priority','ASC')->get();
@@ -287,7 +289,7 @@ class HomeController extends Controller
         $menu12 = Menu::selectRaw('menus.*')->join('food_types','food_types.id','=','menus.category')
             ->where('food_types.priority','=',12)->orderBy('menus.priority','ASC')->get();
 
-        return view('frontend.restaurant',compact('menus','food_types','menu1','menu2','menu3','menu4','menu5','menu6','menu7','menu8','menu9','menu10','menu11','menu12'));
+        return view('frontend.restaurant',compact('menus','about','food_types','menu1','menu2','menu3','menu4','menu5','menu6','menu7','menu8','menu9','menu10','menu11','menu12'));
 
 
     }

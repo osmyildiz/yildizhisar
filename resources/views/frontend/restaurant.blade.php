@@ -80,31 +80,36 @@
                                 <div class="restbeef_block_inner">
                                     <div class="restbeef_content_box02 align_center">
                                         @if(app()->getLocale() == "tr")
-                                            <h2 class="align_center restbeef_js_padding"
-                                                data-padding="0 0 0 0">
+                                            <h2 class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
                                                 <span style="font-size: 50px" class="restbeef_up_title">Hikayemiz</span>
 
                                             </h2>
-                                            <p>Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermekteyiz. Alacarte Restoran, Cam Salon, Havuz Başı, Alt Teras ve Şömineli salonumuz bulunmaktadır. Havuz başımız yaz aylarında 650 kişiye, kış aylarında 130 kişiye kadar hizmet verirken, Alacarte Restoranımız ise yaz aylarında 350 kişiye kadar hizmet vermektedir.“Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermekteyiz. Alacarte Restoran, Cam Salon, Havuz Başı, Alt Teras ve Şömineli salonumuz bulunmaktadır. Havuz başımız yaz aylarında 650 kişiye, kış aylarında 130 kişiye kadar hizmet verirken, Alacarte Restoranımız ise yaz aylarında 350 kişiye kadar hizmet vermektedir.
-                                            </p>
+
+                                            @if($about)
+
+                                                <p>
+                                                    {{$about->about_first_text_tr}}
+
+                                                </p>
+                                            @else
+                                                <p>Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermekteyiz. Alacarte Restoran, Cam Salon, Havuz Başı, Alt Teras ve Şömineli salonumuz bulunmaktadır. Havuz başımız yaz aylarında 650 kişiye, kış aylarında 130 kişiye kadar hizmet verirken, Alacarte Restoranımız ise yaz aylarında 350 kişiye kadar hizmet vermektedir.</p>
+                                            @endif
+
 
                                         @else
-                                            <h2 class="align_center restbeef_js_padding"
-                                                data-padding="0 0 15px 0">
-                                                <span style="font-size: 50px"
-                                                      class="restbeef_up_title">Our History</span>
+                                            <h2 class="align_center restbeef_js_padding" data-padding="0 0 15px 0">
+                                                <span style="font-size: 50px" class="restbeef_up_title">Our History</span>
 
                                             </h2>
-                                            <p>Located in Rumeli Fortress, right next to Fatih Sultan Mehmet Bridge,
-                                                with its wonderful architecture and Bosphorus view, we serve breakfast,
-                                                lunch and dinner as well as special occasions such as weddings,
-                                                engagement parties, cocktails, graduation nights, seminars.
-                                                We have Yıldız Main Restaurant, Poolside Restaurant, Lower Terrace
-                                                Restaurant, meeting rooms with fireplace. At the poolside restaurant;
-                                                While we serve 650 people in summer and 130 people in winter, we serve
-                                                450 people in Yıldız Main Restaurant. As of our renovation in June 2021,
-                                                we have moved to Yalı Tarım. </p>
-                                        @endif
+                                            @if($about)
+
+                                                <p>
+                                                    {{$about->about_first_text_en}}
+
+                                                </p>
+                                            @else
+                                                <p>Rumeli Hisarı’nda Fatih Sultan Mehmet Köprüsü’nün hemen yanında yer alan, harika mimarisi ve boğaz manzarasıyla kahvaltı, öğlen ve akşam yemeklerinin yanı sıra düğün, nişan, kokteyl, mezuniyet geceleri, seminer gibi özel günlerde de hizmet vermekteyiz. Alacarte Restoran, Cam Salon, Havuz Başı, Alt Teras ve Şömineli salonumuz bulunmaktadır. Havuz başımız yaz aylarında 650 kişiye, kış aylarında 130 kişiye kadar hizmet verirken, Alacarte Restoranımız ise yaz aylarında 350 kişiye kadar hizmet vermektedir.</p>
+                                            @endif
                                     </div><!-- .restbeef_content_box -->
                                 </div><!-- .restbeef_block_inner -->
                             </div><!-- .restbeef_block -->
