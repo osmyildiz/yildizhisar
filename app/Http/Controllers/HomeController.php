@@ -89,11 +89,7 @@ class HomeController extends Controller
 
     public function table_rezervations()
     {
-        DB::table('users')->insert([
-            'name' => 'admin',
-            'email' => 'info@yildizhisar.com',
-            'password' => Hash::make('yildiz2021*'),
-        ]);
+
         if (app()->getLocale() == "tr") {
             return view('frontend.table_rezervations');
         } else {

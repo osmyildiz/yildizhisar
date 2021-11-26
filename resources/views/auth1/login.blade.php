@@ -60,8 +60,8 @@
                                             <label for="email" class="form-label">Email</label>
                                             <input name="email" type="email"
                                                 class="form-control @error('email') is-invalid @enderror"
-                                                value="{{ old('email', 'admin@admin.com') }}" id="email"
-                                                placeholder="Enter Email" autocomplete="email" autofocus>
+                                                 id="email"
+                                                placeholder="Email" autocomplete="email" autofocus>
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -75,7 +75,7 @@
                                                 class="input-group auth-pass-inputgroup @error('password') is-invalid @enderror">
                                                 <input type="password" name="password"
                                                     class="form-control  @error('password') is-invalid @enderror"
-                                                    id="password" value="123456" placeholder="Enter password"
+                                                    id="password"  placeholder="Şifre"
                                                     aria-label="Password" aria-describedby="password-addon">
                                                 <button class="btn btn-light " type="button" id="password-addon"><i
                                                         class="mdi mdi-eye-outline"></i></button>
