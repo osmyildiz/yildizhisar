@@ -44,7 +44,7 @@ Route::get('/şirket-akşam-yemeği', [App\Http\Controllers\HomeController::clas
 Route::get('/event/{id}/{slug}', [App\Http\Controllers\HomeController::class, 'eventspage'])->name('etkinlikpage');
 Route::get('/etkinlik/{id}/{slug}', [App\Http\Controllers\HomeController::class, 'eventspage'])->name('eventspage');
 Route::get('/restoran', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant');
-Route::get('/files/mobil.pdf', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant');
+Route::get('/files/mobil.pdf', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant_qr');
 Route::post('/add-reservation-web', [AdminController::class, 'add_reservation_web'])->name('add_reservation_web');
 Route::post('/add-form-web', [AdminController::class, 'add_form_web'])->name('add_form_web');
 Route::post('/add-newsletter', [AdminController::class, 'add_newsletter'])->name('add_newsletter');
