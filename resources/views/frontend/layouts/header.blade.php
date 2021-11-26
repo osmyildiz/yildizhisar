@@ -31,9 +31,9 @@
                     <li><a href="{{$contact->twitter}}">      <i class="fab fa-twitter"></i></a></li>
                     <li><a href="{{$contact->instagram}}">     <i class="fab fa-instagram"></i></a></li>
                     <li><a href="{{$contact->linkedin}}"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="{{route('lang', ["locale" => Session::get('locale') == "en" ? "tr" : "en"])}}" class="btn_restbeef btn_lang" >
+                    <!--<li><a href="{{route('lang', ["locale" => Session::get('locale') == "en" ? "tr" : "en"])}}" class="btn_restbeef btn_lang" >
                             {{ Session::get('locale') == "en" ? "TR" : "EN" }}
-                        </a></li>
+                        </a></li>-->
                     <!-- <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>-->
                 </ul><!-- .restbeef_header_socials_list -->
             </div><!-- .restbeef_header_socials -->

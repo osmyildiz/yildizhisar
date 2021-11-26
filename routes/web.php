@@ -21,8 +21,8 @@ use Illuminate\Support\Facades\Session;
 
 Auth::routes();
 
-//Route::get('/', [App\Http\Controllers\HomeController::class, 'homepage'])->name('homepage');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'homepage'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'homepage'])->name('homepage');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'homepage'])->name('home');
 Route::get('/table_rezervations', [App\Http\Controllers\HomeController::class, 'table_rezervations'])->name('table_rezervations');
 Route::get('/hakkımızda', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/etkinlikler', [App\Http\Controllers\HomeController::class, 'events'])->name('events');
@@ -44,6 +44,7 @@ Route::get('/şirket-akşam-yemeği', [App\Http\Controllers\HomeController::clas
 Route::get('/event/{id}/{slug}', [App\Http\Controllers\HomeController::class, 'eventspage'])->name('etkinlikpage');
 Route::get('/etkinlik/{id}/{slug}', [App\Http\Controllers\HomeController::class, 'eventspage'])->name('eventspage');
 Route::get('/restoran', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant');
+Route::get('/files/mobil.pdf', [App\Http\Controllers\HomeController::class, 'restaurant'])->name('restaurant');
 Route::post('/add-reservation-web', [AdminController::class, 'add_reservation_web'])->name('add_reservation_web');
 Route::post('/add-form-web', [AdminController::class, 'add_form_web'])->name('add_form_web');
 Route::post('/add-newsletter', [AdminController::class, 'add_newsletter'])->name('add_newsletter');
