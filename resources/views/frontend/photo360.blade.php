@@ -84,6 +84,16 @@
                                                     <a href="https://sanal360.dugunbuketi.com/yildiz-hisar/" target="_blank"> <div class="restbeef_event_date">İÇ MEKAN</div></a>
                                                 </div>
                                             </div><!-- .restbeef_event_item -->
+                                            <div class="restbeef_event_item">
+                                                <div class="restbeef_event_item_image">
+                                                    <a href="https://sanal360.dugunbuketi.com/yildiz-hisar-2/" target="_blank">
+                                                        <img src="/img/havuz.jpg" alt="ic_mekan" style="width: 570px;height: 380px" />
+                                                    </a>
+                                                </div><!-- .restbeef_event_item_image -->
+                                                <div class="restbeef_event_item_content">
+                                                    <a href="https://sanal360.dugunbuketi.com/yildiz-hisar/" target="_blank"> <div class="restbeef_event_date">HAVUZ BAŞI</div></a>
+                                                </div>
+                                            </div><!-- .restbeef_event_item -->
 
 
 

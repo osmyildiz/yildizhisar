@@ -276,7 +276,7 @@
         </div><!-- .restbeef_main_wrapper -->
 
     </div>
-        <script language="javascript" type="text/javascript">
+        <script  type="text/javascript">
             function limitText(limitField, limitNum) {
                 if (limitField.value.length > limitNum) {
                     limitField.value = limitField.value.substring(0, limitNum);
