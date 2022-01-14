@@ -91,7 +91,7 @@
                                                     </a>
                                                 </div><!-- .restbeef_event_item_image -->
                                                 <div class="restbeef_event_item_content">
-                                                    <a href="https://sanal360.dugunbuketi.com/yildiz-hisar/" target="_blank"> <div class="restbeef_event_date">HAVUZ BAŞI</div></a>
+                                                    <a href="https://sanal360.dugunbuketi.com/yildiz-hisar-2/" target="_blank"> <div class="restbeef_event_date">HAVUZ BAŞI</div></a>
                                                 </div>
                                             </div><!-- .restbeef_event_item -->
 
